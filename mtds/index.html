@@ -4,28 +4,74 @@
 		<meta name="description" content="Marilia Ferreira Portfolio">
 		<meta name="keywords" content="marilia ferreira, porfolio, interaction designer, design, digital design">
 		<meta name="author" content="Marilia Ferreira">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<title>Marilia Ferreira</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/style.css" />
-		
-        
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(function() {
+                var pull 		= $('#pull');
+                    menu 		= $('nav ul');
+                    menuHeight	= menu.height();
+
+                $(pull).on('click', function(e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+
+                $(window).resize(function(){
+                    var w = $(window).width();
+                    if(w > 320 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
        
         
 	</head>
 <body>
 
-	<div class="container">
-		<div class="content">
-			
-			<header>
-				<h1>INDEX MTDS</h1>
-			</header>
-
-
-			</div>
-
-	</div><!-- fecha div container -->
+    <div class="container">
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#instructions">Instructions</a></li>
+                <li><a href="#submit">Submit</a></li>	
+            </ul>
+            <a href="#" id="pull">Make your own website with Lewis Watson</a>
+        </nav>
+        
+        <div class="main">
+            <section id="home">
+                <h1>Home</h1>
+            </section>
+            
+            <section id="photos">
+                <h1>Photos</h1>
+            </section>
+            
+            <section id="videos">
+                <h1>Videos</h1>
+            </section>
+            
+            <section id="instructions">
+                <h1>Instructions</h1>
+            </section>
+            
+            <section id="submit">
+                <h1>Submit</h1>
+            </section>
+        </div>
+        
+    </div>
     
+
+     
+        
 	
 </body>
 </html>
