@@ -343,6 +343,22 @@ section{
 
 
 
+/* ----------- SECTION VIDEOS ------------ */
+
+.content-videos{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+    background-color: yellow;
+}
+
+
+
+
+
+
 
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 600px) {
@@ -633,17 +649,12 @@ svg:not(:root) {
 
 }
 
-.div-imagem img{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.li-img img {
- 
-    margin-left: auto;
-    margin-right: auto;
+.div-imagem{
+    overflow: hidden;
     
 }
+
+
 
 .info-product{
     
@@ -657,6 +668,8 @@ svg:not(:root) {
 }
 
 .image-grid-item{
+    width: 100%;
+    height: auto;
 }
 
 .li-text {
@@ -740,7 +753,7 @@ svg:not(:root) {
 
 @media all and (min-width: 960px) {
   .list li {
-    width: 30%;
+    width: 261;
   }
     
      
