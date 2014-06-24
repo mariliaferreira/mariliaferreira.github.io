@@ -370,14 +370,17 @@ section{
     padding: 10px;
     }
     
+    .title-section{
+    margin-top: 30px;
+        width: 100%;
+    }
+    
     .image-lewiswatson-section{
-    width: 80%;
+    width: 100%;
         margin-top: 30px;
     }
     
-    .title-section{
-    width: 80%;
-    }
+    
 }
 
 /*Smartphone*/
