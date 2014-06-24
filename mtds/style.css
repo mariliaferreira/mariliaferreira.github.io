@@ -39,6 +39,7 @@ p{
     font-family: 'museo_slab500', sans-serif;
     font-size: 0.8em;
     margin-left: 2%;
+    color: #656565;
 }
 
 h2{
@@ -322,7 +323,7 @@ section{
 .content-photos{
     float: left;
     width: 70%;
-    margin-left: 15%;
+    margin-left: 17%;
     height: 70%;
     margin-top: 5%;
 }
@@ -627,7 +628,7 @@ svg:not(:root) {
     height: 300px;
     padding-right: 1em;
     border: 1px #d6d0c7 solid;
-    z-index: -1;
+    
 
 }
 
@@ -647,10 +648,10 @@ svg:not(:root) {
     
     height: 80px;
     background-color: #f4f0ed;
-    width: 260px;
+    width: 259px;
     position: absolute;
     margin-top: 220px;
-    z-index: 50;
+   
 }
 
 .li-text {
@@ -685,7 +686,8 @@ svg:not(:root) {
     padding-left: 3;
     margin-left: 10px;
     border: none;
-    max-width: 280px;
+    width: 90%;
+    float: left;
 }
 
 
