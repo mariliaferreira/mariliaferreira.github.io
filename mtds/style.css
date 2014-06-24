@@ -30,6 +30,11 @@ body {
 	
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 .brand span{
@@ -200,16 +205,14 @@ section{
 
 .content{
     float: left;
-    width: 70%;
-    margin-left: 15%;
+    width: 60%;
+    margin-left: 20%;
     height: 70%;
     margin-top: 5%;
     
 }
 
-.competition-title{
-    width: 600px;
-}
+
 
 .logos{
     background-color: #fff;
@@ -235,17 +238,18 @@ section{
         
       }
       
-       .mtds-logo{
+.mtds-logo{
         width: 150px;
       }
-      
-      .spotify-logo{
+.spotify-logo{
         width: 60px;
       }
       
-      .warnermusic-logo{
+.warnermusic-logo{
         width: 120px;
-      }
+}
+
+
 
 .content-home{
     margin-top: 5%;
@@ -260,19 +264,21 @@ section{
 }
 
 .title-section{
-    width: 45%;
+    width: 50%;
     float: left;
-    margin-left: 7%;
 }
 
 .image-lewiswatson-section{
-    width: 45%;
+    width: 50%;
     float: left;
 }
 
 .lewis-watson-jpg{
-    width: 83%;
-    margin-left: 8%;
+    width: 370px;
+    margin-left: 2%;
+    margin-top: 20px;
+    border-right: solid 4px #bd4c45;
+    border-bottom: solid 4px #bd4c45;
 }
 
 .call-to-action{
@@ -328,6 +334,8 @@ section{
     .title-competition{
     font-size: 1.0em;
 }
+    
+    
 }
 
 /*Styles for screen 515px and lower*/
@@ -375,11 +383,41 @@ section{
     width: 100%;
         margin-top: 30px;
     }
+    
+    .lewis-watson-jpg{
+    margin-left: 0;
+    margin-top: 0;
+    width: 200px;}
+    
+    .logos ul li{
+    display: block;
+    }
+    
+    .mtds-logo{
+        width: 90px;
+        
+      }
+    .spotify-logo{
+            width: 50px;
+        padding-bottom: 20px;
+          }
+
+    .warnermusic-logo{
+            width: 90px;
+        padding-bottom: 20px;
+    }
 }
 
-@media only screen and (max-width : 800px) {
+@media screen and (max-width: 800px) and (min-width: 601px) {
     
+    .image-lewiswatson-section{
+    width: 50%;
+    }
     
+    .lewis-watson-jpg{
+    margin-left: 0;
+    margin-top: 0;
+    width: 200px;}
     
     
     
