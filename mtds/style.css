@@ -75,6 +75,7 @@ nav ul {
 nav li {
 	display: inline;
 	float: left;
+    padding-top: 8px;
 }
 nav a {
 	color: #6e6565;
@@ -85,10 +86,8 @@ nav a {
 	line-height: 40px;
 }
 nav li a {
-	border-right: 1px solid #576979;
-	box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+	
+	
 }
 nav li:last-child a {
 	border-right: 0;
