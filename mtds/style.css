@@ -462,6 +462,28 @@ section{
         padding-bottom: 20px;
     }
     
+    #photos{
+        height: 2200px;
+    }
+    
+    .content-photos{
+        margin-left: 10%;
+    }
+    
+    .list li{
+        height: 50px;
+    }
+    
+    .li-img{
+        height: 100px;
+    }
+    
+    .info-product{
+    
+    width: 200px;
+    }
+    
+    
 }
 
 
@@ -491,6 +513,7 @@ section{
 	nav li a {
 		border-bottom: 1px solid #576979;
 	}
+   
 }
 
 
@@ -635,7 +658,7 @@ svg:not(:root) {
   border-bottom: 1px solid #F2F1F2;
   display: table;
   border-collapse: collapse;
-  width: 100%;
+  
 }
 
 .li-img {
@@ -646,15 +669,9 @@ svg:not(:root) {
     padding-right: 1em;
     border: 1px #d6d0c7 solid;
     z-index: -1;
-
-}
-
-.div-imagem{
     overflow: hidden;
-    
+
 }
-
-
 
 .info-product{
     
@@ -667,10 +684,7 @@ svg:not(:root) {
    
 }
 
-.image-grid-item{
-    width: 100%;
-    height: auto;
-}
+
 
 .li-text {
     float:left;
@@ -678,15 +692,6 @@ svg:not(:root) {
     font-family: 'Lato', sans-serif;
     width: 100%;
    
-}
-
-
-
-.li-head {
-  margin: 0;
-}
-.li-sub {
-  margin: 0;
 }
 
 
@@ -725,9 +730,6 @@ svg:not(:root) {
     background: none;
     border: 0;
   }
-  .inner {
-    display: block;
-  }
   .li-img, .inner {
     display: block;
     width: auto;
@@ -753,7 +755,7 @@ svg:not(:root) {
 
 @media all and (min-width: 960px) {
   .list li {
-    width: 261;
+    width: 261px;
   }
     
      
