@@ -193,7 +193,6 @@ nav a#pull {
 
 #videos{
     height: 900px;
-    background-color: green;
 }
 
 #instructions{
@@ -369,10 +368,27 @@ nav a#pull {
     margin-left: 17%;
     height: 70%;
     margin-top: 5%;
-    background-color: yellow;
 }
 
+.video-codes{
+    width: 100%;
+    float: left;
+}
 
+.video-iframe{
+    width: 55%;
+    float: left;
+}
+
+.video-iframe iframe{
+    margin-left: 3%;
+}
+
+.copy-embbed-code{
+    width: 45%;
+    float: left;
+
+}
 /* --------------- SECTION 4 - INSTRUCTIONS ---------------- */
 
 /* --------------- SECTION 5 - FORM ---------------- */
