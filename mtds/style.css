@@ -86,6 +86,7 @@ nav {
 	font-size: 1.0em;
 	font-family: 'museo_slab500', sans-serif;
 	position: fixed;
+    z-index: 100;
 }
 nav ul {
 	padding: 0;
@@ -628,7 +629,7 @@ svg:not(:root) {
     height: 300px;
     padding-right: 1em;
     border: 1px #d6d0c7 solid;
-    
+    z-index: -1;
 
 }
 
@@ -651,7 +652,11 @@ svg:not(:root) {
     width: 259px;
     position: absolute;
     margin-top: 220px;
+     z-index: 50;
    
+}
+
+.image-grid-item{
 }
 
 .li-text {
