@@ -325,6 +325,10 @@ section{
 	  	width: 100%;
 	  	text-indent: 25px;
   	}
+    
+    .title-competition{
+    font-size: 1.0em;
+}
 }
 
 /*Styles for screen 515px and lower*/
@@ -355,6 +359,18 @@ section{
 	}
 }
 
+@media only screen and (max-width : 800px) {
+    
+    
+    .title-competition{
+    font-size: 1.5em;}
+    
+    .call-to-action{
+    border: 1px solid #f4f0ed;
+    font-size: 0.8em;
+}
+}
+
 /*Smartphone*/
 @media only screen and (max-width : 320px) {
 	nav li {
@@ -366,6 +382,16 @@ section{
 		border-bottom: 1px solid #576979;
 	}
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
