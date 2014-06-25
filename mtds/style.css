@@ -62,7 +62,7 @@ h3{
 
 h4{
     font-family: 'museo_slab500', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: #f2665e;
     margin-left: 2%;
 }
@@ -70,6 +70,14 @@ h4{
 h5{
     font-family: 'museo_slab500', sans-serif;
     font-size: 1.2em;
+    color: #656565;
+    margin-left: 2%;
+    text-align: center;
+}
+
+h6{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
     color: #656565;
     margin-left: 2%;
     text-align: center;
@@ -339,8 +347,8 @@ nav a#pull {
 
 .content-description{
     float: left;
-    width: 70%;
-    margin-left: 17%;
+    width: 75%;
+    margin-left: 15%;
     height: 70%;
     margin-top: 5%;
 }
@@ -348,8 +356,8 @@ nav a#pull {
 .steps{
     background-color: #f2665e;
     border-radius: 5px;
-    width: 20%;
-    height: 370px;
+    width: 15%;
+    height: 310px;
     padding: 0.2% 1.6% 4% 2%;
     margin-right: 1%;
     float: left;
@@ -361,6 +369,7 @@ nav a#pull {
 
 .steps p{
     color: #fff;
+    line-height: 150%;
 }
 
 .template-thumbnail{
@@ -378,7 +387,7 @@ nav a#pull {
 
 .number-steps{
     font-family: 'museo_slab500', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 2px 2px #bd4c45;
@@ -392,8 +401,7 @@ nav a#pull {
     font-size: 1.0em;
     color: #f4f0ed;
     text-align: center;
-    padding: 10px 15px;
-    margin-left: 17%;
+    padding: 5% 0% 5% 0%;
 }
 
 .call-to-action-steps:hover{
@@ -409,7 +417,7 @@ nav a#pull {
 
 
 
-/* --------------- PRIZES - (STILL SECTION 'HOW IT WORKS') ---------------- */
+/* --------------- SECTION PRIZES  ---------------- */
 
 .content-prizes{
     float: left;
@@ -430,12 +438,7 @@ nav a#pull {
     border-radius: 5px;
     border: 1px solid #d6d0c7;
     float: left;
-    margin-right: 1%;
-    padding: 2%;
-}
-
-.prizes-description p{
-    text-align: center;
+    margin-left: 4%;
 }
 
 .icon-prizes{
@@ -445,6 +448,41 @@ nav a#pull {
     padding: 0px;
     color: #fbb040;
 }
+
+.prizes-places-details{
+    width: 100%;
+    float: left;
+}
+
+.prizes-places-details h6{
+    margin: 5px;
+    padding: 20px 20px 5px 20px;
+}
+
+.prizes-places-details p{
+    margin: 5px;
+    padding: 5px 20px 20px 20px;
+    text-align: center;
+}
+
+.first-place-prize-detail{
+    background-color: rgba(251,176,64,1);
+    float: left;
+    width: 100%;
+}
+
+.second-place-prize-detail{
+    background-color: rgba(251,176,64,0.6);
+    float: left;
+    width: 100%;
+}
+
+.third-place-prize-detail{
+    background-color: rgba(251,176,64,0.4);
+    float: left;
+    width: 100%;
+}
+
 
 
 /* --------------- SECTION 4 - PHOTOS ---------------- */
