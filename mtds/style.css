@@ -60,6 +60,13 @@ h3{
     color: #656565;
 }
 
+h4{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.2em;
+    color: #f2665e;
+    margin-left: 2%;
+}
+
 a{
     text-decoration: none;
 }
@@ -117,7 +124,7 @@ nav li {
 nav a {
 	color: #6e6565;
 	display: inline-block;
-	width: 180px;
+	width: 128px;
 	text-align: center;
 	text-decoration: none;
 	line-height: 40px;
@@ -194,6 +201,14 @@ nav a#pull {
 #home{
     height: 550px;
     background-color: #F2665E;
+}
+
+#description{
+    height: 900px;
+}
+
+#prizes{
+    height: 900px;
 }
 
 #photos{
@@ -309,10 +324,91 @@ nav a#pull {
 }
 
 
+/* --------------- SECTION 2 - HOW IT WORKS ---------------- */
+
+.content-description{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+}
+
+.steps{
+    background-color: #f2665e;
+    border-radius: 5px;
+    width: 20%;
+    height: 360px;
+    padding: 0.2% 1.6% 4% 2%;
+    margin-right: 1%;
+    float: left;
+}
+
+.steps h4{
+    color: #fff;
+}
+
+.steps p{
+    color: #fff;
+}
+
+.template-thumbnail{
+    float: right;
+    width: 200px;
+}
+
+.icon-steps{
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px #bd4c45;
+    line-height: 10px;
+    padding: 0px;
+}
+
+.number-steps{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #bd4c45;
+    margin-left: 2%;
+}
+
+.call-to-action-steps{
+    border: 1px solid #f4f0ed;
+    border-radius: 5px;
+    font-family: 'museo_slab500';
+    font-size: 1.0em;
+    color: #f4f0ed;
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 17%;
+}
+
+.call-to-action-steps:hover{
+    background-color: #f4f0ed;
+    color: #f06762;
+    cursor: pointer;
+    -o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+  	-webkit-transition:.3s;
+  	transition:.3s;
+}
+
+/* --------------- SECTION 3 - THE PRIZES ---------------- */
+
+.content-prizes{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+    background-color: white;
+}
 
 
-
-/* --------------- SECTION 2 - PHOTOS ---------------- */
+/* --------------- SECTION 4 - PHOTOS ---------------- */
 
 .content-photos{
     float: left;
