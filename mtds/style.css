@@ -67,6 +67,14 @@ h4{
     margin-left: 2%;
 }
 
+h5{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.2em;
+    color: #656565;
+    margin-left: 2%;
+    text-align: center;
+}
+
 a{
     text-decoration: none;
 }
@@ -194,8 +202,9 @@ nav a#pull {
 
 
 
-#home, #photos, #videos, #instructions, #submit{
+#home, #description, #prizes, #photos, #videos, #instructions, #submit{
     width: 100%;
+    border-bottom: 1px solid #c7c0b5;
 }
 
 #home{
@@ -342,6 +351,7 @@ nav a#pull {
     padding: 0.2% 1.6% 4% 2%;
     margin-right: 1%;
     float: left;
+    margin-top: 5%;
 }
 
 .steps h4{
@@ -405,6 +415,33 @@ nav a#pull {
     height: 70%;
     margin-top: 5%;
     background-color: white;
+}
+
+.content-prizes a{
+    color: #f2665e;
+}
+
+.prizes-description{
+    width: 26%;
+    background-color: #f4f0ed;
+    border-radius: 5px;
+    margin-top: 8%;
+    border: 1px solid #d6d0c7;
+    float: left;
+    margin-right: 1%;
+    padding: 2%;
+}
+
+.prizes-description p{
+    text-align: center;
+}
+
+.icon-prizes{
+    font-size: 2em;
+    text-align: center;
+    line-height: 10px;
+    padding: 0px;
+    color: #fbb040;
 }
 
 
@@ -511,14 +548,17 @@ nav a#pull {
     line-height: 125%;
 }
 
-.video-isntructions{
+.video-instructions{
     width: 45%;
     float: left;
+    margin-top: 12%;
 }
 
-.video-instructions iframe{
-    margin-top: 14%;
+.video-instructions p{
+    
+    line-height: 150%;
 }
+
 
 
 
