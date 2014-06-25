@@ -40,6 +40,7 @@ p{
     font-size: 0.8em;
     margin-left: 2%;
     color: #656565;
+    
 }
 
 h2{
@@ -49,6 +50,14 @@ h2{
     text-transform: uppercase;
     text-shadow: 2px 2px #f4f0ed;
     margin-left: 2%;
+}
+
+h3{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.2em;
+    color: #f2665e;
+    margin-left: 2%;
+    color: #656565;
 }
 
 a{
@@ -197,7 +206,6 @@ nav a#pull {
 
 #instructions{
     height: 900px;
-    background-color: blue;
 }
 
 #submit{
@@ -382,6 +390,7 @@ nav a#pull {
 
 .video-iframe iframe{
     margin-left: 3%;
+    padding: 5px;
 }
 
 .copy-embbed-code{
@@ -390,6 +399,32 @@ nav a#pull {
 
 }
 /* --------------- SECTION 4 - INSTRUCTIONS ---------------- */
+
+.content-instructions{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+}
+
+.text-instructions{
+    width: 45%;
+    float: left;
+    padding-right: 20px;
+    line-height: 125%;
+}
+
+.video-isntructions{
+    width: 45%;
+    float: left;
+}
+
+.video-instructions iframe{
+    margin-top: 14%;
+}
+
+
 
 /* --------------- SECTION 5 - FORM ---------------- */
 
