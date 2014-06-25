@@ -209,8 +209,8 @@ nav a#pull {
 }
 
 #submit{
-    height: 900px;
-    background-color: black;
+    height: 700px;
+    background-color: #eae5de;
 }
 
 /* --------------- SECTION 1 - HOME ---------------- */
@@ -428,9 +428,68 @@ nav a#pull {
 
 /* --------------- SECTION 5 - FORM ---------------- */
 
+.content-submit{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+}
 
+.form-submit-website{
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 21%;
+    background-color: white;
+    padding: 40px;
+    border: 1px solid #d6d0c7;
+}
 
+.form-submit-website label span{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    margin-left: 2%;
+    color: #656565;
+    
+}
 
+.form-submit-website label input{
+    margin-left: 2%;
+    border: 1px solid #d6d0c7;
+    padding: 13px 15px 13px 15px;
+    color: #a5a5a5;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    width: 95%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.form-submit-website label select{
+    margin-left: 2%;
+    border: 1px solid #d6d0c7;
+    color: #a5a5a5;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+    
+}
+
+.form-submit-website button{
+    margin-left: 12%;
+    margin-top: 3%;
+    border: 1px solid #f4f0ed;
+    border-radius: 5px;
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    color: #fff;
+    text-align: center;
+    padding: 20px 50px 20px 50px;
+    background-color: #f2665e;
+    cursor: pointer;
+}
 
 
 /* --------------- ***** MEDIA QUERIES ***** -------------- */
