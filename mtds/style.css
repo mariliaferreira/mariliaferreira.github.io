@@ -210,6 +210,7 @@ nav a#pull {
 
 #home{
     background-color: #F2665E;
+    height: 500px;
 }
 
 #description{
@@ -350,7 +351,7 @@ nav a#pull {
     background-color: #f2665e;
     border-radius: 5px;
     width: 15%;
-    height: 310px;
+    height: 340px;
     padding: 0.2% 1.6% 4% 2%;
     margin-right: 1%;
     float: left;
@@ -417,7 +418,7 @@ nav a#pull {
     float: left;
     width: 70%;
     margin-left: 17%;
-    margin-top: 20px;
+    margin-top: 5%;
     margin-left: 17%;
     background-color: white;
 }
