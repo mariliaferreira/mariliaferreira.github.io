@@ -170,6 +170,10 @@ a{
 	perspective-origin: 50% 100%;
 }
 
+.link-flip a:hover,
+.link-flip a:focus {
+	color: #e74c3c;
+}
 
 .link-flip a::before,
 .link-flip a::after {
@@ -185,7 +189,7 @@ a{
 }
 
 .link-flip a::before {
-	background-color: #eae5de;
+	background-color: #fff;
 	-webkit-transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
@@ -196,6 +200,15 @@ a{
 	transform-origin: 50% 100%;
 }
 
+.link-flip a:hover::before,
+.link-flip a:focus::before {
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.link-flip a::after {
+	border-bottom: 1px solid #f4f0ed;
+}
 
 /* --------------- SECTIONS ---------------- */
 
