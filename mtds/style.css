@@ -412,7 +412,7 @@ a{
 
 
 
-/* --------------- SECTION PRIZES  ---------------- */
+/* --------------- SECTION 3 - PRIZES  ---------------- */
 
 .content-prizes{
     float: left;
@@ -538,7 +538,7 @@ a{
 }
 
 
-/* --------------- SECTION 3 - VIDEOS ---------------- */
+/* --------------- SECTION 5 - VIDEOS ---------------- */
 
 .content-videos{
     float: left;
@@ -574,7 +574,7 @@ a{
 
 }
 
-/* --------------- SECTION 4 - PLAYLIST ---------------- */
+/* --------------- SECTION 6 - PLAYLIST ---------------- */
 
 .content-playlist{
     float: left;
@@ -604,7 +604,7 @@ a{
 }
 
 
-/* --------------- SECTION 4 - INSTRUCTIONS ---------------- */
+/* --------------- SECTION 7 - INSTRUCTIONS ---------------- */
 
 .content-instructions{
     float: left;
@@ -772,7 +772,7 @@ a{
 	line-height: 1.6;
 }
 
-/* --------------- SECTION 5 - FORM ---------------- */
+/* --------------- SECTION 8 - FORM SUBMIT ---------------- */
 
 .content-submit{
     float: left;
@@ -1020,6 +1020,18 @@ a{
     .content-prizes{
         margin-top: 60px;
     }
+    
+    .cbp-contentslider > ul li {
+	position: absolute;
+	width: 70%;
+    }
+    
+     .cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
 }
 
 
@@ -1050,12 +1062,7 @@ a{
 		border-bottom: 1px solid #576979;
 	}
     
-    .cbp-contentslider .cbp-content {
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
-		-o-column-count: 1;
-		column-count: 1;
-	}
+   
    
 }
 
