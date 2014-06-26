@@ -115,7 +115,7 @@ a{
     background:#6ac071;
     }
 
-nav {
+#menu {
 	height: 60px;
 	width: 100%;
 	background: #f3f0ec;
@@ -126,20 +126,20 @@ nav {
     z-index: 100;
 }
 
-nav ul {
+#menu ul {
 	padding: 0;
 	margin: 0 auto;
 	width: 950px;
 	height: 40px;
 }
 
-nav li {
+#menu li {
 	display: inline;
 	float: left;
     padding-top: 8px;
 }
 
-nav a {
+#menu a {
 	color: #6e6565;
 	display: inline-block;
 	width: 118px;
@@ -148,11 +148,11 @@ nav a {
 	line-height: 40px;
 }
 
-nav li:last-child a {
+#menu li:last-child a {
 	border-right: 0;
 }
 
-nav a#pull {
+#menu a#pull {
 	display: none;
 }
 
@@ -634,6 +634,143 @@ nav a#pull {
 
 
 
+/* main wrapper */
+.cbp-contentslider {
+	width: 100%;
+	height: 70%;
+	margin: 1em auto;
+	position: relative;
+	border: 1px solid #d6d0c7;
+    border-radius: 5px;
+}
+
+.cbp-contentslider > ul {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+    
+}
+
+.cbp-contentslider > ul li {
+	position: absolute;
+	width: 92%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 1em;
+	background: #fff;
+    
+    
+}
+
+/* whithout JS, use :target */
+.cbp-contentslider > ul li:target {
+	z-index: -2;
+}
+
+.nav-slider {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3.313em;
+	z-index: 0;
+	border: 1px solid #d6d0c7;
+	overflow: hidden;
+    
+}
+
+.nav-slider a {
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-weight: 400;
+	overflow: hidden;
+	color: #656565;
+    font-family: 'museo_slab500', sans-serif;
+	background: #fff;
+	outline: none;
+	text-align: center;
+	position: relative;
+	padding-top: 2%;
+    border-right: 1px solid #ebe8e4;
+	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.nav-slider a span {
+	display: block;
+}
+
+.nav-slider a:last-child {
+	border: none;
+	
+}
+
+.nav-slider a:hover {
+	background-color: #f2665e;
+	color: #fff;
+}
+
+.nav-slider a.rc-active {
+	background-color: #f2665e;
+	color: #fff;
+}
+
+
+.cbp-contentslider h3 {
+	font-size: 2m;
+	height: 1em;
+	margin: 0 0 0 0;
+	padding: 0 0.2em 1em 0;
+	border-bottom: 1px solid #d6d0c7;
+}
+
+.cbp-contentslider li > div {
+	position: absolute;
+	top: 5em;
+	bottom: 3.313em;
+	width: 100%;
+	left: 0;
+	padding: 0 1em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+/*columns*/
+.cbp-contentslider .cbp-content {
+	-webkit-column-rule: 1px solid #d6d0c7;
+	-moz-column-rule: 1px solid #d6d0c7;
+	column-rule: 1px solid #d6d0c7;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	-o-column-gap: 1em;
+	column-gap: 1em;
+	vertical-align: top;	
+	padding: 1em 0;
+}
+
+.cbp-contentslider p {
+	padding: 0 0.5em 0.4em;
+	margin: 0;
+	text-align: justify;
+	line-height: 1.6;
+}
 
 /* --------------- SECTION 5 - FORM ---------------- */
 
@@ -711,25 +848,25 @@ nav a#pull {
 
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 600px) {
-	nav { 
+	#menu { 
   		height: auto;
   	}
-  	nav ul {
+  	#menu ul {
   		width: 100%;
   		display: block;
   		height: auto;
   	}
-  	nav li {
+  	#menu li {
   		width: 50%;
   		float: left;
   		position: relative;
   	}
-  	nav li a {
+  	#menu li a {
 		border-bottom: 1px solid #d6d0c7;
 		border-right: 1px solid #d6d0c7;
 	}
     
-  	nav a {
+  	#menu a {
 	  	text-align: left;
 	  	width: 100%;
 	  	text-indent: 25px;
@@ -766,21 +903,21 @@ nav a#pull {
 
 /*Styles for screen 515px and lower*/
 @media only screen and (max-width : 480px) {
-	nav {
+	#menu {
 		border-bottom: 0;
 	}
-	nav ul {
+	#menu ul {
 		display: none;
 		height: auto;
 	}
-	nav a#pull {
+	#menu a#pull {
 		display: block;
 		background-color: #d6d0c7;
 		width: 100%;
 		position: relative;
         border-bottom: 1px solid #d6d0c7;
 	}
-	nav a#pull:after {
+	#menu a#pull:after {
 		content:"";
 		background: url('nav-icon.png') no-repeat;
 		width: 30px;
@@ -904,28 +1041,24 @@ nav a#pull {
 
 /*Smartphone*/
 @media only screen and (max-width : 320px) {
-	nav li {
+	#menu li {
 		display: block;
 		float: none;
 		width: 100%;
 	}
-	nav li a {
+	#menu li a {
 		border-bottom: 1px solid #576979;
+	}
+    
+    .cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
 	}
    
 }
 
-/*
-@media all and (max-width: 1024px) {
-  
-     .content-photos{
-        margin-left: 5%;
-         width: 80%;
-         background-color: purple;
-    }
-  
-}
-*/
 
 @media all and (min-width: 640px) {
   .list {
@@ -954,41 +1087,53 @@ nav a#pull {
     
 }
 
-@media all and (min-width: 768px) {
- 
-    
-}
-
-@media all and (min-width: 800px) {
- 
-  
-}
-
-
 @media all and (min-width: 960px) {
   .list li {
     width: 261px;
   }
     
-     
-   
+ /* Media queries for Instructions Section */
+
+@media screen and (max-width: 70em) { 
+	.cbp-contentslider p {
+		font-size: 100%;
+	}
 }
 
-@media all and (min-width: 1024px) {
-  
-     
-  
+@media screen and (max-width: 67.75em) {
+
+	.cbp-contentslider { font-size: 85%; }
+
+	
+
+	.nav-slider a span {
+		display: none;
+	}
 }
 
-@media all and (min-width: 1276px) {
-  
-   
+@media screen and (max-width: 43em) {
+
+	.cbp-contentslider h3 {
+		font-size: 2em;
+	}
+
+	.cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+
+	.cbp-contentslider li > div {
+		top: 5em;
+	}
+
 }
 
-
-
-
-
+@media screen and (max-width: 25em) { 
+	.nav-slider a { padding: 0;}
+	
+}
 
 
 
@@ -1012,7 +1157,7 @@ figure,
 footer,
 header,
 hgroup,
-nav,
+#menu,
 section,
 summary {
     display: block;

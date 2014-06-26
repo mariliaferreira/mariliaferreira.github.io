@@ -12,10 +12,11 @@
         <link rel="stylesheet" href="css/font-awesome.min.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <srcipt type="text/javascript" href="prettify.js"></srcipt>
+        <script src="js/modernizr.custom.js"></script>
         <script>
             $(function() {
                 var pull 		= $('#pull');
-                    menu 		= $('nav ul');
+                    menu 		= $('#menu ul');
                     menuHeight	= menu.height();
 
                 $(pull).on('click', function(e) {
@@ -41,7 +42,7 @@
      
     <div class="container">
         
-        <nav class="clearfix">
+        <div id="menu" class="clearfix">
             <div class="brand">
                 <span class="red"></span>
                 <span class="blue"></span>
@@ -59,7 +60,7 @@
                 <li><a href="#submit">Submit</a></li>	
             </ul>
             <a href="#" id="pull">Lewis Watson Competition</a>
-        </nav>
+        </div>
         
         
         <div class="main">
@@ -402,21 +403,84 @@
             <!-- INSTRUCTIONS SECTION -->
             <section id="instructions">
                 <div class="content-instructions">
-                    <div class="text-instructions">
-                        <h2>Instructions</h2>
-                        <h3>Hacking, re-mixing and making things</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        
-                    </div>
+                   <h2>Instructions</h2>
+                    <p>Follow these instructions to get your website done and submit for the competition.</p>
+                    <div id="cbp-contentslider" class="cbp-contentslider">
+					
+                        <ul>
+                            <li id="slide1">
+                                <h3 class="icon-wolf">1. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide2">
+                                <h3 class="icon-rabbit">2. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide3">
+                                <h3 class="icon-aligator">3. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide4">
+                                <h3 class="icon-turtle">4. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide5">
+                                <h3 class="icon-platypus">5. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     
-                    <div class="video-instructions">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <iframe width="450" height="253" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                     <nav class="nav-slider" id="nav-slider">
+						<a href="#slide1" class="icon-wolf"><span>1. Step</span></a>
+						<a href="#slide2" class="icon-rabbit"><span>2. Step</span></a>
+						<a href="#slide3" class="icon-aligator"><span>3. Step</span></a>
+						<a href="#slide4" class="icon-turtle"><span>4. Step</span></a>
+						<a href="#slide5" class="icon-platypus"><span>5. Step</span></a>
+					</nav>
+					
+				</div>
+                    
+                    
                 </div>
             </section>
             
@@ -529,5 +593,15 @@
       });
     });
   </script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.cbpContentSlider.min.js"></script>
+		<script>
+			$(function() {
+
+				$( '#cbp-contentslider' ).cbpContentSlider();
+			});
+		</script>
+    
 </body>
 </html>
