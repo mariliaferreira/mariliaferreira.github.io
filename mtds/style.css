@@ -221,7 +221,7 @@ nav a#pull {
 }
 
 #description{
-    height: 1100px;
+    height: 750px;
 }
 
 #prizes{
@@ -264,7 +264,7 @@ nav a#pull {
 }
 
 .title-competition{
-    font-size: 2.5em;
+    font-size: 2.7em;
     color: #f4f0ed;
     font-family: 'museo_slab500', sans-serif;
     text-shadow: 3px 3px #bd4c45;
@@ -361,6 +361,7 @@ nav a#pull {
     padding: 0.2% 1.6% 4% 2%;
     margin-right: 1%;
     float: left;
+    margin-top: 7%;
 }
 
 .steps h4{
@@ -439,6 +440,7 @@ nav a#pull {
     border: 1px solid #d6d0c7;
     float: left;
     margin-left: 4%;
+    margin-top: 3%;
 }
 
 .icon-prizes{
@@ -696,6 +698,12 @@ nav a#pull {
     padding: 20px 50px 20px 50px;
     background-color: #f2665e;
     cursor: pointer;
+}
+
+.detail-info-form{
+    font-size: 0.2em;
+    margin: 3 3 0 3;
+    padding: 3 3 0 3;
 }
 
 
