@@ -96,23 +96,23 @@ a{
     display:block;
     float:left;
     height:5px;
-    width:25%
+    width:25%;
 }
       
 .brand .red{
-    background:#f2665e
+    background:#f2665e;
 }
       
 .brand .blue{
-    background:#57cbf5
+    background:#57cbf5;
 }
       
 .brand .yellow{
-    background:#fcb040
+    background:#fcb040;
 }
       
 .brand .green{
-    background:#6ac071
+    background:#6ac071;
     }
 
 nav {
@@ -205,15 +205,16 @@ nav a#pull {
     width: 100%;
     border-bottom: 1px solid #c7c0b5;
     padding-bottom: 30px;
+    display: inline-block;
 }
 
 #home{
-/*    height: 550px;*/
     background-color: #F2665E;
 }
 
 #description{
     clear:both;
+    background-color: #fcb040;
 }
 
 #prizes{
@@ -874,7 +875,7 @@ nav a#pull {
         margin-bottom: 30px;
     }
     .content-prizes{
-        margin-top: 40px;
+        margin-top: 60px;
     }
 }
 
