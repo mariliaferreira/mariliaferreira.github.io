@@ -208,7 +208,7 @@ nav a#pull {
 }
 
 #home{
-    height: 550px;
+/*    height: 550px;*/
     background-color: #F2665E;
 }
 
@@ -229,7 +229,7 @@ nav a#pull {
 }
 
 #playlist{
-    height: 900px;
+/*    height: 900px;*/
 }
 
 #instructions{
@@ -248,7 +248,7 @@ nav a#pull {
     float: left;
     width: 60%;
     margin-left: 20%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
 }
 
@@ -340,15 +340,8 @@ nav a#pull {
 
 .content-description{
     float: left;
-<<<<<<< HEAD
     width: 70%;
     margin-left: 17%;
-/*    height: 70%;*/
-=======
-    width: 75%;
-    margin-left: 15%;
-    height: 70%;
->>>>>>> origin/master
     margin-top: 5%;
     margin-bottom: 40px;
 }
@@ -423,13 +416,8 @@ nav a#pull {
 .content-prizes{
     float: left;
     width: 70%;
-<<<<<<< HEAD
     margin-left: 17%;
-/*    height: 70%;*/
-=======
->>>>>>> origin/master
-    margin-top: 5%;
-    height: 70%;
+    margin-top: 20px;
     margin-left: 17%;
     background-color: white;
 }
@@ -585,7 +573,7 @@ nav a#pull {
     float: left;
     width: 70%;
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
     background-color: white;
 }
@@ -762,6 +750,9 @@ nav a#pull {
         width:100%;
     }
     .prizes-description{
+        width:100%;
+    }
+    .playlist-spotify{
         width:100%;
     }
 }
