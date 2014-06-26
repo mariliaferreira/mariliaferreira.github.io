@@ -29,7 +29,9 @@
 body {
 	
 }
-
+section {
+    clear:both;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -62,7 +64,7 @@ h3{
 
 h4{
     font-family: 'museo_slab500', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: #f2665e;
     margin-left: 2%;
 }
@@ -70,6 +72,14 @@ h4{
 h5{
     font-family: 'museo_slab500', sans-serif;
     font-size: 1.2em;
+    color: #656565;
+    margin-left: 2%;
+    text-align: center;
+}
+
+h6{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
     color: #656565;
     margin-left: 2%;
     text-align: center;
@@ -119,7 +129,7 @@ nav {
 nav ul {
 	padding: 0;
 	margin: 0 auto;
-	width: 900px;
+	width: 950px;
 	height: 40px;
 }
 
@@ -132,7 +142,7 @@ nav li {
 nav a {
 	color: #6e6565;
 	display: inline-block;
-	width: 128px;
+	width: 118px;
 	text-align: center;
 	text-decoration: none;
 	line-height: 40px;
@@ -160,10 +170,6 @@ nav a#pull {
 	perspective-origin: 50% 100%;
 }
 
-.link-flip a:hover,
-.link-flip a:focus {
-	color: #e74c3c;
-}
 
 .link-flip a::before,
 .link-flip a::after {
@@ -190,21 +196,15 @@ nav a#pull {
 	transform-origin: 50% 100%;
 }
 
-.link-flip a:hover::before,
-.link-flip a:focus::before {
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-
 
 /* --------------- SECTIONS ---------------- */
 
 
 
-#home, #description, #prizes, #photos, #videos, #instructions, #submit{
+#home, #description, #prizes, #photos, #videos, #playlist, #instructions, #submit{
     width: 100%;
     border-bottom: 1px solid #c7c0b5;
+    padding-bottom: 30px;
 }
 
 #home{
@@ -213,27 +213,40 @@ nav a#pull {
 }
 
 #description{
-    height: 900px;
+<<<<<<< HEAD
+/*    height: 900px;*/
+    clear:both;
+=======
+    height: 750px;
+>>>>>>> origin/master
 }
 
 #prizes{
-    height: 900px;
+/*    height: 900px;*/
+    clear:both;
 }
 
 #photos{
-    height: 900px;
+/*    height: 900px;*/
+    clear:both;
 }
 
 #videos{
+/*    height: 900px;*/
+    clear:both;
+}
+
+#playlist{
     height: 900px;
 }
 
 #instructions{
-    height: 900px;
+/*    height: 900px;*/
+    clear:both;
 }
 
 #submit{
-    height: 700px;
+/*    height: 700px;*/
     background-color: #eae5de;
 }
 
@@ -252,16 +265,16 @@ nav a#pull {
 }
 
 .title-competition{
-    font-size: 2.8em;
+    font-size: 2.7em;
     color: #f4f0ed;
     font-family: 'museo_slab500', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 4px 4px #bd4c45;
+    text-shadow: 3px 3px #bd4c45;
 }
 
 .title-section{
     width: 50%;
     float: left;
+    margin-top: 5%;
 }
 
 .image-lewiswatson-section{
@@ -273,8 +286,6 @@ nav a#pull {
     width: 370px;
     margin-left: 2%;
     margin-top: 20px;
-    border-right: solid 4px #bd4c45;
-    border-bottom: solid 4px #bd4c45;
 }
 
 .call-to-action{
@@ -337,21 +348,28 @@ nav a#pull {
 
 .content-description{
     float: left;
+<<<<<<< HEAD
     width: 70%;
     margin-left: 17%;
+/*    height: 70%;*/
+=======
+    width: 75%;
+    margin-left: 15%;
     height: 70%;
+>>>>>>> origin/master
     margin-top: 5%;
+    margin-bottom: 40px;
 }
 
 .steps{
     background-color: #f2665e;
     border-radius: 5px;
-    width: 20%;
-    height: 370px;
+    width: 15%;
+    height: 310px;
     padding: 0.2% 1.6% 4% 2%;
     margin-right: 1%;
     float: left;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .steps h4{
@@ -360,6 +378,7 @@ nav a#pull {
 
 .steps p{
     color: #fff;
+    line-height: 150%;
 }
 
 .template-thumbnail{
@@ -377,7 +396,7 @@ nav a#pull {
 
 .number-steps{
     font-family: 'museo_slab500', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 2px 2px #bd4c45;
@@ -391,8 +410,7 @@ nav a#pull {
     font-size: 1.0em;
     color: #f4f0ed;
     text-align: center;
-    padding: 10px 15px;
-    margin-left: 17%;
+    padding: 5% 0% 5% 0%;
 }
 
 .call-to-action-steps:hover{
@@ -406,14 +424,21 @@ nav a#pull {
   	transition:.3s;
 }
 
-/* --------------- SECTION 3 - THE PRIZES ---------------- */
+
+
+/* --------------- SECTION PRIZES  ---------------- */
 
 .content-prizes{
     float: left;
     width: 70%;
+<<<<<<< HEAD
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
+=======
+>>>>>>> origin/master
     margin-top: 5%;
+    height: 70%;
+    margin-left: 17%;
     background-color: white;
 }
 
@@ -425,15 +450,10 @@ nav a#pull {
     width: 26%;
     background-color: #f4f0ed;
     border-radius: 5px;
-    margin-top: 8%;
     border: 1px solid #d6d0c7;
     float: left;
-    margin-right: 1%;
-    padding: 2%;
-}
-
-.prizes-description p{
-    text-align: center;
+    margin-left: 4%;
+    margin-top: 3%;
 }
 
 .icon-prizes{
@@ -444,6 +464,41 @@ nav a#pull {
     color: #fbb040;
 }
 
+.prizes-places-details{
+    width: 100%;
+    float: left;
+}
+
+.prizes-places-details h6{
+    margin: 5px;
+    padding: 20px 20px 5px 20px;
+}
+
+.prizes-places-details p{
+    margin: 5px;
+    padding: 5px 20px 20px 20px;
+    text-align: center;
+}
+
+.first-place-prize-detail{
+    background-color: rgba(251,176,64,1);
+    float: left;
+    width: 100%;
+}
+
+.second-place-prize-detail{
+    background-color: rgba(251,176,64,0.6);
+    float: left;
+    width: 100%;
+}
+
+.third-place-prize-detail{
+    background-color: rgba(251,176,64,0.4);
+    float: left;
+    width: 100%;
+}
+
+
 
 /* --------------- SECTION 4 - PHOTOS ---------------- */
 
@@ -451,7 +506,7 @@ nav a#pull {
     float: left;
     width: 70%;
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
 }
 
@@ -507,7 +562,7 @@ nav a#pull {
     float: left;
     width: 70%;
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
 }
 
@@ -531,13 +586,44 @@ nav a#pull {
     float: left;
 
 }
+
+/* --------------- SECTION 4 - PLAYLIST ---------------- */
+
+.content-playlist{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    height: 70%;
+    margin-top: 5%;
+    background-color: white;
+}
+
+.playlist-spotify{
+    width: 30%;
+    float: left;
+    margin-right: 1%;
+    background-color: #f4f0ed;
+    padding: 2% 1%;
+    border: 1px solid #d6d0c7;
+    border-radius: 5px;
+}
+
+.playlist-spotify textarea{
+    width: 92%;
+}
+
+.playlist-spotify iframe{
+    margin-left: 3%;
+}
+
+
 /* --------------- SECTION 4 - INSTRUCTIONS ---------------- */
 
 .content-instructions{
     float: left;
     width: 70%;
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
 }
 
@@ -568,7 +654,7 @@ nav a#pull {
     float: left;
     width: 70%;
     margin-left: 17%;
-    height: 70%;
+/*    height: 70%;*/
     margin-top: 5%;
 }
 
@@ -627,6 +713,12 @@ nav a#pull {
     cursor: pointer;
 }
 
+.detail-info-form{
+    font-size: 0.2em;
+    margin: 3 3 0 3;
+    padding: 3 3 0 3;
+}
+
 
 /* --------------- ***** MEDIA QUERIES ***** -------------- */
 
@@ -658,9 +750,28 @@ nav a#pull {
     
     .title-competition{
     font-size: 1.0em;
-}
+    }
     
-    
+    .steps{
+        width:100%;
+        height:auto;
+        padding-bottom: 20px;
+    }
+    .steps a{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .steps img{
+        height:170px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-grid-item{
+        width:100%;
+    }
+    .prizes-description{
+        width:100%;
+    }
 }
 
 /*Styles for screen 515px and lower*/
@@ -733,11 +844,11 @@ nav a#pull {
     }
     
     #photos{
-        height: 2200px;
+/*        height: 2200px;*/
     }
     
     .content-photos{
-        margin-left: 10%;
+/*        margin-left: 10%;*/
     }
     
     .list li{
@@ -752,8 +863,36 @@ nav a#pull {
     
     width: 200px;
     }
-    
-    
+    #grid {
+        padding-left: 0px;
+    }
+    #grid li{
+        width:100%;
+    }
+    .li-img{
+        padding-right: 0px;
+    }
+    li img{
+        width:100%;
+    }
+    .info-product{
+        position:relative;
+        width:100%;
+        margin-top: auto;
+    }
+    .text-instructions, .video-instructions{
+        width:100%;
+        padding-right:0px;
+    }
+    .form-submit-website{
+        width:100%;
+        margin-left: 0px;
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+    .content-prizes{
+        margin-top: 40px;
+    }
 }
 
 
@@ -786,6 +925,7 @@ nav a#pull {
    
 }
 
+/*
 @media all and (max-width: 1024px) {
   
      .content-photos{
@@ -795,6 +935,7 @@ nav a#pull {
     }
   
 }
+*/
 
 @media all and (min-width: 640px) {
   .list {
@@ -970,3 +1111,5 @@ img {
 svg:not(:root) {
     overflow: hidden;
 }
+
+
