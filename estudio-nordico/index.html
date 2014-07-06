@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estudio Nordico</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/snap.svg-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/vja0gmj.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+	<nav class="clearfix">
+		<ul class="clearfix" class="link-scaledown">
+			<li><a href="index.html">home</a></li>
+            <li><a href="nosso-trabalho.html">nosso trabalho</a></li>
+			<li><a href="contato.html">contato</a></li>
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+    
+    <div class="container">
+        <section id="home" class="main">
+            <div class="logo-home">
+                <img src="img/logo-estudio-nordico.svg" />
+            </div>
+            
+            <h5>Somos o Est&uacute;dio N&oacute;rdico<br /> de Ilustra&ccedil;&atilde;o e Anima&ccedil;&atilde;o de Curitiba.</h5>
+        </section>
+    </div>
+    
+    <footer>
+        <ul>
+            <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+            <li><a href=""><i class="fa fa-facebook-square"></i> Facebook</a></li>
+            <li><a href=""><i class="fa fa-instagram"></i> Instagram</a></li>
+        </ul>
+        <p>&copy; 2014 Est&uacute;dio N&oacute;rdico</p>
+    </footer>
+    
+    <script>
+			(function() {
+	
+				function init() {
+					var speed = 330,
+						easing = mina.backout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+  </body>
+</html>
