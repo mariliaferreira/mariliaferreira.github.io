@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,700,900,100italic,900italic,300italic,700italic);
+
 
 f*, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -12,26 +12,27 @@ f*, *:before, *:after {
 
 /*--------------------------------------------------------------   GLOBALS   ------------------------*/
 body{
-	font-family: 'Alegreya Sans', sans-serif;
-  font-weight: 300;
+    font-family: "freight-text-pro", serif;
 	color: #3c3c3c; 
   /*background-color: #f0f2f3;*/
 
 }
 
 h1{
-    font-family: "proxima-nova";
-	text-transform: uppercase;
+    
+    font-family: "freight-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 300;
 	font-size: 2.2em;
-	font-weight: 300;
-  letter-spacing: 8px;
-  text-align: center;
-  margin-top: -10px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-align: center;
+    margin-top: -10px;
 
 }
 
 h2{
-  font-family: 'Alegreya Sans', sans-serif;
+  
   font-size: 1.2em;
   font-weight: 300;
   color: #b7b7b6;
@@ -39,7 +40,10 @@ h2{
 }
 
 h3{
-  font-family: 'Alegreya Sans', sans-serif;
+  
+    font-family: "freight-text-pro",sans-serif;
+font-style: italic;
+font-weight: 400;
   font-size: 0.9em;
   font-weight: 300;
   color: #b7b7b6;
@@ -47,7 +51,9 @@ h3{
 }
 
 h4{
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "freight-text-pro",sans-serif;
+  font-style: normal;
+  font-weight: 300;
   font-size: 1.6em;
   font-weight: 300;
   color: #b7b7b6;
@@ -55,7 +61,9 @@ h4{
 }
 
 h5{
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "freight-text-pro",sans-serif;
+  font-style: normal;
+  font-weight: 300;
   font-size: 1.0em;
   font-weight: 100;
   color: #b7b7b6;
@@ -102,6 +110,10 @@ header{
 
 /*--------------------------------------------------------------   CLASSES/IDS   ------------------------*/
 
+.divisor{
+    margin-top: -1%;
+}
+
 .projeto-1{
  width: 75%;
  margin-left: 7%;
@@ -141,6 +153,7 @@ border-radius:25px;
 .content{
   width: 80%;
   border-top:1px solid #d3d3d3;
+  border-bottom:1px solid #d3d3d3;
   margin-left: 10%;
   margin-top: 5%;
   background-color: #ffffff;
@@ -148,11 +161,125 @@ border-radius:25px;
   padding-bottom: 2%;
 }
 
+.project-description{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.project-title-description{
+    text-align: left;
+    font-size: 2.5em;
+    line-height: 1%;
+}
+
+.breadcrumb{
+    text-align: left;
+}
 
 
 
 
 
+
+
+/*---- LINK EFFECT ---*/
+
+
+
+
+section {
+	position: relative;
+	z-index: 1; /* needed for setting pseudo-element z-index */
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+section a {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: #404d5b;
+	vertical-align: bottom;
+	text-decoration: none;
+	white-space: nowrap;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+section a:hover{
+    color: #cbcbcb;
+}
+
+section a::before,
+section a::after {
+	pointer-events: none;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+/* Curtain */
+.link-curtain {
+	background: rgba(255,255,255,1);
+    margin-top: -2%;
+}
+
+.link-curtain a {
+	overflow: hidden;
+	font-weight: 500;
+}
+
+.link-curtain a::before,
+.link-curtain a::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.link-curtain a::before {
+	border-top: 1px solid #d3d3d3;
+	background: transparent;
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	-webkit-transform: translateY( calc(100% - 2px) );
+	transform: translateY( calc(100% - 2px) );
+}
+
+.link-curtain a:hover::before,
+.link-curtain a:focus::before {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.link-curtain a:hover::before,
+.link-curtain a:focus::before,
+.link-curtain a:hover::after,
+.link-curtain a:focus::after {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.link-curtain a::after {
+	z-index: -1;
+	background: rgba(240,240,240,1);
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.link-curtain a:hover::after,
+.link-curtain a:focus::after {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
 
 
 

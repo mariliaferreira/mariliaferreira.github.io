@@ -12,8 +12,11 @@
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         
-        <script type="text/javascript" src="//use.typekit.net/dkn1hzw.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript" src="//use.typekit.net/ofw6ymy.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        
+       
+        
 	</head>
 <body>
 
@@ -23,8 +26,18 @@
 			<header>
 				<h3>the work of</h3>
 				<h1>Marilia Ferreira</h1>
-				<hr noshade size=1 color="#b7b7b6" width=150 align="center">
-				<h3><a href="about.html">about</a> - <a href="contact.html">contact</a></h3>
+				<!--<hr noshade size=1 color="#b7b7b6" width=150 align="center" class="divisor">-->
+				<nav class="fixedElement">
+                    <section class="link-curtain">
+                        <!--<ul>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="contact.html">resumé</a></li>
+                        </ul>-->
+                        
+                        <h3><a href="about.html">about</a> <a href="contact.html">contact</a> <a href="contact.html">resumé</a></h3>
+                    </section>
+                </nav>
 				<!--<div class="social">+</div>-->
 			</header>
 
@@ -63,64 +76,14 @@ Jana Mižutytė and Tangui Ness during the second semester of 2013.</p>
 				</div>
 			</div>
 
-			<h3><i class="fa fa-code"></i>  with  <i class="fa fa-heart-o"></i>.</h3>
+			
 
 			</div>
 
-		
+		<h3><i class="fa fa-code"></i>  with  <i class="fa fa-heart-o"></i>.</h3>
 
 	</div><!-- fecha div container -->
+    
 	
-
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquery.cbpFWSlider.min.js"></script>
-		<script>
-			$( function() {
-				/*
-				- how to call the plugin:
-				$( selector ).cbpFWSlider( [options] );
-				- options:
-				{
-					// default transition speed (ms)
-					speed : 500,
-					// default transition easing
-					easing : 'ease'
-				}
-				- destroy:
-				$( selector ).cbpFWSlider( 'destroy' );
-				*/
-
-				$( '#cbp-fwslider' ).cbpFWSlider();
-
-			} );
-		</script>
-
-
-		<script>
-			$(document).ready(function(){
-				$("#year1").toggle(50);
-				$("#year2").toggle(50);
-
-			 $(window).scroll(function(){
-			    var scrollposition = document.body.scrollTop;
-			    if (scrollposition > 300){
-			    	if($("#year1").is(":hidden")){
-			    		$("#year1").toggle(1000);
-			    	}
-			    }
-
-			    if (scrollposition > 300){
-			    	if($("#year2").is(":hidden")){
-			    		$("#year2").toggle(1000);
-			    	}
-			    }
-
-			  });
-
-			});
-		</script>
-				
-
 </body>
 </html>
