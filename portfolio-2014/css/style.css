@@ -151,14 +151,15 @@ border-radius:25px;
 }
 
 .content{
-  width: 80%;
+  width: 100%;
   border-top:1px solid #d3d3d3;
   border-bottom:1px solid #d3d3d3;
-  margin-left: 10%;
+  
   margin-top: 5%;
-  background-color: #ffffff;
+  background-color: purple;
   margin-bottom: 4%;
   padding-bottom: 2%;
+    
 }
 
 .project-description{

@@ -1,0 +1,63 @@
+@import "compass/reset";
+
+/* variables for CSS */
+
+
+
+$width-full-screen: 100%;
+$width-half-screen: 34%;
+
+$block-typeface: "freight-text-pro",sans-serif;
+$font-normal-size: 1.4em;
+$normal-lineheight: 150%;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+/* SASS global */
+body{
+   
+}
+
+p{
+    font-family: $block-typeface;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-normal-size;
+    line-height: $normal-lineheight;
+    
+}
+
+h1{
+
+}
+
+header{
+    width: $width-full-screen;
+}
+
+section{
+    width: $width-full-screen;
+    float: left;
+    heigth: auto;
+    
+    div{
+        width: $width-half-screen;
+        float: left;
+        height: auto;
+        padding: 8%;
+    }
+    
+    div:first-child{
+        background-color: green;
+    }
+    
+    div:last-child{
+        background-color: purple;
+    }
+}
