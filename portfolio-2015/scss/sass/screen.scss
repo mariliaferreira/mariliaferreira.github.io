@@ -21,7 +21,44 @@ $normal-lineheight: 150%;
 
 /* SASS global */
 body{
-   
+   height: 100%;
+    overflow-x: hidden;
+}
+
+h2{
+    font-family: "freight-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    line-height: 250%;
+}
+
+header{
+    height: auto;
+    padding: 4% 10%;
+    width: $width-full-screen;
+    background-color: white;
+    
+    ul{
+        font-family: $block-typeface;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6em;
+    }
+    
+    li{
+        display: inline;
+    }
+    
+    li:last-child{
+        float: right;
+        margin-right: 20%;
+    }
+}
+
+img{
+    min-height: auto;
+    width: 100%;
 }
 
 p{
@@ -47,17 +84,38 @@ section{
     heigth: auto;
     
     div{
-        width: $width-half-screen;
+        
         float: left;
         height: auto;
-        padding: 8%;
+        
     }
     
-    div:first-child{
+    .image-project{
+        width: 50%;
         background-color: green;
     }
     
-    div:last-child{
+    .text-project{
+        width: $width-half-screen;
         background-color: purple;
+        padding: 8% 8% 9% 8%;
+        border-bottom: 1px #000 solid;
+    }
+}
+
+footer{
+    width: $width-full-screen;
+    
+    div{
+        width: 34%;
+        float: left;
+        padding: 8%;
+    }
+    div:first-child{
+        background-color: pink;
+    }
+    
+    div:last-child{
+        background-color: yellow;
     }
 }

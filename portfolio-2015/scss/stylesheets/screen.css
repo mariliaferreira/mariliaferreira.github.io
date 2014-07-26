@@ -65,7 +65,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* variables for CSS */
 /* SASS global */
-/* line 27, ../sass/screen.scss */
+/* line 23, ../sass/screen.scss */
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* line 28, ../sass/screen.scss */
+h2 {
+  font-family: "freight-sans-pro",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2em;
+  line-height: 250%;
+}
+
+/* line 36, ../sass/screen.scss */
+header {
+  height: auto;
+  padding: 4% 10%;
+  width: 100%;
+  background-color: white;
+}
+/* line 42, ../sass/screen.scss */
+header ul {
+  font-family: "freight-text-pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6em;
+}
+/* line 49, ../sass/screen.scss */
+header li {
+  display: inline;
+}
+/* line 53, ../sass/screen.scss */
+header li:last-child {
+  float: right;
+  margin-right: 20%;
+}
+
+/* line 59, ../sass/screen.scss */
+img {
+  min-height: auto;
+  width: 100%;
+}
+
+/* line 64, ../sass/screen.scss */
 p {
   font-family: "freight-text-pro", sans-serif;
   font-style: normal;
@@ -74,29 +119,50 @@ p {
   line-height: 150%;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 header {
   width: 100%;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 section {
   width: 100%;
   float: left;
   heigth: auto;
 }
-/* line 49, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 section div {
-  width: 34%;
   float: left;
   height: auto;
-  padding: 8%;
 }
-/* line 56, ../sass/screen.scss */
-section div:first-child {
+/* line 93, ../sass/screen.scss */
+section .image-project {
+  width: 50%;
   background-color: green;
 }
-/* line 60, ../sass/screen.scss */
-section div:last-child {
+/* line 98, ../sass/screen.scss */
+section .text-project {
+  width: 34%;
   background-color: purple;
+  padding: 8% 8% 9% 8%;
+  border-bottom: 1px #000 solid;
+}
+
+/* line 106, ../sass/screen.scss */
+footer {
+  width: 100%;
+}
+/* line 109, ../sass/screen.scss */
+footer div {
+  width: 34%;
+  float: left;
+  padding: 8%;
+}
+/* line 114, ../sass/screen.scss */
+footer div:first-child {
+  background-color: pink;
+}
+/* line 118, ../sass/screen.scss */
+footer div:last-child {
+  background-color: yellow;
 }
