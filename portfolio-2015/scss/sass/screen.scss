@@ -25,6 +25,10 @@ body{
     overflow-x: hidden;
 }
 
+html, body{
+    height: 100%;
+}
+
 h2{
     font-family: "freight-sans-pro",sans-serif;
     font-style: normal;
@@ -88,18 +92,24 @@ section{
         float: left;
         height: auto;
         
+        
     }
     
     .image-project{
         width: 50%;
-        background-color: green;
+        height: 500px;
+//        background-image: url("../../img/");
+//        background-size: contain;
+//        background-repeat: no-repeat;
+        max-width:100%;
+        max-height:100%;
     }
     
     .text-project{
         width: $width-half-screen;
-        background-color: purple;
+        background-color: #dbdacb;
         padding: 8% 8% 9% 8%;
-        border-bottom: 1px #000 solid;
+        
     }
 }
 
@@ -119,3 +129,4 @@ footer{
         background-color: yellow;
     }
 }
+
