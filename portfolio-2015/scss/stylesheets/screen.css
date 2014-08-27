@@ -144,31 +144,29 @@ section div {
 section .image-project {
   width: 50%;
   height: 500px;
-  max-width: 100%;
-  max-height: 100%;
 }
-/* line 108, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 section .text-project {
   width: 34%;
   background-color: #dbdacb;
   padding: 8% 8% 9% 8%;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 footer {
   width: 100%;
 }
-/* line 119, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 footer div {
   width: 34%;
   float: left;
   padding: 8%;
 }
-/* line 124, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 footer div:first-child {
   background-color: pink;
 }
-/* line 128, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 footer div:last-child {
   background-color: yellow;
 }
