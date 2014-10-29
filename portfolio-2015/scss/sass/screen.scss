@@ -49,15 +49,6 @@ header{
         font-weight: 400;
         font-size: 1.6em;
     }
-    
-    li{
-        display: inline;
-    }
-    
-    li:last-child{
-        float: right;
-        margin-right: 20%;
-    }
 }
 
 img{
@@ -80,6 +71,17 @@ h1{
 
 header{
     width: $width-full-screen;
+}
+
+footer{
+    
+    ul{
+    font-family: $block-typeface;
+    font-style: normal;
+    font-weight: 400;
+    font-size: $font-normal-size;
+    line-height: $normal-lineheight;
+    }
 }
 
 section{
@@ -105,7 +107,7 @@ section{
     
     .text-project{
         width: $width-half-screen;
-        background-color: #dbdacb;
+        background-color: #ecebe3;
         padding: 8% 8% 9% 8%;
         
     }
