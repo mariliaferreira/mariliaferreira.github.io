@@ -1,0 +1,131 @@
+CACHE MANIFEST
+# 1415130102.244769
+CACHE:
+/_server/server.js
+../.DS_Store
+../.temp.html
+../app.coffee
+../framer/.bowerrc
+../framer/app.manifest
+../framer/backup (Nikolas Moya's conflicted copy 2014-11-04).coffee
+../framer/backup.coffee
+../framer/coffee-script.js
+../framer/config.json
+../framer/framer.generated (Nikolas Moya's conflicted copy 2014-11-04).js
+../framer/framer.generated.js
+../framer/framer.js
+../framer/framer.js.map
+../framer/images/background.png
+../framer/images/cursor.png
+../framer/images/cursor@2x.png
+../framer/images/icon-120.png
+../framer/images/icon-152.png
+../framer/images/icon-76.png
+../framer/init.js
+../framer/style.css
+../framer/version
+../images/framer-icon.png
+../images/resultadoGlicemia.png
+../images/resultadoHemograma.png
+../images/resultadoLipidico.png
+../imported/ ui-redbits/images/bemvindoD-232B7051-F3F7-4679-AC8C-DA2BDF2002CA.png
+../imported/ ui-redbits/images/botaoGlicemia-4C0CD3C1-317E-4E57-AB18-FD7A637A7C38.png
+../imported/ ui-redbits/images/botaoGlicemia_2-B5A5CF9F-D564-4E0F-AC8A-DB3F34B2BC05.png
+../imported/ ui-redbits/images/botaoHemograma-ADE96874-7533-4171-812C-387EAC710314.png
+../imported/ ui-redbits/images/botaoLipidico-B32B4652-9DA8-400B-9E8C-BA8030DFEB55.png
+../imported/ ui-redbits/images/botaoMenu-325AD03F-FBCF-456C-8B9A-6A5F7DB1B12D.png
+../imported/ ui-redbits/images/botaoMenu-D51E2F08-4324-4582-8AC0-0312D26C48BA.png
+../imported/ ui-redbits/images/botaoSincronizar-85AE93D2-A7F3-46C7-8A00-F93EABDB7282.png
+../imported/ ui-redbits/images/glicemiaResultado-ACD2C086-E748-4060-A7FD-554A4612AB58.png
+../imported/ ui-redbits/images/Group-247D9C24-2497-4DDC-AC0B-F9646F18A0C4.png
+../imported/ ui-redbits/images/Group-85DB2984-F862-44D1-8C2F-C4DCB707C0F1.png
+../imported/ ui-redbits/images/Group-881D8C15-7561-49A9-978F-C39CE304E373.png
+../imported/ ui-redbits/images/Group-8B2E3F90-0381-4840-A4A5-CA85BD0E6858.png
+../imported/ ui-redbits/images/Group-91365ABD-000F-439D-9470-20130FE4ADC4.png
+../imported/ ui-redbits/images/Group-9B437A83-F8D9-480E-BA72-D3A16F8955C4.png
+../imported/ ui-redbits/images/Group-B8FF3DD5-7BA4-4518-ABC9-72A39E0B612D.png
+../imported/ ui-redbits/images/Group-BDDDF522-361A-4F0C-8E4D-DDFA5F58D23B.png
+../imported/ ui-redbits/images/Group-D1FCD155-F630-4A6A-B6D1-BAECF05A7254.png
+../imported/ ui-redbits/images/Group_2-33A29CA5-A9B0-4FDC-AACF-6678E19A5B18.png
+../imported/ ui-redbits/images/Group_2-358B30CA-2611-47FF-A0FE-DEFF0DFECA6E.png
+../imported/ ui-redbits/images/Group_2-9AC069BE-FF8A-4E98-AC79-48D3F6887E2D.png
+../imported/ ui-redbits/images/Group_4-FF2F3BD5-202B-4CC0-A77A-D4A2E5619F4E.png
+../imported/ ui-redbits/images/Group_5-37514708-493F-4693-AE2E-FB70EB4ABF57.png
+../imported/ ui-redbits/images/Group_6-4BF7369C-65FB-4D34-8509-7F66DE118F13.png
+../imported/ ui-redbits/images/Group_7-29AA3D99-4861-4CD7-88AC-C38CEA5F97BC.png
+../imported/ ui-redbits/images/hemogramaResultado-038B71D6-9429-4F68-9E72-8FB5294F1FF0.png
+../imported/ ui-redbits/images/Line__Line__Line_2-92A7BEEB-C5D9-4C5A-B044-6F0A2E4C483F.png
+../imported/ ui-redbits/images/navigation-CD4ECF05-6C59-470A-BA7A-212F24BDA3A5.png
+../imported/ ui-redbits/images/openMenu-41A10ADC-0A8D-420D-8285-151327C82CD0.png
+../imported/ ui-redbits/images/Oval_102__selected_10-6BE899A9-0E02-488F-BF2C-1620FD5987B8.png
+../imported/ ui-redbits/images/Oval_102__selected_11-1B6F609F-F750-4D86-AE51-71A0F54BF898.png
+../imported/ ui-redbits/images/Oval_102__selected_12-318FC23B-AC72-4F65-83A8-76972E08180B.png
+../imported/ ui-redbits/images/Oval_102__selected_7-2BB53093-0474-4EA6-870D-D99132438EAC.png
+../imported/ ui-redbits/images/Oval_102__selected_8-B87A9C49-2B56-47DD-AC23-3AD0813AA0AD.png
+../imported/ ui-redbits/images/Oval_102__selected_9-B0FAB909-771B-44DE-97B9-41D1D38CE44B.png
+../imported/ ui-redbits/images/Oval_102__Triangle_3__LAB_2-C4B0DDF7-A8CF-4784-B4C5-787B708C47D4.png
+../imported/ ui-redbits/images/Oval_103__Rectangle_13__Oval_7-2B4D8C8C-E4DC-4F3A-A466-92AA0C70356E.png
+../imported/ ui-redbits/images/perfilLipidicoResultado-9011B0A1-3691-4F57-9454-4F65A8942526.png
+../imported/ ui-redbits/images/Rectangle_109__Bem_vindo__Sincronize_os_seus_e-B47FB2B8-4E77-4D6B-B5F7-53E7B1AF8AEC.png
+../imported/ ui-redbits/images/Rectangle_13__Oval_7-A1192BE3-14C2-4172-9E17-07380DCEB010.png
+../imported/ ui-redbits/images/Rectangle_34__Oval_33-7E547020-C8EF-4325-9E7D-2D587C7EE97C.png
+../imported/ ui-redbits/images/splashScreen-1B357EF7-1CDD-4184-B4BC-28BE2D094829.png
+../imported/ ui-redbits/images/startExames-40B2D8F8-24EE-44E6-A468-DD96EA617F14.png
+../imported/ ui-redbits/images/Sync_icon_4-7F1A46B2-643B-4E26-8ECA-8A06A3987128.png
+../imported/ ui-redbits/layers.json
+../imported/ ui-redbits/layers.json.js
+../imported/.DS_Store
+../imported/redbits/.DS_Store
+../imported/redbits/images/.DS_Store
+../imported/redbits/images/bemvindoD-232B7051-F3F7-4679-AC8C-DA2BDF2002CA.png
+../imported/redbits/images/botaoGlicemia-4C0CD3C1-317E-4E57-AB18-FD7A637A7C38.png
+../imported/redbits/images/botaoGlicemia_2-B5A5CF9F-D564-4E0F-AC8A-DB3F34B2BC05.png
+../imported/redbits/images/botaoHemograma-ADE96874-7533-4171-812C-387EAC710314.png
+../imported/redbits/images/botaoLipidico-B32B4652-9DA8-400B-9E8C-BA8030DFEB55.png
+../imported/redbits/images/botaoMenu-325AD03F-FBCF-456C-8B9A-6A5F7DB1B12D.png
+../imported/redbits/images/botaoMenu-D51E2F08-4324-4582-8AC0-0312D26C48BA.png
+../imported/redbits/images/botaoSincronizar-85AE93D2-A7F3-46C7-8A00-F93EABDB7282.png
+../imported/redbits/images/glicemiaResultado-ACD2C086-E748-4060-A7FD-554A4612AB58.png
+../imported/redbits/images/Group-247D9C24-2497-4DDC-AC0B-F9646F18A0C4.png
+../imported/redbits/images/Group-85DB2984-F862-44D1-8C2F-C4DCB707C0F1.png
+../imported/redbits/images/Group-881D8C15-7561-49A9-978F-C39CE304E373.png
+../imported/redbits/images/Group-8B2E3F90-0381-4840-A4A5-CA85BD0E6858.png
+../imported/redbits/images/Group-91365ABD-000F-439D-9470-20130FE4ADC4.png
+../imported/redbits/images/Group-9B437A83-F8D9-480E-BA72-D3A16F8955C4.png
+../imported/redbits/images/Group-B8FF3DD5-7BA4-4518-ABC9-72A39E0B612D.png
+../imported/redbits/images/Group-BDDDF522-361A-4F0C-8E4D-DDFA5F58D23B.png
+../imported/redbits/images/Group-D1FCD155-F630-4A6A-B6D1-BAECF05A7254.png
+../imported/redbits/images/Group_2-33A29CA5-A9B0-4FDC-AACF-6678E19A5B18.png
+../imported/redbits/images/Group_2-358B30CA-2611-47FF-A0FE-DEFF0DFECA6E.png
+../imported/redbits/images/Group_2-41143BC1-9378-42C9-988C-AE0F7914E9AE.png
+../imported/redbits/images/Group_2-9AC069BE-FF8A-4E98-AC79-48D3F6887E2D.png
+../imported/redbits/images/Group_4-FF2F3BD5-202B-4CC0-A77A-D4A2E5619F4E.png
+../imported/redbits/images/Group_5-37514708-493F-4693-AE2E-FB70EB4ABF57.png
+../imported/redbits/images/Group_6-4BF7369C-65FB-4D34-8509-7F66DE118F13.png
+../imported/redbits/images/Group_7-29AA3D99-4861-4CD7-88AC-C38CEA5F97BC.png
+../imported/redbits/images/hemogramaResultado-038B71D6-9429-4F68-9E72-8FB5294F1FF0.png
+../imported/redbits/images/Line__Line__Line_2-92A7BEEB-C5D9-4C5A-B044-6F0A2E4C483F.png
+../imported/redbits/images/navigation-CD4ECF05-6C59-470A-BA7A-212F24BDA3A5.png
+../imported/redbits/images/navigationBlack-46F4012D-A8A6-4263-AAED-5047E9E42250.png
+../imported/redbits/images/openMenu-41A10ADC-0A8D-420D-8285-151327C82CD0.png
+../imported/redbits/images/Oval_102__selected_10-6BE899A9-0E02-488F-BF2C-1620FD5987B8.png
+../imported/redbits/images/Oval_102__selected_11-1B6F609F-F750-4D86-AE51-71A0F54BF898.png
+../imported/redbits/images/Oval_102__selected_12-318FC23B-AC72-4F65-83A8-76972E08180B.png
+../imported/redbits/images/Oval_102__selected_7-2BB53093-0474-4EA6-870D-D99132438EAC.png
+../imported/redbits/images/Oval_102__selected_8-B87A9C49-2B56-47DD-AC23-3AD0813AA0AD.png
+../imported/redbits/images/Oval_102__selected_9-B0FAB909-771B-44DE-97B9-41D1D38CE44B.png
+../imported/redbits/images/Oval_102__Triangle_3__LAB_2-C4B0DDF7-A8CF-4784-B4C5-787B708C47D4.png
+../imported/redbits/images/Oval_103__Rectangle_13__Oval_7-2B4D8C8C-E4DC-4F3A-A466-92AA0C70356E.png
+../imported/redbits/images/perfilLipidicoResultado-9011B0A1-3691-4F57-9454-4F65A8942526.png
+../imported/redbits/images/Rectangle_109__Bem_vindo__Sincronize_os_seus_e-B47FB2B8-4E77-4D6B-B5F7-53E7B1AF8AEC.png
+../imported/redbits/images/Rectangle_13__Oval_7-A1192BE3-14C2-4172-9E17-07380DCEB010.png
+../imported/redbits/images/Rectangle_34__Oval_33-7E547020-C8EF-4325-9E7D-2D587C7EE97C.png
+../imported/redbits/images/splashScreen-1B357EF7-1CDD-4184-B4BC-28BE2D094829.png
+../imported/redbits/images/startExames-40B2D8F8-24EE-44E6-A468-DD96EA617F14.png
+../imported/redbits/images/Sync_icon_4-7F1A46B2-643B-4E26-8ECA-8A06A3987128.png
+../imported/redbits/layers.json
+../imported/redbits/layers.json.js
+../index.html
+../offline.html
+SETTINGS:
+prefer-online
