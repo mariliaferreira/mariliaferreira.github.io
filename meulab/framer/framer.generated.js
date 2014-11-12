@@ -1365,13 +1365,13 @@ window.__imported__["redbits2/layers.json.js"] = [
       },
       {
         "maskFrame" : null,
-        "id" : "B3184981-60F1-45CA-AF5E-60A8B4D86061",
+        "id" : "C78BEF7A-ED74-4076-8367-154B64344F4E",
         "visible" : true,
         "children" : [
 
         ],
         "image" : {
-          "path" : "images\/telaComparar-B3184981-60F1-45CA-AF5E-60A8B4D86061.png",
+          "path" : "images\/telaComparar-C78BEF7A-ED74-4076-8367-154B64344F4E.png",
           "frame" : {
             "y" : 0,
             "x" : 0,
