@@ -185,7 +185,7 @@ superResultadoHemograma = new Layer
 	width: 544
 	height: 1135
 	x: 50
-	y: 220
+	y: 120
 	opacity: 0
 	rotationY: 180
 	
@@ -447,8 +447,8 @@ handleCard = (card_layer, backcard_layer, close_layer, super_layer, y_pos) ->
 			super_layer.visible = false
 
 handleCard(cardLipidico, resultadoLipidico, fechar, superResultadoLipidico, -831)
-handleCard(cardGlicemia, resultadoGlicemia, fechar2, superResultadoGlicemia, -831)
-handleCard(cardHemograma, resultadoHemograma, fechar3, superResultadoHemograma, -831)
+handleCard(cardGlicemia, resultadoGlicemia, fechar2, superResultadoGlicemia, -131)
+handleCard(cardHemograma, resultadoHemograma, fechar3, superResultadoHemograma, -2231)
 
 
 	

@@ -765,7 +765,7 @@ window.__imported__["redbits2/layers.json.js"] = [
             "image" : {
               "path" : "images\/Oval_101__Imported_Layers-EFE71D9D-81BC-4B7C-856C-138AFFB97D95.png",
               "frame" : {
-                "y" : 245,
+                "y" : 225,
                 "x" : 133,
                 "width" : 191,
                 "height" : 191
@@ -773,7 +773,7 @@ window.__imported__["redbits2/layers.json.js"] = [
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 245,
+              "y" : 225,
               "x" : 133,
               "width" : 191,
               "height" : 191
