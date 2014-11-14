@@ -196,6 +196,9 @@ superHiperCard = new Layer
 	y: 130
 	opacity: 1
 
+
+
+
 #imagens importadas
 navigation = redbits2Layers.navigation
 zeroExames = redbits2Layers.zeroExames
@@ -220,6 +223,13 @@ telaComparar = redbits2Layers.telaComparar
 examesAntigosTitle = redbits2Layers.examesAntigosTitle
 compararExamesTitle = redbits2Layers.compararExamesTitle
 bigTitle = redbits2Layers.exameTitle
+splashScreen = redbits2Layers.splashScreen
+
+
+Utils.delay 1, ->
+  splashScreen.animate
+    properties: {opacity: 0}
+    time: 0.5	
 
 
 #inicialização
@@ -258,6 +268,7 @@ telaComparar.opacity = 0
 examesAntigosTitle.opacity = 0
 compararExamesTitle.opacity = 0
 exameTitle = 1
+splashScreen.opacity = 0
 
 superHiperCard.backgroundColor = "white"
 
