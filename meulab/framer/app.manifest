@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 1415945977.491579
+# 1415946803.718198
 CACHE:
 /_server/server.js
 ../.DS_Store
@@ -42,8 +42,9 @@ CACHE:
 ../imported/redbits2/images/cardLipidico-9F8D89AD-8804-48DF-9100-5FEA43EBF13D.png
 ../imported/redbits2/images/comparar-F8E042DB-7129-45EF-B1D0-CDDF5B6CC509.png
 ../imported/redbits2/images/compararExamesTitle-7C133833-7675-4511-AF1C-626C20E3BE96.png
+../imported/redbits2/images/Exame-57E9C9AB-71D3-4D62-9A79-8EAC19599D45.png
 ../imported/redbits2/images/examesAntigos-64AB9DE8-A0C1-4658-B792-7CDAD867C5AA.png
-../imported/redbits2/images/examesAntigosLista-A34C9BBA-F88A-471F-8CA3-E09D2AA397BE.png
+../imported/redbits2/images/examesAntigosLista-E29672BB-3139-422D-8CAD-A6A09DDC7FB9.png
 ../imported/redbits2/images/examesAntigosTitle-4D3B6E52-DEE0-4779-9393-DD6C63F05263.png
 ../imported/redbits2/images/exameTitle-AD83DD47-ED67-4C56-8EDF-D1B70A8023D9.png
 ../imported/redbits2/images/fechar-81BE8B70-B946-4AE4-8D43-C367E0814E2F.png
@@ -51,7 +52,6 @@ CACHE:
 ../imported/redbits2/images/fechar3-BD583307-FAB8-4A13-847B-A2DCB3F98D83.png
 ../imported/redbits2/images/Group-B1ABA035-CB26-41F8-B79A-E8210E29131C.png
 ../imported/redbits2/images/Group_2-F458BE09-C6C4-43CB-BF33-E72E96643F35.png
-../imported/redbits2/images/Group_2__Exame-0308DF04-712B-430D-8D7D-370E96A7EB42.png
 ../imported/redbits2/images/navigation-25C1132A-7A08-4E15-BDAC-0AC89E377AD1.png
 ../imported/redbits2/images/navigationBlack-D8631016-156F-4A1B-8263-54E2B75F44C5.png
 ../imported/redbits2/images/Oval_101__Imported_Layers-96CD4A33-18B2-4AAD-8E9B-01CC62509F1B.png
@@ -79,17 +79,17 @@ CACHE:
 ../imported/redbits2/images/Oval_101__Imported_Layers_9-0A9CAF97-D750-4FEB-8AD4-38EED307C836.png
 ../imported/redbits2/images/Oval_161__selected-1BA39DD3-A6C8-4686-8B46-3F313B592E3C.png
 ../imported/redbits2/images/Oval_162__selected_2-EFDEEAF2-1A45-4C7F-BF69-575164333443.png
-../imported/redbits2/images/Oval_163___2-7009624E-A368-4F1B-9A29-3D06E893322A.png
+../imported/redbits2/images/Oval_163__-C5A2243E-CB0D-4B3A-A912-24F553DF58F3.png
 ../imported/redbits2/images/Oval_99__selected_3-DDF4DD27-002A-4E29-B110-DC1B98123023.png
 ../imported/redbits2/images/Oval_99__selected_4-2389D531-CCED-4CCA-BA96-475D1A8049D0.png
 ../imported/redbits2/images/Oval_99__selected_4-A1C48716-6C0F-4F68-B2D0-A65677934A50.png
 ../imported/redbits2/images/paginaDois-FC8D075C-480D-4365-8E27-158708467AC6.png
 ../imported/redbits2/images/paginaTres-E53D9000-AAA7-4D97-979A-E79D537750F5.png
 ../imported/redbits2/images/paginaUm-0253F20D-2076-4F69-9FDD-8718019313CA.png
-../imported/redbits2/images/recents_24-B3288F28-151F-4431-A0E0-38C0294616F4.png
+../imported/redbits2/images/recents_24-FD83E842-054B-4F11-9DC4-C2CA37207755.png
 ../imported/redbits2/images/startExames-7F67F92E-434E-4906-9086-5997B2F60EDC.png
 ../imported/redbits2/images/Sync_icon_5-D4E8A7B7-6482-422E-AF9B-1D7B7A8DCF9B.png
-../imported/redbits2/images/telaComparar-C78BEF7A-ED74-4076-8367-154B64344F4E.png
+../imported/redbits2/images/telaComparar-F864A0DD-9EEC-45AC-AD24-72FBC21501CC.png
 ../imported/redbits2/images/telaPerfilUsuario-F8B6CF2D-38A8-481C-B503-5DC799E72C7E.png
 ../imported/redbits2/images/time_4-210E78B8-DD3F-4FEC-A0DA-0D82EA9400BA.png
 ../imported/redbits2/images/zeroExames-0D3A37AD-F42C-4D29-8BAC-1BD6551970A4.png
