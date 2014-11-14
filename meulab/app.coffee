@@ -227,6 +227,7 @@ HEIGHT = 1136
 WIDTH = 640
 zeroExames.opacity = 0
 startExames.x = WIDTH
+startExames.y = -100
 cardLipidico.x = 570
 cardLipidico.y = 80
 cardGlicemia.x = 1130
