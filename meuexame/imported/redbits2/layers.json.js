@@ -8,7 +8,7 @@ window.__imported__["redbits2/layers.json.js"] = [
       {
         "maskFrame" : null,
         "id" : "8570977C-F2A5-4E0C-B683-DA5992067C4D",
-        "visible" : true,
+        "visible" : false,
         "children" : [
           {
             "maskFrame" : null,
@@ -20,18 +20,18 @@ window.__imported__["redbits2/layers.json.js"] = [
             "image" : {
               "path" : "images\/Imported_Layers-DB08B065-95BC-49C1-A253-6ACE8CE3BA84.png",
               "frame" : {
-                "y" : 481,
-                "x" : 138,
-                "width" : 350,
-                "height" : 110
+                "y" : 382,
+                "x" : 38,
+                "width" : 550,
+                "height" : 309
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 481,
-              "x" : 138,
-              "width" : 350,
-              "height" : 110
+              "y" : 382,
+              "x" : 38,
+              "width" : 550,
+              "height" : 309
             },
             "name" : "Imported_Layers"
           }
@@ -88,18 +88,18 @@ window.__imported__["redbits2/layers.json.js"] = [
         "image" : {
           "path" : "images\/fechar3-BD583307-FAB8-4A13-847B-A2DCB3F98D83.png",
           "frame" : {
-            "y" : 70,
-            "x" : 535,
-            "width" : 29,
-            "height" : 29
+            "y" : 45,
+            "x" : 500,
+            "width" : 111,
+            "height" : 77
           }
         },
         "imageType" : "png",
         "layerFrame" : {
-          "y" : 70,
-          "x" : 535,
-          "width" : 29,
-          "height" : 29
+          "y" : 45,
+          "x" : 500,
+          "width" : 111,
+          "height" : 77
         },
         "name" : "fechar3"
       },
@@ -1843,7 +1843,7 @@ window.__imported__["redbits2/layers.json.js"] = [
           "frame" : {
             "y" : 141,
             "x" : 0,
-            "width" : 622,
+            "width" : 640,
             "height" : 995
           }
         },
@@ -1851,7 +1851,7 @@ window.__imported__["redbits2/layers.json.js"] = [
         "layerFrame" : {
           "y" : 141,
           "x" : 0,
-          "width" : 622,
+          "width" : 640,
           "height" : 995
         },
         "name" : "examesAntigosLista"
