@@ -476,7 +476,7 @@
       {
         "maskFrame" : null,
         "id" : "0D3A37AD-F42C-4D29-8BAC-1BD6551970A4",
-        "visible" : true,
+        "visible" : false,
         "children" : [
           {
             "maskFrame" : null,
@@ -498,18 +498,18 @@
                     "image" : {
                       "path" : "images\/Line__Line_3-FF20CD4B-1669-424E-A946-2646CB5F6F96.png",
                       "frame" : {
-                        "y" : 772,
-                        "x" : 131,
-                        "width" : 19,
-                        "height" : 14
+                        "y" : 671,
+                        "x" : 33,
+                        "width" : 217,
+                        "height" : 213
                       }
                     },
                     "imageType" : "png",
                     "layerFrame" : {
-                      "y" : 772,
-                      "x" : 131,
-                      "width" : 19,
-                      "height" : 14
+                      "y" : 671,
+                      "x" : 33,
+                      "width" : 217,
+                      "height" : 213
                     },
                     "name" : "Line__Line_3"
                   },
@@ -523,18 +523,18 @@
                     "image" : {
                       "path" : "images\/Line__Line_2-9607143D-DF1A-4076-9E8A-5D8B29FA4E23.png",
                       "frame" : {
-                        "y" : 767,
-                        "x" : 76,
-                        "width" : 21,
-                        "height" : 13
+                        "y" : 669,
+                        "x" : -21,
+                        "width" : 215,
+                        "height" : 209
                       }
                     },
                     "imageType" : "png",
                     "layerFrame" : {
-                      "y" : 767,
-                      "x" : 76,
-                      "width" : 21,
-                      "height" : 13
+                      "y" : 669,
+                      "x" : -21,
+                      "width" : 215,
+                      "height" : 209
                     },
                     "name" : "Line__Line_2"
                   }
@@ -542,18 +542,18 @@
                 "image" : {
                   "path" : "images\/Sync_icon_5-D4E8A7B7-6482-422E-AF9B-1D7B7A8DCF9B.png",
                   "frame" : {
-                    "y" : 745,
-                    "x" : 76,
-                    "width" : 74,
-                    "height" : 58
+                    "y" : 645,
+                    "x" : -21,
+                    "width" : 271,
+                    "height" : 257
                   }
                 },
                 "imageType" : "png",
                 "layerFrame" : {
-                  "y" : 745,
-                  "x" : 76,
-                  "width" : 74,
-                  "height" : 58
+                  "y" : 645,
+                  "x" : -21,
+                  "width" : 271,
+                  "height" : 257
                 },
                 "name" : "Sync_icon_5"
               }
@@ -561,18 +561,18 @@
             "image" : {
               "path" : "images\/Group-B1ABA035-CB26-41F8-B79A-E8210E29131C.png",
               "frame" : {
-                "y" : 0,
-                "x" : 0,
-                "width" : 640,
-                "height" : 1136
+                "y" : -103,
+                "x" : -100,
+                "width" : 886,
+                "height" : 1343
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 0,
-              "x" : 0,
-              "width" : 640,
-              "height" : 1136
+              "y" : -103,
+              "x" : -100,
+              "width" : 886,
+              "height" : 1343
             },
             "name" : "Group"
           }
@@ -1465,7 +1465,7 @@
       {
         "maskFrame" : null,
         "id" : "F4B6B314-D330-4A4B-8103-610FD3DEC790",
-        "visible" : false,
+        "visible" : true,
         "children" : [
           {
             "maskFrame" : null,
@@ -1477,18 +1477,18 @@
             "image" : {
               "path" : "images\/paginaUm-0253F20D-2076-4F69-9FDD-8718019313CA.png",
               "frame" : {
-                "y" : 940,
-                "x" : 184,
-                "width" : 271,
-                "height" : 233
+                "y" : 1045,
+                "x" : 285,
+                "width" : 70,
+                "height" : 22
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 940,
-              "x" : 184,
-              "width" : 271,
-              "height" : 233
+              "y" : 1045,
+              "x" : 285,
+              "width" : 70,
+              "height" : 22
             },
             "name" : "paginaUm"
           }
@@ -1514,7 +1514,7 @@
       {
         "maskFrame" : null,
         "id" : "A765A231-A28B-4219-AB74-7D01D93DAA2D",
-        "visible" : false,
+        "visible" : true,
         "children" : [
           {
             "maskFrame" : null,
@@ -1526,18 +1526,18 @@
             "image" : {
               "path" : "images\/paginaDois-FC8D075C-480D-4365-8E27-158708467AC6.png",
               "frame" : {
-                "y" : 945,
-                "x" : 177,
-                "width" : 283,
-                "height" : 234
+                "y" : 1050,
+                "x" : 278,
+                "width" : 81,
+                "height" : 23
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 945,
-              "x" : 177,
-              "width" : 283,
-              "height" : 234
+              "y" : 1050,
+              "x" : 278,
+              "width" : 81,
+              "height" : 23
             },
             "name" : "paginaDois"
           }
@@ -1563,7 +1563,7 @@
       {
         "maskFrame" : null,
         "id" : "B0463AA3-0560-4680-9BE5-DCCEE9447C65",
-        "visible" : false,
+        "visible" : true,
         "children" : [
           {
             "maskFrame" : null,
@@ -1575,18 +1575,18 @@
             "image" : {
               "path" : "images\/paginaTres-E53D9000-AAA7-4D97-979A-E79D537750F5.png",
               "frame" : {
-                "y" : 945,
-                "x" : 177,
-                "width" : 284,
-                "height" : 234
+                "y" : 1050,
+                "x" : 278,
+                "width" : 81,
+                "height" : 23
               }
             },
             "imageType" : "png",
             "layerFrame" : {
-              "y" : 945,
-              "x" : 177,
-              "width" : 284,
-              "height" : 234
+              "y" : 1050,
+              "x" : 278,
+              "width" : 81,
+              "height" : 23
             },
             "name" : "paginaTres"
           }
@@ -1879,6 +1879,81 @@
           "height" : 1122
         },
         "name" : "telaComparar"
+      },
+      {
+        "maskFrame" : null,
+        "id" : "E5BED47A-19CF-4A3A-A713-62B51BBB8028",
+        "visible" : true,
+        "children" : [
+
+        ],
+        "image" : {
+          "path" : "images\/telaCompararDois-E5BED47A-19CF-4A3A-A713-62B51BBB8028.png",
+          "frame" : {
+            "y" : 435,
+            "x" : 73,
+            "width" : 513,
+            "height" : 649
+          }
+        },
+        "imageType" : "png",
+        "layerFrame" : {
+          "y" : 435,
+          "x" : 73,
+          "width" : 513,
+          "height" : 649
+        },
+        "name" : "telaCompararDois"
+      },
+      {
+        "maskFrame" : null,
+        "id" : "8ABB9AD7-3A73-440A-9696-760D076D2A45",
+        "visible" : true,
+        "children" : [
+
+        ],
+        "image" : {
+          "path" : "images\/telaCompararTres-8ABB9AD7-3A73-440A-9696-760D076D2A45.png",
+          "frame" : {
+            "y" : 317,
+            "x" : 0,
+            "width" : 639,
+            "height" : 767
+          }
+        },
+        "imageType" : "png",
+        "layerFrame" : {
+          "y" : 317,
+          "x" : 0,
+          "width" : 639,
+          "height" : 767
+        },
+        "name" : "telaCompararTres"
+      },
+      {
+        "maskFrame" : null,
+        "id" : "AF365900-1135-454D-A07A-79EB06F2BC5D",
+        "visible" : true,
+        "children" : [
+
+        ],
+        "image" : {
+          "path" : "images\/telaCompararQuatro-AF365900-1135-454D-A07A-79EB06F2BC5D.png",
+          "frame" : {
+            "y" : 317,
+            "x" : 0,
+            "width" : 639,
+            "height" : 767
+          }
+        },
+        "imageType" : "png",
+        "layerFrame" : {
+          "y" : 317,
+          "x" : 0,
+          "width" : 639,
+          "height" : 767
+        },
+        "name" : "telaCompararQuatro"
       }
     ],
     "image" : {

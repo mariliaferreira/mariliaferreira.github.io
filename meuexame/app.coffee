@@ -31,6 +31,14 @@ Layer::fadeInXRight = ->
     time: 0.2,
     curve: "ease-in-out"
   this.visible=true
+  
+Layer::fadeInXExame = ->
+  return this.animate
+    properties:
+      x: 160
+    time: 0.2,
+    curve: "ease-in-out"
+  this.visible=true
 
 Layer::fadeOutX = ->
   return this.animate
@@ -155,6 +163,18 @@ resultadoHemograma = new Layer
 	x: -50
 	y: -250
 	scale: 0.85
+	
+botaoCompararExameSet = new Layer
+	width: 200
+	height: 100
+
+botaoCompararExameNov = new Layer
+	width: 200
+	height: 100
+
+botaoCompararExameMar = new Layer
+	width: 200
+	height: 100
 
 # superlayers
 
@@ -224,6 +244,9 @@ examesAntigosTitle = redbits2Layers.examesAntigosTitle
 compararExamesTitle = redbits2Layers.compararExamesTitle
 bigTitle = redbits2Layers.exameTitle
 splashScreen = redbits2Layers.splashScreen
+telaCompararDois = redbits2Layers.telaCompararDois
+telaCompararTres = redbits2Layers.telaCompararTres
+telaCompararQuatro = redbits2Layers.telaCompararQuatro
 
 
 Utils.delay 1, ->
@@ -269,13 +292,41 @@ examesAntigosTitle.opacity = 0
 compararExamesTitle.opacity = 0
 exameTitle = 1
 splashScreen.opacity = 0
+telaCompararDois.opacity = 0
+telaCompararTres.opacity = 0
+telaCompararQuatro.opacity = 0
+telaCompararDois.x = 465
+telaCompararDois.y = 310
+telaCompararTres.x = 87
+telaCompararTres.y = 192
+telaCompararQuatro.x = 87
+telaCompararQuatro.y = 192
+botaoCompararExameSet.x = 300
+botaoCompararExameSet.y = 850
+botaoCompararExameSet.opacity = 0
+botaoCompararExameSet.visible = false
+botaoCompararExameNov.x = 500
+botaoCompararExameNov.y = 850
+botaoCompararExameNov.opacity = 0
+botaoCompararExameNov.visible = false
+botaoCompararExameMar.x = 100
+botaoCompararExameMar.y = 850
+botaoCompararExameMar.opacity = 0
+botaoCompararExameMar.visible = false
+
 
 superHiperCard.backgroundColor = "white"
 
 superHiperCard.addSubLayer(superCardHorizontal)
 superHiperCard.addSubLayer(telaPerfilUsuario)
 superHiperCard.addSubLayer(telaComparar)
+superHiperCard.addSubLayer(telaCompararDois)
+superHiperCard.addSubLayer(telaCompararTres)
+superHiperCard.addSubLayer(telaCompararQuatro)
 superHiperCard.addSubLayer(examesAntigosLista)
+superHiperCard.addSubLayer(botaoCompararExameSet)
+superHiperCard.addSubLayer(botaoCompararExameNov)
+superHiperCard.addSubLayer(botaoCompararExameMar)
 
 # Configuracao do scroll horizontal
 superCardHorizontal.draggable.enabled = true
@@ -356,6 +407,20 @@ changeScene = (scene) ->
 			animWait1.on Events.AnimationEnd, ->
 				examesAntigosicone.visible = false
 			bigTitle.opacidadeEsconder()
+			telaCompararDois.bringToFront()
+			telaCompararDois.fadeInXExame()
+			telaCompararDois.opacity = 1
+			botaoCompararExameSet.bringToFront()
+			botaoCompararExameSet.visible = true
+			botaoCompararExameNov.bringToFront()
+			botaoCompararExameMar.bringToFront()
+			
+			botaoCompararExameNov.visible = true
+			botaoCompararExameSet.visible = true
+			botaoCompararExameMar.visible = true
+			telaCompararDois.visible = true
+			telaCompararTres.visible = true
+			telaCompararQuatro.visible = true
 			
 		when 4 
 			superHiperCard.states.switch("stateA")
@@ -366,6 +431,13 @@ changeScene = (scene) ->
 			examesAntigosicone.visible = true
 			compararExamesTitle.opacidadeEsconder()
 			bigTitle.opacidadeMostrar()
+			
+			botaoCompararExameNov.visible = false
+			botaoCompararExameSet.visible = false
+			botaoCompararExameMar.visible = false
+			telaCompararDois.visible = false
+			telaCompararTres.visible = false
+			telaCompararQuatro.visible = false
 			
 		when 5
 			examesAntigosicone.botaoExamesAntigos()
@@ -380,7 +452,21 @@ changeScene = (scene) ->
 			bigTitle.opacidadeMostrar()
 			superHiperCard.states.switch("stateA")
 			superHiperCard.states.switch("stateD")
-			
+		when 7
+			telaCompararTres.bringToFront()
+			telaCompararTres.opacidadeMostrar()
+			telaCompararDois.opacidadeEsconder()
+			telaCompararQuatro.opacidadeEsconder()
+		when 8
+			telaCompararDois.bringToFront()
+			telaCompararDois.opacidadeMostrar()
+			telaCompararTres.opacidadeEsconder()
+			telaCompararQuatro.opacidadeEsconder()
+		when 9
+			telaCompararQuatro.bringToFront()
+			telaCompararQuatro.opacidadeMostrar()
+			telaCompararTres.opacidadeEsconder()
+			telaCompararDois.opacidadeEsconder()
 
 		
 Layer::botaoComparar = ->
@@ -416,6 +502,14 @@ examesAntigosicone.on Events.Click, ->
 backExamesAntigos.on Events.Click, -> 
 	changeScene(6)
 
+botaoCompararExameSet.on Events.Click, ->
+	changeScene(7)
+	
+botaoCompararExameNov.on Events.Click, ->
+	changeScene(8)
+	
+botaoCompararExameMar.on Events.Click, ->
+	changeScene(9)
 
 superHiperCard.states.add("stateA", {x:0})
 superHiperCard.states.add("stateB", {x:-100})
