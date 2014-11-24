@@ -175,6 +175,14 @@ botaoCompararExameNov = new Layer
 botaoCompararExameMar = new Layer
 	width: 200
 	height: 100
+	
+botaoPerfilUsuario = new Layer
+	width: 500
+	height: 100
+	
+backBotaoPerfilUsuario = new Layer
+	width: 640
+	height: 200
 
 # superlayers
 
@@ -247,6 +255,12 @@ splashScreen = redbits2Layers.splashScreen
 telaCompararDois = redbits2Layers.telaCompararDois
 telaCompararTres = redbits2Layers.telaCompararTres
 telaCompararQuatro = redbits2Layers.telaCompararQuatro
+zerodetres = redbits2Layers.zerodetres
+umdetres = redbits2Layers.umdetres
+doisdetres = redbits2Layers.doisdetres
+tresdetres = redbits2Layers.tresdetres
+meuPerfilTitle = redbits2Layers.meuPerfilTitle
+
 
 
 Utils.delay 1, ->
@@ -269,16 +283,13 @@ cardHemograma.x = 1710
 cardHemograma.y = 80
 fechar.x = 480
 fechar2.x = 480
-fechar3.x = 480
+fechar3.x = 460
 superResultadoLipidico.shadowX = 3
 superResultadoLipidico.shadowY = 3
 superResultadoLipidico.shadowBlur = 4
 superResultadoLipidico.shadowColor = "rgba(0,0,0,0.2)"
 superResultadoLipidico.visible = false
 superResultadoGlicemia.visible = false
-telaPerfilUsuario.x = WIDTH
-telaPerfilUsuario.y = 0
-telaPerfilUsuario.opacity = 0
 back.visible = false
 backComparar.visible = false
 backExamesAntigos.visible = false
@@ -313,9 +324,29 @@ botaoCompararExameMar.x = 100
 botaoCompararExameMar.y = 850
 botaoCompararExameMar.opacity = 0
 botaoCompararExameMar.visible = false
-
+botaoPerfilUsuario.y = 900
+botaoPerfilUsuario.visible = false
+telaPerfilUsuario.visible = false
+telaPerfilUsuario.x = 0
+telaPerfilUsuario.y = 0
+meuPerfilTitle.opacity = 0
+backBotaoPerfilUsuario.visible = false
+backBotaoPerfilUsuario.opacity = 0
+botaoPerfilUsuario.opacity = 0
+zerodetres.visible = true
+umdetres.visible = false
+doisdetres.visible = false
+tresdetres.visible = false
+zerodetres.bringToFront()
+umdetres.bringToFront()
+doisdetres.bringToFront()
+tresdetres.bringToFront()
+umdetres.x = 800
+doisdetres.x = 1350
+tresdetres.x = 1940
 
 superHiperCard.backgroundColor = "white"
+
 
 superHiperCard.addSubLayer(superCardHorizontal)
 superHiperCard.addSubLayer(telaPerfilUsuario)
@@ -327,6 +358,10 @@ superHiperCard.addSubLayer(examesAntigosLista)
 superHiperCard.addSubLayer(botaoCompararExameSet)
 superHiperCard.addSubLayer(botaoCompararExameNov)
 superHiperCard.addSubLayer(botaoCompararExameMar)
+superHiperCard.addSubLayer(botaoPerfilUsuario)
+
+
+
 
 # Configuracao do scroll horizontal
 superCardHorizontal.draggable.enabled = true
@@ -336,6 +371,7 @@ superCardHorizontal.states.add("inicioCard", {x:0})
 superCardHorizontal.states.add("segundoCard", {x:-530})
 superCardHorizontal.states.add("terceiroCard", {x:-1084})
 superCardHorizontal.states.add("quartoCard", {x:-1638})
+
 superCardHorizontal.states.next(["inicioCard", "segundoCard", "terceiroCard", "quartoCard"])
 
 superCardHorizontal.states.animationOptions = {
@@ -347,6 +383,10 @@ superCardHorizontal.addSubLayer(startExames)
 superCardHorizontal.addSubLayer(cardLipidico)
 superCardHorizontal.addSubLayer(cardGlicemia)
 superCardHorizontal.addSubLayer(cardHemograma)
+superCardHorizontal.addSubLayer(zerodetres)
+superCardHorizontal.addSubLayer(umdetres)
+superCardHorizontal.addSubLayer(doisdetres)
+superCardHorizontal.addSubLayer(tresdetres)
 
 
 # Resultado Lipidico
@@ -379,6 +419,7 @@ cardGlicemia.bringToFront()
 cardHemograma.bringToFront()
 
 
+
 #eventos
 
 superCardHorizontal.on Events.DragStart, ->
@@ -397,6 +438,29 @@ superCardHorizontal.on Events.DragEnd, ->
 			superCardHorizontal.states.previous()			
 		else
 			superCardHorizontal.states.switch(initialState)
+	final_state = superCardHorizontal.states.state
+
+	if final_state == "inicioCard"
+		zerodetres.visible = true
+		umdetres.visible = false
+		doisdetres.visible = false
+		tresdetres.visible = false
+	else if final_state == "segundoCard"
+		umdetres.visible = true
+		zerodetres.visible = false
+		doisdetres.visible = false
+		tresdetres.visible = false
+	else if final_state == "terceiroCard"
+		doisdetres.visible = true
+		umdetres.visible = false
+		zerodetres.visible = false
+		tresdetres.visible = false
+	else if final_state == "quartoCard"
+		tresdetres.visible = true
+		zerodetres.visible = false
+		umdetres.visible = false
+		doisdetres.visible = false
+		
 
 changeScene = (scene) ->
 	switch scene
@@ -443,6 +507,8 @@ changeScene = (scene) ->
 			examesAntigosicone.botaoExamesAntigos()
 			examesAntigosTitle.opacidadeMostrar()
 			bigTitle.opacidadeEsconder()
+			botaoPerfilUsuario.bringToFront()
+			botaoPerfilUsuario.visible = true
 		when 6
 			examesAntigosLista.fadeOutX()
 			backExamesAntigos.visible = false
@@ -452,6 +518,8 @@ changeScene = (scene) ->
 			bigTitle.opacidadeMostrar()
 			superHiperCard.states.switch("stateA")
 			superHiperCard.states.switch("stateD")
+			telaPerfilUsuario.visible = false
+			botaoPerfilUsuario.visible = false
 		when 7
 			telaCompararTres.bringToFront()
 			telaCompararTres.opacidadeMostrar()
@@ -467,6 +535,21 @@ changeScene = (scene) ->
 			telaCompararQuatro.opacidadeMostrar()
 			telaCompararTres.opacidadeEsconder()
 			telaCompararDois.opacidadeEsconder()
+		when 10
+			telaPerfilUsuario.bringToFront()
+			telaPerfilUsuario.visible = true
+			telaPerfilUsuario.fadeInY()
+			backExamesAntigos.opacidadeEsconder()
+			examesAntigosTitle.opacidadeEsconder()
+			telaPerfilUsuario.opacidadeMostrar()
+			meuPerfilTitle.opacidadeMostrar()
+			backBotaoPerfilUsuario.visible = true
+		when 11
+			meuPerfilTitle.opacidadeEsconder()
+			backExamesAntigos.opacidadeMostrar()
+			examesAntigosTitle.opacidadeMostrar()
+			telaPerfilUsuario.opacidadeEsconder()
+			backBotaoPerfilUsuario.visible = false
 
 		
 Layer::botaoComparar = ->
@@ -510,6 +593,12 @@ botaoCompararExameNov.on Events.Click, ->
 	
 botaoCompararExameMar.on Events.Click, ->
 	changeScene(9)
+	
+botaoPerfilUsuario.on Events.Click, ->
+	changeScene(10)
+	
+backBotaoPerfilUsuario.on Events.Click, ->
+	changeScene(11)
 
 superHiperCard.states.add("stateA", {x:0})
 superHiperCard.states.add("stateB", {x:-100})

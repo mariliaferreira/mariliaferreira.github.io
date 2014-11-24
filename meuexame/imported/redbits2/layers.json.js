@@ -382,6 +382,31 @@ window.__imported__["redbits2/layers.json.js"] = [
           },
           {
             "maskFrame" : null,
+            "id" : "5AD804BB-B892-4EB3-B43F-5F84E3437574",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/meuPerfilTitle-5AD804BB-B892-4EB3-B43F-5F84E3437574.png",
+              "frame" : {
+                "y" : 69,
+                "x" : 245,
+                "width" : 330,
+                "height" : 28
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 69,
+              "x" : 245,
+              "width" : 330,
+              "height" : 28
+            },
+            "name" : "meuPerfilTitle"
+          },
+          {
+            "maskFrame" : null,
             "id" : "4D3B6E52-DEE0-4779-9393-DD6C63F05263",
             "visible" : true,
             "children" : [
@@ -603,627 +628,676 @@ window.__imported__["redbits2/layers.json.js"] = [
         "children" : [
           {
             "maskFrame" : null,
-            "id" : "5A10E609-C767-45EF-8776-FC8A0FD1983A",
+            "id" : "4540A05A-86EF-40C9-B878-2B413E19A301",
             "visible" : true,
             "children" : [
               {
                 "maskFrame" : null,
-                "id" : "0308DF04-712B-430D-8D7D-370E96A7EB42",
+                "id" : "4E0A5117-5AD8-48F8-8541-926523CED712",
+                "visible" : true,
+                "children" : [
+
+                ],
+                "image" : {
+                  "path" : "images\/zerodetres-4E0A5117-5AD8-48F8-8541-926523CED712.png",
+                  "frame" : {
+                    "y" : 1057,
+                    "x" : 281,
+                    "width" : 77,
+                    "height" : 23
+                  }
+                },
+                "imageType" : "png",
+                "layerFrame" : {
+                  "y" : 1057,
+                  "x" : 281,
+                  "width" : 77,
+                  "height" : 23
+                },
+                "name" : "zerodetres"
+              },
+              {
+                "maskFrame" : null,
+                "id" : "5A10E609-C767-45EF-8776-FC8A0FD1983A",
                 "visible" : true,
                 "children" : [
                   {
                     "maskFrame" : null,
-                    "id" : "57E9C9AB-71D3-4D62-9A79-8EAC19599D45",
-                    "visible" : true,
-                    "children" : [
-
-                    ],
-                    "image" : {
-                      "path" : "images\/Exame-57E9C9AB-71D3-4D62-9A79-8EAC19599D45.png",
-                      "frame" : {
-                        "y" : 474,
-                        "x" : 88,
-                        "width" : 376,
-                        "height" : 314
-                      }
-                    },
-                    "imageType" : "png",
-                    "layerFrame" : {
-                      "y" : 474,
-                      "x" : 88,
-                      "width" : 376,
-                      "height" : 314
-                    },
-                    "name" : "Exame"
-                  },
-                  {
-                    "maskFrame" : null,
-                    "id" : "40F3D7AF-D1F1-4A89-A04E-0FCD859F067B",
+                    "id" : "0308DF04-712B-430D-8D7D-370E96A7EB42",
                     "visible" : true,
                     "children" : [
                       {
                         "maskFrame" : null,
-                        "id" : "4F50B7C7-6481-4A3C-AEC1-9D763677AF99",
+                        "id" : "57E9C9AB-71D3-4D62-9A79-8EAC19599D45",
+                        "visible" : true,
+                        "children" : [
+
+                        ],
+                        "image" : {
+                          "path" : "images\/Exame-57E9C9AB-71D3-4D62-9A79-8EAC19599D45.png",
+                          "frame" : {
+                            "y" : 474,
+                            "x" : 88,
+                            "width" : 376,
+                            "height" : 314
+                          }
+                        },
+                        "imageType" : "png",
+                        "layerFrame" : {
+                          "y" : 474,
+                          "x" : 88,
+                          "width" : 376,
+                          "height" : 314
+                        },
+                        "name" : "Exame"
+                      },
+                      {
+                        "maskFrame" : null,
+                        "id" : "40F3D7AF-D1F1-4A89-A04E-0FCD859F067B",
                         "visible" : true,
                         "children" : [
                           {
                             "maskFrame" : null,
-                            "id" : "96510136-5942-4027-91D4-D518A9C5D89A",
+                            "id" : "4F50B7C7-6481-4A3C-AEC1-9D763677AF99",
                             "visible" : true,
                             "children" : [
+                              {
+                                "maskFrame" : null,
+                                "id" : "96510136-5942-4027-91D4-D518A9C5D89A",
+                                "visible" : true,
+                                "children" : [
 
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_19-96510136-5942-4027-91D4-D518A9C5D89A.png",
-                              "frame" : {
-                                "y" : 739,
-                                "x" : 407,
-                                "width" : 212,
-                                "height" : 212
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_19-96510136-5942-4027-91D4-D518A9C5D89A.png",
+                                  "frame" : {
+                                    "y" : 739,
+                                    "x" : 407,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 739,
+                                  "x" : 407,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_19"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "B4CC0638-EDA1-4394-84D8-5E750D128EA5",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_18-B4CC0638-EDA1-4394-84D8-5E750D128EA5.png",
+                                  "frame" : {
+                                    "y" : 736,
+                                    "x" : 279,
+                                    "width" : 211,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 736,
+                                  "x" : 279,
+                                  "width" : 211,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_18"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "6BB46912-8D04-40AF-B52B-77A3ED73A50C",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_17-6BB46912-8D04-40AF-B52B-77A3ED73A50C.png",
+                                  "frame" : {
+                                    "y" : 739,
+                                    "x" : 143,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 739,
+                                  "x" : 143,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_17"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "B6A1D925-8FF4-4DBE-B72D-DD2F5F665C9D",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_16-B6A1D925-8FF4-4DBE-B72D-DD2F5F665C9D.png",
+                                  "frame" : {
+                                    "y" : 736,
+                                    "x" : 0,
+                                    "width" : 88,
+                                    "height" : 131
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 736,
+                                  "x" : 0,
+                                  "width" : 88,
+                                  "height" : 131
+                                },
+                                "name" : "Oval_101__Imported_Layers_16"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "D500982A-87DE-4B24-8B05-06562E711DCA",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_15-D500982A-87DE-4B24-8B05-06562E711DCA.png",
+                                  "frame" : {
+                                    "y" : 736,
+                                    "x" : 14,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 736,
+                                  "x" : 14,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_15"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "E80E93E8-F1B8-4F82-981A-A4BE661A63FF",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_14-E80E93E8-F1B8-4F82-981A-A4BE661A63FF.png",
+                                  "frame" : {
+                                    "y" : 555,
+                                    "x" : 469,
+                                    "width" : 171,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 555,
+                                  "x" : 469,
+                                  "width" : 171,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_14"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "19DA3A51-8FD6-4DA0-8B2E-B0D2587045EB",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_13-19DA3A51-8FD6-4DA0-8B2E-B0D2587045EB.png",
+                                  "frame" : {
+                                    "y" : 555,
+                                    "x" : 338,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 555,
+                                  "x" : 338,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_13"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "C9F27154-0ED1-4872-9937-996A41C06A3C",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_12-C9F27154-0ED1-4872-9937-996A41C06A3C.png",
+                                  "frame" : {
+                                    "y" : 552,
+                                    "x" : 210,
+                                    "width" : 211,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 552,
+                                  "x" : 210,
+                                  "width" : 211,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_12"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "2F16D485-DEE2-4213-8ADE-BE774EC73F9E",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_11-2F16D485-DEE2-4213-8ADE-BE774EC73F9E.png",
+                                  "frame" : {
+                                    "y" : 555,
+                                    "x" : 74,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 555,
+                                  "x" : 74,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_11"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "5A1868AA-68C5-46D3-949E-B37363B5F93F",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_20-5A1868AA-68C5-46D3-949E-B37363B5F93F.png",
+                                  "frame" : {
+                                    "y" : 552,
+                                    "x" : 0,
+                                    "width" : 157,
+                                    "height" : 200
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 552,
+                                  "x" : 0,
+                                  "width" : 157,
+                                  "height" : 200
+                                },
+                                "name" : "Oval_101__Imported_Layers_20"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "B0A6B6C7-A088-4138-AA07-C507C568F332",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_7-B0A6B6C7-A088-4138-AA07-C507C568F332.png",
+                                  "frame" : {
+                                    "y" : 371,
+                                    "x" : 407,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 371,
+                                  "x" : 407,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_7"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "5BB0005A-7CD5-4481-9B7A-E3905C2C606C",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_6-5BB0005A-7CD5-4481-9B7A-E3905C2C606C.png",
+                                  "frame" : {
+                                    "y" : 369,
+                                    "x" : 278,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 369,
+                                  "x" : 278,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_6"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "2411D43C-CE37-48EF-8C8F-D4D2C83D563B",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_5-2411D43C-CE37-48EF-8C8F-D4D2C83D563B.png",
+                                  "frame" : {
+                                    "y" : 371,
+                                    "x" : 142,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 371,
+                                  "x" : 142,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_5"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "0A9CAF97-D750-4FEB-8AD4-38EED307C836",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_9-0A9CAF97-D750-4FEB-8AD4-38EED307C836.png",
+                                  "frame" : {
+                                    "y" : 369,
+                                    "x" : 0,
+                                    "width" : 87,
+                                    "height" : 130
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 369,
+                                  "x" : 0,
+                                  "width" : 87,
+                                  "height" : 130
+                                },
+                                "name" : "Oval_101__Imported_Layers_9"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "7CC5AA4A-02C8-4C12-BCC8-26C7D8B42704",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_23-7CC5AA4A-02C8-4C12-BCC8-26C7D8B42704.png",
+                                  "frame" : {
+                                    "y" : 567,
+                                    "x" : 0,
+                                    "width" : 34,
+                                    "height" : 62
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 567,
+                                  "x" : 0,
+                                  "width" : 34,
+                                  "height" : 62
+                                },
+                                "name" : "Oval_101__Imported_Layers_23"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "779436ED-0138-4FAA-AC92-8AFAC96E5DF6",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_8-779436ED-0138-4FAA-AC92-8AFAC96E5DF6.png",
+                                  "frame" : {
+                                    "y" : 369,
+                                    "x" : 13,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 369,
+                                  "x" : 13,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_8"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "4664657B-2AF7-4E15-9CF2-A7E6AC469996",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_22-4664657B-2AF7-4E15-9CF2-A7E6AC469996.png",
+                                  "frame" : {
+                                    "y" : 323,
+                                    "x" : 606,
+                                    "width" : 34,
+                                    "height" : 77
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 323,
+                                  "x" : 606,
+                                  "width" : 34,
+                                  "height" : 77
+                                },
+                                "name" : "Oval_101__Imported_Layers_22"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "31B97478-C103-410B-A66D-AAA47A35C6F7",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_21-31B97478-C103-410B-A66D-AAA47A35C6F7.png",
+                                  "frame" : {
+                                    "y" : 437,
+                                    "x" : 544,
+                                    "width" : 96,
+                                    "height" : 138
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 437,
+                                  "x" : 544,
+                                  "width" : 96,
+                                  "height" : 138
+                                },
+                                "name" : "Oval_101__Imported_Layers_21"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "3A711ACA-5BAA-4BFC-B2B3-5432D9FDAE27",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_10-3A711ACA-5BAA-4BFC-B2B3-5432D9FDAE27.png",
+                                  "frame" : {
+                                    "y" : 187,
+                                    "x" : 468,
+                                    "width" : 172,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 187,
+                                  "x" : 468,
+                                  "width" : 172,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_10"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "1C698A28-6418-465C-8612-59CE2EB1BBFA",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_3-1C698A28-6418-465C-8612-59CE2EB1BBFA.png",
+                                  "frame" : {
+                                    "y" : 187,
+                                    "x" : 338,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 187,
+                                  "x" : 338,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_3"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "CB805CC9-E202-4183-AD5D-D4D6EFC050B7",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_4-CB805CC9-E202-4183-AD5D-D4D6EFC050B7.png",
+                                  "frame" : {
+                                    "y" : 185,
+                                    "x" : 209,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 185,
+                                  "x" : 209,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_4"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "3B2FEF2F-A21A-4BA4-B2C2-08CE88061ADA",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers_2-3B2FEF2F-A21A-4BA4-B2C2-08CE88061ADA.png",
+                                  "frame" : {
+                                    "y" : 187,
+                                    "x" : 73,
+                                    "width" : 212,
+                                    "height" : 212
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 187,
+                                  "x" : 73,
+                                  "width" : 212,
+                                  "height" : 212
+                                },
+                                "name" : "Oval_101__Imported_Layers_2"
+                              },
+                              {
+                                "maskFrame" : null,
+                                "id" : "96CD4A33-18B2-4AAD-8E9B-01CC62509F1B",
+                                "visible" : true,
+                                "children" : [
+
+                                ],
+                                "image" : {
+                                  "path" : "images\/Oval_101__Imported_Layers-96CD4A33-18B2-4AAD-8E9B-01CC62509F1B.png",
+                                  "frame" : {
+                                    "y" : 185,
+                                    "x" : 0,
+                                    "width" : 156,
+                                    "height" : 198
+                                  }
+                                },
+                                "imageType" : "png",
+                                "layerFrame" : {
+                                  "y" : 185,
+                                  "x" : 0,
+                                  "width" : 156,
+                                  "height" : 198
+                                },
+                                "name" : "Oval_101__Imported_Layers"
                               }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 739,
-                              "x" : 407,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_19"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "B4CC0638-EDA1-4394-84D8-5E750D128EA5",
-                            "visible" : true,
-                            "children" : [
-
                             ],
                             "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_18-B4CC0638-EDA1-4394-84D8-5E750D128EA5.png",
-                              "frame" : {
-                                "y" : 736,
-                                "x" : 279,
-                                "width" : 211,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 736,
-                              "x" : 279,
-                              "width" : 211,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_18"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "6BB46912-8D04-40AF-B52B-77A3ED73A50C",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_17-6BB46912-8D04-40AF-B52B-77A3ED73A50C.png",
-                              "frame" : {
-                                "y" : 739,
-                                "x" : 143,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 739,
-                              "x" : 143,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_17"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "B6A1D925-8FF4-4DBE-B72D-DD2F5F665C9D",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_16-B6A1D925-8FF4-4DBE-B72D-DD2F5F665C9D.png",
-                              "frame" : {
-                                "y" : 736,
-                                "x" : 0,
-                                "width" : 88,
-                                "height" : 131
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 736,
-                              "x" : 0,
-                              "width" : 88,
-                              "height" : 131
-                            },
-                            "name" : "Oval_101__Imported_Layers_16"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "D500982A-87DE-4B24-8B05-06562E711DCA",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_15-D500982A-87DE-4B24-8B05-06562E711DCA.png",
-                              "frame" : {
-                                "y" : 736,
-                                "x" : 14,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 736,
-                              "x" : 14,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_15"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "E80E93E8-F1B8-4F82-981A-A4BE661A63FF",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_14-E80E93E8-F1B8-4F82-981A-A4BE661A63FF.png",
-                              "frame" : {
-                                "y" : 555,
-                                "x" : 469,
-                                "width" : 171,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 555,
-                              "x" : 469,
-                              "width" : 171,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_14"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "19DA3A51-8FD6-4DA0-8B2E-B0D2587045EB",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_13-19DA3A51-8FD6-4DA0-8B2E-B0D2587045EB.png",
-                              "frame" : {
-                                "y" : 555,
-                                "x" : 338,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 555,
-                              "x" : 338,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_13"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "C9F27154-0ED1-4872-9937-996A41C06A3C",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_12-C9F27154-0ED1-4872-9937-996A41C06A3C.png",
-                              "frame" : {
-                                "y" : 552,
-                                "x" : 210,
-                                "width" : 211,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 552,
-                              "x" : 210,
-                              "width" : 211,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_12"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "2F16D485-DEE2-4213-8ADE-BE774EC73F9E",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_11-2F16D485-DEE2-4213-8ADE-BE774EC73F9E.png",
-                              "frame" : {
-                                "y" : 555,
-                                "x" : 74,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 555,
-                              "x" : 74,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_11"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "5A1868AA-68C5-46D3-949E-B37363B5F93F",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_20-5A1868AA-68C5-46D3-949E-B37363B5F93F.png",
-                              "frame" : {
-                                "y" : 552,
-                                "x" : 0,
-                                "width" : 157,
-                                "height" : 200
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 552,
-                              "x" : 0,
-                              "width" : 157,
-                              "height" : 200
-                            },
-                            "name" : "Oval_101__Imported_Layers_20"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "B0A6B6C7-A088-4138-AA07-C507C568F332",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_7-B0A6B6C7-A088-4138-AA07-C507C568F332.png",
-                              "frame" : {
-                                "y" : 371,
-                                "x" : 407,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 371,
-                              "x" : 407,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_7"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "5BB0005A-7CD5-4481-9B7A-E3905C2C606C",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_6-5BB0005A-7CD5-4481-9B7A-E3905C2C606C.png",
-                              "frame" : {
-                                "y" : 369,
-                                "x" : 278,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 369,
-                              "x" : 278,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_6"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "2411D43C-CE37-48EF-8C8F-D4D2C83D563B",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_5-2411D43C-CE37-48EF-8C8F-D4D2C83D563B.png",
-                              "frame" : {
-                                "y" : 371,
-                                "x" : 142,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 371,
-                              "x" : 142,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_5"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "0A9CAF97-D750-4FEB-8AD4-38EED307C836",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_9-0A9CAF97-D750-4FEB-8AD4-38EED307C836.png",
-                              "frame" : {
-                                "y" : 369,
-                                "x" : 0,
-                                "width" : 87,
-                                "height" : 130
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 369,
-                              "x" : 0,
-                              "width" : 87,
-                              "height" : 130
-                            },
-                            "name" : "Oval_101__Imported_Layers_9"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "7CC5AA4A-02C8-4C12-BCC8-26C7D8B42704",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_23-7CC5AA4A-02C8-4C12-BCC8-26C7D8B42704.png",
-                              "frame" : {
-                                "y" : 567,
-                                "x" : 0,
-                                "width" : 34,
-                                "height" : 62
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 567,
-                              "x" : 0,
-                              "width" : 34,
-                              "height" : 62
-                            },
-                            "name" : "Oval_101__Imported_Layers_23"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "779436ED-0138-4FAA-AC92-8AFAC96E5DF6",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_8-779436ED-0138-4FAA-AC92-8AFAC96E5DF6.png",
-                              "frame" : {
-                                "y" : 369,
-                                "x" : 13,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 369,
-                              "x" : 13,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_8"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "4664657B-2AF7-4E15-9CF2-A7E6AC469996",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_22-4664657B-2AF7-4E15-9CF2-A7E6AC469996.png",
-                              "frame" : {
-                                "y" : 323,
-                                "x" : 606,
-                                "width" : 34,
-                                "height" : 77
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 323,
-                              "x" : 606,
-                              "width" : 34,
-                              "height" : 77
-                            },
-                            "name" : "Oval_101__Imported_Layers_22"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "31B97478-C103-410B-A66D-AAA47A35C6F7",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_21-31B97478-C103-410B-A66D-AAA47A35C6F7.png",
-                              "frame" : {
-                                "y" : 437,
-                                "x" : 544,
-                                "width" : 96,
-                                "height" : 138
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 437,
-                              "x" : 544,
-                              "width" : 96,
-                              "height" : 138
-                            },
-                            "name" : "Oval_101__Imported_Layers_21"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "3A711ACA-5BAA-4BFC-B2B3-5432D9FDAE27",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_10-3A711ACA-5BAA-4BFC-B2B3-5432D9FDAE27.png",
-                              "frame" : {
-                                "y" : 187,
-                                "x" : 468,
-                                "width" : 172,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 187,
-                              "x" : 468,
-                              "width" : 172,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_10"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "1C698A28-6418-465C-8612-59CE2EB1BBFA",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_3-1C698A28-6418-465C-8612-59CE2EB1BBFA.png",
-                              "frame" : {
-                                "y" : 187,
-                                "x" : 338,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 187,
-                              "x" : 338,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_3"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "CB805CC9-E202-4183-AD5D-D4D6EFC050B7",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_4-CB805CC9-E202-4183-AD5D-D4D6EFC050B7.png",
+                              "path" : "images\/Group-4F50B7C7-6481-4A3C-AEC1-9D763677AF99.png",
                               "frame" : {
                                 "y" : 185,
-                                "x" : 209,
-                                "width" : 212,
-                                "height" : 212
+                                "x" : 0,
+                                "width" : 640,
+                                "height" : 766
                               }
                             },
                             "imageType" : "png",
                             "layerFrame" : {
                               "y" : 185,
-                              "x" : 209,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_4"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "3B2FEF2F-A21A-4BA4-B2C2-08CE88061ADA",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers_2-3B2FEF2F-A21A-4BA4-B2C2-08CE88061ADA.png",
-                              "frame" : {
-                                "y" : 187,
-                                "x" : 73,
-                                "width" : 212,
-                                "height" : 212
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 187,
-                              "x" : 73,
-                              "width" : 212,
-                              "height" : 212
-                            },
-                            "name" : "Oval_101__Imported_Layers_2"
-                          },
-                          {
-                            "maskFrame" : null,
-                            "id" : "96CD4A33-18B2-4AAD-8E9B-01CC62509F1B",
-                            "visible" : true,
-                            "children" : [
-
-                            ],
-                            "image" : {
-                              "path" : "images\/Oval_101__Imported_Layers-96CD4A33-18B2-4AAD-8E9B-01CC62509F1B.png",
-                              "frame" : {
-                                "y" : 185,
-                                "x" : 0,
-                                "width" : 156,
-                                "height" : 198
-                              }
-                            },
-                            "imageType" : "png",
-                            "layerFrame" : {
-                              "y" : 185,
                               "x" : 0,
-                              "width" : 156,
-                              "height" : 198
+                              "width" : 640,
+                              "height" : 766
                             },
-                            "name" : "Oval_101__Imported_Layers"
+                            "name" : "Group"
                           }
                         ],
                         "image" : {
-                          "path" : "images\/Group-4F50B7C7-6481-4A3C-AEC1-9D763677AF99.png",
+                          "path" : "images\/pattern-40F3D7AF-D1F1-4A89-A04E-0FCD859F067B.png",
                           "frame" : {
                             "y" : 185,
                             "x" : 0,
@@ -1238,11 +1312,11 @@ window.__imported__["redbits2/layers.json.js"] = [
                           "width" : 640,
                           "height" : 766
                         },
-                        "name" : "Group"
+                        "name" : "pattern"
                       }
                     ],
                     "image" : {
-                      "path" : "images\/pattern-40F3D7AF-D1F1-4A89-A04E-0FCD859F067B.png",
+                      "path" : "images\/Group_2__Exame-0308DF04-712B-430D-8D7D-370E96A7EB42.png",
                       "frame" : {
                         "y" : 185,
                         "x" : 0,
@@ -1257,11 +1331,11 @@ window.__imported__["redbits2/layers.json.js"] = [
                       "width" : 640,
                       "height" : 766
                     },
-                    "name" : "pattern"
+                    "name" : "Group_2__Exame"
                   }
                 ],
                 "image" : {
-                  "path" : "images\/Group_2__Exame-0308DF04-712B-430D-8D7D-370E96A7EB42.png",
+                  "path" : "images\/Group_2__Exame-5A10E609-C767-45EF-8776-FC8A0FD1983A.png",
                   "frame" : {
                     "y" : 185,
                     "x" : 0,
@@ -1280,12 +1354,12 @@ window.__imported__["redbits2/layers.json.js"] = [
               }
             ],
             "image" : {
-              "path" : "images\/Group_2__Exame-5A10E609-C767-45EF-8776-FC8A0FD1983A.png",
+              "path" : "images\/Group_2__Exame__zerodetres-4540A05A-86EF-40C9-B878-2B413E19A301.png",
               "frame" : {
                 "y" : 185,
                 "x" : 0,
                 "width" : 640,
-                "height" : 766
+                "height" : 895
               }
             },
             "imageType" : "png",
@@ -1293,9 +1367,9 @@ window.__imported__["redbits2/layers.json.js"] = [
               "y" : 185,
               "x" : 0,
               "width" : 640,
-              "height" : 766
+              "height" : 895
             },
-            "name" : "Group_2__Exame"
+            "name" : "Group_2__Exame__zerodetres"
           }
         ],
         "image" : {
@@ -1321,6 +1395,31 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "9F8D89AD-8804-48DF-9100-5FEA43EBF13D",
         "visible" : true,
         "children" : [
+          {
+            "maskFrame" : null,
+            "id" : "0D38FB38-EA39-4F06-A094-1EA7BE13FF05",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/umdetres-0D38FB38-EA39-4F06-A094-1EA7BE13FF05.png",
+              "frame" : {
+                "y" : 1056,
+                "x" : 281,
+                "width" : 74,
+                "height" : 23
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 1056,
+              "x" : 281,
+              "width" : 74,
+              "height" : 23
+            },
+            "name" : "umdetres"
+          },
           {
             "maskFrame" : null,
             "id" : "DDF4DD27-002A-4E29-B110-DC1B98123023",
@@ -1353,7 +1452,7 @@ window.__imported__["redbits2/layers.json.js"] = [
             "y" : 184,
             "x" : 60,
             "width" : 526,
-            "height" : 774
+            "height" : 895
           }
         },
         "imageType" : "png",
@@ -1361,7 +1460,7 @@ window.__imported__["redbits2/layers.json.js"] = [
           "y" : 184,
           "x" : 60,
           "width" : 526,
-          "height" : 774
+          "height" : 895
         },
         "name" : "cardLipidico"
       },
@@ -1370,6 +1469,31 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "EF116275-C1D5-4683-9ED5-545D09C8D87F",
         "visible" : true,
         "children" : [
+          {
+            "maskFrame" : null,
+            "id" : "3317C91E-9DFE-4384-943A-06CC886865B0",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/doisdetres-3317C91E-9DFE-4384-943A-06CC886865B0.png",
+              "frame" : {
+                "y" : 1056,
+                "x" : 280,
+                "width" : 76,
+                "height" : 23
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 1056,
+              "x" : 280,
+              "width" : 76,
+              "height" : 23
+            },
+            "name" : "doisdetres"
+          },
           {
             "maskFrame" : null,
             "id" : "2389D531-CCED-4CCA-BA96-475D1A8049D0",
@@ -1402,7 +1526,7 @@ window.__imported__["redbits2/layers.json.js"] = [
             "y" : 184,
             "x" : 60,
             "width" : 526,
-            "height" : 774
+            "height" : 895
           }
         },
         "imageType" : "png",
@@ -1410,7 +1534,7 @@ window.__imported__["redbits2/layers.json.js"] = [
           "y" : 184,
           "x" : 60,
           "width" : 526,
-          "height" : 774
+          "height" : 895
         },
         "name" : "cardGlicemia"
       },
@@ -1419,6 +1543,31 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "C2EEF900-8BC7-433B-8EEC-8ABEC5AC6516",
         "visible" : true,
         "children" : [
+          {
+            "maskFrame" : null,
+            "id" : "58BCD54E-D38E-458A-8A26-9698D48FCC65",
+            "visible" : true,
+            "children" : [
+
+            ],
+            "image" : {
+              "path" : "images\/tresdetres-58BCD54E-D38E-458A-8A26-9698D48FCC65.png",
+              "frame" : {
+                "y" : 1056,
+                "x" : 281,
+                "width" : 75,
+                "height" : 23
+              }
+            },
+            "imageType" : "png",
+            "layerFrame" : {
+              "y" : 1056,
+              "x" : 281,
+              "width" : 75,
+              "height" : 23
+            },
+            "name" : "tresdetres"
+          },
           {
             "maskFrame" : null,
             "id" : "A1C48716-6C0F-4F68-B2D0-A65677934A50",
@@ -1451,7 +1600,7 @@ window.__imported__["redbits2/layers.json.js"] = [
             "y" : 184,
             "x" : 60,
             "width" : 526,
-            "height" : 774
+            "height" : 895
           }
         },
         "imageType" : "png",
@@ -1459,7 +1608,7 @@ window.__imported__["redbits2/layers.json.js"] = [
           "y" : 184,
           "x" : 60,
           "width" : 526,
-          "height" : 774
+          "height" : 895
         },
         "name" : "cardHemograma"
       },
@@ -1468,31 +1617,7 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "F4B6B314-D330-4A4B-8103-610FD3DEC790",
         "visible" : true,
         "children" : [
-          {
-            "maskFrame" : null,
-            "id" : "0253F20D-2076-4F69-9FDD-8718019313CA",
-            "visible" : true,
-            "children" : [
 
-            ],
-            "image" : {
-              "path" : "images\/paginaUm-0253F20D-2076-4F69-9FDD-8718019313CA.png",
-              "frame" : {
-                "y" : 1045,
-                "x" : 285,
-                "width" : 70,
-                "height" : 22
-              }
-            },
-            "imageType" : "png",
-            "layerFrame" : {
-              "y" : 1045,
-              "x" : 285,
-              "width" : 70,
-              "height" : 22
-            },
-            "name" : "paginaUm"
-          }
         ],
         "image" : {
           "path" : "images\/botaoLipidico-F4B6B314-D330-4A4B-8103-610FD3DEC790.png",
@@ -1517,31 +1642,7 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "A765A231-A28B-4219-AB74-7D01D93DAA2D",
         "visible" : true,
         "children" : [
-          {
-            "maskFrame" : null,
-            "id" : "FC8D075C-480D-4365-8E27-158708467AC6",
-            "visible" : true,
-            "children" : [
 
-            ],
-            "image" : {
-              "path" : "images\/paginaDois-FC8D075C-480D-4365-8E27-158708467AC6.png",
-              "frame" : {
-                "y" : 1050,
-                "x" : 278,
-                "width" : 81,
-                "height" : 23
-              }
-            },
-            "imageType" : "png",
-            "layerFrame" : {
-              "y" : 1050,
-              "x" : 278,
-              "width" : 81,
-              "height" : 23
-            },
-            "name" : "paginaDois"
-          }
         ],
         "image" : {
           "path" : "images\/botaoGlicemia-A765A231-A28B-4219-AB74-7D01D93DAA2D.png",
@@ -1566,31 +1667,7 @@ window.__imported__["redbits2/layers.json.js"] = [
         "id" : "B0463AA3-0560-4680-9BE5-DCCEE9447C65",
         "visible" : true,
         "children" : [
-          {
-            "maskFrame" : null,
-            "id" : "E53D9000-AAA7-4D97-979A-E79D537750F5",
-            "visible" : true,
-            "children" : [
 
-            ],
-            "image" : {
-              "path" : "images\/paginaTres-E53D9000-AAA7-4D97-979A-E79D537750F5.png",
-              "frame" : {
-                "y" : 1050,
-                "x" : 278,
-                "width" : 81,
-                "height" : 23
-              }
-            },
-            "imageType" : "png",
-            "layerFrame" : {
-              "y" : 1050,
-              "x" : 278,
-              "width" : 81,
-              "height" : 23
-            },
-            "name" : "paginaTres"
-          }
         ],
         "image" : {
           "path" : "images\/botaoHemograma-B0463AA3-0560-4680-9BE5-DCCEE9447C65.png",
