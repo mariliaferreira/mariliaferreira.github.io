@@ -21,7 +21,6 @@ $normal-lineheight: 150%;
 
 /* SASS global */
 body{
-   height: 100%;
     overflow-x: hidden;
 }
 
@@ -29,32 +28,26 @@ html, body{
     height: 100%;
 }
 
-h2{
+h1, h2{
     font-family: "brandon-grotesque", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 2em;
     line-height: 250%;
+    font-size: 2.6em;
 }
 
-header{
-    height: auto;
-    padding: 4% 10%;
-    width: $width-full-screen;
-    background-color: white;
-    
-    ul{
-        font-family: $block-typeface;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.6em;
-    }
+h1{
+    font-size: 2em;
 }
 
-img{
-    min-height: auto;
-    width: 100%;
+h2{
+  font-size: 1.8em;  
 }
+
+blockquote{
+
+}
+
 
 p{
     font-family: $block-typeface;
@@ -65,23 +58,26 @@ p{
     
 }
 
-h1{
-
+ul{
+    font-family: $block-typeface;
+    font-size: $font-normal-size;
+    line-height: $normal-lineheight;
 }
 
 header{
+    height: auto;
+    padding: 4% 10%;
     width: $width-full-screen;
-}
-
-footer{
+    background-color: white;
     
     ul{
-    font-family: $block-typeface;
-    font-style: normal;
-    font-weight: 400;
-    font-size: $font-normal-size;
-    line-height: $normal-lineheight;
+        font-size: 1.6em;
     }
+}
+
+img{
+    min-height: auto;
+    width: 100%;
 }
 
 section{
@@ -90,27 +86,74 @@ section{
     heigth: auto;
     
     div{
-        
         float: left;
         height: auto;
-        
-        
     }
     
     .image-project{
         width: 50%;
         height: 500px;
-//        background-image: url("../../img/");
-//        background-size: contain;
-//        background-repeat: no-repeat;
     }
     
     .text-project{
         width: $width-half-screen;
         background-color: #ecebe3;
         padding: 8% 8% 9% 8%;
-        
     }
+}
+
+#content{
+	width: 70%;
+	height: 500px;
+	margin-left: 10%;
+	background-color: white;
+	position: absolute;
+	z-index: 1000;
+	margin-top: 18%;
+	padding-top: 5%;
+}
+
+#content, p, ul, h3, h4{
+	margin-left: 14%;
+	margin-right: 16%;
+	line-height: 150%;
+}
+
+#header-image{
+	width: 100%;
+	height: 380px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: 1200px;
+}
+
+.header-image{
+	background-image: url('img-header.jpg');
+}
+
+.header-image-2{
+	background-image: url('img-header-2.jpg');
+}
+
+.header-image-3{
+	background-image: url('img-header-3.jpg');
+}
+
+.header-image-4{
+	background-image: url('img-header-4.jpg');
+}
+
+.header-image-5{
+	background-image: url('img-header-5.jpg');
+}
+
+.header-image-6{
+	background-image: url('img-header-6.jpg');
+}
+
+.header-image-7{
+	background-image: url('img-header-7.jpg');
 }
 
 footer{
@@ -129,4 +172,3 @@ footer{
         background-color: yellow;
     }
 }
-
