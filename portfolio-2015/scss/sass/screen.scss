@@ -11,6 +11,8 @@ $block-typeface: "ff-meta-serif-web-pro", sans-serif;
 $font-normal-size: 1.4em;
 $normal-lineheight: 150%;
 
+$background-color-cinza: #ecebe3;
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -37,11 +39,15 @@ h1, h2{
 }
 
 h1{
-    font-size: 2em;
+    font-size: 1.8em;
+    font-family: $block-typeface;
+    margin-left: 12%;
+    padding-top: 4%;
 }
 
 h2{
-  font-size: 1.8em;  
+    font-size: 1.8em;
+    margin-left: 0;
 }
 
 blockquote{
@@ -77,13 +83,15 @@ header{
 
 img{
     min-height: auto;
+    max-height: 500px;
     width: 100%;
 }
 
 section{
     width: $width-full-screen;
     float: left;
-    heigth: auto;
+    height: 480px;
+    background-color: $background-color-cinza;
     
     div{
         float: left;
@@ -97,25 +105,51 @@ section{
     
     .text-project{
         width: $width-half-screen;
-        background-color: #ecebe3;
+        background-color: $background-color-cinza;
         padding: 8% 8% 9% 8%;
     }
 }
 
-#content{
+.section-in-project{
+    margin-bottom: 3%;
+    max-height: 480px;
+}
+
+.image-project{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.image-project-1{
+    background-image: url('../../img/tonetable.jpg');
+}
+
+.image-project-2{
+    background-image: url('../../img/tonetable.jpg');
+}
+
+.image-project-3{
+    background-image: url('../../img/tonetable.jpg');
+}
+
+.image-project-4{
+    background-image: url('../../img/tonetable.jpg');
+}
+
+.image-project-5{
+    background-image: url('../../img/tonetable.jpg');
+}
+
+#project-content{
 	width: 70%;
 	height: 500px;
 	margin-left: 10%;
-	background-color: white;
-	position: absolute;
-	z-index: 1000;
-	margin-top: 18%;
-	padding-top: 5%;
+	padding-top: 15%;
 }
 
-#content, p, ul, h3, h4{
-	margin-left: 14%;
-	margin-right: 16%;
+#project-content > p, ul, h3, h4{
+	margin-left: 12%;
+	margin-right: 12%;
 	line-height: 150%;
 }
 
