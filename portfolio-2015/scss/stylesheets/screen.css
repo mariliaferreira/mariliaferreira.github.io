@@ -65,17 +65,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* variables for CSS */
 /* SASS global */
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 body {
   overflow-x: hidden;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 html, body {
   height: 100%;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 h1, h2 {
   font-family: "brandon-grotesque", sans-serif;
   font-style: normal;
@@ -84,7 +84,7 @@ h1, h2 {
   font-size: 2.6em;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 h1 {
   font-size: 1.8em;
   font-family: "ff-meta-serif-web-pro", sans-serif;
@@ -92,13 +92,13 @@ h1 {
   padding-top: 4%;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 h2 {
   font-size: 1.8em;
   margin-left: 0;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 p {
   font-family: "ff-meta-serif-web-pro", sans-serif;
   font-style: normal;
@@ -107,94 +107,94 @@ p {
   line-height: 150%;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 ul {
   font-family: "ff-meta-serif-web-pro", sans-serif;
   font-size: 1.4em;
   line-height: 150%;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 header {
   height: auto;
   padding: 4% 10%;
   width: 100%;
   background-color: white;
 }
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 header ul {
   font-size: 1.6em;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 img {
   min-height: auto;
   max-height: 500px;
   width: 100%;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 section {
   width: 100%;
   float: left;
   height: 480px;
   background-color: #ecebe3;
 }
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 section div {
   float: left;
   height: auto;
 }
-/* line 101, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 section .image-project {
   width: 50%;
   height: 500px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 section .text-project {
   width: 34%;
   background-color: #ecebe3;
   padding: 8% 8% 9% 8%;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .section-in-project {
   margin-bottom: 3%;
   max-height: 480px;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .image-project {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .image-project-1 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 127, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .image-project-2 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .image-project-3 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .image-project-4 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 .image-project-5 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 #project-content {
   width: 70%;
   height: 500px;
@@ -202,14 +202,14 @@ section .text-project {
   padding-top: 15%;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 #project-content > p, ul, h3, h4 {
   margin-left: 12%;
   margin-right: 12%;
   line-height: 150%;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 #header-image {
   width: 100%;
   height: 380px;
@@ -219,56 +219,56 @@ section .text-project {
   background-size: 1200px;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .header-image {
   background-image: url("img-header.jpg");
 }
 
-/* line 169, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .header-image-2 {
   background-image: url("img-header-2.jpg");
 }
 
-/* line 173, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .header-image-3 {
   background-image: url("img-header-3.jpg");
 }
 
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .header-image-4 {
   background-image: url("img-header-4.jpg");
 }
 
-/* line 181, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .header-image-5 {
   background-image: url("img-header-5.jpg");
 }
 
-/* line 185, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .header-image-6 {
   background-image: url("img-header-6.jpg");
 }
 
-/* line 189, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .header-image-7 {
   background-image: url("img-header-7.jpg");
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 footer {
   width: 100%;
 }
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 footer div {
   width: 34%;
   float: left;
   padding: 8%;
 }
-/* line 201, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 footer div:first-child {
   background-color: pink;
 }
-/* line 205, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 footer div:last-child {
   background-color: yellow;
 }
