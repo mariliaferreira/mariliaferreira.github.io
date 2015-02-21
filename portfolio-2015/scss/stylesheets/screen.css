@@ -292,11 +292,11 @@ footer div {
 }
 /* line 247, ../sass/screen.scss */
 footer div:first-child {
-  background-color: pink;
+  background-color: #DBDAD2;
 }
 /* line 251, ../sass/screen.scss */
 footer div:last-child {
-  background-color: yellow;
+  background-color: #c3c1b9;
 }
 
 /* line 256, ../sass/screen.scss */
