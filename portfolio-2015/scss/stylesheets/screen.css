@@ -279,6 +279,7 @@ footer div:last-child {
 /* line 225, ../sass/screen.scss */
 .breadcrumbs {
   width: 15px;
+  height: 15px;
   font-size: 1em;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -286,7 +287,7 @@ footer div:last-child {
   -ms-transition: all 0.2s ease-in-out;
 }
 
-/* line 234, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .breadcrumbs:hover {
   font-size: 1.2em;
   -webkit-transition: all 0.2s ease-in-out;
