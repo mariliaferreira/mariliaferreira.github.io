@@ -218,9 +218,14 @@ section{
 	padding-top: 5%;
     
     img{
-        width: 100%;
+        width: 795px;
         border-left: 5px solid #ECEBE3;
-        margin: 3% auto 3% auto;
+        margin: 3% 5% 3% 12%;
+    }
+    
+    .smaller-img{
+        width: 795px;
+        margin-left: 12%;
     }
     
 }
@@ -292,6 +297,10 @@ footer{
     }
 }
 
+iframe{
+    margin-left: 12%;
+}
+
 .breadcrumbs{
     width: 15px;
     height: 15px;
@@ -308,4 +317,12 @@ footer{
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -ms-transition: all 0.2s ease-in;
+}
+
+.end-text{
+    width: 20%;
+    height: 5px;
+    border-top: 1px solid #C3C1B9;
+    margin-left: 45%;
+    padding-bottom: 5%;
 }
