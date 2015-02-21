@@ -150,50 +150,13 @@ section{
 	width: 70%;
 	height: 500px;
 	margin-left: 10%;
-	padding-top: 15%;
+	padding-top: 5%;
 }
 
 #project-content > p, ul, h3, h4{
 	margin-left: 12%;
     width: 90%;
 	line-height: 170%;
-}
-
-#header-image{
-	width: 100%;
-	height: 380px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-size: 1200px;
-}
-
-.header-image{
-	background-image: url('img-header.jpg');
-}
-
-.header-image-2{
-	background-image: url('img-header-2.jpg');
-}
-
-.header-image-3{
-	background-image: url('img-header-3.jpg');
-}
-
-.header-image-4{
-	background-image: url('img-header-4.jpg');
-}
-
-.header-image-5{
-	background-image: url('img-header-5.jpg');
-}
-
-.header-image-6{
-	background-image: url('img-header-6.jpg');
-}
-
-.header-image-7{
-	background-image: url('img-header-7.jpg');
 }
 
 footer{
@@ -210,5 +173,22 @@ footer{
     
     div:last-child{
         background-color: yellow;
+    }
+}
+
+.header-projects{
+    width: $width-full-screen;
+    height: 30%;
+    background-color: $background-color-cinza;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    
+    div{
+        margin-left: 18%;
+        padding-top: 3%;
+    }
+    
+    h3{
+        margin-left: 18%;
+        margin-top: 2%;
     }
 }

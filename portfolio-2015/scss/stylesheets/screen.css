@@ -203,7 +203,7 @@ section .text-project {
   width: 70%;
   height: 500px;
   margin-left: 10%;
-  padding-top: 15%;
+  padding-top: 5%;
 }
 
 /* line 156, ../sass/screen.scss */
@@ -214,65 +214,38 @@ section .text-project {
 }
 
 /* line 162, ../sass/screen.scss */
-#header-image {
-  width: 100%;
-  height: 380px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 1200px;
-}
-
-/* line 171, ../sass/screen.scss */
-.header-image {
-  background-image: url("img-header.jpg");
-}
-
-/* line 175, ../sass/screen.scss */
-.header-image-2 {
-  background-image: url("img-header-2.jpg");
-}
-
-/* line 179, ../sass/screen.scss */
-.header-image-3 {
-  background-image: url("img-header-3.jpg");
-}
-
-/* line 183, ../sass/screen.scss */
-.header-image-4 {
-  background-image: url("img-header-4.jpg");
-}
-
-/* line 187, ../sass/screen.scss */
-.header-image-5 {
-  background-image: url("img-header-5.jpg");
-}
-
-/* line 191, ../sass/screen.scss */
-.header-image-6 {
-  background-image: url("img-header-6.jpg");
-}
-
-/* line 195, ../sass/screen.scss */
-.header-image-7 {
-  background-image: url("img-header-7.jpg");
-}
-
-/* line 199, ../sass/screen.scss */
 footer {
   width: 100%;
 }
-/* line 202, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 footer div {
   width: 34%;
   float: left;
   padding: 8%;
 }
-/* line 207, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 footer div:first-child {
   background-color: pink;
 }
-/* line 211, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 footer div:last-child {
   background-color: yellow;
+}
+
+/* line 179, ../sass/screen.scss */
+.header-projects {
+  width: 100%;
+  height: 30%;
+  background-color: #ecebe3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+/* line 185, ../sass/screen.scss */
+.header-projects div {
+  margin-left: 18%;
+  padding-top: 3%;
+}
+/* line 190, ../sass/screen.scss */
+.header-projects h3 {
+  margin-left: 18%;
+  margin-top: 2%;
 }
