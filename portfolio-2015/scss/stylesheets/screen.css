@@ -275,3 +275,22 @@ footer div:last-child {
 .header-projects div:last-child span:last-of-type {
   padding-left: 5%;
 }
+
+/* line 225, ../sass/screen.scss */
+.breadcrumbs {
+  width: 15px;
+  font-size: 1em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
+
+/* line 234, ../sass/screen.scss */
+.breadcrumbs:hover {
+  font-size: 1.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+}
