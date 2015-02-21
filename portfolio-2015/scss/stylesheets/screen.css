@@ -65,141 +65,202 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* variables for CSS */
 /* SASS global */
-/* line 26, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 body {
   overflow-x: hidden;
-  font-family: "ff-meta-serif-web-pro", sans-serif;
+  font-family: "freight-text-pro", sans-serif;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 html, body {
   height: 100%;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "jaf-bernino-sans", sans-serif;
   font-style: normal;
-  font-weight: 500;
-  line-height: 250%;
-  font-size: 2.6em;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 2.0em;
+  color: #7c7b74;
+  letter-spacing: -0.02em;
+  margin-bottom: 2%;
+  margin-top: 3%;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 h3, h4, h5, h6 {
   margin-left: 12%;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 h1 {
-  font-size: 1.8em;
-  font-family: "ff-meta-serif-web-pro", sans-serif;
+  font-size: 1.6em;
+  font-family: "freight-text-pro", sans-serif;
   padding-top: 4%;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 h2 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-left: 0;
 }
 
-/* line 65, ../sass/screen.scss */
-p {
-  font-family: "ff-meta-serif-web-pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.4em;
-  line-height: 150%;
+/* line 70, ../sass/screen.scss */
+h4 {
+  font-size: 1.6em;
 }
 
 /* line 74, ../sass/screen.scss */
-ul {
-  font-family: "ff-meta-serif-web-pro", sans-serif;
-  font-size: 1.4em;
-  line-height: 150%;
+h5 {
+  font-size: 1.6em;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
+h6 {
+  font-size: 1.2em;
+}
+
+/* line 89, ../sass/screen.scss */
+p {
+  font-family: "freight-text-pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #404040;
+  letter-spacing: .01rem;
+}
+
+/* line 99, ../sass/screen.scss */
+ul {
+  font-family: "freight-text-pro", sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* line 105, ../sass/screen.scss */
 header {
   height: auto;
   padding: 4% 10%;
   width: 100%;
   background-color: white;
+  font-size: 1.6;
 }
-/* line 86, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 header ul {
-  font-size: 1.6em;
+  float: right;
+  width: 15%;
+  margin-right: 15%;
+  font-family: "jaf-bernino-sans", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+/* line 121, ../sass/screen.scss */
+header ul li {
+  display: inline;
+  list-style: none;
+  padding: 0 5% 0 5%;
+}
+/* line 127, ../sass/screen.scss */
+header h1 {
+  margin-left: 5%;
+}
+/* line 130, ../sass/screen.scss */
+header h1 span {
+  font-family: "grafolita-script";
+  font-size: 1.2em;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 img {
   min-height: auto;
   max-height: 500px;
   width: 100%;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
+a {
+  color: #C3C1B9;
+  text-decoration: none;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+/* line 152, ../sass/screen.scss */
+a:hover {
+  color: #7C7B74;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+/* line 160, ../sass/screen.scss */
 section {
   width: 100%;
   float: left;
   height: 480px;
-  background-color: #ecebe3;
+  background-color: #80cbc4;
 }
-/* line 103, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 section div {
   float: left;
   height: auto;
 }
-/* line 108, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 section .image-project {
   width: 50%;
   height: 500px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 section .text-project {
   width: 34%;
-  background-color: #ecebe3;
+  background-color: #80cbc4;
   padding: 8% 8% 9% 8%;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 .section-in-project {
   margin-bottom: 3%;
   max-height: 480px;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .image-project {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .image-project-1 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .image-project-2 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .image-project-3 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .image-project-4 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .image-project-5 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #project-content {
   width: 70%;
   height: 500px;
@@ -207,55 +268,55 @@ section .text-project {
   padding-top: 5%;
 }
 
-/* line 159, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 #project-content > p, ul, h3, h4 {
   margin-left: 12%;
-  width: 90%;
+  width: 80%;
   line-height: 170%;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 footer {
   width: 100%;
 }
-/* line 168, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 footer div {
   width: 34%;
   float: left;
   padding: 8%;
 }
-/* line 173, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 footer div:first-child {
   background-color: pink;
 }
-/* line 177, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 footer div:last-child {
   background-color: yellow;
 }
 
-/* line 182, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .header-projects {
   width: 100%;
-  background-color: #ecebe3;
+  background-color: #80cbc4;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 187, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .header-projects div:first-child {
   margin-left: 18%;
   padding-top: 3%;
 }
-/* line 192, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .header-projects h3 {
   margin-left: 18%;
   margin-top: 2%;
 }
-/* line 197, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .header-projects p {
   margin-left: 18%;
   width: 60%;
   margin-top: 2%;
 }
-/* line 203, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .header-projects div:last-child {
   font-size: 0.8em;
   margin-top: 1%;
@@ -264,19 +325,20 @@ footer div:last-child {
   padding-bottom: 2%;
   padding-top: 2%;
 }
-/* line 212, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 .header-projects div:last-child span {
-  font-family: "brandon-grotesque", sans-serif;
+  font-family: "jaf-bernino-sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   padding-right: 1%;
+  color: #404040;
 }
-/* line 219, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 .header-projects div:last-child span:last-of-type {
   padding-left: 5%;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .breadcrumbs {
   width: 15px;
   height: 15px;
@@ -287,7 +349,7 @@ footer div:last-child {
   -ms-transition: all 0.2s ease-in;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .breadcrumbs:hover {
   font-size: 1.2em;
   -webkit-transition: all 0.2s ease-in;
