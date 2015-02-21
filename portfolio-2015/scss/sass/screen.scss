@@ -249,7 +249,31 @@ footer{
     }
     
     div:last-child{
-        background-color: #C3C1B9 ;
+        background-color: #F5F5F3 ;
+        font-family: $block-typeface;
+        
+        
+        ul{
+            margin: 0;
+        }
+        
+        ul li{
+            display: inline;
+            padding: 0 4.5% 0 4.5%;
+            border-right: 1px solid #C3C1B9;
+            font-style: normal;
+            font-weight: 300;
+            font-size: $font-normal-size;
+            line-height: $normal-lineheight;
+            color: $copy-color;
+            letter-spacing: .01rem;
+        }
+        
+        ul li:first-child, li:last-child{
+            border: none;
+            
+        }
+        
     }
 }
 
