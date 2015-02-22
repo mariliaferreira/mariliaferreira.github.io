@@ -324,40 +324,42 @@ footer div:last-child ul li:first-child, footer div:last-child li:last-child {
 /* line 284, ../sass/screen.scss */
 #contact {
   margin-top: 10%;
+  text-align: center;
+  margin-left: 7%;
 }
 
-/* line 289, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .profile-pic {
-  width: 150px;
+  width: 100px;
   border-radius: 50%;
   margin-right: 5%;
   margin-top: 5%;
   float: left;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 .header-projects {
   width: 100%;
   background-color: #ecebe3;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 302, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .header-projects div:first-child {
   margin-left: 18%;
   padding-top: 3%;
 }
-/* line 307, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 .header-projects h3 {
   margin-left: 18%;
   margin-top: 2%;
 }
-/* line 312, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 .header-projects p {
   margin-left: 18%;
   width: 60%;
   margin-top: 2%;
 }
-/* line 318, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .header-projects div:last-child {
   font-size: 0.8em;
   margin-top: 1%;
@@ -366,7 +368,7 @@ footer div:last-child ul li:first-child, footer div:last-child li:last-child {
   padding-bottom: 2%;
   padding-top: 2%;
 }
-/* line 327, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .header-projects div:last-child span {
   font-family: "jaf-bernino-sans", sans-serif;
   font-weight: 300;
@@ -374,17 +376,17 @@ footer div:last-child ul li:first-child, footer div:last-child li:last-child {
   padding-right: 1%;
   color: #404040;
 }
-/* line 335, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 .header-projects div:last-child span:last-of-type {
   padding-left: 5%;
 }
 
-/* line 341, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 iframe {
   margin-left: 12%;
 }
 
-/* line 345, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 .breadcrumbs {
   width: 15px;
   height: 15px;
@@ -395,7 +397,7 @@ iframe {
   -ms-transition: all 0.2s ease-in;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .breadcrumbs:hover {
   font-size: 1.2em;
   -webkit-transition: all 0.2s ease-in;
@@ -404,7 +406,7 @@ iframe {
   -ms-transition: all 0.2s ease-in;
 }
 
-/* line 363, ../sass/screen.scss */
+/* line 364, ../sass/screen.scss */
 .end-text {
   width: 20%;
   height: 5px;
