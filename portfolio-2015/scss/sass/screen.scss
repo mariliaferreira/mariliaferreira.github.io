@@ -245,7 +245,7 @@ footer{
     
     
     #about{
-       width: 40%;
+       width: 48%;
         margin: 4% auto;
         padding: 6% 6%;
         opacity: 1;
@@ -254,6 +254,7 @@ footer{
     div:last-child{
         background-color: #F5F5F3 ;
         font-family: $block-typeface;
+        
         
         
         ul{
@@ -278,6 +279,11 @@ footer{
         }
         
     }
+}
+
+#contact{
+    margin-top: 10%;
+    
 }
 
 .profile-pic{
