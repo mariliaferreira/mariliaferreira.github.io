@@ -98,32 +98,33 @@ h1 {
   font-size: 1.6em;
   font-family: "freight-text-pro", sans-serif;
   padding-top: 4%;
+  margin: 0 auto;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 h2 {
   font-size: 1.5em;
   margin-left: 0;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 h4 {
   font-size: 1.8em;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 h5 {
   font-size: 1.4em;
   font-weight: 600;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 h6 {
   font-size: 1.2em;
   font-weight: 100;
 }
 
-/* line 90, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 p {
   font-family: "freight-text-pro", sans-serif;
   font-style: normal;
@@ -136,14 +137,14 @@ p {
   margin-bottom: 2%;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 ul {
   font-family: "freight-text-pro", sans-serif;
   font-size: 22px;
   line-height: 1.5;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 header {
   height: auto;
   padding: 4% 10%;
@@ -151,7 +152,7 @@ header {
   background-color: white;
   font-size: 1.6;
 }
-/* line 115, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 header ul {
   float: right;
   width: 20%;
@@ -160,23 +161,23 @@ header ul {
   font-size: 1em;
   font-weight: 300;
 }
-/* line 124, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 header ul li {
   display: inline;
   list-style: none;
   padding: 0 5% 0 5%;
 }
-/* line 130, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 header h1 {
   margin-left: 5%;
 }
-/* line 133, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 header h1 span {
   font-family: "grafolita-script";
   font-size: 1.2em;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 a {
   color: #C3C1B9;
   text-decoration: none;
@@ -186,7 +187,7 @@ a {
   transition: all .1s ease-in;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 a:hover {
   color: #7C7B74;
   -moz-transition: all .1s ease-in;
@@ -195,117 +196,115 @@ a:hover {
   transition: all .1s ease-in;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 section {
   width: 100%;
   float: left;
   height: 480px;
   background-color: #ecebe3;
 }
-/* line 169, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 section div {
   float: left;
   height: auto;
 }
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 section .image-project {
   width: 50%;
   height: 500px;
 }
-/* line 179, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 section .text-project {
   width: 34%;
   background-color: #ecebe3;
   padding: 8% 8% 9% 8%;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 .section-in-project {
   margin-bottom: 3%;
   max-height: 480px;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .image-project {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .image-project-1 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .image-project-2 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 204, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .image-project-3 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .image-project-4 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .image-project-5 {
   background-image: url("../../img/tonetable.jpg");
 }
 
-/* line 216, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 #project-content {
   width: 70%;
   height: 500px;
   margin-left: 10%;
   padding-top: 5%;
 }
-/* line 222, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 #project-content img {
   width: 795px;
   border-left: 5px solid #ECEBE3;
   margin: 3% 5% 3% 12%;
 }
-/* line 228, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #project-content .smaller-img {
   width: 795px;
   margin-left: 12%;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #project-content > p, ul, h3, h4 {
   margin-left: 12%;
   width: 80%;
   line-height: 170%;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 footer {
   width: 100%;
+  background-color: #fff;
 }
-/* line 244, ../sass/screen.scss */
-footer div {
-  width: 34%;
-  float: left;
-  padding: 8%;
+/* line 247, ../sass/screen.scss */
+footer #about {
+  width: 40%;
+  margin: 4% auto;
+  padding: 6% 6%;
+  opacity: 1;
 }
-/* line 249, ../sass/screen.scss */
-footer div:first-child {
-  background-color: #DBDAD2;
-}
-/* line 253, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 footer div:last-child {
   background-color: #f5f5f3;
   font-family: "freight-text-pro", sans-serif;
 }
-/* line 258, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 footer div:last-child ul {
   margin: 0;
 }
-/* line 262, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 footer div:last-child ul li {
   display: inline;
   padding: 0 4.5% 0 4.5%;
@@ -317,34 +316,43 @@ footer div:last-child ul li {
   color: #404040;
   letter-spacing: .01rem;
 }
-/* line 274, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 footer div:last-child ul li:first-child, footer div:last-child li:last-child {
   border: none;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin-right: 5%;
+  margin-top: 5%;
+  float: left;
+}
+
+/* line 291, ../sass/screen.scss */
 .header-projects {
   width: 100%;
   background-color: #ecebe3;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 287, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .header-projects div:first-child {
   margin-left: 18%;
   padding-top: 3%;
 }
-/* line 292, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .header-projects h3 {
   margin-left: 18%;
   margin-top: 2%;
 }
-/* line 297, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 .header-projects p {
   margin-left: 18%;
   width: 60%;
   margin-top: 2%;
 }
-/* line 303, ../sass/screen.scss */
+/* line 312, ../sass/screen.scss */
 .header-projects div:last-child {
   font-size: 0.8em;
   margin-top: 1%;
@@ -353,7 +361,7 @@ footer div:last-child ul li:first-child, footer div:last-child li:last-child {
   padding-bottom: 2%;
   padding-top: 2%;
 }
-/* line 312, ../sass/screen.scss */
+/* line 321, ../sass/screen.scss */
 .header-projects div:last-child span {
   font-family: "jaf-bernino-sans", sans-serif;
   font-weight: 300;
@@ -361,17 +369,17 @@ footer div:last-child ul li:first-child, footer div:last-child li:last-child {
   padding-right: 1%;
   color: #404040;
 }
-/* line 320, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .header-projects div:last-child span:last-of-type {
   padding-left: 5%;
 }
 
-/* line 326, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 iframe {
   margin-left: 12%;
 }
 
-/* line 330, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 .breadcrumbs {
   width: 15px;
   height: 15px;
@@ -382,7 +390,7 @@ iframe {
   -ms-transition: all 0.2s ease-in;
 }
 
-/* line 340, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 .breadcrumbs:hover {
   font-size: 1.2em;
   -webkit-transition: all 0.2s ease-in;
@@ -391,7 +399,7 @@ iframe {
   -ms-transition: all 0.2s ease-in;
 }
 
-/* line 348, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 .end-text {
   width: 20%;
   height: 5px;
