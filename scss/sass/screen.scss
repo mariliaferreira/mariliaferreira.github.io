@@ -8,6 +8,7 @@ $width-full-screen: 100%;
 $width-full-screen: 100%;
 $width-half-screen: 34%;
 
+
 $block-typeface: "freight-text-pro", sans-serif;
 $title-typeface: "jaf-bernino-sans", sans-serif;
 $name-typeface: "grafolita-script";
@@ -368,4 +369,34 @@ iframe{
     border-top: 1px solid #C3C1B9;
     margin-left: 45%;
     padding-bottom: 5%;
+}
+
+
+.more-button{
+    padding: 11px 15px 11px 15px;
+    background-color: #FF6138;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px #888888;
+    float: right;
+    
+    a{
+        color: white;
+    }
+}
+
+.button-inside{
+    background-color: #FF6138;
+    padding: 15px 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 45%;
+    box-shadow: 2px 2px 3px #888888;
+    
+    a{
+        font-family: $title-typeface;
+        color: white;
+    }
 }
