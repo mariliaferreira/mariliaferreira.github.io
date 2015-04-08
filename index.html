@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="scss/stylesheets/screen.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       
    <script src="//use.typekit.net/mwl6jhx.js"></script>
       <script>try{Typekit.load();}catch(e){}</script>
@@ -27,52 +28,109 @@
     </script>
       
       
+      <script>
+        
+          $(window).scroll(function() {
+           var height = $(window).scrollTop();
+
+           if(height  > 10) {
+               $($("header")).removeClass("abc")
+               $($("header")).addClass("abc2")
+           }
+           else
+           {
+               $($("header")).removeClass("abc2")
+               $($("header")).addClass("abc")
+           }
+        });
+          
+      </script>
+      
+      
       <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
       
       
   </head>
   
 <body>
-    <header>
+    
+    <header class="abc">
+       <span class="name-logo"><a href="#about">marilia ferreira </a></span>
         <ul>
             <li><a href="index.html">projects</a></li>
             <li><a href="about.html" id="aboutLink">about</a></li>
             <li><a href="files/cv-marilia-ferreira.pdf" target="_blank">cv</a></li>
-<!--            <li><a href="#contact">contact</a></li>-->
-            
+<!--            <li><a href="#contact">contact</a></li>-->   
         </ul>
-    <h1>Hi! I'm <span><a href="#about">marilia ferreira </a></span> , User Interface Designer, and you can see my work here.</h1>
     </header>
     
-    <section>
-       <div class="image-project image-project-1"></div>
-        <div class="text-project">
+    
+    <h1>Hi! I'm <span><a href="index.html">marilia ferreira </a></span> , User Interface Designer, and you can see my work here.</h1>
+    
+    
+    <div class="container">
+     
+    <section data-sr='enter bottom'>
+       
+       <div class="text-project">
             <h2>Tonetable</h2>
             <p>Tonetable brings tone of voice for people who for any reason can't speak. Tonetable is a device for AAC researchers use it with their participants, to try differents tone of voice with or without a Speech Generating Device. </p>
             
-            <span class="more-button"><a href="projects/tonetable.html">+</a></span>
-            
-              
-
-        </div>
+            <a href="projects/tonetable.html" class="link-more-button"><span class="more-button-2">View details</span></a>
+           </div>
+        
+        <img src="img/tonetable.jpg" class="img-project"/>
         
     </section>
     
 
-    <section>
+    <section data-sr='enter bottom'>
+        
         <div class="text-project">
             <h2>Meu Exame</h2>
             <p>Meu Exame is a mobile app that brings a better way to read and understand laboratorial tests. Meu Exame helps you to improve your health by comparing your old laboratorial tests to make sure you understand your health.
 
 </p>
             
-            <span class="more-button"><a href="projects/meuexame.html">+</a></span>
+           <a href="projects/meuexame.html" class="link-more-button"><span class="more-button-2">View details</span></a>
             
         </div>
-        <div class="image-project image-project-2"></div>
+        
+        <img src="img/meuexame-capa.jpg" class="img-project" />
+        
     </section>
+        
+        
+        
+        
+      
+        
+        
+        
+    </div>
     
-
+    <footer>
+        <p>© 2015 Marilia Ferreira. Crafted in Curitiba.</p>
+        
+        <ul>
+            <a href="https://dribbble.com/mariliaferreira" target="_blank"><li><i class="fa fa-dribbble"></i></li></a>
+            
+            <a href="https://twitter.com/mariliafrrr" target="_blank"><li><i class="fa fa-twitter"></i></li></a>
+            <a href="https://instagram.com/marilia.ferreira/" target="_blank"><li><i class="fa fa-instagram"></i></li></a>
+            <a href="https://github.com/mariliaferreira" target="_blank"><li><i class="fa fa-github-alt"></i></li></a>
+            <a href="https://medium.com/@mariliaferreira" target="_blank"><li><i class="fa fa-medium"></i></li></a>
+        </ul>
+        
+        
+                
+    </footer>
+    
+    
+    
+<script src='js/scrollReveal.min.js'></script>
+<script>
+    window.sr = new scrollReveal();
+</script>
 
 </body>
     

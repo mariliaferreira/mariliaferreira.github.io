@@ -16,8 +16,10 @@ $font-normal-size: 22px;
 $normal-lineheight: 1.5;
 
 $background-color: #ECEBE3;
+$background-color-sec: #f6f6f4;
 $title-color: #7C7B74;
 $copy-color: #404040;
+$bright-color: #FF6138;
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -39,6 +41,8 @@ body{
 
 html, body{
     height: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -60,7 +64,7 @@ h1{
     font-size: 1.6em;
     font-family: $block-typeface;
     padding-top: 6%;
-    padding-bottom: 4%;
+    padding-bottom: 10%;
     margin: 0 auto;
 }
 
@@ -89,6 +93,15 @@ blockquote{
 
 }
 
+.message{
+    margin-left: 5%;
+    font-family: $title-typeface;
+    background-color: #fcf9e8;
+    padding: 2%;
+    width: 60%;
+    font-size: 1em;
+}
+
 
 p{
     font-family: $block-typeface;
@@ -108,20 +121,21 @@ ul{
     line-height: $normal-lineheight;
 }
 
+
 header{
-    height: auto;
-    padding: 4% 10%;
+    height: 60px;
+    padding: 4% 5% 0% 5%;
     width: $width-full-screen;
     background-color: white;
     font-size: 1.6;
+    border-bottom: 1px solid #fff;
     
     ul{
         float: right;
-        width: 20%;
-        margin-right: 15%;
+        width: 27%;
         font-family: $title-typeface;
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 100;
     }
     
     ul li{
@@ -130,13 +144,49 @@ header{
         padding: 0 5% 0 5%;
     }
     
-    h1{
-        margin-left: 5%;
-        
-        span{
+    ul li:last-child{
+        padding-right: 0;
+        margin-right: 0;
+    }
+    
+    
+}
+
+h1{
+    padding: 4% 5% 5% 5%;
+    
+    span{
             font-family: $name-typeface;
             font-size: 1.2em;
-        }
+    }
+}
+
+.abc{
+    position: relative;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.abc2{
+    position: fixed;
+    margin-top: 0;
+    padding-top: 3%;
+    height: 60px;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    border-bottom: 1px solid #e4e3df;
+}
+
+.name-logo{
+    font-family: $name-typeface;
+    font-size: 2em;
+    
+    a{
+        color: #343434;
     }
 }
 
@@ -164,26 +214,34 @@ a:hover{
 }
 
 section{
-    width: $width-full-screen;
-    float: left;
-    height: 490px;
-    background-color: $background-color;
+    width: 100%;
+    height: 100%;
+//    background-color: purple;
+    margin: 0 5% 5% 0;
+    overflow: hidden;
     
-    div{
-        float: left;
-        height: auto;
-    }
     
-    .image-project{
-        width: 50%;
-        height: 100%;
+    .img-project{
+       width: 400px;
+       float: left;
+        margin-left: 20%;
     }
     
     .text-project{
-        width: $width-half-screen;
-        background-color: $background-color;
-        padding: 8% 8% 9% 8%;
+//        background-color: pink;
+        float: left;
+        width: 500px;
     }
+    
+    p{
+        font-size: 1.1em;
+        margin-bottom: 8%;
+    }
+}
+
+.container{
+    margin: 100px 5%;
+    overflow: hidden;
 }
 
 .section-in-project{
@@ -243,7 +301,52 @@ section{
 
 footer{
     width: $width-full-screen;
-    background-color: #fff;
+    background-color: #343434;
+    height: 200px;
+    padding-top: 40px;
+    bottom: 0;
+    overflow: hidden;
+    
+    p{
+    font-family: $title-typeface;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: white;
+    margin-left: 5%;
+    }
+    
+    ul{
+        margin-left: 5%;
+    }
+    
+    ul a li{
+       display: inline;
+        border: 1px solid $bright-color;
+        padding: 5px 9px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        font-size: 0.8em;
+        margin-right: 10px;
+        -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    }
+    
+    ul a li:hover{
+        border: 1px solid white;
+        background-color: rgba(11, 11, 11, 1);
+        color: white;
+        -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    }
+    
+    ul a{
+        color: $bright-color;
+}
     
     
     #about{
@@ -265,22 +368,19 @@ footer{
         
         ul li{
             display: inline;
-            padding: 0 4.5% 0 4.5%;
-            border-right: 1px solid #C3C1B9;
             font-style: normal;
             font-weight: 300;
             font-size: $font-normal-size;
             line-height: $normal-lineheight;
-            color: $copy-color;
+            color: white;
             letter-spacing: .01rem;
         }
-        
-        ul li:first-child, li:last-child{
-            border: none;
-            
-        }
-        
     }
+}
+
+.thanks{
+    font-size: 0.8em;
+    float: right;
 }
 
 #contact{
@@ -372,18 +472,42 @@ iframe{
 }
 
 
-.more-button{
-    padding: 11px 15px 11px 15px;
-    background-color: #FF6138;
+.more-button-2{
+    font-family: $title-typeface;
+    font-size: 1em;
+    padding: 10px 30px;
+    border: solid 1px $bright-color;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    box-shadow: 2px 2px 3px #888888;
-    float: right;
-    
-    a{
-        color: white;
-    }
+    font-weight: 300;
+    margin: 50px 0;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+}
+
+.more-button-2:hover{
+    background-color:  $bright-color;
+    border: solid 1px $bright-color;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -ms-transition: all 0.1s ease-in;
+
+}
+
+.link-more-button:hover more-button-2:after{
+    content: 'ADD';
+}
+
+.link-more-button{
+    color: $bright-color;
+}
+
+.link-more-button:hover{  
+    color: white;
 }
 
 .button-inside{
@@ -399,4 +523,12 @@ iframe{
         font-family: $title-typeface;
         color: white;
     }
+}
+
+.div-sec{
+    background-color: $background-color-sec;
+}
+
+.div-first{
+    background-color: $background-color;
 }
