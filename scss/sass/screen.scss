@@ -4,7 +4,7 @@
 
 
 
-$width-full-screen: 100%;
+
 $width-full-screen: 100%;
 $width-half-screen: 34%;
 
@@ -15,11 +15,13 @@ $name-typeface: "grafolita-script";
 $font-normal-size: 22px;
 $normal-lineheight: 1.5;
 
-$background-color: #ECEBE3;
+$background-color: #F8484D;
+//$background-color: #ECEBE3;
 $background-color-sec: #f6f6f4;
 $title-color: #7C7B74;
-$copy-color: #404040;
-$bright-color: #FF6138;
+$copy-color: #4F4F4F;
+//$bright-color: #FF6138;
+$bright-color: #F8484D;
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -45,7 +47,16 @@ html, body{
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6{
+::selection {
+    background: $bright-color;
+    color: white;
+}
+::-moz-selection {
+    background: $bright-color;
+    color: white;
+}
+
+h1, h2, h4, h5, h6{
     font-family: $title-typeface;
     font-weight: 300;
     line-height: 1.2;
@@ -56,25 +67,35 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 3%;
 }
 
-h3, h4, h5, h6{
+h5{
     margin-left: 12%;
 }
 
 h1{
-    font-size: 1.6em;
+    font-size: 2em;
     font-family: $block-typeface;
+    font-weight: 300;
     padding-top: 6%;
     padding-bottom: 10%;
     margin: 0 auto;
+    line-height: 120%;
 }
 
 h2{
-    font-size: 1.5em;
+    font-size: 2em;
+    margin-left: 0;
+    font-family: $title-typeface;
+}
+
+h3{
     margin-left: 0;
 }
 
+
 h4{
-    font-size: 1.8em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: $copy-color;
 }
 
 h5{
@@ -83,33 +104,27 @@ h5{
 }
 
 h6{
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 100;
 }
-
 
 
 blockquote{
 
 }
 
-.message{
-    margin-left: 5%;
-    font-family: $title-typeface;
-    background-color: #fcf9e8;
-    padding: 2%;
-    width: 60%;
-    font-size: 1em;
-}
+
 
 
 p{
-    font-family: $block-typeface;
+
+font-family: $title-typeface;
     font-style: normal;
     font-weight: 300;
-    font-size: $font-normal-size;
+    font-size: 1.1em;
+    //    font-size: $font-normal-size;
     line-height: $normal-lineheight;
-    color: $copy-color;
+    color: #181818 ;
     letter-spacing: .01rem;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -153,33 +168,28 @@ header{
     
 }
 
-h1{
-    padding: 4% 5% 5% 5%;
-    
-    span{
-            font-family: $name-typeface;
-            font-size: 1.2em;
-    }
-}
+
 
 .abc{
-    position: relative;
+    position: fixed;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
+    height: 60px;
 }
 
 .abc2{
     position: fixed;
     margin-top: 0;
-    padding-top: 3%;
-    height: 60px;
+    padding-top: 1.5%;
+    height: 50px;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
     border-bottom: 1px solid #e4e3df;
+    
 }
 
 .name-logo{
@@ -187,8 +197,19 @@ h1{
     font-size: 2em;
     
     a{
-        color: #343434;
+        color: #F8484D;
+        border: none;
     }
+    
+    a:hover{
+        color: #FA7679;
+        border: none;
+    }
+}
+
+.name-inline{
+    
+    font-size: 1.2em;
 }
 
 //img{
@@ -204,6 +225,9 @@ a{
     -o-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    border-bottom: #fff 1px solid;
+    padding-bottom: 1px;
+    
 }
 
 a:hover{
@@ -212,12 +236,54 @@ a:hover{
     -o-transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
+    border-bottom: #C3C1B9 1px solid;
+    padding-bottom: 4px;
+}
+
+.first-content{
+    width: $width-full-screen;
+    padding-top: 15%;
+    padding-bottom: 5%;
+    
+    a{
+        padding-left: 5%;
+        color: $bright-color;
+        border: none;
+    }
+    
+    a:hover{
+        color: white;
+        border: none;
+    }
+    
+    h1{
+    padding: 0 5% 5% 5%;
+    
+        span{
+                font-family: $name-typeface;
+                font-size: 1.2em;
+        }
+    }
+}
+
+.checkprototype{
+    text-align: center;
+    
+    a{
+        padding-left: 5%;
+        color: $bright-color;
+        border: none;
+    }
+    
+    a:hover{
+        color: white;
+        border: none;
+    }
 }
 
 section{
     width: 100%;
     height: 100%;
-//    background-color: purple;
     margin: 0 5% 5% 0;
     overflow: hidden;
     
@@ -226,10 +292,22 @@ section{
        width: 400px;
        float: left;
         margin-left: 20%;
+        border-radius: 10px;
+         -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    }
+    
+    .img-project:hover{
+        border-radius: 20px;
+         -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
     }
     
     .text-project{
-//        background-color: pink;
         float: left;
         width: 500px;
     }
@@ -238,6 +316,16 @@ section{
         font-size: 1.1em;
         margin-bottom: 8%;
     }
+    
+    a{
+        border: none;
+    }
+    
+    a:hover{
+        border: none;
+    }
+    
+    
 }
 
 .container{
@@ -277,13 +365,12 @@ section{
 
 #project-content{
 	width: 70%;
-	height: 500px;
 	margin-left: 10%;
-	padding-top: 5%;
+	padding-top: 15%;
     
     img{
         width: 795px;
-        border-left: 5px solid #ECEBE3;
+        border-left: 5px solid $bright-color;
         margin: 3% 5% 3% 12%;
     }
     
@@ -292,9 +379,35 @@ section{
         margin-left: 12%;
     }
     
+    h2, h6{
+        margin-left: 12%;
+    }
+    
+    h5, h6{
+        margin-top: 8%;
+    }
+    
+    ul{
+        font-family: $title-typeface;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.1em;
+        line-height: 130%;
+        color: #181818 ;
+        letter-spacing: .01rem;
+        margin-left: 12%;
+        list-style-type: disc;
+        background-color: $background-color-sec;
+        padding: 5.3%;
+    }
+    
+    ul li{
+        margin-bottom: 3%;
+    }
+    
 }
 
-#project-content > p, ul, h3, h4{
+#project-content > p, ul, h3{
 	margin-left: 12%;
     width: 80%;
 	line-height: 170%;
@@ -302,22 +415,52 @@ section{
 
 footer{
     width: $width-full-screen;
-    background-color: #343434;
+    background-color: #192326 ;
     height: 200px;
     padding-top: 40px;
     bottom: 0;
     overflow: hidden;
+    text-align: center;
     
     p{
     font-family: $title-typeface;
     font-weight: 300;
     font-size: 0.8em;
     color: white;
-    margin-left: 5%;
+    }
+    
+    p:first-child{
+        font-size: 1.1em;
+        width: 450px;
+        margin: 0 auto;
+        
+        a{
+            color: $bright-color;
+            -moz-transition: all .1s ease-out;
+            -o-transition: all .1s ease-out;
+            -webkit-transition: all .1s ease-out;
+            transition: all .1s ease-out;
+        }
+        
+        a:hover{
+            color: #FA7679;
+            -moz-transition: all .1s ease-out;
+            -o-transition: all .1s ease-out;
+            -webkit-transition: all .1s ease-out;
+            transition: all .1s ease-out;
+        }
+    }
+    
+    a{
+        border: none;
+    }
+    
+    a:hover{
+        border: none;
     }
     
     ul{
-        margin-left: 5%;
+        text-align: center;
     }
     
     ul a li{
@@ -336,8 +479,8 @@ footer{
     }
     
     ul a li:hover{
-        border: 1px solid white;
-        background-color: rgba(11, 11, 11, 1);
+        border: 1px solid $bright-color;
+        background-color: $bright-color;
         color: white;
         -moz-transition: all .1s ease-out;
     -o-transition: all .1s ease-out;
@@ -358,7 +501,7 @@ footer{
     }
     
     div:last-child{
-        background-color: #F5F5F3 ;
+        
         font-family: $block-typeface;
         
         
@@ -379,6 +522,11 @@ footer{
     }
 }
 
+.support-links-footer{
+    float: right;
+    right: 0;
+}
+
 .thanks{
     font-size: 0.8em;
     float: right;
@@ -391,10 +539,12 @@ footer{
 }
 
 .profile-pic{
-    width: 100px;
-    border-radius: 50%;
-    margin-right: 5%;
-    margin-top: 5%;
+    width: 135px;
+//    border-radius: 50%;
+//    margin-right: 5%;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 3%;
     float: left;
 }
 
@@ -402,15 +552,25 @@ footer{
     width: $width-full-screen;
     background-color: $background-color;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    color: #fff;
+    font-family: $title-typeface;
+    
+   
     
     div:first-child{
-        margin-left: 18%;
-        padding-top: 3%;
+        margin-left: 5%;
+        padding-top: 2%;
     }
     
     h3{
-        margin-left: 18%;
-        margin-top: 2%;
+        font-size: 1.6em;
+        color: #fff;
+        font-weight: 100;
+        font-family: $title-typeface;
+        margin-left: 0;
+        padding-top: 1%;
+        padding-bottom: 2%;
+        margin-left: 5%;
     }
     
     p{
@@ -419,21 +579,29 @@ footer{
         margin-top: 2%;
     }
     
+    a{
+        border: none;
+    }
+    
+    a:hover{
+        border: none;
+    }
+    
     div:last-child{
         font-size: 0.8em;
-        margin-top: 1%;
-        margin-bottom: 1%;
-        margin-left: 18%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 5%;
         padding-bottom: 2%;
-        padding-top: 2%;
+        padding-top: 0;
+        font-weight: 300;
         
         
         span{
             font-family: $title-typeface;
-            font-weight: 300;
-            text-transform: uppercase;
+            font-weight: 600;
             padding-right: 1%;
-            color: $copy-color;
+            color: #fff;
         }
         
         span:last-of-type{
@@ -441,6 +609,8 @@ footer{
         }
     }
 }
+
+
 
 iframe{
     margin-left: 12%;
@@ -450,10 +620,10 @@ iframe{
     width: 15px;
     height: 15px;
     font-size: 1em;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
 }
 
 .breadcrumbs:hover{
@@ -464,17 +634,26 @@ iframe{
     -ms-transition: all 0.2s ease-in;
 }
 
+.breadcrumbs a{
+    color: #fff;
+}
+
+.breadcrumbs a:hover{
+    color: #fff;
+}
+
 .end-text{
-    width: 20%;
+    width: 12%;
     height: 5px;
     border-top: 1px solid #C3C1B9;
     margin-left: 45%;
+    margin-top: 5%;
     padding-bottom: 5%;
 }
 
 
 .more-button-2{
-    font-family: $title-typeface;
+    font-family: $title-typeface !important;
     font-size: 1em;
     padding: 10px 30px;
     border: solid 1px $bright-color;
@@ -496,7 +675,33 @@ iframe{
     -moz-transition: all 0.1s ease-in;
     -o-transition: all 0.1s ease-in;
     -ms-transition: all 0.1s ease-in;
+}
 
+.teste-botao{
+    color: black;
+}
+
+.more-button-2:hover + .teste-botao::after{
+    content: " \f054";
+}
+
+
+.more-button-3{
+    background-color: $bright-color;
+    color: #fff;
+}
+
+.more-button-3:hover{
+    background-color: #fff;
+    color: $bright-color;
+}
+
+.more-button-inside-text{
+    text-align: center;
+}
+
+.more-button-inside-text:hover{
+    text-decoration: none;
 }
 
 .link-more-button:hover more-button-2:after{
@@ -533,3 +738,39 @@ iframe{
 .div-first{
     background-color: $background-color;
 }
+
+article{
+    float: left;
+    width: 60%;
+    margin-top: 10%;
+    
+    p:first-child{
+        margin-top: 8%;
+    }
+    
+    p{
+        width: 80%;
+    }
+    
+    p:last-child{
+        margin-top: 8%;
+        padding-bottom: 10%;
+    }
+    
+    a{
+        border: none;
+    }
+    
+    a:hover{
+        border: none;
+    }
+}
+
+.available{
+    font-weight: 400;
+}
+
+
+
+
+

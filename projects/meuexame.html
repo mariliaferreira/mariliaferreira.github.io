@@ -10,6 +10,8 @@
         <script src="//use.typekit.net/mwl6jhx.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
         <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,40 +23,45 @@
 
     </script>
         
+        
+        <script>
+        
+          $(window).scroll(function() {
+           var height = $(window).scrollTop();
+
+           if(height  > 7) {
+               $($("header")).removeClass("abc")
+               $($("header")).addClass("abc2")
+           }
+           else
+           {
+               $($("header")).removeClass("abc2")
+               $($("header")).addClass("abc")
+           }
+        });
+          
+      </script>
+        
 	</head>
     
 	<body>
 
-<!--
-    <section class="section-in-project">
-        <div class="image-project image-project-1"></div>
-        <div class="text-project">
-            <h2>tonetable</h2>
-            <p>Tonetable brings tone of voice for people who for any reason can't speak. Tonetable is a device for AAC researchers use it with their participants, to try differents tones of voice with or without a Speech Generating Device.</p>
-        </div>
-    </section>
--->
-    <div class="header-projects">
-        <div class="breadcrumbs">
-            <a href="../index.html"><i class="fa fa-chevron-left"></i></a>
-        </div>
+<header class="abc">
+<!--    <a href="../index.html"><i class="fa fa-chevron-left"></i></a>   -->
+    <span class="name-logo"><a href="../index.html">marilia ferreira </a></span>
+        <ul>
+            <li><a href="../index.html#projects">projects</a></li>
+            
+            <li><a href="../about.html" id="aboutLink">about & contact</a></li> 
+        </ul>
+    </header>
         
-        <h3>Meu Exame</h3>
-        
-        <p>Meu Exame is a mobile app that brings a better way to read and understand laboratorial tests. Meu Exame helps you to improve your health by comparing your old laboratorial tests to make sure you understand your health.</p>
-        
-        <div>
-             <span><i class="fa fa-calendar"></i> When</span> from September to December 2014 
-            <span><i class="fa fa-map-marker"></i> Where</span> <a href="http://www.dundee.ac.uk/" target="_blank">PUCPR</a> - Curitiba, BR
-        </div>
-        
-    </div>
 
         
 	<div id="project-content">
 
 		
-        <h4>Design Process</h4>
+        <h2>Meu Exame</h2>
         <img src="../img/meuexame6.png" style="width: 200px;"/>
         
         <p>Meu Exame was my final project at university. We were free to choose our brief, so the theme of my project was health - something I'm very interested in.</p>
@@ -69,10 +76,13 @@
         
         <img src="../img/meuexame1.png" style="width: 600px;"/>
         
-        <span class="button-inside"><a href="http://mariliaferreira.com/meuexame/">Check the prototype</a></span>
+        <div class="checkprototype">
+        <a href="http://mariliaferreira.com/meuexame/" target="_blank"><span class="more-button-inside-text more-button-3 more-button-2 " id="projects">Check the prototype</span></a>
+        </div>
         
         <br />
         <br />
+        <h2>Design Process</h2>
         <p>One of the most important part of this work were about the information. How would I present it in an easy way to the user, but in the same time not scare him - just inform him so he would be conscious about his decisions related to his health.</p>
         <h5>Visualizing the results</h5>
         
@@ -84,16 +94,51 @@
         <h5>Choosing different set of exams and laboratories</h5>
         <img src="../img/meuexame2.png" style="width: 600px;"/>
         
-       <span class="button-inside"><a href="http://mariliaferreira.com/meuexame/">Check the prototype</a></span>
+        <br />
+        
+        <div class="checkprototype">
+        <a href="http://mariliaferreira.com/meuexame/" target="_blank"><span class="more-button-inside-text more-button-3 more-button-2 " id="projects">Check the prototype</span></a>
+        </div>
        
+        <br />
         
-
         
         
+    <p>Do you want to hear more about it? Contact me: mariliaferreiraa@gmail.com</p>
         
     <div class="end-text"></div>
 
 	</div>
+        
+    <footer>
+        <p>I upload some projects on <a href="https://dribbble.com/mariliaferreira" target="_blank"><i class="fa fa-dribbble"></i> dribbble</a>, write some stuff on <a href="https://medium.com/@mariliaferreira" target="_blank"><i class="fa fa-medium"></i> medium</a>, tweet on <a href="https://twitter.com/mariliafrrr" target="_blank"><i class="fa fa-twitter"></i> twitter</a>, sync my projects with <a href="https://github.com/mariliaferreira" target="_blank"><i class="fa fa-github-alt"></i> github</a> and post some pictures on <a href="https://instagram.com/marilia.ferreira/" target="_blank"><i class="fa fa-instagram"></i> instagram</a>.</p>
+      
+        <p>© 2015 Marilia Ferreira. <i class="fa fa-code"></i> with <i class="fa fa-heart-o"></i> in Curitiba.</p>
+    </footer>
+        
+        
+
+<script src='js/scrollReveal.min.js'></script>
+<script>
+    window.sr = new scrollReveal();
+</script>
+    
+    <script>
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 300);
+        return false;
+      }
+    }
+  });
+});
+    </script>
         
     
 

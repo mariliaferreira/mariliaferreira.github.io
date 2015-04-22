@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project</title>
+        <script src="//use.typekit.net/mwl6jhx.js"></script>
+        <link rel="shortcut icon" href="./assets/ico/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../scss/stylesheets/screen.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+        <script src="//use.typekit.net/mwl6jhx.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-18418884-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+        
+        
+        <script>
+        
+          $(window).scroll(function() {
+           var height = $(window).scrollTop();
+
+           if(height  > 7) {
+               $($("header")).removeClass("abc")
+               $($("header")).addClass("abc2")
+           }
+           else
+           {
+               $($("header")).removeClass("abc2")
+               $($("header")).addClass("abc")
+           }
+        });
+          
+      </script>
+        
+	</head>
+    
+	<body>
+
+<header class="abc">
+<!--    <a href="../index.html"><i class="fa fa-chevron-left"></i></a>   -->
+    <span class="name-logo"><a href="../index.html">marilia ferreira </a></span>
+        <ul>
+            <li><a href="../index.html#projects">projects</a></li>
+            
+            <li><a href="../about.html" id="aboutLink">about & contact</a></li> 
+        </ul>
+    </header>
+        
+
+        
+	<div id="project-content">
+
+		
+        <h2>Meu Exame</h2>
+        <img src="../img/meuexame6.png" style="width: 200px;"/>
+        
+        <p>Meu Exame was my final project at university. We were free to choose our brief, so the theme of my project was health - something I'm very interested in.</p>
+        
+        <p>Here in Brasil - and I truly believe that in other parts of the world it happens too - we have acess to the laboratoty test results, but we don't always understand it clearly. Patients have the rights to understand what is happening with their bodies, because everybody wants to improve their health.</p>
+        
+        <p>Laboratory tests in Brasil look like this:</p>
+        <img src="../img/meuexame7.png" style="width: 500px;" />
+        
+        <p>It's not very easy to understand because the information is poorly structured. Based on this, I started working on this project and decided to have an app that allows users to import their results form different laboratories and store it so they could understand and compare the information.</p>
+        
+        
+        <img src="../img/meuexame1.png" style="width: 600px;"/>
+        
+        <div class="checkprototype">
+        <a href="http://mariliaferreira.com/meuexame/" target="_blank"><span class="more-button-inside-text more-button-3 more-button-2 " id="projects">Check the prototype</span></a>
+        </div>
+        
+        <br />
+        <br />
+        <h2>Design Process</h2>
+        <p>One of the most important part of this work were about the information. How would I present it in an easy way to the user, but in the same time not scare him - just inform him so he would be conscious about his decisions related to his health.</p>
+        <h5>Visualizing the results</h5>
+        
+         <img src="../img/meuexame3.png" />
+        
+        <h5>Comparing the results</h5>
+        <img src="../img/meuexame4.png" style="width: 600px;"/>
+        
+        <h5>Choosing different set of exams and laboratories</h5>
+        <img src="../img/meuexame2.png" style="width: 600px;"/>
+        
+        <br />
+        
+        <div class="checkprototype">
+        <a href="http://mariliaferreira.com/meuexame/" target="_blank"><span class="more-button-inside-text more-button-3 more-button-2 " id="projects">Check the prototype</span></a>
+        </div>
+       
+        <br />
+        
+        
+        
+    <p>Do you want to hear more about it? Contact me: mariliaferreiraa@gmail.com</p>
+        
+    <div class="end-text"></div>
+
+	</div>
+        
+       <footer>
+          <p class="">Eu coloco alguns projetos no <a href="https://dribbble.com/mariliaferreira" target="_blank"><i class="fa fa-dribbble"></i> dribbble</a>, escrevo coisas no <a href="https://medium.com/@mariliaferreira" target="_blank"><i class="fa fa-medium"></i> medium</a>, posto coisas legais no <a href="https://twitter.com/mariliafrrr" target="_blank"><i class="fa fa-twitter"></i> twitter</a>, sincronizo projetos no <a href="https://github.com/mariliaferreira" target="_blank"><i class="fa fa-github-alt"></i> github</a> e posto fotos no <a href="https://instagram.com/marilia.ferreira/" target="_blank"><i class="fa fa-instagram"></i> instagram</a>.</p>
+
+          <p>© 2015 Marilia Ferreira. <i class="fa fa-code"></i> com <i class="fa fa-heart-o"></i> em Curitiba.</p>
+    </footer>
+        
+
+<script src='js/scrollReveal.min.js'></script>
+<script>
+    window.sr = new scrollReveal();
+</script>
+    
+    <script>
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 300);
+        return false;
+      }
+    }
+  });
+});
+    </script>
+        
+    
+
+	</body>
+</html>
