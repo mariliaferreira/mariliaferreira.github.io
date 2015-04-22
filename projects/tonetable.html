@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project</title>
+        <script src="//use.typekit.net/mwl6jhx.js"></script>
+        <link rel="shortcut icon" href="./assets/ico/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../scss/stylesheets/screen.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+        <script src="//use.typekit.net/mwl6jhx.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-18418884-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+        
+        
+        <script>
+        
+          $(window).scroll(function() {
+           var height = $(window).scrollTop();
+
+           if(height  > 7) {
+               $($("header")).removeClass("abc")
+               $($("header")).addClass("abc2")
+           }
+           else
+           {
+               $($("header")).removeClass("abc2")
+               $($("header")).addClass("abc")
+           }
+        });
+          
+      </script>
+        
+	</head>
+    
+	<body>
+
+<header class="abc">
+<!--    <a href="../index.html"><i class="fa fa-chevron-left"></i></a>   -->
+    <span class="name-logo"><a href="../index.html">marilia ferreira </a></span>
+        <ul>
+            <li><a href="../index.html#projects">projects</a></li>
+            
+            <li><a href="../about.html" id="aboutLink">about & contact</a></li> 
+        </ul>
+    </header>
+        
+    
+       
+
+        
+	<div id="project-content">
+        
+        
+        <h2>Tonetable</h2>
+        <p>Tonetable brings tone of voice to people who for any reason can't speak. Tonetable is a device for AAC researchers to try differents tones of voice with their participants using (or not) a Speech Generating Device.</p>
+
+		
+        
+        <iframe src="//player.vimeo.com/video/103603917?color=ffffff&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        
+       
+        <br />
+        <h2>Design Process</h2>
+
+        <p>I worked in this project as a research assistant. This project was leaded by Professor Dr. <a href="http://www.dundee.ac.uk/djcad/staff/grahampullin/" target="_blank">Graham Pullin</a> (ex-IDEO studio head of design in London) who is now a researcher and professor at University of Dundee. We also had Shannon Hennig (Language Therapist and AAC researcher in New Zealand) as a partner in this research.</p>
+
+        
+        <h5>Scenarios</h5>
+        <p>Since Professor Graham had previous projects in the same field, he has wide information about the users. With this documentation we started building the scenarios for this project. We brainstormed and made two possible cases:</p>
+
+<p>1. The first one, was a product that worked as a SGD (Speech Generating Device), which you could choose the tone of voice throught the cards.</p>
+
+<p>2. The second one, was a book about experimentation, where you should follow some lessons and interact with it to get the tones of voice.</p>
+
+<img src="../img/scenario-1.png"/></a>
+<img src="../img/scenario-2.png" /></a>
+
+
+<p>After developing these scenarios, we presented them to Shannon Hennig, who works in Australia as a language Therapist and researcher. She helped us with thoughts on both scenarios and her thoughts were fundamental for our work - acted as a north star to help us find the best solution.</p>
+
+        <h5>Inspiration</h5>
+        <p>After gathering lots of information from both Professor Graham and Shennon, it was time to step back and look for some visual inspiration as well.</p>
+
+<p>To accomplished this task, we created a board on Pinterest to register this finding and keep remembering of them.</p>
+
+<img src="../img/pinterest-board.png" />
+
+
+<p>*Offline inspiration*: we went to Tayside Recycling Centre to find different pieces of inspiration (I suggest every designer do this one hour or another).</p>
+
+<p>One inspiration that stick in our heads (for so many good reasons) was Dieter Rams. Our work was somehow related with his, in the sense that we had an piece of product design that was about "sound". We serched some cues from the design language of Braun––hardly an original source, but appropriate in this case as we try to balance attractiveness with a sense of scientific rigour.</p>
+
+
+
+        <h5>Sketches - Ideation</h5>
+        <p>After lots of inputs, I brainstormed some ideias and drew them on paper to present it. Some of them were better than others, some took a very different approach (i.e. one of them was inspired by Scrabble game). Then, after discussing them with Professor Graham, I took the lead to make the first prototyping iterations, using cardboard.</p>
+
+<img src="../img/sketch-1.png" class="smaller-img" />
+<img src="../img/sketch-2.png" class="smaller-img" />
+<img src="../img/sketch-3.jpg" class="smaller-img" />
+
+
+        <h5>Prototype - Experimenting</h5>
+        <h6>Cardboard Prototypes</h6>
+        <p>After we discuss which prototype were more prominent in terms of form, we chose one to make it at least functional. We decided to use Arduino with MP3 shield. In this stage, we used some audio files from the Cereproc project [LINK] from Edinburgh - which is a Scottish company, based in Edinburgh, the home of advanced speech synthesis research. With those files, we could test different tones of voice for the same sentence.</p>
+        
+        <img src="../img/tonetable-cardboard-1.jpg" class="smaller-img" />
+        
+        <iframe src="//player.vimeo.com/video/101418600?color=ffffff&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+
+<p>We also built a prototype using foam to test more details in the product.</p>
+        
+        <img src="../img/tonetable-foam-1.jpg" class="smaller-img" />
+
+<img src="../img/tonetable-final.jpg" class="smaller-img" />
+        
+        <p>Do you want to hear more about it? Contact me: mariliaferreiraa@gmail.com</p>
+        
+    <div class="end-text"></div>
+    
+    
+
+	</div>
+
+
+
+    <footer>
+        <p>I upload some projects on <a href="https://dribbble.com/mariliaferreira" target="_blank"><i class="fa fa-dribbble"></i> dribbble</a>, write some stuff on <a href="https://medium.com/@mariliaferreira" target="_blank"><i class="fa fa-medium"></i> medium</a>, tweet on <a href="https://twitter.com/mariliafrrr" target="_blank"><i class="fa fa-twitter"></i> twitter</a>, sync my projects with <a href="https://github.com/mariliaferreira" target="_blank"><i class="fa fa-github-alt"></i> github</a> and post some pictures on <a href="https://instagram.com/marilia.ferreira/" target="_blank"><i class="fa fa-instagram"></i> instagram</a>.</p>
+      
+        <p>© 2015 Marilia Ferreira. <i class="fa fa-code"></i> with <i class="fa fa-heart-o"></i> in Curitiba.</p>
+    </footer>
+
+
+
+<script src='js/scrollReveal.min.js'></script>
+<script>
+    window.sr = new scrollReveal();
+</script>
+    
+    <script>
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 300);
+        return false;
+      }
+    }
+  });
+});
+    </script> 
+        
+    
+
+	</body>
+</html>
