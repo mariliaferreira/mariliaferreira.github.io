@@ -1,0 +1,607 @@
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<meta name="description" content="Make your own website with Lewis Watson & Mozilla Thimble">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Lewis Watson Competition</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/font-awesome.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <srcipt type="text/javascript" href="prettify.js"></srcipt>
+        <script src="js/modernizr.custom.js"></script>
+        <script>
+            $(function() {
+                var pull 		= $('#pull');
+                    menu 		= $('#menu ul');
+                    menuHeight	= menu.height();
+
+                $(pull).on('click', function(e) {
+                    e.preventDefault();
+                    menu.slideToggle();
+                });
+
+                $(window).resize(function(){
+                    var w = $(window).width();
+                    if(w > 320 && menu.is(':hidden')) {
+                        menu.removeAttr('style');
+                    }
+                });
+            });
+        </script>
+        
+    
+       
+        
+	</head>
+<body>
+
+     
+    <div class="container">
+        
+        <div id="menu" class="clearfix">
+            <div class="brand">
+                <span class="red"></span>
+                <span class="blue"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+            <ul class="clearfix link-flip">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#description">How it works</a></li>
+                <li><a href="#prizes">The Prizes</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#playlist">Playlists</a></li>
+                <li><a href="#instructions">Instructions</a></li>
+                <li><a href="#submit">Submit</a></li>	
+            </ul>
+            <a href="#" id="pull">Lewis Watson Competition</a>
+        </div>
+        
+        
+        <div class="main">
+            
+            <!-- HOME SECTION -->
+            <section id="home">
+                <div class="content">
+                    <div class="content-home">
+                        <div class="title-section">
+                            <p class="title-competition">Make your *own*<br /> <strong>website</strong> with<br /> <strong>Lewis Watson!</strong></p>
+                            <a class="call-to-action" href="#description">
+                                How it works?
+                            </a>
+                        </div>
+                        <div class="image-lewiswatson-section">
+                            <img src="img/header-lewiswatson-mozillathimble.png" class="lewis-watson-jpg" />
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="logos-section">
+                <div class="logos">
+                        
+                        <ul class="footer-logos">
+        
+                            <li>
+                                <a href="https://www.spotify.com">
+                                    <img class="spotify-logo" src="img/spotify.jpg"/>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.wmg.com/">
+                                    <img class="warnermusic-logo" src="img/warnermusic.png" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/makethingsdostuff.jpg" />
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/lewiswatsonlogo.png" />
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/mozilla-thimble-logo.png" />
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+            
+            </section>
+            
+            <!-- HOW IT WORKS SECTION -->
+            <section id="description">
+                <div class="content-description">
+                     <h2>How it works</h2>
+                    
+                        <div class="steps">
+                            <p class="icon-steps"><i class="fa fa-download"></i></p>
+                            <h4><span class="number-steps">1.</span> Open the Remixable Template </h4>
+                            <p link-flip>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <a href="#photos">
+                                <p class="call-to-action-steps">Get the template</p>
+                            </a>
+                            
+                        </div>
+
+                        <div class="steps">
+                            <p class="icon-steps"><i class="fa fa-code"></i></p>
+                            <h4><span class="number-steps">2.</span> Remix it with Mozilla Thimble</h4>
+                            <p link-flip>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <a  href="#photos">
+                                <p class="call-to-action-steps">Go to Mozilla Thimble</p>
+                            </a>
+                        </div>
+                    
+                        <div class="steps">
+                            <p class="icon-steps"><i class="fa fa-camera-retro"></i></p>
+                            <h4><span class="number-steps">3.</span> Get some Lewis Watson photos</h4>
+                            <p link-flip>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <a href="#photos">
+                                <p class="call-to-action-steps">Get photos</p>
+                            </a>
+                        </div>
+                    
+                        <div class="steps">
+                            <p class="icon-steps"><i class="fa fa-video-camera"></i></p>
+                            <h4><span class="number-steps">4.</span> Let's use some videos, too!</h4>
+                            <p link-flip>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <a href="#videos">
+                                <p class="call-to-action-steps">Get videos</p>
+                            </a>
+                        </div>
+
+                        <div class="steps">
+                            <p class="icon-steps"><i class="fa fa-paper-plane"></i></p>
+                            <h4><span class="number-steps">5.</span> Submit your website</h4>
+                            <p link-flip>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            <a href="#submit">
+                                <p class="call-to-action-steps">Submit your website</p>
+                            </a>
+                        </div>
+                </div>
+                
+                
+            </section>
+            
+            <section id="prizes">
+                <div class="content-prizes">
+                    
+                    <h2>The prizes</h2>
+                    <div class="prizes-description">
+                        <p class="icon-prizes"><i class="fa fa-star"></i></p>
+                        <h5>Category 1</h5>
+                        <div class="prizes-places-details">
+                            <div class="first-place-prize-detail">
+                                <h6>1st Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="second-place-prize-detail">
+                                <h6>2nd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="third-place-prize-detail">
+                                <h6>3rd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prizes-description">
+                        <p  class="icon-prizes"><i class="fa fa-star"></i></p>
+                        <h5>Category 2</h5>
+                        <div class="prizes-places-details">
+                            <div class="first-place-prize-detail">
+                                <h6>1st Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="second-place-prize-detail">
+                                <h6>2nd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="third-place-prize-detail">
+                                <h6>3rd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prizes-description">
+                        <p  class="icon-prizes"><i class="fa fa-star"></i></p>
+                        <h5>Category 3</h5>
+                        <div class="prizes-places-details">
+                            <div class="first-place-prize-detail">
+                                <h6>1st Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="second-place-prize-detail">
+                                <h6>2nd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                            <div class="third-place-prize-detail">
+                                <h6>3rd Place:</h6>
+                                <p>Lorem ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+            
+            
+            
+            <!-- PHOTOS SECTION -->
+            <section id="photos">
+                
+                <div class="content-photos">
+                    
+                    <h2>Photos</h2>
+                    <p>Copy the image link and use it in your website!</p>
+<!--                    Formatting code              -->
+                        <ul class="list img-list" id="grid">
+                            <li>
+                                 <div class="li-img">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson.jpg" class="image-grid-item" />
+                                    </div>
+                            </li>
+                            
+                            <li>
+                                <div class="li-img div-imagem">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson-1.jpg" class="image-grid-item"/>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="li-img div-imagem">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson-2.jpg" />
+                                </div>
+                            </li>
+                            
+                            <li>
+                                 <div class="li-img div-imagem">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson-3.jpg" />
+                                    </div>
+                            </li>
+                            
+                            <li>
+                                <div class="li-img div-imagem">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson-4.jpg" />
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="li-img div-imagem">
+                                        <div class="info-product">
+                                            <div class="li-text">
+                                                <span class="link-image-title">Image link:</span><br />
+                                                 <div class="link-image-copy"><textarea cols="30">http://www.makethingsdostuff.co.uk/sites/default/files/banner/teachers-banner_0.png</textarea></div>
+                                             </div>
+
+                                        </div>
+
+                                        <img src="img/lewis-watson-5.jpg" />
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+               
+                 
+            </section>
+            
+            <!-- VIDEOS SECTION -->
+            <section id="videos">
+                 <div class="content-videos">
+                    
+                    <h2>Videos</h2>
+                    <p>Copy the embbed code from these videos and use it in your website :-)</p>
+                     
+                    <div class="video-codes">
+                        <div class="video-iframe">
+                            <iframe width="450" height="253" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe> 
+                        </div>
+                        
+                        <div class="copy-embbed-code">
+                            <span class="link-image-title">Embed this video: </span><br />
+                            <textarea class="link-image-copy" rows="5"><iframe width="450" height="253" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe></textarea>
+                        </div>
+                     </div>
+                     
+                     <div class="video-codes">
+                        <div class="video-iframe">
+                            <iframe width="450" height="253" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe> 
+                        </div>
+                        
+                         <div class="copy-embbed-code">
+                            <span class="link-image-title">Embed this video: </span><br />
+                            <textarea class="link-image-copy" rows="5"><iframe width="450" height="253" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe></textarea>
+                         </div>
+                     </div>
+                     
+                </div>
+            </section>
+            
+            <!-- PLAYLIST SECTION -->
+            <section id="playlist">
+                
+                <div class="content-playlist">
+                    <h2>Playlists</h2>
+                    
+                    <div class="playlist-spotify">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe><br />
+                        <span class="link-image-title">Embed playlist:</span><br />
+                        <textarea class="link-image-copy" rows="6"><iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe></textarea>
+                    </div>
+                    
+                    <div class="playlist-spotify">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe><br />
+                        <span class="link-image-title">Embed playlist:</span><br />
+                        <textarea class="link-image-copy" rows="6"><iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe></textarea>
+                    </div>
+                    
+                    <div class="playlist-spotify">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe><br />
+                        <span class="link-image-title">Embed playlist:</span><br />
+                        <textarea class="link-image-copy" rows="6"><iframe src="https://embed.spotify.com/?uri=spotify:album:0iyv3RfKBGrf88K5UPbr9h" width="250" height="380" frameborder="0" allowtransparency="true"></iframe></textarea>
+                    </div>
+                    
+                </div>
+            </section>
+            
+            
+            <!-- INSTRUCTIONS SECTION -->
+            <section id="instructions">
+                <div class="content-instructions">
+                   <h2>Instructions</h2>
+                    <p>Follow these instructions to get your website done and submit for the competition.</p>
+                    <div id="cbp-contentslider" class="cbp-contentslider">
+					
+                        <ul>
+                            <li id="slide1">
+                                <h3 class="icon-wolf">1. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide2">
+                                <h3 class="icon-rabbit">2. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide3">
+                                <h3 class="icon-aligator">3. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide4">
+                                <h3 class="icon-turtle">4. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="slide5">
+                                <h3 class="icon-platypus">5. Step</h3>
+                                <div>
+                                    <div class="cbp-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                                        
+                                        <iframe width="400" height="225" src="//www.youtube.com/embed/wLkX37nwugY?rel=0" frameborder="0" allowfullscreen></iframe>
+                                        
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                     <nav class="nav-slider" id="nav-slider">
+						<a href="#slide1" class="icon-wolf"><span>1. Step</span></a>
+						<a href="#slide2" class="icon-rabbit"><span>2. Step</span></a>
+						<a href="#slide3" class="icon-aligator"><span>3. Step</span></a>
+						<a href="#slide4" class="icon-turtle"><span>4. Step</span></a>
+						<a href="#slide5" class="icon-platypus"><span>5. Step</span></a>
+					</nav>
+					
+				</div>
+                    
+                    
+                </div>
+            </section>
+            
+            
+            <!-- SUBMIT SECTION -->
+            <section id="submit">
+                <div class="content-submit">
+                    <h2>Submit your website</h2>
+                    <p>Please fill all the texts in the fields to submit your website:</p>
+                    
+                    <form action="" method="post" class="form-submit-website">
+                        <label>
+                            <span>Name</span><br />
+                            <input id="name" type="text" name="name" placeholder="" /><br />
+                        </label>
+
+                        <label>
+                            <span>Email</span><p class="detail-info-form">(If you do not have your own email, then you can use your parents email address)</p><br />
+                            <input id="email" type="email" name="email" placeholder="" /><br />
+                        </label>
+                        
+                         <label>
+                            <span>Your age</span><br />
+                            <select name="selection">
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="11">13</option>
+                                <option value="12">14</option>
+                                <option value="11">15</option>
+                            </select><br />
+                        </label>
+                        
+                        <label>
+                            <span>Website URL</span><br />
+                            <input id="message" name="message" placeholder=""></input><br />
+                        </label>
+                        
+                        <button>Submit my website!</button>   
+                    </form>
+                
+            </section>
+            
+            <!-- FOOTER -->
+            <section class="logos-section">
+                <div class="brand">
+                    <span class="red"></span>
+                    <span class="blue"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <div class="logos">
+                        
+                        <ul class="footer-logos">
+        
+                            <li>
+                                <a href="https://www.spotify.com">
+                                    <img class="spotify-logo" src="img/spotify.jpg"/>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="http://www.wmg.com/">
+                                    <img class="warnermusic-logo" src="img/warnermusic.png" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/makethingsdostuff.jpg" />
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/lewiswatsonlogo.png" />
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="http://www.makethingsdostuff.co.uk/">
+                                  <img class="mtds-logo" src="img/mozilla-thimble-logo.png" />
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+            
+            </section>
+        </div>
+        
+    </div>
+    
+
+     
+   
+	<script>
+        $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/jquery.cbpContentSlider.min.js"></script>
+		<script>
+			$(function() {
+
+				$( '#cbp-contentslider' ).cbpContentSlider();
+			});
+		</script>
+    
+</body>
+</html>

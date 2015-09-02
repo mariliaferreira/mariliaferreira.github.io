@@ -1,0 +1,1270 @@
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+@font-face {
+    font-family: 'museo_slab500';
+    src: url('fonts/Museo_Slab_500_2-webfont.eot');
+    src: url('fonts/Museo_Slab_500_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Museo_Slab_500_2-webfont.woff') format('woff'),
+         url('fonts/Museo_Slab_500_2-webfont.ttf') format('truetype'),
+         url('fonts/Museo_Slab_500_2-webfont.svg#museo_slab500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Basic Styles */
+body {
+	
+}
+section {
+    clear:both;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 0.8em;
+    margin-left: 2%;
+    color: #656565;
+    
+}
+
+h2{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.5em;
+    color: #f2665e;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #f4f0ed;
+    margin-left: 2%;
+}
+
+h3{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.2em;
+    color: #f2665e;
+    margin-left: 2%;
+    color: #656565;
+}
+
+h4{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    color: #f2665e;
+    margin-left: 2%;
+}
+
+h5{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.2em;
+    color: #656565;
+    margin-left: 2%;
+    text-align: center;
+}
+
+h6{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    color: #656565;
+    margin-left: 2%;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*-------------- NAV MENU -------------- */
+
+.brand span{
+    display:block;
+    float:left;
+    height:5px;
+    width:25%;
+}
+      
+.brand .red{
+    background:#f2665e;
+}
+      
+.brand .blue{
+    background:#57cbf5;
+}
+      
+.brand .yellow{
+    background:#fcb040;
+}
+      
+.brand .green{
+    background:#6ac071;
+    }
+
+#menu {
+	height: 60px;
+	width: 100%;
+	background: #f3f0ec;
+    border-bottom: 1px solid #d6d0c7;
+	font-size: 1.0em;
+	font-family: 'museo_slab500', sans-serif;
+	position: fixed;
+    z-index: 100;
+}
+
+#menu ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 950px;
+	height: 40px;
+}
+
+#menu li {
+	display: inline;
+	float: left;
+    padding-top: 8px;
+}
+
+#menu a {
+	color: #6e6565;
+	display: inline-block;
+	width: 118px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+#menu li:last-child a {
+	border-right: 0;
+}
+
+#menu a#pull {
+	display: none;
+}
+
+
+
+/* flip link nav menu*/
+
+.link-flip a {
+	font-weight: 500;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+	-webkit-perspective: 600px;
+	perspective: 600px;
+	-webkit-perspective-origin: 50% 100%;
+	perspective-origin: 50% 100%;
+}
+
+.link-flip a:hover,
+.link-flip a:focus {
+	color: #e74c3c;
+}
+
+.link-flip a::before,
+.link-flip a::after {
+	position: absolute;
+	top: 0;
+	left: -4px;
+	z-index: -1;
+	box-sizing: content-box;
+	padding: 0 4px;
+	width: 100%;
+	height: 100%;
+	content: '';
+}
+
+.link-flip a::before {
+	background-color: #fff;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+.link-flip a:hover::before,
+.link-flip a:focus::before {
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+.link-flip a::after {
+	border-bottom: 1px solid #f4f0ed;
+}
+
+/* --------------- SECTIONS ---------------- */
+
+
+
+#home, #description, #prizes, #photos, #videos, #playlist, #instructions, #submit{
+    width: 100%;
+    border-bottom: 1px solid #c7c0b5;
+    padding-bottom: 30px;
+    display: inline-block;
+}
+
+#home{
+    background-color: #F2665E;
+    height: 500px;
+}
+
+#description{
+    clear:both;
+}
+
+#prizes{
+    clear:both;
+}
+
+#photos{
+    clear:both;
+}
+
+#videos{
+    clear:both;
+}
+
+#playlist{
+/*    height: 900px;*/
+}
+
+#instructions{
+/*    height: 900px;*/
+    clear:both;
+}
+
+#submit{
+/*    height: 700px;*/
+    background-color: #eae5de;
+}
+
+/* --------------- SECTION 1 - HOME ---------------- */
+
+.content{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+/*    height: 70%;*/
+    margin-top: 5%;
+}
+
+.content-home{
+    margin-top: 5%;
+}
+
+.title-competition{
+    font-size: 2.7em;
+    color: #f4f0ed;
+    font-family: 'museo_slab500', sans-serif;
+    text-shadow: 3px 3px #bd4c45;
+}
+
+.title-section{
+    width: 50%;
+    float: left;
+    margin-top: 5%;
+}
+
+.image-lewiswatson-section{
+    width: 50%;
+    float: left;
+}
+
+.lewis-watson-jpg{
+    width: 370px;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+.call-to-action{
+    border: 1px solid #f4f0ed;
+    border-radius: 5px;
+    font-family: 'museo_slab500';
+    font-size: 1.0em;
+    color: #f4f0ed;
+    text-align: center;
+    padding: 20px 50px 20px 50px;
+}
+
+.title-section a:hover{
+    background-color: #f4f0ed;
+    color: #f06762;
+    cursor: pointer;
+    -o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+  	-webkit-transition:.3s;
+  	transition:.3s;
+}
+
+.logos{
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.logos ul li{
+    display: inline;
+    text-decoration: none;
+     padding-right: 40px;
+}
+
+
+.logo-section{
+    width: 100%;
+}
+
+
+.footer-logos{
+    text-align: center;
+}
+      
+.mtds-logo{
+    width: 150px;
+}
+.spotify-logo{
+    width: 60px;
+}
+      
+.warnermusic-logo{
+    width: 120px;
+}
+
+
+/* --------------- SECTION 2 - HOW IT WORKS ---------------- */
+
+.content-description{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    margin-top: 5%;
+    margin-bottom: 40px;
+}
+
+.steps{
+    background-color: #f2665e;
+    border-radius: 5px;
+    width: 15%;
+    height: 340px;
+    padding: 0.2% 1.6% 4% 2%;
+    margin-right: 1%;
+    float: left;
+    margin-top: 7%;
+}
+
+.steps h4{
+    color: #fff;
+}
+
+.steps p{
+    color: #fff;
+    line-height: 150%;
+}
+
+.template-thumbnail{
+    float: right;
+    width: 200px;
+}
+
+.icon-steps{
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px #bd4c45;
+    line-height: 10px;
+    padding: 0px;
+}
+
+.number-steps{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #bd4c45;
+    margin-left: 2%;
+}
+
+.call-to-action-steps{
+    border: 1px solid #f4f0ed;
+    border-radius: 5px;
+    font-family: 'museo_slab500';
+    font-size: 1.0em;
+    color: #f4f0ed;
+    text-align: center;
+    padding: 5% 0% 5% 0%;
+}
+
+.call-to-action-steps:hover{
+    background-color: #f4f0ed;
+    color: #f06762;
+    cursor: pointer;
+    -o-transition:.3s;
+  	-ms-transition:.3s;
+  	-moz-transition:.3s;
+  	-webkit-transition:.3s;
+  	transition:.3s;
+}
+
+
+
+/* --------------- SECTION 3 - PRIZES  ---------------- */
+
+.content-prizes{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+    margin-top: 5%;
+    margin-left: 17%;
+    background-color: white;
+}
+
+.content-prizes a{
+    color: #f2665e;
+}
+
+.prizes-description{
+    width: 26%;
+    background-color: #f4f0ed;
+    border-radius: 5px;
+    border: 1px solid #d6d0c7;
+    float: left;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+.icon-prizes{
+    font-size: 2em;
+    text-align: center;
+    line-height: 10px;
+    padding: 0px;
+    color: #fbb040;
+}
+
+.prizes-places-details{
+    width: 100%;
+    float: left;
+}
+
+.prizes-places-details h6{
+    margin: 5px;
+    padding: 20px 20px 5px 20px;
+}
+
+.prizes-places-details p{
+    margin: 5px;
+    padding: 5px 20px 20px 20px;
+    text-align: center;
+}
+
+.first-place-prize-detail{
+    background-color: rgba(251,176,64,1);
+    float: left;
+    width: 100%;
+}
+
+.second-place-prize-detail{
+    background-color: rgba(251,176,64,0.6);
+    float: left;
+    width: 100%;
+}
+
+.third-place-prize-detail{
+    background-color: rgba(251,176,64,0.4);
+    float: left;
+    width: 100%;
+}
+
+
+
+/* --------------- SECTION 4 - PHOTOS ---------------- */
+
+.content-photos{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+/*    height: 70%;*/
+    margin-top: 5%;
+}
+
+/* ------- grid photos css -------- */
+
+.list li {
+    border-bottom: 1px solid #F2F1F2;
+    display: table;
+    border-collapse: collapse;
+}
+
+.li-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 40%;
+    height: 300px;
+    padding-right: 1em;
+    border: 1px #d6d0c7 solid;
+    border-radius: 5px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.info-product{
+    height: 80px;
+    background-color: #f4f0ed;
+    width: 259px;
+    position: absolute;
+    margin-top: 220px;
+    z-index: 50;
+}
+
+.link-image-title{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 0.8em;
+    color: #656565;
+    padding: 5px 0px 5px 10px;
+}
+
+.link-image-copy{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.7em;
+    padding-left: 3;
+    margin-left: 10px;
+    border: none;
+    width: 90%;
+    float: left;
+}
+
+
+/* --------------- SECTION 5 - VIDEOS ---------------- */
+
+.content-videos{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+/*    height: 70%;*/
+    margin-top: 5%;
+}
+
+.video-codes{
+    width: 100%;
+    float: left;
+}
+
+.video-iframe{
+    width: 55%;
+    float: left;
+}
+
+.video-iframe iframe{
+    margin-left: 3%;
+    padding: 5px;
+}
+
+.copy-embbed-code{
+    width: 40%;
+    float: left;
+    background-color: #f4f0ed;
+    padding: 1% 1% 2% 1%;
+    margin-top: 0.5%;
+    border: 1px solid #d6d0c7;
+    border-radius: 5px;
+
+}
+
+/* --------------- SECTION 6 - PLAYLIST ---------------- */
+
+.content-playlist{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+/*    height: 70%;*/
+    margin-top: 5%;
+    background-color: white;
+}
+
+.playlist-spotify{
+    width: 30%;
+    float: left;
+    margin-right: 1%;
+    background-color: #f4f0ed;
+    padding: 2% 1%;
+    border: 1px solid #d6d0c7;
+    border-radius: 5px;
+}
+
+.playlist-spotify textarea{
+    width: 92%;
+}
+
+.playlist-spotify iframe{
+    margin-left: 3%;
+}
+
+
+/* --------------- SECTION 7 - INSTRUCTIONS ---------------- */
+
+.content-instructions{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+/*    height: 70%;*/
+    margin-top: 5%;
+}
+
+.text-instructions{
+    width: 45%;
+    float: left;
+    padding-right: 20px;
+    line-height: 125%;
+}
+
+.video-instructions{
+    width: 45%;
+    float: left;
+    margin-top: 12%;
+}
+
+.video-instructions p{
+    
+    line-height: 150%;
+}
+
+
+
+/* main wrapper */
+.cbp-contentslider {
+	width: 100%;
+	height: 70%;
+	margin: 1em auto;
+	position: relative;
+	border: 1px solid #d6d0c7;
+    border-radius: 5px;
+}
+
+.cbp-contentslider > ul {
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+    
+}
+
+.cbp-contentslider > ul li {
+	position: absolute;
+	width: 92%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 1em;
+	background: #fff;
+    
+    
+}
+
+/* whithout JS, use :target */
+.cbp-contentslider > ul li:target {
+	z-index: -2;
+}
+
+.nav-slider {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3.313em;
+	z-index: 0;
+	border: 1px solid #d6d0c7;
+	overflow: hidden;
+    
+}
+
+.nav-slider a {
+	float: left;
+	display: block;
+	width: 20%;
+	height: 100%;
+	font-weight: 400;
+	overflow: hidden;
+	color: #656565;
+    font-family: 'museo_slab500', sans-serif;
+	background: #fff;
+	outline: none;
+	text-align: center;
+	position: relative;
+	padding-top: 2%;
+    border-right: 1px solid #ebe8e4;
+	-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.nav-slider a span {
+	display: block;
+}
+
+.nav-slider a:last-child {
+	border: none;
+	
+}
+
+.nav-slider a:hover {
+	background-color: #f2665e;
+	color: #fff;
+}
+
+.nav-slider a.rc-active {
+	background-color: #f2665e;
+	color: #fff;
+}
+
+
+.cbp-contentslider h3 {
+	font-size: 2m;
+	height: 1em;
+	margin: 0 0 0 0;
+	padding: 0 0.2em 1em 0;
+	border-bottom: 1px solid #d6d0c7;
+}
+
+.cbp-contentslider li > div {
+	position: absolute;
+	top: 5em;
+	bottom: 3.313em;
+	width: 100%;
+	left: 0;
+	padding: 0 1em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+/*columns*/
+.cbp-contentslider .cbp-content {
+	-webkit-column-rule: 1px solid #d6d0c7;
+	-moz-column-rule: 1px solid #d6d0c7;
+	column-rule: 1px solid #d6d0c7;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 1em;
+	-moz-column-gap: 1em;
+	-o-column-gap: 1em;
+	column-gap: 1em;
+	vertical-align: top;	
+	padding: 1em 0;
+}
+
+.cbp-contentslider p {
+	padding: 0 0.5em 0.4em;
+	margin: 0;
+	text-align: justify;
+	line-height: 1.6;
+}
+
+/* --------------- SECTION 8 - FORM SUBMIT ---------------- */
+
+.content-submit{
+    float: left;
+    width: 70%;
+    margin-left: 17%;
+/*    height: 70%;*/
+    margin-top: 5%;
+}
+
+.form-submit-website{
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 21%;
+    background-color: white;
+    padding: 40px;
+    border: 1px solid #d6d0c7;
+}
+
+.form-submit-website label span{
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    margin-left: 2%;
+    color: #656565;
+    
+}
+
+.form-submit-website label input{
+    margin-left: 2%;
+    border: 1px solid #d6d0c7;
+    padding: 13px 15px 13px 15px;
+    color: #a5a5a5;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    width: 95%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.form-submit-website label select{
+    margin-left: 2%;
+    border: 1px solid #d6d0c7;
+    color: #a5a5a5;
+    font-size: 0.8em;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 30px;
+    
+}
+
+.form-submit-website button{
+    margin-left: 12%;
+    margin-top: 3%;
+    border: 1px solid #f4f0ed;
+    border-radius: 5px;
+    font-family: 'museo_slab500', sans-serif;
+    font-size: 1.0em;
+    color: #fff;
+    text-align: center;
+    padding: 20px 50px 20px 50px;
+    background-color: #f2665e;
+    cursor: pointer;
+}
+
+.detail-info-form{
+    font-size: 0.2em;
+    margin: 3 3 0 3;
+    padding: 3 3 0 3;
+}
+
+
+/* --------------- ***** MEDIA QUERIES ***** -------------- */
+
+/*Styles for screen 600px and lower*/
+@media screen and (max-width: 600px) {
+	#menu { 
+  		height: auto;
+  	}
+  	#menu ul {
+  		width: 100%;
+  		display: block;
+  		height: auto;
+  	}
+  	#menu li {
+  		width: 50%;
+  		float: left;
+  		position: relative;
+  	}
+  	#menu li a {
+		border-bottom: 1px solid #d6d0c7;
+		border-right: 1px solid #d6d0c7;
+	}
+    
+  	#menu a {
+	  	text-align: left;
+	  	width: 100%;
+	  	text-indent: 25px;
+  	}
+    
+    .title-competition{
+    font-size: 1.0em;
+    }
+    
+    .steps{
+        width:100%;
+        height:auto;
+        padding-bottom: 20px;
+    }
+    .steps a{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .steps img{
+        height:170px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-grid-item{
+        width:100%;
+    }
+    .prizes-description{
+        width:100%;
+    }
+    .playlist-spotify{
+        width:100%;
+    }
+}
+
+/*Styles for screen 515px and lower*/
+@media only screen and (max-width : 480px) {
+	#menu {
+		border-bottom: 0;
+	}
+	#menu ul {
+		display: none;
+		height: auto;
+	}
+	#menu a#pull {
+		display: block;
+		background-color: #d6d0c7;
+		width: 100%;
+		position: relative;
+        border-bottom: 1px solid #d6d0c7;
+	}
+	#menu a#pull:after {
+		content:"";
+		background: url('nav-icon.png') no-repeat;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+    
+    .title-competition{
+    font-size: 1.5em;}
+    
+    .call-to-action{
+    border: 1px solid #f4f0ed;
+    font-size: 0.8em;
+    padding: 10px;
+    }
+    
+    .title-section{
+    margin-top: 30px;
+        width: 100%;
+    }
+    
+    .image-lewiswatson-section{
+    width: 100%;
+        margin-top: 30px;
+    }
+    
+    .lewis-watson-jpg{
+    margin-left: 0;
+    margin-top: 0;
+    width: 200px;}
+    
+    .logos ul li{
+    display: block;
+    }
+    
+    .mtds-logo{
+        width: 90px;
+        
+      }
+    .spotify-logo{
+            width: 50px;
+        padding-bottom: 20px;
+          }
+
+    .warnermusic-logo{
+            width: 90px;
+        padding-bottom: 20px;
+    }
+    
+    #photos{
+/*        height: 2200px;*/
+    }
+    
+    .content-photos{
+/*        margin-left: 10%;*/
+    }
+    
+    .list li{
+        height: 50px;
+    }
+    
+    .li-img{
+        height: 100px;
+    }
+    
+    .info-product{
+    
+    width: 200px;
+    }
+    #grid {
+        padding-left: 0px;
+    }
+    #grid li{
+        width:100%;
+    }
+    .li-img{
+        padding-right: 0px;
+    }
+    li img{
+        width:100%;
+    }
+    .info-product{
+        position:relative;
+        width:100%;
+        margin-top: auto;
+    }
+    .text-instructions, .video-instructions{
+        width:100%;
+        padding-right:0px;
+    }
+    .form-submit-website{
+        width:100%;
+        margin-left: 0px;
+        padding: 5px;
+        margin-bottom: 30px;
+    }
+    .content-prizes{
+        margin-top: 60px;
+    }
+    
+    .cbp-contentslider > ul li {
+	position: absolute;
+	width: 70%;
+    }
+    
+     .cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+}
+
+
+/*Styles for screen 800px max and 601px min*/
+@media screen and (max-width: 800px) and (min-width: 601px) {
+    
+    .image-lewiswatson-section{
+    width: 50%;
+    }
+    
+    .lewis-watson-jpg{
+    margin-left: 0;
+    margin-top: 0;
+    width: 200px;}
+    
+    
+    
+}
+
+/*Smartphone*/
+@media only screen and (max-width : 320px) {
+	#menu li {
+		display: block;
+		float: none;
+		width: 100%;
+	}
+	#menu li a {
+		border-bottom: 1px solid #576979;
+	}
+    
+   
+   
+}
+
+
+@media all and (min-width: 640px) {
+  .list {
+    padding: 0.5em;
+    max-width: 70em;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .list li {
+    padding: 0.5em;
+    display: block;
+    width: 50%;
+    float: left;
+    background: none;
+    border: 0;
+  }
+  .li-img, .inner {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  .li-text {
+    padding: 0.5em 0;
+  }
+    
+    
+}
+
+@media all and (min-width: 960px) {
+  .list li {
+    width: 261px;
+  }
+    
+ /* Media queries for Instructions Section */
+
+@media screen and (max-width: 70em) { 
+	.cbp-contentslider p {
+		font-size: 100%;
+	}
+}
+
+@media screen and (max-width: 67.75em) {
+
+	.cbp-contentslider { font-size: 85%; }
+
+	
+
+	.nav-slider a span {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 43em) {
+
+	.cbp-contentslider h3 {
+		font-size: 2em;
+	}
+
+	.cbp-contentslider .cbp-content {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+
+	.cbp-contentslider li > div {
+		top: 5em;
+	}
+
+}
+
+@media screen and (max-width: 25em) { 
+	.nav-slider a { padding: 0;}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * normalize ...
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+#menu,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+
+body {
+    margin: 0;
+}
+
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
