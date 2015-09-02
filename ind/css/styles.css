@@ -9,7 +9,7 @@ p {
 font-family: "lato";}
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
 font-family: "lato";}
 
 h2 {
@@ -36,7 +36,8 @@ h5 {
   border: solid 2px;
   border-radius: 40px;
   display: inline-block;
-  text-transform: uppercase; }
+/*  text-transform: uppercase; */
+}
 
 .btn:hover, .btn:focus {
   color: #fff;
@@ -56,16 +57,26 @@ h5 {
 
 .btn-fill {
   color: #fff;
-  border: solid 2px #FF5274;
+  border: solid 2px #755187;
   border-radius: 40px;
   display: inline-block;
-  text-transform: uppercase;
-  background-color: #FF5274; }
+/*  text-transform: uppercase;*/
+  background-color: #755187; }
 
 .btn-fill:hover, .btn-fill:focus {
   color: #fff;
   background-color: #D7405D;
   border-color: #D7405D; }
+
+.botao-hov{
+    color: #fff;
+  background-color: #D7405D;
+  border-color: #D7405D; 
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
 
 .btn-small {
   padding: 8px 40px; }
@@ -751,7 +762,7 @@ To top
 Footer
 ========================================================================== */
 footer {
-  background-color: #3D4351;
+  background-color: #301629  ;
   position: relative; }
   footer p {
     color: #ACB1B4;
