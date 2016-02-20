@@ -292,6 +292,8 @@ ol, ul {
     padding-left: 2rem;
     font-family: "ff-tisa-sans-web-pro";
     line-height: 125%;
+    background-color: #f8f8f8;
+    padding: 15px;
 }
 
 ol ol, ul ul,
@@ -318,7 +320,7 @@ dl dd {
 }
 
 li {
-    margin: 0.4em 0;
+    margin: 0.4em 30px;
 }
 
 li li {
@@ -501,7 +503,6 @@ input{
 .inner {
     position: relative;
     width: 80%;
-    max-width: 710px;
     margin: 0 auto;
 }
 
@@ -728,7 +729,26 @@ body.nav-opened .nav {
 }
 */
 
+.nav{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    height: 60px;
+}
 
+.nav ul{
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.nav ul li{
+    display: inline;
+    text-align: center;
+    margin: 0 2% 0 2%;
+    text-transform: uppercase;
+}
 
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
@@ -936,10 +956,10 @@ body.nav-opened .nav {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 80%;
-    max-width: 720px;
+    width: 56%;
+/*    max-width: 720px;*/
     margin: 4rem 8%;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
 }
@@ -1011,10 +1031,15 @@ body:not(.post-template) .post-title {
     min-height: 77px;
 }
 
+.post-footer .post-date{
+    font-family: "Open Sans", sans-serif;
+    color: #cecece;
+    letter-spacing: 2px;
+}
+
 .post-date {
     display: block;
     padding-top: 5px;
-    border-left: #d5dbde 1px solid;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
@@ -1060,7 +1085,6 @@ body:not(.post-template) .post-title {
 }
 
 aside{
-    
     width: 30%;
     max-width: 350px;
     margin-right: 5%;
@@ -1124,7 +1148,7 @@ aside img{
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 80%;
     height: auto;
     padding: 0.6em 0;
     /* Centers an image by (1) pushing its left edge to the
@@ -1160,13 +1184,15 @@ aside img{
 /* The author credit area after the post */
 .post-footer {
     position: relative;
+/*
     margin: 6rem 0 0 0;
     padding: 6rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
+*/
+/*    border-bottom: #EBF2F6 1px solid;*/
 }
 
 .post-footer h4 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin: 0;
 }
 
@@ -1196,16 +1222,20 @@ aside img{
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    margin-right: 180px;
+    
 }
 
 .post-footer h4 a {
-    color: #2e2e2e;
+    color: #cecece;
     text-decoration: none;
+    font-family: "learning-curve";
+    font-size: 1.3em;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .post-footer h4 a:hover {
-    text-decoration: underline;
 }
 
 /* Drop the share links in the space to the right.
