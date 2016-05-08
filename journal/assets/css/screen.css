@@ -42,7 +42,7 @@ html {
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; font-family: "ff-tisa-sans-web-pro";}
+body { margin: 0; font-family: "ff-tisa-sans-web-pro"; overflow-x: hidden;}
 a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
@@ -226,14 +226,15 @@ h1 {
     letter-spacing: -2px;
     text-indent: -3px;
     font-family: "ff-tisa-sans-web-pro";
-    color: #96DFB4;
+    background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
     font-size: 3.6rem;
     letter-spacing: -1px;
     font-family: "ff-tisa-sans-web-pro";
-    color: #96DFB4;
     text-align: center;
 }
 
@@ -262,7 +263,7 @@ h6 {
 }
 
 a {
-    color: #96DFB4;
+    color: #78B290;
     transition: color 0.3s ease;
     text-decoration: none;
 }
@@ -956,7 +957,7 @@ body.nav-opened .nav {
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 56%;
+
 /*    max-width: 720px;*/
     margin: 4rem 8%;
     padding-bottom: 3rem;
@@ -1085,22 +1086,26 @@ body:not(.post-template) .post-title {
 }
 
 aside{
-    width: 30%;
-    max-width: 350px;
-    margin-right: 5%;
-    display: block;
-    float: right;
+  position: relative;
+  border-left: 1px solid #eee;
 }
 
 aside p{
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
 }
 
-aside img{
-    width: 100%;
-    border-radius: 3px;
+aside div{
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+aside div img{
+  width: 100%;
+  margin-top: 15%;
+  border-radius: 3px;
 }
 
 /* ==========================================================================
@@ -1222,7 +1227,7 @@ aside img{
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-    
+
 }
 
 .post-footer h4 a {
