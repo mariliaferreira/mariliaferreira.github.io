@@ -1468,7 +1468,7 @@ aside div img{
 }
 
 .read-next-story .post:before {
-    content: "Read This Next";
+    content: "Próximo";
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -1479,7 +1479,7 @@ aside div img{
     transition: all 0.5s ease;
 }
 .read-next-story.prev .post:before {
-    content: "You Might Enjoy";
+    content: "Talvez você goste de:";
 }
 
 .read-next-story h2 {
