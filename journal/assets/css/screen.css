@@ -229,6 +229,7 @@ h1 {
     background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 
 h2 {
@@ -247,25 +248,25 @@ h3 {
 h4 {
     font-size: 2.5rem;
     font-family: "ff-tisa-sans-web-pro";
-    color: #96DFB4;
+    color: #3A4145;
 }
 
 h5 {
     font-size: 2rem;
     font-family: "ff-tisa-sans-web-pro";
-    color: #96DFB4;
+    color: #3A4145;
 }
 
 h6 {
     font-size: 2rem;
     font-family: "ff-tisa-sans-web-pro";
-    color: #96DFB4;
+    color: #3A4145;
 }
 
 a {
     color: #78B290;
     transition: color 0.3s ease;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -340,7 +341,7 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.75em 0 1.75em -2.2em;
+    margin: 1.75em 0 1.75em 0;
     padding: 0 0 0 1.75em;
     border-left: #96DFB4 0.3em solid;
 }
