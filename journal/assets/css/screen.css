@@ -2139,6 +2139,10 @@ aside div img{
     }
 }
 
+.instagram-feed{
+  margin: 14%;
+  border: none;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
