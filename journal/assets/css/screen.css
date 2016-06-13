@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -46,7 +48,7 @@ body { margin: 0; font-family: "ff-tisa-sans-web-pro"; overflow-x: hidden;}
 a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
-h1 { font-size: 2em; margin: 0.67em 0; font-family: "ff-tisa-sans-web-pro";}
+h1 { font-size: 2em; margin: 0.67em 0; font-family: 'Lato', sans-serif;}
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: 700; }
 dfn { font-style: italic; }
@@ -56,7 +58,7 @@ hr {
    height: 0;
 }
 mark { background: #FF0; color: #000; }
-code, kbd, pre,
+kbd, pre,
 samp { font-family: monospace, serif; font-size: 1em; }
 pre { white-space: pre-wrap; }
 q { quotes: "\201C" "\201D" "\2018" "\2019"; }
@@ -189,7 +191,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.6rem;
     line-height: 1.5em;
@@ -210,14 +212,13 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: "ff-tisa-sans-web-pro";
+    font-family: 'Lato', sans-serif;
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -225,7 +226,6 @@ h1 {
     font-size: 5rem;
     letter-spacing: -2px;
     text-indent: -3px;
-    font-family: "ff-tisa-sans-web-pro";
     background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -235,31 +235,26 @@ h1 {
 h2 {
     font-size: 3.6rem;
     letter-spacing: -1px;
-    font-family: "ff-tisa-sans-web-pro";
     text-align: center;
 }
 
 h3 {
     font-size: 3rem;
-    font-family: "ff-tisa-sans-web-pro";
     color: #3A4145;
 }
 
 h4 {
     font-size: 2.5rem;
-    font-family: "ff-tisa-sans-web-pro";
     color: #3A4145;
 }
 
 h5 {
     font-size: 2rem;
-    font-family: "ff-tisa-sans-web-pro";
     color: #3A4145;
 }
 
 h6 {
     font-size: 2rem;
-    font-family: "ff-tisa-sans-web-pro";
     color: #3A4145;
 }
 
@@ -283,16 +278,16 @@ p, ul, ol, dl {
     -o-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
     margin: 0 0 1.75em 0;
     text-rendering: geometricPrecision;
-    font-family: "ff-tisa-sans-web-pro";
+    font-family: 'Lato', sans-serif;
 }
 
 p{
-    font-family: "ff-tisa-sans-web-pro";
+    font-family: 'Lato', sans-serif;
 }
 
 ol, ul {
     padding-left: 2rem;
-    font-family: "ff-tisa-sans-web-pro";
+    font-family: 'Lato', sans-serif;
     line-height: 125%;
     background-color: #f8f8f8;
     padding: 15px;
@@ -372,7 +367,7 @@ mark {
 }
 
 code, tt {
-    padding: 1px 3px;
+    padding: 2px 5px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
@@ -562,7 +557,7 @@ body.nav-opened .site-wrapper {
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Navigation */
@@ -913,7 +908,7 @@ body.nav-opened .nav {
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #fff;
 }
 
@@ -922,7 +917,7 @@ body.nav-opened .nav {
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -1387,7 +1382,7 @@ aside div img{
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
