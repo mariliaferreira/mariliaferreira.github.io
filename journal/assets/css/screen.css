@@ -44,11 +44,11 @@ html {
    -ms-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; font-family: "ff-tisa-sans-web-pro"; overflow-x: hidden;}
+body { margin: 0; font-family: 'Lato', sans-serif; overflow-x: hidden;}
 a { background: transparent; }
 a:focus { outline: thin dotted; }
 a:active, a:hover { outline: 0; }
-h1 { font-size: 2em; margin: 0.67em 0; font-family: 'Lato', sans-serif;}
+h1 { font-size: 2em; margin: 0.67em 0; font-family: 'Lora', serif;}
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: 700; }
 dfn { font-style: italic; }
@@ -210,9 +210,14 @@ body {
     background: rgba(150,223,180,0.2);
 }
 
+.main-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lora', serif;
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -227,15 +232,21 @@ h1 {
     letter-spacing: -2px;
     text-indent: -3px;
     background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 h2 {
-    font-size: 3.6rem;
-    letter-spacing: -1px;
-    text-align: center;
+    font-size: 2em !important;
+    color: #212121;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1em;
+}
+
+h2 a {
+  color: #3A4145;
 }
 
 h3 {
@@ -244,7 +255,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #3A4145;
 }
 
@@ -269,7 +280,8 @@ a:hover {
 }
 
 p{
-    text-align: justify;
+  line-height: 150%;
+  font-size: 15px;
 }
 
 p, ul, ol, dl {
@@ -343,6 +355,7 @@ blockquote {
 
 blockquote p {
     margin: 0.8em 0;
+    font-family: 'Lora', serif;
     font-style: italic;
     color: #706C70;
 }
@@ -1032,6 +1045,7 @@ body:not(.post-template) .post-title {
     font-family: "Open Sans", sans-serif;
     color: #cecece;
     letter-spacing: 2px;
+    margin-top: -20px;
 }
 
 .post-date {
@@ -1087,9 +1101,12 @@ aside{
 }
 
 aside p{
-    font-size: 1.5rem;
+    font-size: 0.9em;
     text-align: left;
     margin-top: 10px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    color: #706C70;
 }
 
 aside div{
@@ -1109,7 +1126,22 @@ aside div img{
    ========================================================================== */
 
 .post-template .post-header {
-   margin-bottom: 3.4rem;
+   margin-bottom: 2rem;
+}
+
+.post-header .post-img {
+  min-width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 3px solid #78B290;
+}
+
+.post-header .post-img img {
+  width: 100%;
+  display: block;
 }
 
 .post-template .post-title {
@@ -1229,8 +1261,10 @@ aside div img{
 .post-footer h4 a {
     color: #cecece;
     text-decoration: none;
-    font-family: "learning-curve";
-    font-size: 1.3em;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.7em;
+    font-weight: 400;
     text-align: center;
     display: block;
     width: 100%;
@@ -1944,7 +1978,7 @@ aside div img{
 
     h1, h2, h3,
     h4, h5, h6 {
-        margin: 0 0 0.3em 0;
+        margin: 0 0 0.2em 0;
     }
 
     h1 {
@@ -1955,6 +1989,7 @@ aside div img{
     h2 {
         font-size: 2.4rem;
         letter-spacing: 0;
+        font-weight: 100;
     }
 
     h3 {
