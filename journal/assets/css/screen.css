@@ -433,6 +433,10 @@ table {
     background-color: transparent;
 }
 
+.comments-thread {
+  margin: 4rem 8%;
+}
+
 table th,
 table td {
     padding: 8px;
