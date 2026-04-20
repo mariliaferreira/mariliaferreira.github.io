@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sketchbook Companion</title>
+<title>Feuille</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -241,7 +241,7 @@ function TopNav({ navTab, setNavTab, showTabs, format, onChangeFormat, showForma
     <nav className="top-nav">
       <div className="nav-inner">
         <div className="nav-logo">
-          Sketchbook <em>Companion</em>
+          Feuille
         </div>
         <div style={{display:'flex',alignItems:'center',gap:12}}>
           {showTabs && (
@@ -286,7 +286,7 @@ function FormatPicker({ onSelect, onBack, current }) {
           </button>
         )}
         <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontWeight:500,color:'#2A2520',lineHeight:1}}>Your</div>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontStyle:'italic',color:'#8C8680',lineHeight:1.2}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontStyle:'italic',color:'#8C8680',lineHeight:1.2}}>Feuille</div>
         <div style={{marginTop:12,fontSize:14,color:'#7A7470',lineHeight:1.6,fontWeight:300}}>Choose your format. Layout diagrams adapt to your page proportions.</div>
       </div>
       <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:12}}>
@@ -354,7 +354,7 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
   return (
     <div style={{paddingTop:40}}>
       <div style={{marginBottom:24}}>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Feuille</div>
         <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
         <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
       </div>
