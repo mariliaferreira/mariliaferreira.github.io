@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sketchbook Companion</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body { background: #F7F4EF; min-height: 100vh; font-family: 'DM Sans', sans-serif; color: #2A2520; }
+
+.top-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,244,239,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E8E3DC;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 32px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500;
+  color: #2A2520; white-space: nowrap; display: flex; align-items: baseline; gap: 5px;
+  text-decoration: none;
+}
+.nav-logo em { font-style: italic; color: #8C8680; font-weight: 400; }
+.nav-tabs { display: flex; gap: 4px; }
+.nav-tab {
+  padding: 7px 18px; border-radius: 20px; border: 1px solid transparent;
+  font-size: 11.5px; font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em;
+  text-transform: uppercase; cursor: pointer; transition: all 0.15s;
+  color: #7A7470; background: none;
+}
+.nav-tab.active { background: #2A2520; color: #F5F1EC; border-color: #2A2520; }
+.nav-tab:hover:not(.active) { color: #2A2520; border-color: #C8C4BC; }
+
+.page { max-width: 1200px; margin: 0 auto; padding: 0 32px 60px; }
+
+button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+@media (max-width: 600px) {
+  .nav-inner { padding: 0 16px; height: 56px; }
+  .page { padding: 0 16px 48px; }
+  .nav-logo { font-size: 18px; }
+  .nav-tab { padding: 6px 13px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+// ── FORMATS ──────────────────────────────────────────────────────
+const FORMATS = [
+  { id:'a5p', name:'A5 Portrait',  w:100, h:141, real:'148 × 210 mm', desc:'The classic travel sketchbook' },
+  { id:'a5l', name:'A5 Landscape', w:141, h:100, real:'210 × 148 mm', desc:'Wide views & panoramas' },
+  { id:'sq',  name:'Square',       w:110, h:110, real:'150 × 150 mm', desc:'Equal balance, great for studies' },
+  { id:'a6',  name:'A6 Pocket',    w:75,  h:105, real:'105 × 148 mm', desc:'Compact, always in your pocket' },
+  { id:'b5',  name:'B5',           w:100, h:145, real:'182 × 257 mm', desc:'More space, bolder strokes' },
+];
+
+// ── LAYOUTS ──────────────────────────────────────────────────────
+const LAYOUTS = [
+  { id:'corner-anchor', name:'Corner Anchor', type:'single', subtitle:'Asymmetric & bold',
+    zones:[{xp:.02,yp:.014,wp:.46,hp:.121,r:'title'},{xp:.02,yp:.157,wp:.18,hp:.257,r:'text'},{xp:.24,yp:.143,wp:.74,hp:.843,r:'image'}],
+    principles:['Asymmetric balance creates visual tension without chaos','The large empty corner invites the eye before guiding it to the sketch','The sketch is the anchor — everything else is support'],
+    typography:{style:'All-caps stacked block title',preview:{text:'FIRENZE',sub:'20 Apr · Partly cloudy',caps:true,serif:false},placement:'Top-left, 2–3 short lines, stacked',pairing:'LOCATION bold / date small below in lighter weight'},
+    tips:['Sketch first, place text second','Let the image bleed right and bottom — the white corner does the work','One line of annotation beside the sketch adds intimacy'] },
+
+  { id:'strip-narrative', name:'Strip Narrative', type:'single', subtitle:'Cinematic & grounded',
+    zones:[{xp:.00,yp:.000,wp:1.0,hp:.486,r:'image'},{xp:.06,yp:.529,wp:.50,hp:.079,r:'title'},{xp:.06,yp:.629,wp:.88,hp:.357,r:'text'}],
+    principles:['A horizontal band creates cinematic, wide-format energy','The clear ground line between image and text anchors the composition','The lower half invites journaling and reflection'],
+    typography:{style:'Italic serif title',preview:{text:'Ponte Vecchio, dusk',sub:'20 April 2026',caps:false,serif:true},placement:'Just below the image strip, left-aligned',pairing:'Location italic / paragraph notes below in regular weight'},
+    tips:['Ideal for landscapes and cityscapes','Leave deliberate white margins inside the text block','Date, weather, small sounds — make the notes alive'] },
+
+  { id:'floating-study', name:'Floating Study', type:'single', subtitle:'Minimal & meditative',
+    zones:[{xp:.14,yp:.086,wp:.72,hp:.629,r:'image'},{xp:.24,yp:.757,wp:.52,hp:.064,r:'title'},{xp:.30,yp:.843,wp:.40,hp:.043,r:'text'}],
+    principles:['Central isolation draws complete attention to one subject','White margins are not emptiness — they are the composition','Symmetry reads as composed, intentional, confident'],
+    typography:{style:'Small centered caption',preview:{text:'The door on Via Roma',sub:'pencil · 14:30',caps:false,serif:false,small:true,center:true},placement:'Centered below the image, one or two short lines',pairing:'Subject name / medium + time, smaller weight below'},
+    tips:['Works beautifully for objects, plants, architecture fragments','A thin pencil border around the image adds quiet elegance','Resist adding more. The restraint is the statement.'] },
+
+  { id:'four-studies', name:'Four Studies', type:'single', subtitle:'Comparative & detailed',
+    zones:[{xp:.02,yp:.014,wp:.54,hp:.071,r:'title'},{xp:.02,yp:.114,wp:.46,hp:.400,r:'image'},{xp:.52,yp:.114,wp:.46,hp:.400,r:'image'},{xp:.02,yp:.543,wp:.46,hp:.400,r:'image'},{xp:.52,yp:.543,wp:.46,hp:.400,r:'image'}],
+    principles:['A grid creates rhythm and visual equality between subjects','Uniform sizing shifts attention to differences rather than scale','Four panels feel complete: a natural collection'],
+    typography:{style:'Small label under each study',preview:{text:'01  Afternoon light',sub:'02  Shade side',caps:false,serif:false,small:true},placement:'Below each cell, 2–3 word caption',pairing:'Numbered label + one observation word per cell'},
+    tips:['Great for color studies, plant details, door handles, tiles','Loose, quick sketches work better here than refined ones','Tiny numbering (01, 02…) gives a field notebook feeling'] },
+
+  { id:'triptych', name:'Triptych', type:'single', subtitle:'Vertical & rhythmic',
+    zones:[{xp:.02,yp:.014,wp:.29,hp:.971,r:'image'},{xp:.36,yp:.014,wp:.29,hp:.971,r:'image'},{xp:.70,yp:.014,wp:.29,hp:.971,r:'image'}],
+    principles:['Three vertical columns create a strong, satisfying rhythm','Narrow format forces selective, decisive cropping','Repetition with variation — the classic triptych principle'],
+    typography:{style:'One word, flush bottom per strip',preview:{text:'morning  noon  dusk',sub:'',caps:false,serif:false,small:true,center:true},placement:'Centered at bottom of each column',pairing:'One word or place name per strip, same size'},
+    tips:['The same subject at three different times of day is a classic','Try varying marks per strip: pencil / ink / wash','Dark–light–dark tonal rhythm looks beautiful'] },
+
+  { id:'margin-map', name:'Margin Map', type:'single', subtitle:'Annotated & cartographic',
+    zones:[{xp:.20,yp:.114,wp:.60,hp:.514,r:'image'},{xp:.02,yp:.014,wp:.14,hp:.086,r:'accent'},{xp:.84,yp:.014,wp:.14,hp:.086,r:'accent'},{xp:.02,yp:.757,wp:.14,hp:.214,r:'accent'},{xp:.84,yp:.757,wp:.14,hp:.214,r:'accent'},{xp:.02,yp:.114,wp:.14,hp:.614,r:'text'},{xp:.84,yp:.114,wp:.14,hp:.614,r:'text'}],
+    principles:['Central subject is anchored by surrounding details','Margins become active storytelling space, not decoration','The radiating structure feels like genuine field notes'],
+    typography:{style:'Tiny margin labels with arrows',preview:{text:'← shutters: faded green',sub:'↓ cobblestone — uneven',caps:false,serif:false,small:true},placement:'In the margins, small and annotative, pointing inward',pairing:'Fragment labels — textures, colors, sounds, smells'},
+    tips:['Draw the central image first, then decide the margins','Works beautifully for markets, courtyards, street corners','Annotations can be fragments: colors, sounds, things smelled'] },
+
+  { id:'panoramic', name:'Panoramic', type:'spread', subtitle:'Immersive & sweeping',
+    zones:[{xp:.00,yp:.000,wp:1.0,hp:.800,r:'image'},{xp:.04,yp:.843,wp:.40,hp:.071,r:'title'},{xp:.04,yp:.929,wp:.65,hp:.057,r:'text'}],
+    principles:['Two pages become one canvas — maximum immersion','A continuous horizon mirrors how we perceive wide scenes','The gutter disappears inside a continuous scene'],
+    typography:{style:'Light italic title, bottom-left inside image',preview:{text:"Val d'Orcia, evening",sub:'43°N · 1,200m',caps:false,serif:true},placement:'Bottom strip, left side, inside the image area',pairing:'Place name italic / coordinates or altitude tiny below'},
+    tips:['Mark the horizon line lightly across both pages first','Sketch lightly across the gutter — a continuous scene hides it','Works best for mountains, coastlines, rooftops, wide valleys'] },
+
+  { id:'left-focus', name:'Left Focus', type:'spread', subtitle:'Classic editorial',
+    zones:[{xp:.020,yp:.029,wp:.440,hp:.943,r:'image'},{xp:.520,yp:.029,wp:.310,hp:.129,r:'title'},{xp:.520,yp:.186,wp:.440,hp:.643,r:'text'},{xp:.520,yp:.857,wp:.290,hp:.114,r:'accent'}],
+    principles:['Natural left-to-right reading: image draws you in, text holds you','The dominant image gives the spread its emotional identity','Right page functions as the journal entry'],
+    typography:{style:'Serif title, medium weight, right page top',preview:{text:'The Fisherman',sub:'Chioggia · 07:20 · overcast',caps:false,serif:true},placement:'Top of the right page, generous line-height',pairing:'Title medium weight / date + location lighter / body text below'},
+    tips:['Keep the title short: 1–4 words maximum','Large line-spacing on the right page feels intentional, not sparse','A small color swatch at bottom-right grounds the page'] },
+
+  { id:'mosaic', name:'Mosaic', type:'spread', subtitle:'Collage & layered',
+    zones:[{xp:.010,yp:.014,wp:.290,hp:.614,r:'image'},{xp:.010,yp:.657,wp:.290,hp:.314,r:'text'},{xp:.320,yp:.014,wp:.280,hp:.314,r:'image'},{xp:.320,yp:.357,wp:.280,hp:.314,r:'image'},{xp:.320,yp:.700,wp:.280,hp:.271,r:'image'},{xp:.620,yp:.014,wp:.360,hp:.957,r:'image'}],
+    principles:['Varied sizes create hierarchy — one image leads, others support','White gutters between sketches keep the spread readable','Asymmetric arrangement feels found, not designed'],
+    typography:{style:'Loose scattered labels',preview:{text:'the market, 08:45',sub:'fresh herbs / loud vendors',caps:false,serif:false,small:true},placement:'Beside each sketch, varied placement, small',pairing:'Time stamps, one-word descriptors, tiny annotations'},
+    tips:['Plan the dominant image first, then fill around it','Ink outlines on some sketches, wash on others — contrast keeps it alive','Tiny margin annotations between images add field-notes quality'] },
+
+  { id:'chronicle', name:'Chronicle', type:'spread', subtitle:'Story & time',
+    zones:[{xp:.020,yp:.029,wp:.200,hp:.157,r:'title'},{xp:.020,yp:.214,wp:.200,hp:.757,r:'text'},{xp:.260,yp:.029,wp:.330,hp:.443,r:'image'},{xp:.260,yp:.500,wp:.330,hp:.471,r:'image'},{xp:.610,yp:.029,wp:.370,hp:.943,r:'image'}],
+    principles:['A vertical text column on the left reads unmistakably as a diary entry','Multiple sketches suggest time passing — this spread has duration','The right page holds visual weight; the left page holds meaning'],
+    typography:{style:'Date/time/location stacked header',preview:{text:'Saturday · 15 Apr',sub:'Venice, Castello\n16°C, light rain',caps:false,serif:true},placement:'Top of left column, then body text flows below',pairing:'Date bold → place italic → time lighter → body regular'},
+    tips:['Write before you sketch — observations shape what you draw','Two sketches of the same place at different hours tell a story','Keep the left column genuine, not decorative'] },
+
+  { id:'unfolding', name:'Unfolding', type:'accordion', subtitle:'One continuous scene',
+    zones:[{xp:.000,yp:0,wp:.333,hp:1,r:'image'},{xp:.333,yp:0,wp:.333,hp:1,r:'image'},{xp:.667,yp:0,wp:.333,hp:1,r:'image'}],
+    principles:['Three panels become a single canvas when unfolded','A continuous horizon line unifies everything and hides the folds','Physical unfolding is part of the experience — reward it'],
+    typography:{style:'Single title on first panel only',preview:{text:'Ligurian Coast →',sub:'Monterosso, April',caps:false,serif:true},placement:'Panel 1, bottom-left corner, small',pairing:'Place / date · nothing else needed'},
+    tips:['Mark the horizon line across all three panels before you begin','Let subjects cross the folds — this rewards the person unfolding it','Photograph it fully unfolded to share'] },
+
+  { id:'three-moments', name:'Three Moments', type:'accordion', subtitle:'Morning, noon & evening',
+    zones:[{xp:.007,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.007,yp:.717,wp:.319,hp:.250,r:'text'},{xp:.341,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.341,yp:.717,wp:.319,hp:.250,r:'text'},{xp:.674,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.674,yp:.717,wp:.319,hp:.250,r:'text'}],
+    principles:['Three panels give a natural beginning, middle, end','Consistent internal structure per panel creates deliberate rhythm','Contrast between panels is the story — same subject, different light'],
+    typography:{style:'Italic time label per panel',preview:{text:'07:30 · 13:00 · 19:45',sub:'light changes everything',caps:false,serif:true,small:true,center:true},placement:'Top of each caption block, left aligned',pairing:'Time italic / one sentence of observation below, lighter'},
+    tips:['Sketch the same subject at sunrise, midday, and dusk','One observation per caption — not a summary, be specific','Try different mark-making per panel: pencil / ink / wash'] },
+];
+
+const TYPE_LABELS = { single:'Single Page', spread:'Double Spread', accordion:'Accordion' };
+const TYPE_SHORT  = { single:'Single', spread:'Spread', accordion:'Accordion' };
+
+// ── RESPONSIVE HOOK ───────────────────────────────────────────────
+function useWindowWidth() {
+  const [w, setW] = useState(window.innerWidth);
+  useEffect(() => {
+    const h = () => setW(window.innerWidth);
+    window.addEventListener('resize', h);
+    return () => window.removeEventListener('resize', h);
+  }, []);
+  return w;
+}
+
+// Card config scales with grid column count
+function getCardConfig(numCols) {
+  if (numCols <= 2) return {
+    single:    { cols:1, thumbH:165, svgMaxW:155, svgMaxH:145 },
+    spread:    { cols:2, thumbH:130, svgMaxW:334, svgMaxH:110 },
+    accordion: { cols:2, thumbH:108, svgMaxW:334, svgMaxH: 90 },
+  };
+  return {
+    single:    { cols:1, thumbH:210, svgMaxW:255, svgMaxH:190 },
+    spread:    { cols:2, thumbH:168, svgMaxW:530, svgMaxH:148 },
+    accordion: { cols:2, thumbH:138, svgMaxW:530, svgMaxH:118 },
+  };
+}
+
+// ── SVG ──────────────────────────────────────────────────────────
+function getVB(layout, fmt) {
+  if (layout.type==='single')    return [fmt.w, fmt.h];
+  if (layout.type==='spread')    return [fmt.w*2, fmt.h];
+  return [fmt.w*3, fmt.h];
+}
+
+function LayoutSVG({ layout, format, maxWidth=9999, maxHeight=9999 }) {
+  const [vw,vh] = getVB(layout, format);
+  const scale = Math.min(maxWidth/vw, maxHeight/vh);
+  const dispW = Math.round(vw*scale);
+  const dispH = Math.round(vh*scale);
+  const pid = `h-${layout.id}-${format.id}`;
+  return (
+    <svg width={dispW} height={dispH} viewBox={`0 0 ${vw} ${vh}`} style={{display:'block',flexShrink:0}}>
+      <defs>
+        <pattern id={pid} x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="5" stroke="#C0BAB2" strokeWidth="0.8"/>
+        </pattern>
+      </defs>
+      <rect width={vw} height={vh} fill="#F5F1EC"/>
+      {layout.type==='spread'    && <line x1={vw/2} y1={0} x2={vw/2} y2={vh} stroke="#DDD8D2" strokeWidth="0.6" strokeDasharray="2 2"/>}
+      {layout.type==='accordion' && [1,2].map(i=><line key={i} x1={vw/3*i} y1={0} x2={vw/3*i} y2={vh} stroke="#DDD8D2" strokeWidth="0.6" strokeDasharray="2 2"/>)}
+      {layout.zones.map((z,i)=>{
+        const x=z.xp*vw, y=z.yp*vh, w=z.wp*vw, h=z.hp*vh;
+        if(z.r==='text'){
+          const n=Math.max(2,Math.floor(h/(vh*0.04))), lh=h/n;
+          return <g key={i}>{Array.from({length:n},(_,li)=>{
+            const lw=li%3===2?w*.55:li%2===0?w*.92:w*.76;
+            return <line key={li} x1={x} y1={y+lh*li+lh*.5} x2={x+lw} y2={y+lh*li+lh*.5} stroke="#C4BEB6" strokeWidth="0.6"/>;
+          })}</g>;
+        }
+        if(z.r==='title')  return <rect key={i} x={x} y={y} width={w} height={h} fill="#2A2520"/>;
+        if(z.r==='image')  return <g key={i}><rect x={x} y={y} width={w} height={h} fill={`url(#${pid})`}/><rect x={x} y={y} width={w} height={h} fill="none" stroke="#A09890" strokeWidth="0.7"/></g>;
+        if(z.r==='accent') return <rect key={i} x={x} y={y} width={w} height={h} fill="#D4CFC8" stroke="#A09890" strokeWidth="0.5"/>;
+        return null;
+      })}
+      <rect x="0.4" y="0.4" width={vw-0.8} height={vh-0.8} fill="none" stroke="#CCCAB4" strokeWidth="0.7"/>
+    </svg>
+  );
+}
+
+// ── FORMAT SHAPE ─────────────────────────────────────────────────
+function FormatShape({ fmt, size=56 }) {
+  const aspect = fmt.w/fmt.h;
+  const sw = aspect>=1 ? size : Math.round(size*aspect);
+  const sh = aspect>=1 ? Math.round(size/aspect) : size;
+  return (
+    <svg width={sw} height={sh} viewBox={`0 0 ${sw} ${sh}`} style={{display:'block'}}>
+      <defs>
+        <pattern id={`fp-${fmt.id}-${size}`} x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="4" stroke="#C4BEB6" strokeWidth="0.5"/>
+        </pattern>
+      </defs>
+      <rect width={sw} height={sh} fill={`url(#fp-${fmt.id}-${size})`}/>
+      <rect x="0.5" y="0.5" width={sw-1} height={sh-1} fill="none" stroke="#A09890" strokeWidth="1"/>
+    </svg>
+  );
+}
+
+// ── ICONS ────────────────────────────────────────────────────────
+const GridIcon = ()=>(<svg width="20" height="20" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="12" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="12" width="7" height="7" rx="1.5"/><rect x="12" y="12" width="7" height="7" rx="1.5"/></svg>);
+const HeartIcon = ({filled})=>(<svg width="20" height="20" viewBox="0 0 22 22" fill={filled?'currentColor':'none'} stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 19C11 19 3.5 14 3.5 8.5a4 4 0 0 1 7.5-1.9A4 4 0 0 1 18.5 8.5C18.5 14 11 19 11 19z"/></svg>);
+const HeartSmIcon = ({filled})=>(<svg width="15" height="15" viewBox="0 0 22 22" fill={filled?'currentColor':'none'} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M11 19C11 19 3.5 14 3.5 8.5a4 4 0 0 1 7.5-1.9A4 4 0 0 1 18.5 8.5C18.5 14 11 19 11 19z"/></svg>);
+const ChevronDown = ()=>(<svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 6 8 10 12 6"/></svg>);
+const BackArrow = ()=>(<svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="14 18 8 11 14 4"/></svg>);
+
+// ── TOP NAV ──────────────────────────────────────────────────────
+function TopNav({ navTab, setNavTab, showTabs, format, onChangeFormat, showFormat }) {
+  return (
+    <nav className="top-nav">
+      <div className="nav-inner">
+        <div className="nav-logo">
+          Sketchbook <em>Companion</em>
+        </div>
+        <div style={{display:'flex',alignItems:'center',gap:12}}>
+          {showTabs && (
+            <div className="nav-tabs">
+              {[{id:'browse',label:'Browse',Icon:GridIcon},{id:'saved',label:'Saved',Icon:HeartIcon}].map(({id,label,Icon})=>(
+                <button key={id} className={`nav-tab ${navTab===id?'active':''}`} onClick={()=>setNavTab(id)}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          )}
+          {showFormat && format && (
+            <FormatBadge format={format} onClick={onChangeFormat}/>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+// ── FORMAT BADGE ─────────────────────────────────────────────────
+function FormatBadge({ format, onClick }) {
+  return (
+    <button onClick={onClick} style={{display:'flex',alignItems:'center',gap:5,background:'#EFEBE4',border:'1px solid #E0DBD4',borderRadius:20,padding:'6px 10px',cursor:'pointer'}}>
+      <FormatShape fmt={format} size={18}/>
+      <span style={{fontSize:11,color:'#5A5450',fontFamily:"'DM Sans',sans-serif"}}>{format.name}</span>
+      <ChevronDown/>
+    </button>
+  );
+}
+
+// ── FORMAT PICKER ────────────────────────────────────────────────
+function FormatPicker({ onSelect, onBack, current }) {
+  const [chosen,setChosen] = useState(current||null);
+  const confirm = fmt => { setChosen(fmt.id); setTimeout(()=>onSelect(fmt),200); };
+  return (
+    <div style={{maxWidth:640,margin:'0 auto',paddingTop:40}}>
+      <div style={{marginBottom:32}}>
+        {onBack && (
+          <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:13,padding:0,marginBottom:24}}>
+            <BackArrow/> Back
+          </button>
+        )}
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontWeight:500,color:'#2A2520',lineHeight:1}}>Your</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontStyle:'italic',color:'#8C8680',lineHeight:1.2}}>Sketchbook</div>
+        <div style={{marginTop:12,fontSize:14,color:'#7A7470',lineHeight:1.6,fontWeight:300}}>Choose your format. Layout diagrams adapt to your page proportions.</div>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:12}}>
+        {FORMATS.map(fmt=>{
+          const active=chosen===fmt.id;
+          return (
+            <button key={fmt.id} onClick={()=>confirm(fmt)} style={{background:active?'#2A2520':'#FEFCF9',border:`1.5px solid ${active?'#2A2520':'#E4DFD8'}`,borderRadius:14,padding:'20px 16px 18px',display:'flex',flexDirection:'column',alignItems:'center',gap:12,cursor:'pointer',transition:'all 0.18s'}}>
+              <div style={{height:68,display:'flex',alignItems:'center',justifyContent:'center',filter:active?'invert(1) brightness(1.6)':'none',transition:'filter 0.18s'}}>
+                <FormatShape fmt={fmt} size={56}/>
+              </div>
+              <div style={{textAlign:'center'}}>
+                <div style={{fontSize:13.5,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
+                <div style={{fontSize:11,color:active?'#C8C4BC':'#A09890',marginTop:3,letterSpacing:'0.02em'}}>{fmt.real}</div>
+              </div>
+              <div style={{fontSize:11.5,color:active?'#C8C4BC':'#B0ACA4',textAlign:'center',lineHeight:1.5,fontWeight:300}}>{fmt.desc}</div>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── TYPOGRAPHY PREVIEW ───────────────────────────────────────────
+function TypoPreview({ preview }) {
+  const {text,sub,caps,serif,small,center}=preview;
+  return (
+    <div style={{background:'#F5F1EC',borderRadius:8,padding:'14px 16px',border:'1px solid #E4DFD8',textAlign:center?'center':'left',marginBottom:2}}>
+      <div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:small?13:caps?19:18,fontWeight:caps?500:serif?400:300,letterSpacing:caps?'0.14em':serif?'0.01em':'0.02em',textTransform:caps?'uppercase':'none',color:'#2A2520',lineHeight:1.3}}>{text}</div>
+      {sub&&<div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:12,color:'#8C8680',marginTop:5,letterSpacing:'0.03em',whiteSpace:'pre-line'}}>{sub}</div>}
+    </div>
+  );
+}
+
+// ── LAYOUT CARD ──────────────────────────────────────────────────
+function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
+  const [pressed,setPressed] = useState(false);
+  const cfg = cardConfig[layout.type];
+  return (
+    <div
+      onClick={onSelect}
+      onPointerDown={()=>setPressed(true)} onPointerUp={()=>setPressed(false)} onPointerLeave={()=>setPressed(false)}
+      style={{gridColumn:`span ${cfg.cols}`,background:'#FEFCF9',borderRadius:14,overflow:'hidden',border:'1px solid #E8E3DC',transform:pressed?'scale(0.98)':'scale(1)',transition:'transform 0.12s',cursor:'pointer'}}
+    >
+      <div style={{position:'relative',background:'#EDEAE3',height:cfg.thumbH,display:'flex',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
+        <LayoutSVG layout={layout} format={format} maxWidth={cfg.svgMaxW} maxHeight={cfg.svgMaxH}/>
+        <button onClick={e=>{e.stopPropagation();onFave();}} style={{position:'absolute',top:8,right:8,width:30,height:30,borderRadius:'50%',background:'rgba(247,244,239,0.88)',border:'none',display:'flex',alignItems:'center',justifyContent:'center',color:isFaved?'#7A5C3A':'#A09890',transition:'color 0.15s'}}>
+          <HeartSmIcon filled={isFaved}/>
+        </button>
+        <div style={{position:'absolute',bottom:8,left:8,background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
+          {TYPE_SHORT[layout.type]}
+        </div>
+      </div>
+      <div style={{padding:'10px 14px 12px',display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:8}}>
+        <div style={{fontSize:14,fontWeight:500,color:'#2A2520',lineHeight:1.2,fontFamily:"'Cormorant Garamond',serif"}}>{layout.name}</div>
+        <div style={{fontSize:11,color:'#A09890',fontWeight:300,flexShrink:0}}>{layout.subtitle}</div>
+      </div>
+    </div>
+  );
+}
+
+// ── HOME SCREEN ──────────────────────────────────────────────────
+function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter, setFilter, cardConfig, numCols }) {
+  const filters = ['all','single','spread','accordion'];
+  const filtered = filter==='all' ? layouts : layouts.filter(l=>l.type===filter);
+  return (
+    <div style={{paddingTop:40}}>
+      <div style={{marginBottom:24}}>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
+        <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
+      </div>
+      <div style={{display:'flex',gap:8,marginBottom:24,flexWrap:'wrap'}}>
+        {filters.map(f=>(
+          <button key={f} onClick={()=>setFilter(f)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:filter===f?'#2A2520':'#DDD8D2',background:filter===f?'#2A2520':'transparent',color:filter===f?'#F5F1EC':'#7A7470',fontSize:11.5,letterSpacing:'0.04em',textTransform:'uppercase'}}>
+            {f==='all'?'All':TYPE_LABELS[f]}
+          </button>
+        ))}
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:`repeat(${numCols}, 1fr)`,gap:12}}>
+        {filtered.map(layout=>(
+          <LayoutCard key={layout.id} layout={layout} format={format}
+            isFaved={favorites.includes(layout.id)}
+            onFave={()=>onToggleFave(layout.id)}
+            onSelect={()=>onSelect(layout)}
+            cardConfig={cardConfig}/>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── DETAIL SCREEN ────────────────────────────────────────────────
+function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop }) {
+  const lbl={fontSize:10.5,letterSpacing:'0.1em',textTransform:'uppercase',color:'#A09890',marginBottom:12,fontFamily:"'DM Sans',sans-serif"};
+  const body={fontSize:14,color:'#3A3530',lineHeight:1.7,fontFamily:"'DM Sans',sans-serif",fontWeight:300};
+  const divider=<div style={{margin:'24px 0',height:1,background:'#E8E3DC'}}/>;
+
+  const diagram = (
+    <div>
+      <div style={{background:'#EDEAE3',borderRadius:16,padding:'24px 20px',display:'flex',justifyContent:'center',alignItems:'center',overflow:'hidden',border:'1px solid #E4DFD8'}}>
+        <LayoutSVG layout={layout} format={format} maxWidth={isDesktop?480:520} maxHeight={isDesktop?360:260}/>
+      </div>
+      <div style={{marginTop:14,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+        <div style={{display:'flex',alignItems:'center',gap:6}}>
+          <FormatShape fmt={format} size={15}/>
+          <span style={{fontSize:10.5,letterSpacing:'0.08em',textTransform:'uppercase',color:'#A09890'}}>{format.name} · {TYPE_LABELS[layout.type]}</span>
+        </div>
+        <button onClick={onToggleFave} style={{display:'flex',alignItems:'center',gap:6,padding:'7px 16px',borderRadius:20,border:'1px solid',borderColor:isFaved?'#7A5C3A':'#DDD8D2',background:isFaved?'#7A5C3A':'transparent',color:isFaved?'#F5F1EC':'#7A7470',fontSize:11,letterSpacing:'0.05em',textTransform:'uppercase',transition:'all 0.15s'}}>
+          <HeartSmIcon filled={isFaved}/> {isFaved?'Saved':'Save'}
+        </button>
+      </div>
+    </div>
+  );
+
+  const details = (
+    <div>
+      {!isDesktop && <>{diagram}{divider}</>}
+      <div>
+        <div style={lbl}>Composition Principles</div>
+        <div style={{display:'flex',flexDirection:'column',gap:12}}>
+          {layout.principles.map((p,i)=>(
+            <div key={i} style={{display:'flex',gap:12,alignItems:'flex-start'}}>
+              <span style={{fontSize:10,color:'#B4AEA8',fontFamily:'monospace',marginTop:4,flexShrink:0}}>{String(i+1).padStart(2,'0')}</span>
+              <span style={body}>{p}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      {divider}
+      <div>
+        <div style={lbl}>Lettering Style</div>
+        <TypoPreview preview={layout.typography.preview}/>
+        <div style={{marginTop:12,display:'flex',flexDirection:'column',gap:8}}>
+          {[['Style',layout.typography.style],['Placement',layout.typography.placement],['Pairing',layout.typography.pairing]].map(([k,v])=>(
+            <div key={k} style={{fontSize:13,color:'#5A5450',lineHeight:1.6}}>
+              <span style={{color:'#2A2520',fontWeight:500}}>{k}</span> — {v}
+            </div>
+          ))}
+        </div>
+      </div>
+      {divider}
+      <div>
+        <div style={lbl}>Sketching Tips</div>
+        <div style={{display:'flex',flexDirection:'column',gap:10}}>
+          {layout.tips.map((t,i)=>(
+            <div key={i} style={{...body,display:'flex',gap:12,alignItems:'flex-start'}}>
+              <span style={{width:4,height:4,borderRadius:'50%',background:'#C4BEB6',flexShrink:0,marginTop:9}}/>
+              {t}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div style={{paddingTop:36,paddingBottom:60}}>
+      <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:13,padding:0,marginBottom:28}}>
+        <BackArrow/> Back
+      </button>
+      <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?46:36,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1,marginBottom:4}}>{layout.name}</div>
+      <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?24:18,fontStyle:'italic',color:'#8C8680',marginBottom:isDesktop?36:24}}>{layout.subtitle}</div>
+      {isDesktop ? (
+        <div style={{display:'flex',gap:48,alignItems:'flex-start'}}>
+          <div style={{width:'42%',flexShrink:0,position:'sticky',top:80}}>{diagram}</div>
+          <div style={{flex:1}}>{details}</div>
+        </div>
+      ) : details}
+    </div>
+  );
+}
+
+// ── FAVORITES SCREEN ─────────────────────────────────────────────
+function FavoritesScreen({ format, layouts, favorites, onSelect, onToggleFave, cardConfig, numCols }) {
+  const faved = layouts.filter(l=>favorites.includes(l.id));
+  return (
+    <div style={{paddingTop:40}}>
+      <div style={{marginBottom:24}}>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',lineHeight:1}}>Saved</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
+        <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{faved.length} saved</div>
+      </div>
+      {faved.length===0 ? (
+        <div style={{paddingTop:80,textAlign:'center'}}>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:24,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>Click the heart on any layout<br/>to save it here</div>
+        </div>
+      ) : (
+        <div style={{display:'grid',gridTemplateColumns:`repeat(${numCols}, 1fr)`,gap:12}}>
+          {faved.map(layout=>(
+            <LayoutCard key={layout.id} layout={layout} format={format} isFaved={true}
+              onFave={()=>onToggleFave(layout.id)} onSelect={()=>onSelect(layout)}
+              cardConfig={cardConfig}/>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── APP ──────────────────────────────────────────────────────────
+function App() {
+  const windowWidth  = useWindowWidth();
+  const isDesktop    = windowWidth >= 768;
+  const numCols      = windowWidth < 640 ? 2 : 4;
+  const cardConfig   = getCardConfig(numCols);
+
+  const savedFmtId = localStorage.getItem('sc_fmt');
+  const initFmt = FORMATS.find(f=>f.id===savedFmtId)||null;
+  const [format,setFormat]       = useState(initFmt);
+  const [pickingFormat,setPicking] = useState(!initFmt);
+  const [navTab,setNavTab]       = useState('browse');
+  const [selected,setSelected]   = useState(null);
+  const [filter,setFilter]       = useState('all');
+  const [favorites,setFavorites] = useState(()=>{ try{return JSON.parse(localStorage.getItem('sc_faves')||'[]');}catch{return [];} });
+
+  const selectFmt  = fmt=>{ setFormat(fmt); localStorage.setItem('sc_fmt',fmt.id); setPicking(false); };
+  const toggleFave = id=>{ const n=favorites.includes(id)?favorites.filter(f=>f!==id):[...favorites,id]; setFavorites(n); localStorage.setItem('sc_faves',JSON.stringify(n)); };
+
+  const showTabs   = !pickingFormat && !selected;
+  const showFormat = !pickingFormat && !selected && !!format;
+
+  return (
+    <>
+      <TopNav
+        navTab={navTab} setNavTab={setNavTab}
+        showTabs={showTabs} showFormat={showFormat}
+        format={format} onChangeFormat={()=>setPicking(true)}
+      />
+      <div className="page">
+        {pickingFormat ? (
+          <FormatPicker onSelect={selectFmt} current={format?.id} onBack={format?()=>setPicking(false):null}/>
+        ) : selected ? (
+          <DetailScreen layout={selected} format={format} isFaved={favorites.includes(selected.id)} onToggleFave={()=>toggleFave(selected.id)} onBack={()=>setSelected(null)} isDesktop={isDesktop}/>
+        ) : navTab==='browse' ? (
+          <HomeScreen format={format} layouts={LAYOUTS} favorites={favorites} onToggleFave={toggleFave} onSelect={setSelected} filter={filter} setFilter={setFilter} cardConfig={cardConfig} numCols={numCols}/>
+        ) : (
+          <FavoritesScreen format={format} layouts={LAYOUTS} favorites={favorites} onSelect={setSelected} onToggleFave={toggleFave} cardConfig={cardConfig} numCols={numCols}/>
+        )}
+      </div>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
