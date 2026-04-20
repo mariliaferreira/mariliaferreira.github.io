@@ -65,83 +65,294 @@ const FORMATS = [
   { id:'sq',  name:'Square',    w:110, h:110, desc:'Equal balance, great for studies' },
 ];
 
+// ── MODE BADGE STYLES ────────────────────────────────────────────
+const MODE_STYLE = {
+  'Drawing only':    { bg:'#DBEAFE', color:'#1E40AF' },
+  'Drawing + notes': { bg:'#FEF3C7', color:'#92400E' },
+  'Full journal':    { bg:'#E5E7EB', color:'#4B5563' },
+};
+
 // ── LAYOUTS ──────────────────────────────────────────────────────
+// mode is a single string — one of: 'Drawing only' | 'Drawing + notes' | 'Full journal'
+// Drawing only    = zero text zones, pure image space
+// Drawing + notes = image + small annotation area (date, location, a line or two)
+// Full journal    = substantial dedicated writing space, writing as important as drawing
 const LAYOUTS = [
+
+  // ── ORIGINAL 12 ─────────────────────────────────────────────────
+
   { id:'corner-anchor', name:'Corner Anchor', type:'single', subtitle:'Asymmetric & bold',
+    mode:'Drawing + notes', free:true, category:'Urban Sketching',
+    tryWhen:'one strong subject with bold presence · graphic, high-contrast scenes · when you want white space to carry weight',
+    extras:['date and weather stamp','medium note','colour palette swatch'],
     zones:[{xp:.02,yp:.014,wp:.46,hp:.121,r:'title'},{xp:.02,yp:.157,wp:.18,hp:.257,r:'text'},{xp:.24,yp:.143,wp:.74,hp:.843,r:'image'}],
     principles:['Asymmetric balance creates visual tension without chaos','The large empty corner invites the eye before guiding it to the sketch','The sketch is the anchor — everything else is support'],
     typography:{style:'All-caps stacked block title',preview:{text:'FIRENZE',sub:'20 Apr · Partly cloudy',caps:true,serif:false},placement:'Top-left, 2–3 short lines, stacked',pairing:'LOCATION bold / date small below in lighter weight'},
     tips:['Sketch first, place text second','Let the image bleed right and bottom — the white corner does the work','One line of annotation beside the sketch adds intimacy'] },
 
   { id:'strip-narrative', name:'Strip Narrative', type:'single', subtitle:'Cinematic & grounded',
+    mode:'Drawing + notes', free:true, category:'Urban Sketching',
+    tryWhen:'wide scenic views or urban streetscapes · when you have something to write about what you saw · horizontal subjects with strong baselines',
+    extras:['time of day','ambient note — a sound or smell','weather line'],
     zones:[{xp:.00,yp:.000,wp:1.0,hp:.486,r:'image'},{xp:.06,yp:.529,wp:.50,hp:.079,r:'title'},{xp:.06,yp:.629,wp:.88,hp:.357,r:'text'}],
     principles:['A horizontal band creates cinematic, wide-format energy','The clear ground line between image and text anchors the composition','The lower half invites journaling and reflection'],
     typography:{style:'Italic serif title',preview:{text:'Ponte Vecchio, dusk',sub:'20 April 2026',caps:false,serif:true},placement:'Just below the image strip, left-aligned',pairing:'Location italic / paragraph notes below in regular weight'},
     tips:['Ideal for landscapes and cityscapes','Leave deliberate white margins inside the text block','Date, weather, small sounds — make the notes alive'] },
 
   { id:'floating-study', name:'Floating Study', type:'single', subtitle:'Minimal & meditative',
+    mode:'Drawing + notes', free:true, category:'Urban Sketching',
+    tryWhen:'a single object deserves full attention · still life, botanical or architectural fragments · quiet, deliberate sessions',
+    extras:['medium and paper type','scale note','pencil grade used'],
     zones:[{xp:.14,yp:.086,wp:.72,hp:.629,r:'image'},{xp:.24,yp:.757,wp:.52,hp:.064,r:'title'},{xp:.30,yp:.843,wp:.40,hp:.043,r:'text'}],
     principles:['Central isolation draws complete attention to one subject','White margins are not emptiness — they are the composition','Symmetry reads as composed, intentional, confident'],
     typography:{style:'Small centered caption',preview:{text:'The door on Via Roma',sub:'pencil · 14:30',caps:false,serif:false,small:true,center:true},placement:'Centered below the image, one or two short lines',pairing:'Subject name / medium + time, smaller weight below'},
     tips:['Works beautifully for objects, plants, architecture fragments','A thin pencil border around the image adds quiet elegance','Resist adding more. The restraint is the statement.'] },
 
   { id:'four-studies', name:'Four Studies', type:'single', subtitle:'Comparative & detailed',
+    mode:'Drawing only', free:false, category:'Urban Sketching',
+    tryWhen:'comparing light on one subject · quick gesture studies · collecting four details from the same place',
+    extras:['time per study','material note per cell','colour temperature label'],
     zones:[{xp:.02,yp:.014,wp:.54,hp:.071,r:'title'},{xp:.02,yp:.114,wp:.46,hp:.400,r:'image'},{xp:.52,yp:.114,wp:.46,hp:.400,r:'image'},{xp:.02,yp:.543,wp:.46,hp:.400,r:'image'},{xp:.52,yp:.543,wp:.46,hp:.400,r:'image'}],
     principles:['A grid creates rhythm and visual equality between subjects','Uniform sizing shifts attention to differences rather than scale','Four panels feel complete: a natural collection'],
     typography:{style:'Small label under each study',preview:{text:'01  Afternoon light',sub:'02  Shade side',caps:false,serif:false,small:true},placement:'Below each cell, 2–3 word caption',pairing:'Numbered label + one observation word per cell'},
     tips:['Great for color studies, plant details, door handles, tiles','Loose, quick sketches work better here than refined ones','Tiny numbering (01, 02…) gives a field notebook feeling'] },
 
   { id:'triptych', name:'Triptych', type:'single', subtitle:'Vertical & rhythmic',
+    mode:'Drawing only', free:false, category:'Urban Sketching',
+    tryWhen:'the same subject at three times of day · three related but distinct views · when vertical format suits the subject',
+    extras:['time stamps per strip','light quality note','colour palette per strip'],
     zones:[{xp:.02,yp:.014,wp:.29,hp:.971,r:'image'},{xp:.36,yp:.014,wp:.29,hp:.971,r:'image'},{xp:.70,yp:.014,wp:.29,hp:.971,r:'image'}],
     principles:['Three vertical columns create a strong, satisfying rhythm','Narrow format forces selective, decisive cropping','Repetition with variation — the classic triptych principle'],
     typography:{style:'One word, flush bottom per strip',preview:{text:'morning  noon  dusk',sub:'',caps:false,serif:false,small:true,center:true},placement:'Centered at bottom of each column',pairing:'One word or place name per strip, same size'},
     tips:['The same subject at three different times of day is a classic','Try varying marks per strip: pencil / ink / wash','Dark–light–dark tonal rhythm looks beautiful'] },
 
   { id:'margin-map', name:'Margin Map', type:'single', subtitle:'Annotated & cartographic',
+    mode:'Drawing + notes', free:false, category:'Urban Sketching',
+    tryWhen:'a subject rich in texture and detail · markets, interiors, or complex spaces · when the story is in the details',
+    extras:['material key in margin','scale or distance note','colour swatch in corner'],
     zones:[{xp:.20,yp:.114,wp:.60,hp:.514,r:'image'},{xp:.02,yp:.014,wp:.14,hp:.086,r:'accent'},{xp:.84,yp:.014,wp:.14,hp:.086,r:'accent'},{xp:.02,yp:.757,wp:.14,hp:.214,r:'accent'},{xp:.84,yp:.757,wp:.14,hp:.214,r:'accent'},{xp:.02,yp:.114,wp:.14,hp:.614,r:'text'},{xp:.84,yp:.114,wp:.14,hp:.614,r:'text'}],
     principles:['Central subject is anchored by surrounding details','Margins become active storytelling space, not decoration','The radiating structure feels like genuine field notes'],
     typography:{style:'Tiny margin labels with arrows',preview:{text:'← shutters: faded green',sub:'↓ cobblestone — uneven',caps:false,serif:false,small:true},placement:'In the margins, small and annotative, pointing inward',pairing:'Fragment labels — textures, colors, sounds, smells'},
     tips:['Draw the central image first, then decide the margins','Works beautifully for markets, courtyards, street corners','Annotations can be fragments: colors, sounds, things smelled'] },
 
   { id:'panoramic', name:'Panoramic', type:'spread', subtitle:'Immersive & sweeping',
+    mode:'Drawing + notes', free:false, category:'Panoramic',
+    tryWhen:'mountain ranges, coastlines, or wide valleys · when the view demands two full pages · a scene with a strong continuous horizon',
+    extras:['compass bearing','elevation or depth note','distance scale bar'],
     zones:[{xp:.00,yp:.000,wp:1.0,hp:.800,r:'image'},{xp:.04,yp:.843,wp:.40,hp:.071,r:'title'},{xp:.04,yp:.929,wp:.65,hp:.057,r:'text'}],
     principles:['Two pages become one canvas — maximum immersion','A continuous horizon mirrors how we perceive wide scenes','The gutter disappears inside a continuous scene'],
     typography:{style:'Light italic title, bottom-left inside image',preview:{text:"Val d'Orcia, evening",sub:'43°N · 1,200m',caps:false,serif:true},placement:'Bottom strip, left side, inside the image area',pairing:'Place name italic / coordinates or altitude tiny below'},
     tips:['Mark the horizon line lightly across both pages first','Sketch lightly across the gutter — a continuous scene hides it','Works best for mountains, coastlines, rooftops, wide valleys'] },
 
   { id:'left-focus', name:'Left Focus', type:'spread', subtitle:'Classic editorial',
+    mode:'Full journal', free:false, category:'Urban Sketching',
+    tryWhen:'one powerful image with a story attached · portrait of a person or place · when you want to combine sketching and writing equally',
+    extras:['interview fragment','colour swatch','map thumbnail bottom-right'],
     zones:[{xp:.020,yp:.029,wp:.440,hp:.943,r:'image'},{xp:.520,yp:.029,wp:.310,hp:.129,r:'title'},{xp:.520,yp:.186,wp:.440,hp:.643,r:'text'},{xp:.520,yp:.857,wp:.290,hp:.114,r:'accent'}],
     principles:['Natural left-to-right reading: image draws you in, text holds you','The dominant image gives the spread its emotional identity','Right page functions as the journal entry'],
     typography:{style:'Serif title, medium weight, right page top',preview:{text:'The Fisherman',sub:'Chioggia · 07:20 · overcast',caps:false,serif:true},placement:'Top of the right page, generous line-height',pairing:'Title medium weight / date + location lighter / body text below'},
     tips:['Keep the title short: 1–4 words maximum','Large line-spacing on the right page feels intentional, not sparse','A small color swatch at bottom-right grounds the page'] },
 
   { id:'mosaic', name:'Mosaic', type:'spread', subtitle:'Collage & layered',
+    mode:'Drawing + notes', free:false, category:'Urban Sketching',
+    tryWhen:'a busy market or street · a day with many small things happening · when no single image tells the full story',
+    extras:['time stamps per sketch','material note per image','circled highlight detail'],
     zones:[{xp:.010,yp:.014,wp:.290,hp:.614,r:'image'},{xp:.010,yp:.657,wp:.290,hp:.314,r:'text'},{xp:.320,yp:.014,wp:.280,hp:.314,r:'image'},{xp:.320,yp:.357,wp:.280,hp:.314,r:'image'},{xp:.320,yp:.700,wp:.280,hp:.271,r:'image'},{xp:.620,yp:.014,wp:.360,hp:.957,r:'image'}],
     principles:['Varied sizes create hierarchy — one image leads, others support','White gutters between sketches keep the spread readable','Asymmetric arrangement feels found, not designed'],
     typography:{style:'Loose scattered labels',preview:{text:'the market, 08:45',sub:'fresh herbs / loud vendors',caps:false,serif:false,small:true},placement:'Beside each sketch, varied placement, small',pairing:'Time stamps, one-word descriptors, tiny annotations'},
     tips:['Plan the dominant image first, then fill around it','Ink outlines on some sketches, wash on others — contrast keeps it alive','Tiny margin annotations between images add field-notes quality'] },
 
   { id:'chronicle', name:'Chronicle', type:'spread', subtitle:'Story & time',
+    mode:'Full journal', free:false, category:'Day as Sequence',
+    tryWhen:'a full travel day with several events · when writing and sketching feel equally important · a day that unfolded in stages',
+    extras:['temperature and weather','mode of transport','a meal or coffee noted'],
     zones:[{xp:.020,yp:.029,wp:.200,hp:.157,r:'title'},{xp:.020,yp:.214,wp:.200,hp:.757,r:'text'},{xp:.260,yp:.029,wp:.330,hp:.443,r:'image'},{xp:.260,yp:.500,wp:.330,hp:.471,r:'image'},{xp:.610,yp:.029,wp:.370,hp:.943,r:'image'}],
     principles:['A vertical text column on the left reads unmistakably as a diary entry','Multiple sketches suggest time passing — this spread has duration','The right page holds visual weight; the left page holds meaning'],
     typography:{style:'Date/time/location stacked header',preview:{text:'Saturday · 15 Apr',sub:'Venice, Castello\n16°C, light rain',caps:false,serif:true},placement:'Top of left column, then body text flows below',pairing:'Date bold → place italic → time lighter → body regular'},
     tips:['Write before you sketch — observations shape what you draw','Two sketches of the same place at different hours tell a story','Keep the left column genuine, not decorative'] },
 
   { id:'unfolding', name:'Unfolding', type:'accordion', subtitle:'One continuous scene',
+    mode:'Drawing only', free:false, category:'Panoramic',
+    tryWhen:'a panoramic view best seen in full · a gift or keepsake page · when physical unfolding becomes part of the experience',
+    extras:['GPS coordinates','date and light conditions','dedication line on final panel'],
     zones:[{xp:.000,yp:0,wp:.333,hp:1,r:'image'},{xp:.333,yp:0,wp:.333,hp:1,r:'image'},{xp:.667,yp:0,wp:.333,hp:1,r:'image'}],
     principles:['Three panels become a single canvas when unfolded','A continuous horizon line unifies everything and hides the folds','Physical unfolding is part of the experience — reward it'],
     typography:{style:'Single title on first panel only',preview:{text:'Ligurian Coast →',sub:'Monterosso, April',caps:false,serif:true},placement:'Panel 1, bottom-left corner, small',pairing:'Place / date · nothing else needed'},
     tips:['Mark the horizon line across all three panels before you begin','Let subjects cross the folds — this rewards the person unfolding it','Photograph it fully unfolded to share'] },
 
   { id:'three-moments', name:'Three Moments', type:'accordion', subtitle:'Morning, noon & evening',
+    mode:'Drawing + notes', free:false, category:'Day as Sequence',
+    tryWhen:'returning to the same spot at different times · tracking light across a day · a subject that changes with the hours',
+    extras:['time of each moment','cloud or sun symbol per panel','dominant colour per panel'],
     zones:[{xp:.007,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.007,yp:.717,wp:.319,hp:.250,r:'text'},{xp:.341,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.341,yp:.717,wp:.319,hp:.250,r:'text'},{xp:.674,yp:.017,wp:.319,hp:.667,r:'image'},{xp:.674,yp:.717,wp:.319,hp:.250,r:'text'}],
     principles:['Three panels give a natural beginning, middle, end','Consistent internal structure per panel creates deliberate rhythm','Contrast between panels is the story — same subject, different light'],
     typography:{style:'Italic time label per panel',preview:{text:'07:30 · 13:00 · 19:45',sub:'light changes everything',caps:false,serif:true,small:true,center:true},placement:'Top of each caption block, left aligned',pairing:'Time italic / one sentence of observation below, lighter'},
     tips:['Sketch the same subject at sunrise, midday, and dusk','One observation per caption — not a summary, be specific','Try different mark-making per panel: pencil / ink / wash'] },
+
+  // ── 11 NEW LAYOUTS ──────────────────────────────────────────────
+
+  { id:'window-seat', name:'Window Seat', type:'single', subtitle:'Suspended & luminous',
+    mode:'Drawing + notes', free:true, category:'Journey',
+    tryWhen:'sketching from a plane, train, or bus · capturing sky and clouds · any view framed by a window',
+    extras:['altitude or speed note','time & timezone','destination in local language','cloud type'],
+    zones:[
+      {xp:.08,yp:.06,wp:.84,hp:.72,r:'image'},
+      {xp:.08,yp:.82,wp:.42,hp:.07,r:'title'},
+      {xp:.08,yp:.90,wp:.84,hp:.08,r:'text'},
+    ],
+    principles:['The window frame gives the composition an instant border','Sky and horizon always anchor this layout — find yours before you sketch','The view changes every minute: commit to a moment, sketch it, let it go'],
+    typography:{style:'Small italic caption, left-aligned below the frame',preview:{text:'somewhere over the Alps',sub:'35,000 ft · 14:22 UTC',caps:false,serif:true,small:true},placement:'Directly below the image, tight margin',pairing:'Poetic description italic / data note smaller below'},
+    tips:['Lightly sketch the window frame first — it holds everything together','Clouds change fast: block the shapes, then refine','Resist filling the sky with detail — the pale wash is the point'] },
+
+  { id:'waiting-to-board', name:'Waiting to Board', type:'single', subtitle:'Scattered & anticipatory',
+    mode:'Drawing + notes', free:false, category:'Journey',
+    tryWhen:'killing time before departure · sketching a waiting room · capturing four small unrelated things',
+    extras:['ticket stub sketch','what you ate','flight or train number','seat: window or aisle'],
+    zones:[
+      {xp:.02,yp:.02,wp:.46,hp:.28,r:'image'},
+      {xp:.52,yp:.02,wp:.46,hp:.28,r:'image'},
+      {xp:.02,yp:.34,wp:.46,hp:.28,r:'image'},
+      {xp:.52,yp:.34,wp:.46,hp:.28,r:'image'},
+      {xp:.02,yp:.68,wp:.96,hp:.06,r:'title'},
+      {xp:.02,yp:.76,wp:.96,hp:.22,r:'text'},
+    ],
+    principles:['Four equal panels create visual democracy — no subject dominates','The grid holds scattered, unrelated things in satisfying order','The text block below is where the narrative lives'],
+    typography:{style:'Numbered panel labels, loose journal entry below',preview:{text:'Gate B14 · 09:45',sub:'the man with three hats\nchair that wobbled',caps:false,serif:false,small:true},placement:'Small numbered labels on each panel, prose below',pairing:'Panel numbers tiny / loose journal voice for the text block'},
+    tips:['Sketch whatever is in front of you — variety is the point','Four different scales or subjects makes it interesting','The text block should feel like an unedited journal entry'] },
+
+  { id:'road-scene', name:'Road Scene', type:'single', subtitle:'Open & moving',
+    mode:'Drawing + notes', free:false, category:'Journey',
+    tryWhen:'painting a wide landscape from a vehicle · any wide horizontal subject with space for detail below · open roads and countryside',
+    extras:['road name or number','km driven','something you stopped for','music playing'],
+    zones:[
+      {xp:.00,yp:.00,wp:1.0,hp:.60,r:'image'},
+      {xp:.04,yp:.65,wp:.38,hp:.07,r:'title'},
+      {xp:.04,yp:.74,wp:.92,hp:.24,r:'text'},
+    ],
+    principles:['The full-width image band captures the expansiveness of open road','A strong horizon line is the visual anchor of this layout','The lower writing zone gives the movement a voice'],
+    typography:{style:'Italic place name, journal notes below',preview:{text:'the road to Siena',sub:'SP2 · warm and dusty · 11:40',caps:false,serif:true},placement:'Just below the image, left margin',pairing:'Place italic / road number and conditions smaller below'},
+    tips:['Sketch through the windshield or window — imperfection is fine','Capture the feeling of speed in the mark-making, not the detail','Note what you passed through, not just what you stopped at'] },
+
+  { id:'getting-there', name:'Getting There', type:'spread', subtitle:'Narrative & reflective',
+    mode:'Full journal', free:false, category:'Journey',
+    tryWhen:'one large subject left, writing space right · when you have something to say as well as draw · long journeys with one defining view',
+    extras:['departure time','weather at origin','hand-drawn route map','who you left behind'],
+    zones:[
+      {xp:.01,yp:.02,wp:.46,hp:.96,r:'image'},
+      {xp:.54,yp:.02,wp:.40,hp:.10,r:'title'},
+      {xp:.54,yp:.15,wp:.44,hp:.72,r:'text'},
+      {xp:.54,yp:.90,wp:.20,hp:.08,r:'accent'},
+    ],
+    principles:['Left image, right text mirrors the natural reading direction','The full-height image commands attention while the text earns it','A single accent block at bottom-right closes the composition'],
+    typography:{style:'Serif title, generous body text, right page',preview:{text:'The long way round',sub:'Marseille → Genova · 6 hours',caps:false,serif:true},placement:'Top of right page, body text below with room to breathe',pairing:'Title medium weight / route or duration italic / body regular'},
+    tips:['Write the text before you travel — update it when you arrive','The image should feel like a held breath; the text is the exhale','Leave the accent block for a small detail sketch: a map, a stamp, a face'] },
+
+  { id:'three-views', name:'Three Views', type:'single', subtitle:'Sequential & rhythmic',
+    mode:'Drawing + notes', free:false, category:'Journey',
+    tryWhen:'same subject at different times · three studies of light or weather · any subject that evolves across a day',
+    extras:['time of each view','location per strip','light quality note','colour palette per strip'],
+    zones:[
+      {xp:.02,yp:.02,wp:.96,hp:.29,r:'image'},
+      {xp:.02,yp:.36,wp:.96,hp:.29,r:'image'},
+      {xp:.02,yp:.70,wp:.96,hp:.29,r:'image'},
+    ],
+    principles:['Three horizontal strips read as a sequence, top to bottom','Uniform width demands you find composition within the strip','The rhythm of equal intervals makes comparison effortless'],
+    typography:{style:'Small time label flush right on each strip',preview:{text:'07:15 · 13:00 · 18:45',sub:'',caps:false,serif:false,small:true},placement:'Tiny time stamp flush right on each strip',pairing:'Time only — let the sketches do the talking'},
+    tips:['Choose your three moments before you start — commit to the times','Vary your mark-making across strips to show the light changing','A tiny gap between strips is enough — a hairline works beautifully'] },
+
+  { id:'where-in-the-world', name:'Where in the World', type:'single', subtitle:'Orienting & loose',
+    mode:'Drawing + notes', free:true, category:'Map',
+    tryWhen:'orienting yourself at the start of a trip · showing where you are in the world · any sketch needing geographic context',
+    extras:['compass rose','distance travelled','neighbouring countries','scale note'],
+    zones:[
+      {xp:.08,yp:.08,wp:.84,hp:.68,r:'image'},
+      {xp:.02,yp:.02,wp:.10,hp:.07,r:'accent'},
+      {xp:.88,yp:.02,wp:.10,hp:.07,r:'accent'},
+      {xp:.02,yp:.82,wp:.55,hp:.08,r:'title'},
+      {xp:.02,yp:.91,wp:.96,hp:.07,r:'text'},
+    ],
+    principles:['The central map is a document of where you are — not where you came from','Corners hold orientation data: compass, scale, coordinates','This layout earns its page as the first entry of a trip'],
+    typography:{style:'Country or region name, left-aligned below map',preview:{text:'Southern Tuscany',sub:'43°N — April · arriving by train',caps:false,serif:true},placement:'Below the map, left-aligned, generous space',pairing:'Region name medium serif / coordinates lighter below'},
+    tips:['Sketch the map loose — accuracy matters less than feeling','Mark where you are with a dot, not a pin — it feels more personal','Add neighbouring places you recognise: landmarks, not just names'] },
+
+  { id:'the-route', name:'The Route', type:'single', subtitle:'Sequential & geographic',
+    mode:'Drawing + notes', free:false, category:'Map',
+    tryWhen:'a journey with multiple stops · road trip or train route · when the path itself is the story',
+    extras:['hours between stops','border crossing note','elevation change','road or train number'],
+    zones:[
+      {xp:.02,yp:.02,wp:.38,hp:.22,r:'image'},
+      {xp:.46,yp:.06,wp:.52,hp:.12,r:'text'},
+      {xp:.02,yp:.38,wp:.38,hp:.22,r:'image'},
+      {xp:.46,yp:.42,wp:.52,hp:.12,r:'text'},
+      {xp:.02,yp:.74,wp:.38,hp:.22,r:'image'},
+      {xp:.46,yp:.78,wp:.52,hp:.12,r:'text'},
+    ],
+    principles:['Left column sketches, right column notes — a clean and readable pairing','Three stops give the journey a beginning, middle, and end','The vertical flow reads as movement: you are travelling down the page'],
+    typography:{style:'Stop name and time, right column',preview:{text:'Siena · 09:15',sub:'Orvieto · 13:40\nRome · 17:20',caps:false,serif:false,small:true},placement:'Right of each sketch, name and time aligned',pairing:'Stop name small / time lighter / one observation below'},
+    tips:['Sketch each stop quickly — five minutes per location is enough','Vary the subject slightly: a window, a platform, a coffee cup','The route becomes the composition — trust the structure'] },
+
+  { id:'my-corner', name:'My Corner', type:'single', subtitle:'Intimate & local',
+    mode:'Drawing only', free:false, category:'Map',
+    tryWhen:"mapping the neighbourhood where you're staying · marking favourite spots · any sketch benefiting from a sense of place",
+    extras:['street names','north arrow','walking distance note','favourite spot marked'],
+    zones:[
+      {xp:.02,yp:.02,wp:.96,hp:.07,r:'title'},
+      {xp:.12,yp:.12,wp:.76,hp:.58,r:'image'},
+      {xp:.02,yp:.75,wp:.44,hp:.12,r:'text'},
+      {xp:.54,yp:.75,wp:.44,hp:.12,r:'text'},
+      {xp:.02,yp:.88,wp:.96,hp:.10,r:'text'},
+    ],
+    principles:['The map sits inside a frame of annotations — context surrounds content','A neighbourhood sketch has more personality than a printed map','What you choose to include defines what you valued'],
+    typography:{style:'Street names in small print, spot labels circled',preview:{text:'Piazza dei Ciompi',sub:'15 min walk → the bakery\nturn left at the green door',caps:false,serif:false,small:true},placement:'In the annotation bands above and below the map',pairing:'Place name light / directions or memory fragments smaller'},
+    tips:["Start from where you sleep — that's always the centre","Hand-lettered street names are warmer than accurate ones","Mark a spot you'd want a friend to visit"] },
+
+  { id:'todays-walk', name:"Today's Walk", type:'spread', subtitle:'Traced & annotated',
+    mode:'Full journal', free:false, category:'Map',
+    tryWhen:'a full day of urban sketching · tracing a route with multiple stops · a day that deserves two pages',
+    extras:['steps or km walked','time at each stop','something unexpected','weather during the walk'],
+    zones:[
+      {xp:.01,yp:.02,wp:.55,hp:.54,r:'image'},
+      {xp:.58,yp:.02,wp:.40,hp:.28,r:'image'},
+      {xp:.58,yp:.33,wp:.40,hp:.28,r:'image'},
+      {xp:.58,yp:.64,wp:.40,hp:.34,r:'image'},
+      {xp:.01,yp:.60,wp:.26,hp:.38,r:'text'},
+      {xp:.30,yp:.60,wp:.26,hp:.38,r:'text'},
+    ],
+    principles:['Left: the main sketch. Right: a sequence of smaller studies','The walk is the structure — each stop earns its panel','Two columns of notes below the main sketch feel like honest field notes'],
+    typography:{style:'Route title left, stop times right column',preview:{text:'Castello district, morning',sub:'stop 1 · 09:10\nstop 2 · 11:35',caps:false,serif:true,small:true},placement:'Below the main sketch, two columns',pairing:'Neighbourhood italic / stop times and one line per stop'},
+    tips:['Sketch the main image first — it anchors everything else','Right column studies should be quick: five minutes each maximum','Write the route notes at the end of the day while your feet still ache'] },
+
+  { id:'illustrated-map', name:'Illustrated Map', type:'single', subtitle:'Pictorial & personal',
+    mode:'Drawing only', free:false, category:'Map',
+    tryWhen:'placing tiny sketch icons on a map · making a personal legend of a place · when the map is the artwork',
+    extras:['tiny landmark sketches','personal legend key','local place names','decorative border'],
+    zones:[
+      {xp:.02,yp:.02,wp:.96,hp:.80,r:'image'},
+      {xp:.02,yp:.86,wp:.58,hp:.12,r:'title'},
+      {xp:.66,yp:.86,wp:.32,hp:.12,r:'accent'},
+    ],
+    principles:['The entire page is the map — text and border are part of the art','Small sketch icons placed on geography create delight','A legend in the corner converts personal marks into a shared language'],
+    typography:{style:'Illustrated title lettering, hand-drawn legend',preview:{text:'A Map of Lisbon',sub:'drawn from memory',caps:false,serif:true},placement:'Below the map, left side; legend box bottom-right',pairing:'Title decorative serif / legend in small print, same weight'},
+    tips:['Draw the geography first, place the sketches second','Five to eight landmark sketches is enough — avoid crowding','Let the legend name the marks: the bakery, the good bench, the view'] },
+
+  { id:'from-memory', name:'From Memory', type:'single', subtitle:'Impressionistic & felt',
+    mode:'Full journal', free:false, category:'Map',
+    tryWhen:'drawing without reference · after returning home · when accuracy matters less than feeling',
+    extras:['drawn how long after visiting','what you forgot to include','what felt most important','compare to a photo after'],
+    zones:[
+      {xp:.10,yp:.06,wp:.80,hp:.60,r:'image'},
+      {xp:.10,yp:.70,wp:.45,hp:.07,r:'title'},
+      {xp:.10,yp:.79,wp:.80,hp:.19,r:'text'},
+    ],
+    principles:['What you remember is a portrait of what you valued','Inaccuracy is not failure — it is your brain editing for meaning','The gaps and distortions are as interesting as the sketch itself'],
+    typography:{style:'Place name and time elapsed, short reflection below',preview:{text:'the market square',sub:'drawn three days later\nthe fountain was in the wrong place',caps:false,serif:true,small:true},placement:'Below the image, left-aligned, reflection as journal fragment',pairing:'Place name italic / time elapsed lighter / honest note below'},
+    tips:['Do not look at photos until after you have finished','Note anything you could not remember — that list is revealing','Compare to a photo afterwards: the differences are the real drawing'] },
+
 ];
 
 const TYPE_LABELS = { single:'Single Page', spread:'Double Spread', accordion:'Accordion' };
 const TYPE_SHORT  = { single:'Single', spread:'Spread', accordion:'Accordion' };
+const MODE_FILTERS = ['all','Drawing only','Drawing + notes','Full journal'];
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────────────
 function useWindowWidth() {
@@ -154,7 +365,6 @@ function useWindowWidth() {
   return w;
 }
 
-// Card config scales with grid column count
 function getCardConfig(numCols) {
   if (numCols <= 2) return {
     single:    { cols:1, thumbH:165, svgMaxW:155, svgMaxH:145 },
@@ -240,13 +450,11 @@ function TopNav({ navTab, setNavTab, showTabs, format, onChangeFormat, showForma
   return (
     <nav className="top-nav">
       <div className="nav-inner">
-        <div className="nav-logo">
-          Feuille
-        </div>
+        <div className="nav-logo">Feuille</div>
         <div style={{display:'flex',alignItems:'center',gap:12}}>
           {showTabs && (
             <div className="nav-tabs">
-              {[{id:'browse',label:'Browse',Icon:GridIcon},{id:'saved',label:'Saved',Icon:HeartIcon}].map(({id,label,Icon})=>(
+              {[{id:'browse',label:'Browse'},{id:'saved',label:'Saved'}].map(({id,label})=>(
                 <button key={id} className={`nav-tab ${navTab===id?'active':''}`} onClick={()=>setNavTab(id)}>
                   {label}
                 </button>
@@ -297,9 +505,7 @@ function FormatPicker({ onSelect, onBack, current }) {
               <div style={{height:68,display:'flex',alignItems:'center',justifyContent:'center',filter:active?'invert(1) brightness(1.6)':'none',transition:'filter 0.18s'}}>
                 <FormatShape fmt={fmt} size={56}/>
               </div>
-              <div style={{textAlign:'center'}}>
-                <div style={{fontSize:13.5,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
-              </div>
+              <div style={{fontSize:13.5,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
               <div style={{fontSize:11.5,color:active?'#C8C4BC':'#B0ACA4',textAlign:'center',lineHeight:1.5,fontWeight:300}}>{fmt.desc}</div>
             </button>
           );
@@ -320,6 +526,17 @@ function TypoPreview({ preview }) {
   );
 }
 
+// ── MODE BADGE ───────────────────────────────────────────────────
+function ModeBadge({ mode, compact=false }) {
+  if (!mode) return null;
+  const s = MODE_STYLE[mode];
+  return (
+    <span style={{fontSize:compact?9:10,padding:compact?'2px 6px':'3px 8px',borderRadius:20,background:s.bg,color:s.color,fontWeight:400,letterSpacing:'0.01em',whiteSpace:'nowrap',display:'inline-block'}}>
+      {mode}
+    </span>
+  );
+}
+
 // ── LAYOUT CARD ──────────────────────────────────────────────────
 function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
   const [pressed,setPressed] = useState(false);
@@ -335,22 +552,57 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
         <button onClick={e=>{e.stopPropagation();onFave();}} style={{position:'absolute',top:8,right:8,width:30,height:30,borderRadius:'50%',background:'rgba(247,244,239,0.88)',border:'none',display:'flex',alignItems:'center',justifyContent:'center',color:isFaved?'#7A5C3A':'#A09890',transition:'color 0.15s'}}>
           <HeartSmIcon filled={isFaved}/>
         </button>
-        <div style={{position:'absolute',bottom:8,left:8,background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
-          {TYPE_SHORT[layout.type]}
+        <div style={{position:'absolute',bottom:8,left:8,display:'flex',gap:4,alignItems:'center'}}>
+          <div style={{background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
+            {TYPE_SHORT[layout.type]}
+          </div>
+          {layout.free && (
+            <div style={{background:'rgba(220,252,231,0.92)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#166534',fontWeight:500}}>
+              Free
+            </div>
+          )}
         </div>
       </div>
-      <div style={{padding:'10px 14px 12px',display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:8}}>
+      <div style={{padding:'10px 14px 8px',display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:8}}>
         <div style={{fontSize:14,fontWeight:500,color:'#2A2520',lineHeight:1.2,fontFamily:"'Cormorant Garamond',serif"}}>{layout.name}</div>
         <div style={{fontSize:11,color:'#A09890',fontWeight:300,flexShrink:0}}>{layout.subtitle}</div>
+      </div>
+      <div style={{padding:'0 14px 12px'}}>
+        <ModeBadge mode={layout.mode} compact={true}/>
       </div>
     </div>
   );
 }
 
 // ── HOME SCREEN ──────────────────────────────────────────────────
-function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter, setFilter, cardConfig, numCols }) {
-  const filters = ['all','single','spread','accordion'];
-  const filtered = filter==='all' ? layouts : layouts.filter(l=>l.type===filter);
+function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter, setFilter, modeFilter, setModeFilter, cardConfig, numCols }) {
+  const typeFilters = ['all','single','spread','accordion'];
+  const filtered = layouts.filter(l => {
+    const typeMatch = filter === 'all' || l.type === filter;
+    const modeMatch = modeFilter === 'all' || l.mode === modeFilter;
+    return typeMatch && modeMatch;
+  });
+
+  const typeBtn = (val, label) => {
+    const active = filter === val;
+    return (
+      <button key={val} onClick={()=>setFilter(val)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:active?'#2A2520':'#DDD8D2',background:active?'#2A2520':'transparent',color:active?'#F5F1EC':'#7A7470',fontSize:11.5,letterSpacing:'0.04em',textTransform:'uppercase',whiteSpace:'nowrap'}}>
+        {label}
+      </button>
+    );
+  };
+
+  const modeBtn = (val) => {
+    const active = modeFilter === val;
+    const s = val !== 'all' ? MODE_STYLE[val] : null;
+    const label = val === 'all' ? 'All modes' : val;
+    return (
+      <button key={val} onClick={()=>setModeFilter(val)} style={{padding:'5px 14px',borderRadius:20,border:`1px solid ${active?(s?s.color:'#2A2520'):'#DDD8D2'}`,transition:'all 0.15s',background:active?(s?s.bg:'#2A2520'):'transparent',color:active?(s?s.color:'#F5F1EC'):'#7A7470',fontSize:11,letterSpacing:'0.02em',whiteSpace:'nowrap'}}>
+        {label}
+      </button>
+    );
+  };
+
   return (
     <div style={{paddingTop:40}}>
       <div style={{marginBottom:24}}>
@@ -358,13 +610,15 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
         <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
         <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
       </div>
-      <div style={{display:'flex',gap:8,marginBottom:24,flexWrap:'wrap'}}>
-        {filters.map(f=>(
-          <button key={f} onClick={()=>setFilter(f)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:filter===f?'#2A2520':'#DDD8D2',background:filter===f?'#2A2520':'transparent',color:filter===f?'#F5F1EC':'#7A7470',fontSize:11.5,letterSpacing:'0.04em',textTransform:'uppercase'}}>
-            {f==='all'?'All':TYPE_LABELS[f]}
-          </button>
-        ))}
+
+      <div style={{display:'flex',gap:8,marginBottom:10,flexWrap:'wrap'}}>
+        {typeFilters.map(f => typeBtn(f, f==='all'?'All':TYPE_LABELS[f]))}
       </div>
+
+      <div style={{display:'flex',gap:8,marginBottom:28,flexWrap:'wrap'}}>
+        {MODE_FILTERS.map(m => modeBtn(m))}
+      </div>
+
       <div style={{display:'grid',gridTemplateColumns:`repeat(${numCols}, 1fr)`,gap:12}}>
         {filtered.map(layout=>(
           <LayoutCard key={layout.id} layout={layout} format={format}
@@ -374,6 +628,12 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
             cardConfig={cardConfig}/>
         ))}
       </div>
+
+      {filtered.length === 0 && (
+        <div style={{paddingTop:80,textAlign:'center'}}>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:24,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>No layouts match this combination.<br/>Try adjusting the filters.</div>
+        </div>
+      )}
     </div>
   );
 }
@@ -404,6 +664,23 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
   const details = (
     <div>
       {!isDesktop && <>{diagram}{divider}</>}
+
+      {layout.tryWhen && (
+        <div style={{marginBottom:24}}>
+          <div style={lbl}>Try this when</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:'italic',fontSize:isDesktop?17:15,color:'#5A5450',lineHeight:1.7}}>{layout.tryWhen}</div>
+        </div>
+      )}
+
+      {layout.mode && (
+        <div style={{marginBottom:24}}>
+          <div style={lbl}>Mode</div>
+          <ModeBadge mode={layout.mode}/>
+        </div>
+      )}
+
+      {divider}
+
       <div>
         <div style={lbl}>Composition Principles</div>
         <div style={{display:'flex',flexDirection:'column',gap:12}}>
@@ -439,6 +716,22 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
           ))}
         </div>
       </div>
+
+      {layout.extras && layout.extras.length > 0 && (
+        <>
+          {divider}
+          <div>
+            <div style={lbl}>Extras to consider</div>
+            <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+              {layout.extras.map((e,i)=>(
+                <span key={i} style={{fontSize:12,padding:'4px 12px',borderRadius:20,background:'#F0EDE8',color:'#5A5450',border:'1px solid #E4DFD8'}}>
+                  {e}
+                </span>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 
@@ -447,7 +740,10 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
       <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:13,padding:0,marginBottom:28}}>
         <BackArrow/> Back
       </button>
-      <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?46:36,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1,marginBottom:4}}>{layout.name}</div>
+      <div style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:4,flexWrap:'wrap'}}>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?46:36,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>{layout.name}</div>
+        {layout.free && <span style={{fontSize:10,padding:'3px 9px',borderRadius:20,background:'#DCFCE7',color:'#166534',fontWeight:500,letterSpacing:'0.04em',textTransform:'uppercase',marginTop:isDesktop?12:8,flexShrink:0}}>Free</span>}
+      </div>
       <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?24:18,fontStyle:'italic',color:'#8C8680',marginBottom:isDesktop?36:24}}>{layout.subtitle}</div>
       {isDesktop ? (
         <div style={{display:'flex',gap:48,alignItems:'flex-start'}}>
@@ -495,12 +791,13 @@ function App() {
 
   const savedFmtId = localStorage.getItem('sc_fmt');
   const initFmt = FORMATS.find(f=>f.id===savedFmtId)||null;
-  const [format,setFormat]       = useState(initFmt);
+  const [format,setFormat]         = useState(initFmt);
   const [pickingFormat,setPicking] = useState(!initFmt);
-  const [navTab,setNavTab]       = useState('browse');
-  const [selected,setSelected]   = useState(null);
-  const [filter,setFilter]       = useState('all');
-  const [favorites,setFavorites] = useState(()=>{ try{return JSON.parse(localStorage.getItem('sc_faves')||'[]');}catch{return [];} });
+  const [navTab,setNavTab]         = useState('browse');
+  const [selected,setSelected]     = useState(null);
+  const [filter,setFilter]         = useState('all');
+  const [modeFilter,setModeFilter] = useState('all');
+  const [favorites,setFavorites]   = useState(()=>{ try{return JSON.parse(localStorage.getItem('sc_faves')||'[]');}catch{return [];} });
 
   const selectFmt  = fmt=>{ setFormat(fmt); localStorage.setItem('sc_fmt',fmt.id); setPicking(false); };
   const toggleFave = id=>{ const n=favorites.includes(id)?favorites.filter(f=>f!==id):[...favorites,id]; setFavorites(n); localStorage.setItem('sc_faves',JSON.stringify(n)); };
@@ -510,18 +807,14 @@ function App() {
 
   return (
     <>
-      <TopNav
-        navTab={navTab} setNavTab={setNavTab}
-        showTabs={showTabs} showFormat={showFormat}
-        format={format} onChangeFormat={()=>setPicking(true)}
-      />
+      <TopNav navTab={navTab} setNavTab={setNavTab} showTabs={showTabs} showFormat={showFormat} format={format} onChangeFormat={()=>setPicking(true)}/>
       <div className="page">
         {pickingFormat ? (
           <FormatPicker onSelect={selectFmt} current={format?.id} onBack={format?()=>setPicking(false):null}/>
         ) : selected ? (
           <DetailScreen layout={selected} format={format} isFaved={favorites.includes(selected.id)} onToggleFave={()=>toggleFave(selected.id)} onBack={()=>setSelected(null)} isDesktop={isDesktop}/>
         ) : navTab==='browse' ? (
-          <HomeScreen format={format} layouts={LAYOUTS} favorites={favorites} onToggleFave={toggleFave} onSelect={setSelected} filter={filter} setFilter={setFilter} cardConfig={cardConfig} numCols={numCols}/>
+          <HomeScreen format={format} layouts={LAYOUTS} favorites={favorites} onToggleFave={toggleFave} onSelect={setSelected} filter={filter} setFilter={setFilter} modeFilter={modeFilter} setModeFilter={setModeFilter} cardConfig={cardConfig} numCols={numCols}/>
         ) : (
           <FavoritesScreen format={format} layouts={LAYOUTS} favorites={favorites} onSelect={setSelected} onToggleFave={toggleFave} cardConfig={cardConfig} numCols={numCols}/>
         )}
