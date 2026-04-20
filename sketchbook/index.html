@@ -60,11 +60,9 @@ const { useState, useEffect } = React;
 
 // ── FORMATS ──────────────────────────────────────────────────────
 const FORMATS = [
-  { id:'a5p', name:'A5 Portrait',  w:100, h:141, real:'148 × 210 mm', desc:'The classic travel sketchbook' },
-  { id:'a5l', name:'A5 Landscape', w:141, h:100, real:'210 × 148 mm', desc:'Wide views & panoramas' },
-  { id:'sq',  name:'Square',       w:110, h:110, real:'150 × 150 mm', desc:'Equal balance, great for studies' },
-  { id:'a6',  name:'A6 Pocket',    w:75,  h:105, real:'105 × 148 mm', desc:'Compact, always in your pocket' },
-  { id:'b5',  name:'B5',           w:100, h:145, real:'182 × 257 mm', desc:'More space, bolder strokes' },
+  { id:'a5p', name:'Portrait',  w:100, h:141, desc:'The classic travel sketchbook' },
+  { id:'a5l', name:'Landscape', w:141, h:100, desc:'Wide views & panoramas' },
+  { id:'sq',  name:'Square',    w:110, h:110, desc:'Equal balance, great for studies' },
 ];
 
 // ── LAYOUTS ──────────────────────────────────────────────────────
@@ -301,7 +299,6 @@ function FormatPicker({ onSelect, onBack, current }) {
               </div>
               <div style={{textAlign:'center'}}>
                 <div style={{fontSize:13.5,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
-                <div style={{fontSize:11,color:active?'#C8C4BC':'#A09890',marginTop:3,letterSpacing:'0.02em'}}>{fmt.real}</div>
               </div>
               <div style={{fontSize:11.5,color:active?'#C8C4BC':'#B0ACA4',textAlign:'center',lineHeight:1.5,fontWeight:300}}>{fmt.desc}</div>
             </button>
