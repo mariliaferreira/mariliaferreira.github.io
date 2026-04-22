@@ -26,7 +26,7 @@ body { background: #F7F4EF; min-height: 100vh; font-family: 'DM Sans', sans-seri
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
 .nav-logo {
-  font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 500;
+  font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 500;
   color: #2A2520; white-space: nowrap; display: flex; align-items: baseline; gap: 5px;
   text-decoration: none;
 }
@@ -34,7 +34,7 @@ body { background: #F7F4EF; min-height: 100vh; font-family: 'DM Sans', sans-seri
 .nav-tabs { display: flex; gap: 4px; }
 .nav-tab {
   padding: 7px 18px; border-radius: 20px; border: 1px solid transparent;
-  font-size: 11.5px; font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em;
+  font-size: 14px; font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em;
   text-transform: uppercase; cursor: pointer; transition: all 0.15s;
   color: #7A7470; background: none;
 }
@@ -48,8 +48,8 @@ button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
 @media (max-width: 600px) {
   .nav-inner { padding: 0 16px; height: 56px; }
   .page { padding: 0 16px 48px; }
-  .nav-logo { font-size: 18px; }
-  .nav-tab { padding: 6px 13px; font-size: 11px; }
+  .nav-logo { font-size: 22.5px; }
+  .nav-tab { padding: 6px 13px; font-size: 14px; }
 }
 </style>
 </head>
@@ -348,10 +348,379 @@ const LAYOUTS = [
     typography:{style:'Place name and time elapsed, short reflection below',preview:{text:'the market square',sub:'drawn three days later\nthe fountain was in the wrong place',caps:false,serif:true,small:true},placement:'Below the image, left-aligned, reflection as journal fragment',pairing:'Place name italic / time elapsed lighter / honest note below'},
     tips:['Do not look at photos until after you have finished','Note anything you could not remember — that list is revealing','Compare to a photo afterwards: the differences are the real drawing'] },
 
+  // ── PANORAMIC CATEGORY ──────────────────────────────────────────
+
+  { id:'low-horizon', name:'Low Horizon', type:'single', subtitle:'Vast & skyward',
+    mode:'Drawing only', free:true, category:'Panoramic',
+    tryWhen:'the sky is the subject · Arctic or tundra landscapes · flat terrain where the horizon sits low · any scene where light above matters more than ground below',
+    extras:['horizon height marked','light direction note','cloud study inset','colour temperature note'],
+    zones:[
+      {xp:.00,yp:.00,wp:1.0,hp:.80,r:'image'},
+      {xp:.00,yp:.82,wp:1.0,hp:.16,r:'accent'},
+    ],
+    principles:['Placing the horizon low makes sky the subject — a radical act of simplicity','Light above the horizon is where drama lives: clouds, atmosphere, colour','The thin ground strip anchors the eye without competing with the sky'],
+    typography:{style:'No lettering — perhaps a tiny pencil compass note',preview:{text:'N 63°',sub:'light from the left · 17:40',caps:false,serif:false,small:true,center:true},placement:'Tiny pencil note in the bottom corner only if needed',pairing:'Compass bearing or time only — nothing more'},
+    tips:['Commit to the horizon placement before anything else','Work wet-in-wet for the sky — speed matters here','A single tiny dark element in the ground strip anchors the entire painting'] },
+
+  { id:'the-strip', name:'The Strip', type:'single', subtitle:'Cinematic & contained',
+    mode:'Drawing + notes', free:false, category:'Panoramic',
+    tryWhen:'a wide scene needs to live in a portrait page · the landscape is long and thin · you want writing above and below the painting · any subject with a strong horizontal reading',
+    extras:['title above the strip','location & date','scale or distance note','what is just out of frame'],
+    zones:[
+      {xp:.04,yp:.02,wp:.60,hp:.07,r:'title'},
+      {xp:.00,yp:.13,wp:1.0,hp:.40,r:'image'},
+      {xp:.04,yp:.57,wp:.92,hp:.06,r:'title'},
+      {xp:.04,yp:.65,wp:.92,hp:.33,r:'text'},
+    ],
+    principles:['The horizontal strip format turns a landscape into something cinematic','Writing above and below gives equal weight to observation and image','The strip forces selective cropping — you cannot paint everything'],
+    typography:{style:'Title above, location italic below the strip',preview:{text:'Val Gardena',sub:'from the third terrace · 09:20',caps:false,serif:true},placement:'Title above strip left-aligned; location and notes below',pairing:'Title medium weight above / italic place name below / body notes beneath'},
+    tips:['Decide the crop before you start — the strip is merciless','Leave breathing room above and below the strip edges','Write the top title first so the strip sits in context from the start'] },
+
+  { id:'full-spread', name:'Full Spread', type:'spread', subtitle:'Immersive & uninterrupted',
+    mode:'Drawing only', free:false, category:'Panoramic',
+    tryWhen:'the scene is too wide for a single page · painting across the gutter deliberately · a landscape that deserves full attention · glaciers, mountain ranges, coastlines',
+    extras:['gutter as part of the composition','horizon runs continuously','tiny scale figure for depth','colour palette corner'],
+    zones:[
+      {xp:.00,yp:.00,wp:1.0,hp:1.0,r:'image'},
+    ],
+    principles:['Two pages become one canvas — the gutter disappears into the scene','A subject crossing the gutter rewards the person opening the book','Total image area makes this the most immersive format in the library'],
+    typography:{style:'No text — pure image, pencil inscription at the very edge only',preview:{text:'Hardangerfjord →',sub:'August · low tide',caps:false,serif:true,small:true},placement:'Bottom edge only, light pencil, almost invisible',pairing:'Place name italic / season only — resist anything more'},
+    tips:['Lightly sketch the horizon all the way across before you begin','The gutter is not an obstacle — plan a subject to cross it intentionally','Photograph it flat and open, not page by page'] },
+
+  { id:'wide-view', name:'Wide View', type:'spread', subtitle:'Spacious & grounded',
+    mode:'Drawing + notes', free:false, category:'Panoramic',
+    tryWhen:'a wide painting with room to write below · documenting a specific place with context · the scene needs both image and explanation · a landscape you want to remember fully',
+    extras:['location name below','time of day & light','temperature & weather','what you could hear'],
+    zones:[
+      {xp:.01,yp:.02,wp:.98,hp:.68,r:'image'},
+      {xp:.01,yp:.73,wp:.30,hp:.07,r:'title'},
+      {xp:.01,yp:.82,wp:.46,hp:.16,r:'text'},
+      {xp:.53,yp:.73,wp:.46,hp:.25,r:'text'},
+    ],
+    principles:['The wide image commands; the notes below anchor it to time and place','Equal note zones on each page creates balance and reading rhythm','Writing below the view is the most natural thing — you looked, then you described'],
+    typography:{style:'Location name below image, notes in regular body',preview:{text:'Hardanger Plateau',sub:'09:40 · overcast · cold\nthe valley appeared slowly',caps:false,serif:true},placement:'Left page: location header. Right page: continued notes',pairing:'Place name medium weight / descriptive body below both'},
+    tips:['Sketch the full panorama first before writing a word','Let the left note zone set the scene; the right note zone tell what happened','Colour temperature and weather sit in the left column naturally'] },
+
+  { id:'open-horizon', name:'Open Horizon', type:'accordion', subtitle:'Sweeping & unfolding',
+    mode:'Drawing only', free:true, category:'Panoramic',
+    tryWhen:'the landscape is too wide for two pages · painting a glacier, fjord, or mountain range · a scene that unfolds as you turn · the horizon is the whole story',
+    extras:['continuous horizon line','panorama direction noted','tiny scale element for depth','light source consistent across pages'],
+    zones:[
+      {xp:.000,yp:.00,wp:.333,hp:.82,r:'image'},
+      {xp:.333,yp:.00,wp:.333,hp:.82,r:'image'},
+      {xp:.667,yp:.00,wp:.333,hp:.82,r:'image'},
+      {xp:.000,yp:.84,wp:.333,hp:.14,r:'accent'},
+      {xp:.333,yp:.84,wp:.333,hp:.14,r:'accent'},
+      {xp:.667,yp:.84,wp:.333,hp:.14,r:'accent'},
+    ],
+    principles:['Three panels become one continuous landscape when unfolded','The horizon must run continuously across all three panels — measure it first','Nothing interrupts the view: no text, no labels, no borders'],
+    typography:{style:'No lettering — the panorama speaks entirely through image',preview:{text:'←  Jökulsárlón  →',sub:'continuous horizon',caps:false,serif:true,small:true,center:true},placement:'Pencil inscription on the first panel only, if anything',pairing:'One place name on panel 1 only — nothing else'},
+    tips:['Draw the horizon line lightly across all three panels before anything else','Keep the ground strip consistent in tone across all panels','The scale of the subject should make a viewer feel small — commit to that'] },
+
+  { id:'unfolding-story', name:'Unfolding Story', type:'accordion', subtitle:'Narrative & expansive',
+    mode:'Drawing + notes', free:false, category:'Panoramic',
+    tryWhen:'a wide scene with notes under each section · documenting a landscape across time or space · when each part of the panorama has its own story · a journey told left to right',
+    extras:['label each section','distance between points','what changed section to section','colour palette per panel'],
+    zones:[
+      {xp:.007,yp:.017,wp:.319,hp:.580,r:'image'},
+      {xp:.007,yp:.630,wp:.319,hp:.350,r:'text'},
+      {xp:.341,yp:.017,wp:.319,hp:.580,r:'image'},
+      {xp:.341,yp:.630,wp:.319,hp:.350,r:'text'},
+      {xp:.674,yp:.017,wp:.319,hp:.580,r:'image'},
+      {xp:.674,yp:.630,wp:.319,hp:.350,r:'text'},
+    ],
+    principles:['Each panel holds one moment, one view, one set of notes','Left to right reads as a journey — time, distance, or discovery','The text under each panel gives the panorama a narrative spine'],
+    typography:{style:'Section label per panel, notes below each image',preview:{text:'morning · midday · dusk',sub:'',caps:false,serif:false,small:true,center:true},placement:'Top of each text block, small label then flowing notes',pairing:'Time or direction label / short observation paragraph below'},
+    tips:['Label each section before you sketch — it shapes what you choose to draw','Keep notes short per panel: three sentences maximum','The three text zones together should read as one continuous account'] },
+
+  // ── FOCAL MOMENT CATEGORY ────────────────────────────────────────
+
+  { id:'just-this', name:'Just This', type:'single', subtitle:'Pure & undistracted',
+    mode:'Drawing only', free:true, category:'Focal Moment',
+    tryWhen:'one subject deserves the whole page · nothing should compete with it · practising commitment · the white space around it is part of the painting',
+    extras:['resist adding anything else','let white space breathe','tiny signature or date only'],
+    zones:[
+      {xp:.10,yp:.12,wp:.80,hp:.76,r:'image'},
+    ],
+    principles:['A single subject with the full page demands full commitment from the painter','White space is not emptiness — it is the subject\'s silence','Restraint is the hardest technique and the most powerful'],
+    typography:{style:'Nothing — or a tiny pencil date in the bottom corner',preview:{text:'14 Apr',sub:'',caps:false,serif:false,small:true,center:true},placement:'Bottom corner only, if anything at all',pairing:'Initials or date in pencil — never a title'},
+    tips:['Choose your subject before you open the book — arrive with intention','The white space is part of the composition — protect it deliberately','If you are tempted to add something, wait. The page is probably right as it is.'] },
+
+  { id:'room-to-breathe', name:'Room to Breathe', type:'single', subtitle:'Weighted & dynamic',
+    mode:'Drawing only', free:false, category:'Focal Moment',
+    tryWhen:'the subject has direction or movement · you want tension on the page · practising asymmetric composition · the empty space tells as much as the subject',
+    extras:['direction the subject faces','what is implied in the empty space','rule of thirds as guide'],
+    zones:[
+      {xp:.46,yp:.18,wp:.48,hp:.64,r:'image'},
+    ],
+    principles:['Off-centre placement creates tension — the eye wants to complete what it sees','The empty space implies a direction, a destination, or a story','Asymmetry is not imbalance — it is visual energy held in check'],
+    typography:{style:'No text — the composition itself speaks',preview:{text:'→',sub:'subject faces into space',caps:false,serif:false,small:true},placement:'No text needed — the direction is implied by placement',pairing:'Nothing — let the empty space say what the subject faces'},
+    tips:['Place the subject facing into the empty space, not out of the page','The empty area should feel charged, not accidental','Leave at least one third of the page completely untouched'] },
+
+  { id:'the-detail', name:'The Detail', type:'single', subtitle:'Observed & studied',
+    mode:'Drawing only', free:false, category:'Focal Moment',
+    tryWhen:'a detail of the subject deserves its own study · texture or pattern worth zooming into · practising observation at two scales · the corner study completes the page',
+    extras:['zoom indicator line','material or texture note','actual size vs drawn size'],
+    zones:[
+      {xp:.04,yp:.04,wp:.88,hp:.62,r:'image'},
+      {xp:.56,yp:.70,wp:.40,hp:.26,r:'image'},
+    ],
+    principles:['Two scales of observation on one page doubles the act of looking','The corner study teaches you something the main sketch cannot','Zoom is a drawing choice, not a photographic one'],
+    typography:{style:'Tiny zoom label connecting main image to detail study',preview:{text:'× 3',sub:'window latch · iron, painted over',caps:false,serif:false,small:true},placement:'Small label above the detail inset, connecting the two scales',pairing:'Scale multiplier / material note below'},
+    tips:['Choose the detail before you start — do not add it as an afterthought','The detail study should be larger than you think necessary','A faint line connecting main to detail is optional but satisfying'] },
+
+  { id:'out-of-dark', name:'Out of Dark', type:'single', subtitle:'Dramatic & committed',
+    mode:'Drawing only', free:false, category:'Focal Moment',
+    darkBg:true,
+    tryWhen:'committing to extreme darks · the subject emerges from shadow · practising Zubkovich-style value structure · when you want to stop being afraid of going dark',
+    extras:['darkest dark first','leave lights unpainted','value scale study in margin','one light source only'],
+    zones:[
+      {xp:.12,yp:.15,wp:.76,hp:.70,r:'light'},
+    ],
+    principles:['Dark surroundings make the subject appear to glow — earned, not added','Working into darkness reverses the usual approach and reveals form differently','Commitment to deep shadow is what separates a study from a sketch'],
+    typography:{style:'No text — pure tonal study',preview:{text:'value study',sub:'darkest dark first',caps:false,serif:false,small:true,center:true},placement:'No lettering on the page itself',pairing:'Pure image — resist the urge to caption it'},
+    tips:['Put down your darkest dark first and let everything else relate to it','Leave the lightest areas completely unpainted — protect the paper','Squint at your reference: if you see two tones, paint two tones'] },
+
+  { id:'in-context', name:'In Context', type:'single', subtitle:'Placed & grounded',
+    mode:'Drawing + notes', free:false, category:'Focal Moment',
+    tryWhen:'where the subject sits matters as much as the subject · a small environmental sketch anchors the main painting · documenting something in its setting · the place is part of the story',
+    extras:['tiny location sketch','arrow showing subject position','distance from where you sat','what surrounds it'],
+    zones:[
+      {xp:.04,yp:.04,wp:.88,hp:.62,r:'image'},
+      {xp:.04,yp:.70,wp:.28,hp:.22,r:'accent'},
+      {xp:.36,yp:.70,wp:.60,hp:.22,r:'text'},
+    ],
+    principles:['A subject without its setting is a portrait without a face','The small environmental sketch earns its place by showing scale and location','Place and subject in dialogue creates a document, not just a drawing'],
+    typography:{style:'Short location note beside the environmental sketch',preview:{text:'the window, third floor',sub:'looking south · 11 metres up',caps:false,serif:false,small:true},placement:'Beside the small location sketch, annotative and loose',pairing:'Position description / distance or height below'},
+    tips:['Sketch the main subject first, the context second','The location sketch should be loose and diagrammatic — not a second painting','An arrow from the location sketch to the main image completes the connection'] },
+
+  { id:'the-reaction', name:'The Reaction', type:'spread', subtitle:'Felt & recorded',
+    mode:'Full journal', free:false, category:'Focal Moment',
+    tryWhen:'the subject moved you and you need to say why · left page is the painting, right page is the response · when drawing alone is not enough · the moment deserves two pages',
+    extras:['write before you think too much','colour swatches on right page','what you felt not what you saw','return to it later and add more'],
+    zones:[
+      {xp:.01,yp:.02,wp:.46,hp:.96,r:'image'},
+      {xp:.54,yp:.02,wp:.44,hp:.70,r:'text'},
+      {xp:.54,yp:.76,wp:.20,hp:.12,r:'accent'},
+      {xp:.76,yp:.76,wp:.22,hp:.12,r:'accent'},
+    ],
+    principles:['Left page observes, right page responds — together they are complete','Writing about what you felt forces honesty that painting alone sometimes avoids','Colour swatches on the right page connect feeling to visual memory'],
+    typography:{style:'Raw prose on the right page, unedited',preview:{text:'I did not expect it to stop me.',sub:'The light was ordinary. The moment was not.',caps:false,serif:true},placement:'Top of right page, flowing downward, generous line spacing',pairing:'Personal prose italic / colour swatches at the base of the right page'},
+    tips:['Write on the right page before the moment fades — memory edits too quickly','The colour swatches are not decoration: they are visual shorthand for the feeling','Return to this spread later and write more — some reactions need distance'] },
+
+  { id:'sky-first', name:'Sky First', type:'single',
+    subtitle:'The whole page, given to air',
+    mode:'Drawing only',
+    free:true,
+    category:'Atmosphere',
+    tryWhen:'The sky is doing something you will regret not drawing',
+    extras:['Wet-in-wet wash','Single faint horizon line','No ground required'],
+    zones:[
+      {xp:0, yp:0, wp:1, hp:1, r:'image'},
+    ],
+    principles:['The sky does not need a subject — it is the subject','Give the entire page to air and light','A horizon is optional; the feeling is not'],
+    typography:{style:'No text on this page',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None — the image holds the whole page',pairing:'None'},
+    tips:['Work fast — the sky changes every four minutes','Wet the whole page first, then drop colour in from the top','A single faint horizon line at the lower third is enough to anchor it'] },
+
+  { id:'colour-record', name:'Colour Record', type:'single',
+    subtitle:'The atmosphere in three swatches',
+    mode:'Drawing + notes',
+    free:true,
+    category:'Atmosphere',
+    tryWhen:'The light or colour of a place is the thing you most want to keep',
+    extras:['Wet wash at top','Three named colour swatches','Short written observation'],
+    zones:[
+      {xp:0, yp:0, wp:1, hp:0.58, r:'image'},
+      {xp:0.02, yp:0.62, wp:0.28, hp:0.12, r:'accent'},
+      {xp:0.36, yp:0.62, wp:0.28, hp:0.12, r:'accent'},
+      {xp:0.70, yp:0.62, wp:0.28, hp:0.12, r:'accent'},
+      {xp:0, yp:0.78, wp:1, hp:0.22, r:'text'},
+    ],
+    principles:['A colour swatch named in your own words is worth more than a photograph','The wash does not need to be a place — just the light','One sentence per swatch is enough'],
+    typography:{style:'Handwritten colour names beneath each swatch',preview:{text:'Warm grey, almost green.',sub:'The hour before rain.',caps:false,serif:false},placement:'Below each swatch, left-aligned',pairing:'Loose handwriting / wash above'},
+    tips:['Mix each swatch wet and let it bloom — do not overwork it','Name the colour before you paint: it sharpens what you are looking for','The written notes should be unedited — write them fast, on the spot'] },
+
+  { id:'two-moments', name:'Two Moments', type:'single',
+    subtitle:'The same place, twice',
+    mode:'Drawing only',
+    free:true,
+    category:'Atmosphere',
+    tryWhen:'You return to a place and the light has changed everything',
+    extras:['Two equal horizontal strips','No text','The gap between them is deliberate'],
+    zones:[
+      {xp:0, yp:0.02, wp:1, hp:0.46, r:'image'},
+      {xp:0, yp:0.52, wp:1, hp:0.46, r:'image'},
+    ],
+    principles:['Two strips of the same subject tell a story one cannot','The gap between them is not wasted space — it is the pause','Resist labelling: let the images speak across the white'],
+    typography:{style:'No text — the images carry everything',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Choose your horizon placement consistently across both strips — it unifies them','The tonal key can differ: morning pale, evening dark','A hairline gap between strips is more elegant than a wide margin'] },
+
+  { id:'full-wash', name:'Full Wash', type:'spread',
+    subtitle:'Two pages, one unbroken image',
+    mode:'Drawing only',
+    free:false,
+    category:'Atmosphere',
+    tryWhen:'The scene is too wide for a single page and the gutter will not hurt it',
+    extras:['Full bleed across both pages','No text at all','Photograph flat to share'],
+    zones:[
+      {xp:0, yp:0, wp:1, hp:1, r:'image'},
+    ],
+    principles:['The gutter is not a problem — plan a subject that survives it','Full bleed demands commitment: start with the lightest washes','A single panoramic image read straight across is deeply satisfying'],
+    typography:{style:'No text',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Mark the horizon line straight across both pages before you begin','Wet both pages together and work quickly across the gutter','Photograph it fully open — never page by page'] },
+
+  { id:'loose-and-close', name:'Loose & Close', type:'single',
+    subtitle:'The sweep and the detail, held together',
+    mode:'Drawing only',
+    free:true,
+    category:'Atmosphere',
+    tryWhen:'You want to hold both the mood of a scene and one precise thing within it',
+    extras:['Large loose wash fills the top','Small tight study in the lower corner','No labels needed'],
+    zones:[
+      {xp:0, yp:0, wp:1, hp:0.70, r:'image'},
+      {xp:0.58, yp:0.74, wp:0.42, hp:0.26, r:'image'},
+    ],
+    principles:['Let the large area be truly loose — resist tightening it','The small study should be noticeably more precise','The contrast between the two is the content'],
+    typography:{style:'No text — the contrast between loose and precise says everything',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['The loose wash goes in first — commit to it before adding the small study','Choose a detail that sits inside the larger scene, not outside it','Make the small study controlled: the difference in handling is the whole point'] },
+
+  { id:'almost-empty', name:'Almost Empty', type:'single',
+    subtitle:'One thing, held in a lot of white',
+    mode:'Drawing only',
+    free:true,
+    category:'Atmosphere',
+    tryWhen:'The subject is small and the space around it is the whole point',
+    extras:['One subject, placed deliberately','No border or frame','The white is active, not absent'],
+    zones:[
+      {xp:0.28, yp:0.22, wp:0.44, hp:0.40, r:'image'},
+    ],
+    principles:['Decide the placement before you touch the paper','The white around the subject is part of the drawing','Resist adding anything — if you are tempted, wait'],
+    typography:{style:'No text',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Decide where to place the subject before you open the book','Draw smaller than feels comfortable — the white needs room to breathe','If you are tempted to fill the space, leave the page overnight first'] },
+
+  { id:'the-collection', name:'The Collection', type:'pocket',
+    subtitle:'Ordered & complete',
+    mode:'Drawing + notes',
+    free:true,
+    category:'Collector',
+    tryWhen:'you have several items of similar size · everything deserves equal attention · a day\'s worth of collected fragments · the collection as inventory',
+    extras:['Label each item','Where you found it','Date collected','Draw or stick the real thing'],
+    zones:[
+      {xp:0.06, yp:0.05, wp:0.38, hp:0.18, r:'item', rot:-2},
+      {xp:0.56, yp:0.05, wp:0.38, hp:0.18, r:'item', rot:1},
+      {xp:0.06, yp:0.27, wp:0.38, hp:0.18, r:'item', rot:2},
+      {xp:0.56, yp:0.27, wp:0.38, hp:0.18, r:'item', rot:-1},
+      {xp:0.06, yp:0.50, wp:0.38, hp:0.18, r:'item', rot:-2},
+      {xp:0.56, yp:0.50, wp:0.38, hp:0.18, r:'item', rot:1},
+      {xp:0.06, yp:0.72, wp:0.38, hp:0.18, r:'item', rot:1},
+      {xp:0.56, yp:0.72, wp:0.38, hp:0.18, r:'item', rot:-2},
+    ],
+    principles:['Uniform size and arrangement gives a collection its dignity','The label is as important as the item — name everything','Completeness is the point: leave no gaps in the inventory'],
+    typography:{style:'Small handwritten labels beneath each item',preview:{text:'Oak gall, Hampstead Heath.',sub:'03 October.',caps:false,serif:false},placement:'Below each item, centred or left-aligned',pairing:'Small neat handwriting / even spacing throughout'},
+    tips:['Lightly rule the grid before you stick or sketch anything','Labels should be consistent in size and position — treat it like a catalogue','Date the page at the top right before you begin'] },
+
+  { id:'pocket-spill', name:'Pocket Spill', type:'pocket',
+    subtitle:'Loose & accidental',
+    mode:'Drawing only',
+    free:true,
+    category:'Collector',
+    tryWhen:'items of different sizes and shapes · the arrangement feels found not designed · overlapping is fine · the page looks like you emptied your pockets onto it',
+    extras:['Slight rotation on each item','Overlap deliberately','Mix drawn and stuck items','Leave gaps between some'],
+    zones:[
+      {xp:0.05, yp:0.04, wp:0.42, hp:0.22, r:'item', rot:-12},
+      {xp:0.53, yp:0.02, wp:0.34, hp:0.18, r:'item', rot:8},
+      {xp:0.14, yp:0.29, wp:0.32, hp:0.28, r:'item', rot:5},
+      {xp:0.50, yp:0.24, wp:0.44, hp:0.20, r:'item', rot:-9},
+      {xp:0.06, yp:0.60, wp:0.50, hp:0.16, r:'item', rot:7},
+      {xp:0.44, yp:0.52, wp:0.28, hp:0.30, r:'item', rot:-15},
+      {xp:0.16, yp:0.78, wp:0.36, hp:0.16, r:'item', rot:3},
+      {xp:0.58, yp:0.76, wp:0.36, hp:0.20, r:'item', rot:-6},
+    ],
+    principles:['Rotation is honest — things do not land perfectly in real life','Overlapping creates depth without any extra drawing','The disorder is the composition: trust it'],
+    typography:{style:'No text — the objects speak',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Place the largest item first, then work outward','Overlap at least two items — a page where nothing touches feels arranged','Slight rotation on everything: even three degrees is enough to feel real'] },
+
+  { id:'the-main-find', name:'The Main Find', type:'pocket',
+    subtitle:'Anchored & surrounded',
+    mode:'Drawing + notes',
+    free:false,
+    category:'Collector',
+    tryWhen:'one item is the hero of the day · smaller fragments support the main find · a menu, a poster, a leaf that stopped you · everything else gives it context',
+    extras:['Where you found the main item','Why it stopped you','Smaller items labelled briefly','Date and place below'],
+    zones:[
+      {xp:0.10, yp:0.06, wp:0.80, hp:0.46, r:'item', rot:-2},
+      {xp:0.04, yp:0.58, wp:0.26, hp:0.18, r:'item', rot:9},
+      {xp:0.36, yp:0.60, wp:0.22, hp:0.16, r:'item', rot:-5},
+      {xp:0.64, yp:0.57, wp:0.30, hp:0.20, r:'item', rot:6},
+      {xp:0.04, yp:0.82, wp:0.92, hp:0.14, r:'text'},
+    ],
+    principles:['The hero item earns its space — give it the majority of the page','Supporting items should be visibly smaller: hierarchy matters','The note at the bottom is the caption, not the story — keep it short'],
+    typography:{style:'One or two lines below the hero item, then brief labels on the smaller ones',preview:{text:'Found on the steps of the Panthéon.',sub:'Sunday, still warm.',caps:false,serif:true},placement:'Below main item, then small labels beneath supporting items',pairing:'Italic serif for main note / small caps for item labels'},
+    tips:['Place the hero first and commit to it — the page is built around it','Supporting items should have some rotational difference from the hero','Write the note before you sleep — context fades faster than the item does'] },
+
+  { id:'pocket-page', name:'Pocket Page', type:'pocket',
+    subtitle:'Tucked & tactile',
+    mode:'Drawing + notes',
+    free:false,
+    category:'Collector',
+    tryWhen:'creating a real pocket by folding the bottom of the page · items physically slip inside · the page holds things as well as shows them · a title or note sits above the pocket',
+    extras:['Fold and tape the bottom edge','Label what lives inside','Items sketched above before pocketing','Washi tape to seal'],
+    zones:[
+      {xp:0.04, yp:0.04, wp:0.92, hp:0.10, r:'text'},
+      {xp:0.06, yp:0.18, wp:0.40, hp:0.26, r:'item', rot:-5},
+      {xp:0.54, yp:0.20, wp:0.38, hp:0.24, r:'item', rot:4},
+      {xp:0.08, yp:0.48, wp:0.32, hp:0.18, r:'item', rot:8},
+      {xp:0.58, yp:0.46, wp:0.34, hp:0.18, r:'item', rot:-7},
+      {xp:0, yp:0.72, wp:1, hp:0.28, r:'fold'},
+    ],
+    principles:['The fold is structural — it makes the page do something a photograph cannot','Sketch what goes inside before pocketing it: the drawing stays, the item can leave','The title above the fold tells the reader what the pocket holds'],
+    typography:{style:'Title above the fold, brief labels beside sketches',preview:{text:'Things from Tuesday.',sub:'',caps:false,serif:true},placement:'Top of page, above the sketches',pairing:'Serif title / small handwritten labels by each sketch'},
+    tips:['Fold and secure the pocket before you begin sketching — work around it','Use washi tape along the sides: it holds without damaging the page','Sketch each item as if it is already gone — because eventually it might be'] },
+
+  { id:'found-and-noted', name:'Found & Noted', type:'pocket',
+    subtitle:'Journalistic & curious',
+    mode:'Drawing + notes',
+    free:true,
+    category:'Collector',
+    tryWhen:'each item has a story worth telling · sketch on the left, notes on the right · a catalogue of curiosities · when the context matters as much as the object',
+    extras:['Where found','What it is exactly','Why you kept it','What it reminds you of'],
+    zones:[
+      {xp:0.04, yp:0.06, wp:0.44, hp:0.58, r:'item', rot:-3},
+      {xp:0.52, yp:0.06, wp:0.44, hp:0.82, r:'text'},
+      {xp:0.04, yp:0.70, wp:0.44, hp:0.22, r:'text'},
+    ],
+    principles:['The sketch is the record; the notes are the reason you kept it','Write the notes as questions if you are unsure — uncertainty is interesting','One object per page: this is depth, not breadth'],
+    typography:{style:'Left-aligned prose on the right column, generous line spacing',preview:{text:'A bus ticket, Lisbon.',sub:'The number 28. I have no idea where it went.',caps:false,serif:false},placement:'Top of right column, flowing downward',pairing:'Loose handwriting / object sketch on left'},
+    tips:['Write the notes before you lose the context — memory fades in hours','The sketch does not need to be finished — just enough to recognise the object','Four notes per item is enough: what, where, why, what it reminds you of'] },
+
+  { id:'everything-i-kept', name:'Everything I Kept', type:'pocket',
+    subtitle:'Generous & abundant',
+    mode:'Drawing only',
+    free:false,
+    category:'Collector',
+    tryWhen:'a whole trip\'s worth of fragments · the spread as a cabinet of curiosities · when you collected more than one page can hold · a generous record of everything you kept',
+    extras:['Arrange by size or type','Leave breathing room between items','Slight rotation on everything','Stick real items alongside drawn ones'],
+    zones:[
+      {xp:0.03, yp:0.03, wp:0.30, hp:0.18, r:'item', rot:-8},
+      {xp:0.40, yp:0.02, wp:0.24, hp:0.28, r:'item', rot:12},
+      {xp:0.70, yp:0.05, wp:0.28, hp:0.16, r:'item', rot:-5},
+      {xp:0.06, yp:0.27, wp:0.22, hp:0.30, r:'item', rot:6},
+      {xp:0.33, yp:0.34, wp:0.36, hp:0.20, r:'item', rot:-10},
+      {xp:0.74, yp:0.26, wp:0.22, hp:0.26, r:'item', rot:9},
+      {xp:0.04, yp:0.63, wp:0.36, hp:0.18, r:'item', rot:-4},
+      {xp:0.46, yp:0.60, wp:0.20, hp:0.28, r:'item', rot:7},
+      {xp:0.70, yp:0.58, wp:0.26, hp:0.20, r:'item', rot:-11},
+      {xp:0.16, yp:0.82, wp:0.30, hp:0.14, r:'item', rot:5},
+      {xp:0.54, yp:0.82, wp:0.38, hp:0.14, r:'item', rot:-7},
+    ],
+    principles:['A generous scatter is a generous record — do not edit too harshly','Arrange loosely by type or size so the eye can navigate','Some breathing room between items stops it feeling desperate'],
+    typography:{style:'No text — let the objects fill the page',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Lay all your items out on the page before sticking or sketching anything — plan the scatter','Rotate every single item: nothing parallel to the spine','Leave a few deliberate gaps — the page should breathe, not suffocate'] },
+
 ];
 
-const TYPE_LABELS = { single:'Single Page', spread:'Double Spread', accordion:'Accordion' };
-const TYPE_SHORT  = { single:'Single', spread:'Spread', accordion:'Accordion' };
+const TYPE_LABELS = { single:'Single Page', spread:'Double Spread', accordion:'Accordion', pocket:'Pocket' };
+const TYPE_SHORT  = { single:'Single', spread:'Spread', accordion:'Accordion', pocket:'Pocket' };
 const MODE_FILTERS = ['all','Drawing only','Drawing + notes','Full journal'];
 
 // ── RESPONSIVE HOOK ───────────────────────────────────────────────
@@ -370,11 +739,13 @@ function getCardConfig(numCols) {
     single:    { cols:1, thumbH:165, svgMaxW:155, svgMaxH:145 },
     spread:    { cols:2, thumbH:130, svgMaxW:334, svgMaxH:110 },
     accordion: { cols:2, thumbH:108, svgMaxW:334, svgMaxH: 90 },
+    pocket:    { cols:1, thumbH:165, svgMaxW:155, svgMaxH:145 },
   };
   return {
     single:    { cols:1, thumbH:210, svgMaxW:255, svgMaxH:190 },
     spread:    { cols:2, thumbH:168, svgMaxW:530, svgMaxH:148 },
     accordion: { cols:2, thumbH:138, svgMaxW:530, svgMaxH:118 },
+    pocket:    { cols:1, thumbH:210, svgMaxW:255, svgMaxH:190 },
   };
 }
 
@@ -382,6 +753,7 @@ function getCardConfig(numCols) {
 function getVB(layout, fmt) {
   if (layout.type==='single')    return [fmt.w, fmt.h];
   if (layout.type==='spread')    return [fmt.w*2, fmt.h];
+  if (layout.type==='pocket')    return [fmt.w, fmt.h];
   return [fmt.w*3, fmt.h];
 }
 
@@ -398,7 +770,7 @@ function LayoutSVG({ layout, format, maxWidth=9999, maxHeight=9999 }) {
           <line x1="0" y1="0" x2="0" y2="5" stroke="#C0BAB2" strokeWidth="0.8"/>
         </pattern>
       </defs>
-      <rect width={vw} height={vh} fill="#F5F1EC"/>
+      <rect width={vw} height={vh} fill={layout.darkBg ? '#2A2520' : '#F5F1EC'}/>
       {layout.type==='spread'    && <line x1={vw/2} y1={0} x2={vw/2} y2={vh} stroke="#DDD8D2" strokeWidth="0.6" strokeDasharray="2 2"/>}
       {layout.type==='accordion' && [1,2].map(i=><line key={i} x1={vw/3*i} y1={0} x2={vw/3*i} y2={vh} stroke="#DDD8D2" strokeWidth="0.6" strokeDasharray="2 2"/>)}
       {layout.zones.map((z,i)=>{
@@ -413,6 +785,21 @@ function LayoutSVG({ layout, format, maxWidth=9999, maxHeight=9999 }) {
         if(z.r==='title')  return <rect key={i} x={x} y={y} width={w} height={h} fill="#2A2520"/>;
         if(z.r==='image')  return <g key={i}><rect x={x} y={y} width={w} height={h} fill={`url(#${pid})`}/><rect x={x} y={y} width={w} height={h} fill="none" stroke="#A09890" strokeWidth="0.7"/></g>;
         if(z.r==='accent') return <rect key={i} x={x} y={y} width={w} height={h} fill="#D4CFC8" stroke="#A09890" strokeWidth="0.5"/>;
+        if(z.r==='light')  return <rect key={i} x={x} y={y} width={w} height={h} fill="#EDEAE3" stroke="#C4BEB6" strokeWidth="0.5"/>;
+        if(z.r==='item'){
+          const cx=x+w/2, cy=y+h/2, rot=z.rot||0;
+          return <g key={i} transform={`rotate(${rot},${cx},${cy})`}>
+            <rect x={x} y={y} width={w} height={h} fill="#EAE6E0" stroke="#A09890" strokeWidth="0.7"/>
+          </g>;
+        }
+        if(z.r==='fold'){
+          const fy=z.yp*vh;
+          return <g key={i}>
+            <rect x={0} y={fy} width={vw} height={vh-fy} fill="#E2DDD5" opacity="0.5"/>
+            <line x1={0} y1={fy} x2={vw} y2={fy} stroke="#8C8680" strokeWidth="1.8"/>
+            <line x1={0} y1={fy+2} x2={vw} y2={fy+2} stroke="#C4BEB6" strokeWidth="0.5"/>
+          </g>;
+        }
         return null;
       })}
       <rect x="0.4" y="0.4" width={vw-0.8} height={vh-0.8} fill="none" stroke="#CCCAB4" strokeWidth="0.7"/>
@@ -450,7 +837,7 @@ function TopNav({ navTab, setNavTab, showTabs, format, onChangeFormat, showForma
   return (
     <nav className="top-nav">
       <div className="nav-inner">
-        <div className="nav-logo">Feuille</div>
+        <div className="nav-logo">feuille</div>
         <div style={{display:'flex',alignItems:'center',gap:12}}>
           {showTabs && (
             <div className="nav-tabs">
@@ -475,7 +862,7 @@ function FormatBadge({ format, onClick }) {
   return (
     <button onClick={onClick} style={{display:'flex',alignItems:'center',gap:5,background:'#EFEBE4',border:'1px solid #E0DBD4',borderRadius:20,padding:'6px 10px',cursor:'pointer'}}>
       <FormatShape fmt={format} size={18}/>
-      <span style={{fontSize:11,color:'#5A5450',fontFamily:"'DM Sans',sans-serif"}}>{format.name}</span>
+      <span style={{fontSize:14,color:'#5A5450',fontFamily:"'DM Sans',sans-serif"}}>{format.name}</span>
       <ChevronDown/>
     </button>
   );
@@ -489,12 +876,12 @@ function FormatPicker({ onSelect, onBack, current }) {
     <div style={{maxWidth:640,margin:'0 auto',paddingTop:40}}>
       <div style={{marginBottom:32}}>
         {onBack && (
-          <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:13,padding:0,marginBottom:24}}>
+          <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:16,padding:0,marginBottom:24}}>
             <BackArrow/> Back
           </button>
         )}
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontWeight:500,color:'#2A2520',lineHeight:1}}>Your</div>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:36,fontStyle:'italic',color:'#8C8680',lineHeight:1.2}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:45,fontWeight:500,color:'#2A2520',lineHeight:1}}>Your</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:45,fontStyle:'italic',color:'#8C8680',lineHeight:1.2}}>Sketchbook</div>
         <div style={{marginTop:12,fontSize:14,color:'#7A7470',lineHeight:1.6,fontWeight:300}}>Choose your format. Layout diagrams adapt to your page proportions.</div>
       </div>
       <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill, minmax(180px, 1fr))',gap:12}}>
@@ -505,8 +892,8 @@ function FormatPicker({ onSelect, onBack, current }) {
               <div style={{height:68,display:'flex',alignItems:'center',justifyContent:'center',filter:active?'invert(1) brightness(1.6)':'none',transition:'filter 0.18s'}}>
                 <FormatShape fmt={fmt} size={56}/>
               </div>
-              <div style={{fontSize:13.5,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
-              <div style={{fontSize:11.5,color:active?'#C8C4BC':'#B0ACA4',textAlign:'center',lineHeight:1.5,fontWeight:300}}>{fmt.desc}</div>
+              <div style={{fontSize:17,fontWeight:500,color:active?'#F5F1EC':'#2A2520',lineHeight:1.2}}>{fmt.name}</div>
+              <div style={{fontSize:14,color:active?'#C8C4BC':'#B0ACA4',textAlign:'center',lineHeight:1.5,fontWeight:300}}>{fmt.desc}</div>
             </button>
           );
         })}
@@ -520,8 +907,8 @@ function TypoPreview({ preview }) {
   const {text,sub,caps,serif,small,center}=preview;
   return (
     <div style={{background:'#F5F1EC',borderRadius:8,padding:'14px 16px',border:'1px solid #E4DFD8',textAlign:center?'center':'left',marginBottom:2}}>
-      <div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:small?13:caps?19:18,fontWeight:caps?500:serif?400:300,letterSpacing:caps?'0.14em':serif?'0.01em':'0.02em',textTransform:caps?'uppercase':'none',color:'#2A2520',lineHeight:1.3}}>{text}</div>
-      {sub&&<div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:12,color:'#8C8680',marginTop:5,letterSpacing:'0.03em',whiteSpace:'pre-line'}}>{sub}</div>}
+      <div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:small?16:caps?24:22.5,fontWeight:caps?500:serif?400:300,letterSpacing:caps?'0.14em':serif?'0.01em':'0.02em',textTransform:caps?'uppercase':'none',color:'#2A2520',lineHeight:1.3}}>{text}</div>
+      {sub&&<div style={{fontFamily:serif?"'Cormorant Garamond',serif":"'DM Sans',sans-serif",fontStyle:serif?'italic':'normal',fontSize:15,color:'#8C8680',marginTop:5,letterSpacing:'0.03em',whiteSpace:'pre-line'}}>{sub}</div>}
     </div>
   );
 }
@@ -531,7 +918,7 @@ function ModeBadge({ mode, compact=false }) {
   if (!mode) return null;
   const s = MODE_STYLE[mode];
   return (
-    <span style={{fontSize:compact?9:10,padding:compact?'2px 6px':'3px 8px',borderRadius:20,background:s.bg,color:s.color,fontWeight:400,letterSpacing:'0.01em',whiteSpace:'nowrap',display:'inline-block'}}>
+    <span style={{fontSize:compact?11:12.5,padding:compact?'2px 6px':'3px 8px',borderRadius:20,background:s.bg,color:s.color,fontWeight:400,letterSpacing:'0.01em',whiteSpace:'nowrap',display:'inline-block'}}>
       {mode}
     </span>
   );
@@ -553,11 +940,11 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
           <HeartSmIcon filled={isFaved}/>
         </button>
         <div style={{position:'absolute',bottom:8,left:8,display:'flex',gap:4,alignItems:'center'}}>
-          <div style={{background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
+          <div style={{background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:12,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
             {TYPE_SHORT[layout.type]}
           </div>
           {layout.free && (
-            <div style={{background:'rgba(220,252,231,0.92)',borderRadius:10,padding:'2px 7px',fontSize:9.5,letterSpacing:'0.06em',textTransform:'uppercase',color:'#166534',fontWeight:500}}>
+            <div style={{background:'rgba(220,252,231,0.92)',borderRadius:10,padding:'2px 7px',fontSize:12,letterSpacing:'0.06em',textTransform:'uppercase',color:'#166534',fontWeight:500}}>
               Free
             </div>
           )}
@@ -565,7 +952,7 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
       </div>
       <div style={{padding:'10px 14px 8px',display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:8}}>
         <div style={{fontSize:14,fontWeight:500,color:'#2A2520',lineHeight:1.2,fontFamily:"'Cormorant Garamond',serif"}}>{layout.name}</div>
-        <div style={{fontSize:11,color:'#A09890',fontWeight:300,flexShrink:0}}>{layout.subtitle}</div>
+        <div style={{fontSize:14,color:'#A09890',fontWeight:300,flexShrink:0}}>{layout.subtitle}</div>
       </div>
       <div style={{padding:'0 14px 12px'}}>
         <ModeBadge mode={layout.mode} compact={true}/>
@@ -576,7 +963,7 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
 
 // ── HOME SCREEN ──────────────────────────────────────────────────
 function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter, setFilter, modeFilter, setModeFilter, cardConfig, numCols }) {
-  const typeFilters = ['all','single','spread','accordion'];
+  const typeFilters = ['all','single','spread','accordion','pocket'];
   const filtered = layouts.filter(l => {
     const typeMatch = filter === 'all' || l.type === filter;
     const modeMatch = modeFilter === 'all' || l.mode === modeFilter;
@@ -586,7 +973,7 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
   const typeBtn = (val, label) => {
     const active = filter === val;
     return (
-      <button key={val} onClick={()=>setFilter(val)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:active?'#2A2520':'#DDD8D2',background:active?'#2A2520':'transparent',color:active?'#F5F1EC':'#7A7470',fontSize:11.5,letterSpacing:'0.04em',textTransform:'uppercase',whiteSpace:'nowrap'}}>
+      <button key={val} onClick={()=>setFilter(val)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:active?'#2A2520':'#DDD8D2',background:active?'#2A2520':'transparent',color:active?'#F5F1EC':'#7A7470',fontSize:14,letterSpacing:'0.04em',textTransform:'uppercase',whiteSpace:'nowrap'}}>
         {label}
       </button>
     );
@@ -597,7 +984,7 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
     const s = val !== 'all' ? MODE_STYLE[val] : null;
     const label = val === 'all' ? 'All modes' : val;
     return (
-      <button key={val} onClick={()=>setModeFilter(val)} style={{padding:'5px 14px',borderRadius:20,border:`1px solid ${active?(s?s.color:'#2A2520'):'#DDD8D2'}`,transition:'all 0.15s',background:active?(s?s.bg:'#2A2520'):'transparent',color:active?(s?s.color:'#F5F1EC'):'#7A7470',fontSize:11,letterSpacing:'0.02em',whiteSpace:'nowrap'}}>
+      <button key={val} onClick={()=>setModeFilter(val)} style={{padding:'5px 14px',borderRadius:20,border:`1px solid ${active?(s?s.color:'#2A2520'):'#DDD8D2'}`,transition:'all 0.15s',background:active?(s?s.bg:'#2A2520'):'transparent',color:active?(s?s.color:'#F5F1EC'):'#7A7470',fontSize:14,letterSpacing:'0.02em',whiteSpace:'nowrap'}}>
         {label}
       </button>
     );
@@ -606,9 +993,9 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
   return (
     <div style={{paddingTop:40}}>
       <div style={{marginBottom:24}}>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
-        <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
+        <div style={{marginTop:8,fontSize:15,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
       </div>
 
       <div style={{display:'flex',gap:8,marginBottom:10,flexWrap:'wrap'}}>
@@ -631,7 +1018,7 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
 
       {filtered.length === 0 && (
         <div style={{paddingTop:80,textAlign:'center'}}>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:24,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>No layouts match this combination.<br/>Try adjusting the filters.</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:30,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>No layouts match this combination.<br/>Try adjusting the filters.</div>
         </div>
       )}
     </div>
@@ -640,7 +1027,7 @@ function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter
 
 // ── DETAIL SCREEN ────────────────────────────────────────────────
 function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop }) {
-  const lbl={fontSize:10.5,letterSpacing:'0.1em',textTransform:'uppercase',color:'#A09890',marginBottom:12,fontFamily:"'DM Sans',sans-serif"};
+  const lbl={fontSize:13,letterSpacing:'0.1em',textTransform:'uppercase',color:'#A09890',marginBottom:12,fontFamily:"'DM Sans',sans-serif"};
   const body={fontSize:14,color:'#3A3530',lineHeight:1.7,fontFamily:"'DM Sans',sans-serif",fontWeight:300};
   const divider=<div style={{margin:'24px 0',height:1,background:'#E8E3DC'}}/>;
 
@@ -652,9 +1039,9 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
       <div style={{marginTop:14,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
         <div style={{display:'flex',alignItems:'center',gap:6}}>
           <FormatShape fmt={format} size={15}/>
-          <span style={{fontSize:10.5,letterSpacing:'0.08em',textTransform:'uppercase',color:'#A09890'}}>{format.name} · {TYPE_LABELS[layout.type]}</span>
+          <span style={{fontSize:13,letterSpacing:'0.08em',textTransform:'uppercase',color:'#A09890'}}>{format.name} · {TYPE_LABELS[layout.type]}</span>
         </div>
-        <button onClick={onToggleFave} style={{display:'flex',alignItems:'center',gap:6,padding:'7px 16px',borderRadius:20,border:'1px solid',borderColor:isFaved?'#7A5C3A':'#DDD8D2',background:isFaved?'#7A5C3A':'transparent',color:isFaved?'#F5F1EC':'#7A7470',fontSize:11,letterSpacing:'0.05em',textTransform:'uppercase',transition:'all 0.15s'}}>
+        <button onClick={onToggleFave} style={{display:'flex',alignItems:'center',gap:6,padding:'7px 16px',borderRadius:20,border:'1px solid',borderColor:isFaved?'#7A5C3A':'#DDD8D2',background:isFaved?'#7A5C3A':'transparent',color:isFaved?'#F5F1EC':'#7A7470',fontSize:14,letterSpacing:'0.05em',textTransform:'uppercase',transition:'all 0.15s'}}>
           <HeartSmIcon filled={isFaved}/> {isFaved?'Saved':'Save'}
         </button>
       </div>
@@ -668,7 +1055,7 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
       {layout.tryWhen && (
         <div style={{marginBottom:24}}>
           <div style={lbl}>Try this when</div>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:'italic',fontSize:isDesktop?17:15,color:'#5A5450',lineHeight:1.7}}>{layout.tryWhen}</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontStyle:'italic',fontSize:isDesktop?21:19,color:'#5A5450',lineHeight:1.7}}>{layout.tryWhen}</div>
         </div>
       )}
 
@@ -686,7 +1073,7 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
         <div style={{display:'flex',flexDirection:'column',gap:12}}>
           {layout.principles.map((p,i)=>(
             <div key={i} style={{display:'flex',gap:12,alignItems:'flex-start'}}>
-              <span style={{fontSize:10,color:'#B4AEA8',fontFamily:'monospace',marginTop:4,flexShrink:0}}>{String(i+1).padStart(2,'0')}</span>
+              <span style={{fontSize:12.5,color:'#B4AEA8',fontFamily:'monospace',marginTop:4,flexShrink:0}}>{String(i+1).padStart(2,'0')}</span>
               <span style={body}>{p}</span>
             </div>
           ))}
@@ -698,7 +1085,7 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
         <TypoPreview preview={layout.typography.preview}/>
         <div style={{marginTop:12,display:'flex',flexDirection:'column',gap:8}}>
           {[['Style',layout.typography.style],['Placement',layout.typography.placement],['Pairing',layout.typography.pairing]].map(([k,v])=>(
-            <div key={k} style={{fontSize:13,color:'#5A5450',lineHeight:1.6}}>
+            <div key={k} style={{fontSize:16,color:'#5A5450',lineHeight:1.6}}>
               <span style={{color:'#2A2520',fontWeight:500}}>{k}</span> — {v}
             </div>
           ))}
@@ -724,7 +1111,7 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
             <div style={lbl}>Extras to consider</div>
             <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
               {layout.extras.map((e,i)=>(
-                <span key={i} style={{fontSize:12,padding:'4px 12px',borderRadius:20,background:'#F0EDE8',color:'#5A5450',border:'1px solid #E4DFD8'}}>
+                <span key={i} style={{fontSize:15,padding:'4px 12px',borderRadius:20,background:'#F0EDE8',color:'#5A5450',border:'1px solid #E4DFD8'}}>
                   {e}
                 </span>
               ))}
@@ -737,14 +1124,14 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
 
   return (
     <div style={{paddingTop:36,paddingBottom:60}}>
-      <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:13,padding:0,marginBottom:28}}>
+      <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:16,padding:0,marginBottom:28}}>
         <BackArrow/> Back
       </button>
       <div style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:4,flexWrap:'wrap'}}>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?46:36,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>{layout.name}</div>
-        {layout.free && <span style={{fontSize:10,padding:'3px 9px',borderRadius:20,background:'#DCFCE7',color:'#166534',fontWeight:500,letterSpacing:'0.04em',textTransform:'uppercase',marginTop:isDesktop?12:8,flexShrink:0}}>Free</span>}
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?57.5:45,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>{layout.name}</div>
+        {layout.free && <span style={{fontSize:12.5,padding:'3px 9px',borderRadius:20,background:'#DCFCE7',color:'#166534',fontWeight:500,letterSpacing:'0.04em',textTransform:'uppercase',marginTop:isDesktop?12:8,flexShrink:0}}>Free</span>}
       </div>
-      <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?24:18,fontStyle:'italic',color:'#8C8680',marginBottom:isDesktop?36:24}}>{layout.subtitle}</div>
+      <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?30:22.5,fontStyle:'italic',color:'#8C8680',marginBottom:isDesktop?36:24}}>{layout.subtitle}</div>
       {isDesktop ? (
         <div style={{display:'flex',gap:48,alignItems:'flex-start'}}>
           <div style={{width:'42%',flexShrink:0,position:'sticky',top:80}}>{diagram}</div>
@@ -761,13 +1148,13 @@ function FavoritesScreen({ format, layouts, favorites, onSelect, onToggleFave, c
   return (
     <div style={{paddingTop:40}}>
       <div style={{marginBottom:24}}>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontWeight:500,color:'#2A2520',lineHeight:1}}>Saved</div>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:42,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
-        <div style={{marginTop:8,fontSize:12,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{faved.length} saved</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontWeight:500,color:'#2A2520',lineHeight:1}}>Saved</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
+        <div style={{marginTop:8,fontSize:15,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{faved.length} saved</div>
       </div>
       {faved.length===0 ? (
         <div style={{paddingTop:80,textAlign:'center'}}>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:24,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>Click the heart on any layout<br/>to save it here</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:30,fontStyle:'italic',color:'#B4AEA8',lineHeight:1.6}}>Click the heart on any layout<br/>to save it here</div>
         </div>
       ) : (
         <div style={{display:'grid',gridTemplateColumns:`repeat(${numCols}, 1fr)`,gap:12}}>
