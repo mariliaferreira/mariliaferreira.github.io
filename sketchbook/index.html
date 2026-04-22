@@ -717,6 +717,119 @@ const LAYOUTS = [
     typography:{style:'No text — let the objects fill the page',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
     tips:['Lay all your items out on the page before sticking or sketching anything — plan the scatter','Rotate every single item: nothing parallel to the spine','Leave a few deliberate gaps — the page should breathe, not suffocate'] },
 
+  { id:'morning-to-night', name:'Morning to Night', type:'single',
+    subtitle:'Chronological & even',
+    mode:'Drawing only',
+    free:true,
+    category:'Day as Sequence',
+    tryWhen:'three distinct moments define the day · each part of the day deserves equal space · a simple honest record from dawn to dusk · the day told top to bottom',
+    extras:['Time marker beside each strip','Light quality per strip','Sun position indicator','Temperature change noted'],
+    zones:[
+      {xp:0.14, yp:0.03, wp:0.84, hp:0.28, r:'image'},
+      {xp:0.14, yp:0.36, wp:0.84, hp:0.28, r:'image'},
+      {xp:0.14, yp:0.69, wp:0.84, hp:0.28, r:'image'},
+      {xp:0.01, yp:0.135, wp:0.07, hp:0.07, r:'sun'},
+      {xp:0.01, yp:0.465, wp:0.07, hp:0.07, r:'sun', filled:true},
+      {xp:0.01, yp:0.795, wp:0.07, hp:0.07, r:'sun'},
+    ],
+    principles:['Three equal strips say that every part of the day mattered equally','The margin is for time, not decoration','Drawn in sequence: the order is the story'],
+    typography:{style:'Time noted in the left margin beside each strip',preview:{text:'07:12',sub:'17:45',caps:false,serif:false},placement:'Left margin, vertically centred beside each strip',pairing:'Small monospaced time / image strips'},
+    tips:['Note the time lightly in the margin before you start each strip — it anchors the memory','Let the light quality change across strips: pale dawn, warm midday, dark dusk','Keep the same horizontal scale across all three strips if sketching the same place'] },
+
+  { id:'the-best-part', name:'The Best Part', type:'single',
+    subtitle:'Weighted & honest',
+    mode:'Drawing only',
+    free:true,
+    category:'Day as Sequence',
+    tryWhen:'one moment of the day was bigger than the others · the best part gets the most space · two smaller moments support the main one · time is not democratic',
+    extras:['Why the main moment mattered','Time of each section','What you almost missed'],
+    zones:[
+      {xp:0.04, yp:0.03, wp:0.92, hp:0.47, r:'image'},
+      {xp:0.04, yp:0.54, wp:0.44, hp:0.43, r:'image'},
+      {xp:0.52, yp:0.54, wp:0.44, hp:0.43, r:'image'},
+    ],
+    principles:['Space is proportional to importance — the best part earns the most page','Two smaller moments give the main one context and scale','Honest asymmetry is more truthful than equal thirds'],
+    typography:{style:'No text — the proportion says everything',preview:{text:'',sub:'',caps:false,serif:false,small:true,center:false},placement:'None',pairing:'None'},
+    tips:['Decide which moment was the best before you open the book — commit to it','The two smaller zones work well for before and after the main event','Use a consistent horizon line across all three zones if they share the same place'] },
+
+  { id:'nine-things', name:'Nine Things', type:'single',
+    subtitle:'Compressed & complete',
+    mode:'Drawing + notes',
+    free:false,
+    category:'Day as Sequence',
+    tryWhen:'a busy day with too many moments to choose from · nine small vignettes each just enough · speed sketching the whole day · writing below ties it all together',
+    extras:['Number each vignette','Time under each','One sentence summary below','Which one surprised you'],
+    zones:[
+      {xp:0.04, yp:0.04, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.36, yp:0.04, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.67, yp:0.04, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.04, yp:0.26, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.36, yp:0.26, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.67, yp:0.26, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.04, yp:0.48, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.36, yp:0.48, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.67, yp:0.48, wp:0.29, hp:0.19, r:'image'},
+      {xp:0.04, yp:0.74, wp:0.92, hp:0.22, r:'text'},
+    ],
+    principles:['Nine forces you to stop editing and include more than feels comfortable','Speed matters: five minutes per vignette keeps the whole page honest','The written summary below is the thing you actually learned from the day'],
+    typography:{style:'Number above each vignette, summary prose below the grid',preview:{text:'01  02  03',sub:'The day felt long until it was over.',caps:false,serif:false},placement:'Small numbers above each cell; text block below the 3×3 grid',pairing:'Small numbered labels / loose summary prose'},
+    tips:['Number the nine cells before you start — the structure helps you choose what to include','Work quickly: five minutes per cell maximum — speed sketches are more honest than finished ones','The summary sentence should be written last, when the whole day is visible in front of you'] },
+
+  { id:'the-full-day', name:'The Full Day', type:'spread',
+    subtitle:'Generous & complete',
+    mode:'Drawing only',
+    free:false,
+    category:'Day as Sequence',
+    tryWhen:'a day that deserves two full pages · morning fills the left afternoon and evening share the right · the gutter marks midday · a day too full for one page',
+    extras:['Morning label left page','Afternoon & evening right page','Gutter as noon marker','Consistent light across both pages'],
+    zones:[
+      {xp:0.02, yp:0.04, wp:0.46, hp:0.92, r:'image'},
+      {xp:0.52, yp:0.04, wp:0.21, hp:0.44, r:'image'},
+      {xp:0.75, yp:0.04, wp:0.21, hp:0.44, r:'image'},
+      {xp:0.52, yp:0.52, wp:0.21, hp:0.44, r:'image'},
+      {xp:0.75, yp:0.52, wp:0.21, hp:0.44, r:'image'},
+    ],
+    principles:['The gutter is noon — plan a subject that exists on both sides of it','Morning fills the left because mornings are expansive and full of possibility','Afternoon and evening share the right because they compress as the day tires'],
+    typography:{style:'Very small label at the bottom of each page zone',preview:{text:'Morning.',sub:'Afternoon / Evening.',caps:false,serif:true},placement:'Bottom of each page, small and unobtrusive',pairing:'Small italic serif labels / images above'},
+    tips:['Work the left page first — treat it as a complete single-page drawing','Divide the right page before you start: decide where afternoon ends and evening begins','A consistent horizon line across both pages is worth committing to before anything else'] },
+
+  { id:'on-the-hour', name:'On the Hour', type:'single',
+    subtitle:'Timed & intentional',
+    mode:'Drawing + notes',
+    free:false,
+    category:'Day as Sequence',
+    tryWhen:'documenting a day with specific times · a timeline runs down the left · each sketch sits beside its hour · the day as a schedule you actually kept',
+    extras:['Exact time on the timeline','Duration of each moment','What you skipped or missed','Gaps in the timeline noted'],
+    zones:[
+      {xp:0.07, yp:0.04, wp:0.025, hp:0.92, r:'timeline', ticks:4},
+      {xp:0.18, yp:0.075, wp:0.78, hp:0.16, r:'image'},
+      {xp:0.18, yp:0.305, wp:0.78, hp:0.16, r:'image'},
+      {xp:0.18, yp:0.535, wp:0.78, hp:0.16, r:'image'},
+      {xp:0.18, yp:0.765, wp:0.78, hp:0.16, r:'image'},
+    ],
+    principles:['The timeline is a commitment: a gap in it is an honest admission','The time noted beside each sketch is more useful than the sketch itself in ten years','You do not need to fill every hour — blank spaces on the timeline are information too'],
+    typography:{style:'Time noted beside each tick mark on the left timeline',preview:{text:'09:00',sub:'13:30',caps:false,serif:false},placement:'Left of each tick mark, small and precise',pairing:'Small monospaced times / image zones to the right'},
+    tips:['Draw the timeline first and mark the hours before you begin sketching','Leave deliberate gaps on the timeline for travel or transition — note what you skipped','Time stamps are the most valuable annotation you can add to a sketchbook'] },
+
+  { id:'the-unfolding-day', name:'The Unfolding Day', type:'accordion',
+    subtitle:'Sequential & expansive',
+    mode:'Drawing + notes',
+    free:false,
+    category:'Day as Sequence',
+    tryWhen:'morning afternoon and evening each deserve a full page · the day unfolds literally as you open it · a day so full it needs three pages · the accordion as timeline',
+    extras:['Label each page by time of day','Note below each page','Light shifts page to page','One word per page to summarise'],
+    zones:[
+      {xp:0.01, yp:0.04, wp:0.31, hp:0.70, r:'image'},
+      {xp:0.01, yp:0.78, wp:0.31, hp:0.18, r:'text'},
+      {xp:0.35, yp:0.04, wp:0.30, hp:0.70, r:'image'},
+      {xp:0.35, yp:0.78, wp:0.30, hp:0.18, r:'text'},
+      {xp:0.68, yp:0.04, wp:0.30, hp:0.70, r:'image'},
+      {xp:0.68, yp:0.78, wp:0.30, hp:0.18, r:'text'},
+    ],
+    principles:['The day unfolds left to right as the reader opens the accordion','Light should shift visibly across the three panels: pale dawn, warm midday, dark dusk','The written strip below each panel is the note you would regret not making'],
+    typography:{style:'One small label per panel at top: Morning / Afternoon / Evening',preview:{text:'Morning',sub:'Afternoon',caps:false,serif:true,small:true},placement:'Top of each panel, small italic serif',pairing:'Small serif panel label / image above notes strip'},
+    tips:['Plan the tonal key for each panel before you begin — pale, warm, dark keeps them distinct','The accordion rewards the person who unfolds it: plan a subject that benefits from the reveal','A single word summary at the top of each panel is more memorable than a full description'] },
+
 ];
 
 const TYPE_LABELS = { single:'Single Page', spread:'Double Spread', accordion:'Accordion', pocket:'Pocket' };
@@ -798,6 +911,22 @@ function LayoutSVG({ layout, format, maxWidth=9999, maxHeight=9999 }) {
             <rect x={0} y={fy} width={vw} height={vh-fy} fill="#E2DDD5" opacity="0.5"/>
             <line x1={0} y1={fy} x2={vw} y2={fy} stroke="#8C8680" strokeWidth="1.8"/>
             <line x1={0} y1={fy+2} x2={vw} y2={fy+2} stroke="#C4BEB6" strokeWidth="0.5"/>
+          </g>;
+        }
+        if(z.r==='sun'){
+          const r=Math.min(w,h)/2, cx=x+w/2, cy=y+h/2;
+          return z.filled
+            ? <circle key={i} cx={cx} cy={cy} r={r} fill="#2A2520"/>
+            : <circle key={i} cx={cx} cy={cy} r={r} fill="none" stroke="#2A2520" strokeWidth="0.8"/>;
+        }
+        if(z.r==='timeline'){
+          const cx=x+w/2, ticks=z.ticks||4;
+          return <g key={i}>
+            <line x1={cx} y1={y} x2={cx} y2={y+h} stroke="#A09890" strokeWidth="0.8"/>
+            {Array.from({length:ticks},(_,ti)=>{
+              const ty=y+h*(ti+0.5)/ticks;
+              return <line key={ti} x1={cx} y1={ty} x2={cx+vw*0.11} y2={ty} stroke="#C4BEB6" strokeWidth="0.5"/>;
+            })}
           </g>;
         }
         return null;
