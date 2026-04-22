@@ -51,6 +51,8 @@ button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
   .nav-logo { font-size: 22.5px; }
   .nav-tab { padding: 6px 13px; font-size: 14px; }
 }
+.filter-row { -ms-overflow-style: none; scrollbar-width: none; }
+.filter-row::-webkit-scrollbar { display: none; }
 </style>
 </head>
 <body>
@@ -954,6 +956,15 @@ function FormatShape({ fmt, size=56 }) {
   );
 }
 
+// ── FILTER TAG ICONS ─────────────────────────────────────────────
+const IconSingle    = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="1.5" y="1.5" width="9" height="9" rx="1"/></svg>;
+const IconSpread    = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="0.5" y="1.5" width="4.5" height="9" rx="0.8"/><rect x="7" y="1.5" width="4.5" height="9" rx="0.8"/></svg>;
+const IconAccordion = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="0.5" y="1.5" width="3" height="9" rx="0.7"/><rect x="4.5" y="1.5" width="3" height="9" rx="0.7"/><rect x="8.5" y="1.5" width="3" height="9" rx="0.7"/></svg>;
+const IconPocket    = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="1.5" y="1.5" width="9" height="9" rx="1"/><line x1="1.5" y1="7.5" x2="10.5" y2="7.5"/></svg>;
+const IconDrawing   = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><path d="M9 1.5 L10.5 3 L4 9.5 L1.5 10.5 L2.5 8 Z"/></svg>;
+const IconMixed     = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><path d="M5.5 1.5 L7 3 L2.5 7.5 L1 8 L1.5 6.5 Z"/><line x1="8" y1="4.5" x2="11" y2="4.5"/><line x1="8" y1="7" x2="11" y2="7"/><line x1="8" y1="9.5" x2="10" y2="9.5"/></svg>;
+const IconJournal   = ()=><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"><line x1="1" y1="3" x2="11" y2="3"/><line x1="1" y1="6.5" x2="11" y2="6.5"/><line x1="1" y1="10" x2="7" y2="10"/></svg>;
+
 // ── ICONS ────────────────────────────────────────────────────────
 const GridIcon = ()=>(<svg width="20" height="20" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="12" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="12" width="7" height="7" rx="1.5"/><rect x="12" y="12" width="7" height="7" rx="1.5"/></svg>);
 const HeartIcon = ({filled})=>(<svg width="20" height="20" viewBox="0 0 22 22" fill={filled?'currentColor':'none'} stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 19C11 19 3.5 14 3.5 8.5a4 4 0 0 1 7.5-1.9A4 4 0 0 1 18.5 8.5C18.5 14 11 19 11 19z"/></svg>);
@@ -1072,15 +1083,10 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
           <div style={{background:'rgba(247,244,239,0.82)',borderRadius:10,padding:'2px 7px',fontSize:12,letterSpacing:'0.06em',textTransform:'uppercase',color:'#7A7470'}}>
             {TYPE_SHORT[layout.type]}
           </div>
-          {layout.free && (
-            <div style={{background:'rgba(220,252,231,0.92)',borderRadius:10,padding:'2px 7px',fontSize:12,letterSpacing:'0.06em',textTransform:'uppercase',color:'#166534',fontWeight:500}}>
-              Free
-            </div>
-          )}
         </div>
       </div>
       <div style={{padding:'10px 14px 8px',display:'flex',alignItems:'baseline',justifyContent:'space-between',gap:8}}>
-        <div style={{fontSize:14,fontWeight:500,color:'#2A2520',lineHeight:1.2,fontFamily:"'Cormorant Garamond',serif"}}>{layout.name}</div>
+        <div style={{fontSize:14,fontWeight:500,color:'#2A2520',lineHeight:1.2,fontFamily:"'Cormorant Garamond',serif",whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{layout.name}</div>
         <div style={{fontSize:14,color:'#A09890',fontWeight:300,flexShrink:0}}>{layout.subtitle}</div>
       </div>
       <div style={{padding:'0 14px 12px'}}>
@@ -1091,48 +1097,79 @@ function LayoutCard({ layout, format, isFaved, onFave, onSelect, cardConfig }) {
 }
 
 // ── HOME SCREEN ──────────────────────────────────────────────────
-function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, filter, setFilter, modeFilter, setModeFilter, cardConfig, numCols }) {
-  const typeFilters = ['all','single','spread','accordion','pocket'];
-  const filtered = layouts.filter(l => {
-    const typeMatch = filter === 'all' || l.type === filter;
-    const modeMatch = modeFilter === 'all' || l.mode === modeFilter;
-    return typeMatch && modeMatch;
-  });
+function HomeScreen({ format, layouts, favorites, onToggleFave, onSelect, activeTypes, setActiveTypes, activeModes, setActiveModes, cardConfig, numCols, isDesktop }) {
+  const ALL_TYPES = ['single','spread','accordion','pocket'];
+  const ALL_MODES = ['Drawing only','Drawing + notes','Full journal'];
 
-  const typeBtn = (val, label) => {
-    const active = filter === val;
-    return (
-      <button key={val} onClick={()=>setFilter(val)} style={{padding:'7px 18px',borderRadius:20,border:'1px solid',transition:'all 0.15s',borderColor:active?'#2A2520':'#DDD8D2',background:active?'#2A2520':'transparent',color:active?'#F5F1EC':'#7A7470',fontSize:14,letterSpacing:'0.04em',textTransform:'uppercase',whiteSpace:'nowrap'}}>
-        {label}
-      </button>
-    );
+  const filtered = layouts.filter(l => activeTypes.has(l.type) && activeModes.has(l.mode));
+
+  const toggleType = t => {
+    if (activeTypes.has(t) && activeTypes.size === 1) return;
+    setActiveTypes(prev => { const n=new Set(prev); n.has(t)?n.delete(t):n.add(t); return n; });
+  };
+  const toggleMode = m => {
+    if (activeModes.has(m) && activeModes.size === 1) return;
+    setActiveModes(prev => { const n=new Set(prev); n.has(m)?n.delete(m):n.add(m); return n; });
   };
 
-  const modeBtn = (val) => {
-    const active = modeFilter === val;
-    const s = val !== 'all' ? MODE_STYLE[val] : null;
-    const label = val === 'all' ? 'All modes' : val;
-    return (
-      <button key={val} onClick={()=>setModeFilter(val)} style={{padding:'5px 14px',borderRadius:20,border:`1px solid ${active?(s?s.color:'#2A2520'):'#DDD8D2'}`,transition:'all 0.15s',background:active?(s?s.bg:'#2A2520'):'transparent',color:active?(s?s.color:'#F5F1EC'):'#7A7470',fontSize:14,letterSpacing:'0.02em',whiteSpace:'nowrap'}}>
-        {label}
-      </button>
-    );
-  };
+  const typesAllActive = ALL_TYPES.every(t => activeTypes.has(t));
+  const modesAllActive = ALL_MODES.every(m => activeModes.has(m));
+
+  const TYPE_TAGS = [
+    { key:'single',    label:'Single',    icon:<IconSingle/> },
+    { key:'spread',    label:'Spread',    icon:<IconSpread/> },
+    { key:'accordion', label:'Accordion', icon:<IconAccordion/> },
+    { key:'pocket',    label:'Pocket',    icon:<IconPocket/> },
+  ];
+  const MODE_TAGS = [
+    { key:'Drawing only',    label:'Drawing', icon:<IconDrawing/> },
+    { key:'Drawing + notes', label:'Mixed',   icon:<IconMixed/> },
+    { key:'Full journal',    label:'Journal', icon:<IconJournal/> },
+  ];
+
+  const tagBtn = (key, label, icon, active, onToggle) => (
+    <button key={key} onClick={onToggle} style={{
+      display:'flex', alignItems:'center', gap:5,
+      padding:'6px 12px', borderRadius:20,
+      border:`1px solid ${active?'#2A2520':'#DDD8D2'}`,
+      background: active ? '#F0EDE8' : 'transparent',
+      color: '#2A2520',
+      opacity: active ? 1 : 0.38,
+      fontSize:13, letterSpacing:'0.02em', whiteSpace:'nowrap',
+      cursor:'pointer', transition:'opacity 0.15s, border-color 0.15s, background 0.15s',
+      flexShrink:0,
+    }}>
+      {icon}
+      <span>{label}</span>
+    </button>
+  );
+
+  const resetBtn = onClick => (
+    <button onClick={onClick} style={{
+      background:'none', border:'none', color:'#A09890', fontSize:11.5,
+      cursor:'pointer', whiteSpace:'nowrap', padding:'0 2px', flexShrink:0,
+      letterSpacing:'0.06em', textDecoration:'underline', alignSelf:'center',
+    }}>reset</button>
+  );
+
+  const headingSize = isDesktop ? 52.5 : 42;
 
   return (
-    <div style={{paddingTop:40}}>
-      <div style={{marginBottom:24}}>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
-        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:52.5,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
-        <div style={{marginTop:8,fontSize:15,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
+    <div style={{paddingTop: isDesktop ? 40 : 20}}>
+      <div style={{marginBottom: isDesktop ? 18 : 12}}>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:headingSize,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>Sketchbook</div>
+        <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:headingSize,fontStyle:'italic',color:'#8C8680',lineHeight:1.1}}>Layouts</div>
+        <div style={{marginTop:6,fontSize:15,color:'#A09890',letterSpacing:'0.05em',textTransform:'uppercase'}}>{filtered.length} layout{filtered.length!==1?'s':''}</div>
       </div>
 
-      <div style={{display:'flex',gap:8,marginBottom:10,flexWrap:'wrap'}}>
-        {typeFilters.map(f => typeBtn(f, f==='all'?'All':TYPE_LABELS[f]))}
+      <div className="filter-row" style={{display:'flex',gap:7,marginBottom:8,overflowX:'auto',paddingBottom:2}}>
+        {TYPE_TAGS.map(({key,label,icon}) => tagBtn(key, label, icon, activeTypes.has(key), ()=>toggleType(key)))}
+        {!typesAllActive && resetBtn(()=>setActiveTypes(new Set(ALL_TYPES)))}
       </div>
 
-      <div style={{display:'flex',gap:8,marginBottom:28,flexWrap:'wrap'}}>
-        {MODE_FILTERS.map(m => modeBtn(m))}
+      <div className="filter-row" style={{display:'flex',gap:7,marginBottom: isDesktop ? 28 : 18,overflowX:'auto',paddingBottom:2}}>
+        {MODE_TAGS.map(({key,label,icon}) => tagBtn(key, label, icon, activeModes.has(key), ()=>toggleMode(key)))}
+        {!modesAllActive && resetBtn(()=>setActiveModes(new Set(ALL_MODES)))}
       </div>
 
       <div style={{display:'grid',gridTemplateColumns:`repeat(${numCols}, 1fr)`,gap:12}}>
@@ -1256,9 +1293,8 @@ function DetailScreen({ layout, format, isFaved, onToggleFave, onBack, isDesktop
       <button onClick={onBack} style={{background:'none',border:'none',display:'flex',alignItems:'center',gap:4,color:'#7A7470',fontSize:16,padding:0,marginBottom:28}}>
         <BackArrow/> Back
       </button>
-      <div style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:4,flexWrap:'wrap'}}>
+      <div style={{marginBottom:4}}>
         <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?57.5:45,fontWeight:500,color:'#2A2520',letterSpacing:'-0.01em',lineHeight:1}}>{layout.name}</div>
-        {layout.free && <span style={{fontSize:12.5,padding:'3px 9px',borderRadius:20,background:'#DCFCE7',color:'#166534',fontWeight:500,letterSpacing:'0.04em',textTransform:'uppercase',marginTop:isDesktop?12:8,flexShrink:0}}>Free</span>}
       </div>
       <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:isDesktop?30:22.5,fontStyle:'italic',color:'#8C8680',marginBottom:isDesktop?36:24}}>{layout.subtitle}</div>
       {isDesktop ? (
@@ -1311,8 +1347,8 @@ function App() {
   const [pickingFormat,setPicking] = useState(!initFmt);
   const [navTab,setNavTab]         = useState('browse');
   const [selected,setSelected]     = useState(null);
-  const [filter,setFilter]         = useState('all');
-  const [modeFilter,setModeFilter] = useState('all');
+  const [activeTypes,setActiveTypes] = useState(()=>new Set(['single','spread','accordion','pocket']));
+  const [activeModes,setActiveModes] = useState(()=>new Set(['Drawing only','Drawing + notes','Full journal']));
   const [favorites,setFavorites]   = useState(()=>{ try{return JSON.parse(localStorage.getItem('sc_faves')||'[]');}catch{return [];} });
 
   const selectFmt  = fmt=>{ setFormat(fmt); localStorage.setItem('sc_fmt',fmt.id); setPicking(false); };
@@ -1330,7 +1366,7 @@ function App() {
         ) : selected ? (
           <DetailScreen layout={selected} format={format} isFaved={favorites.includes(selected.id)} onToggleFave={()=>toggleFave(selected.id)} onBack={()=>setSelected(null)} isDesktop={isDesktop}/>
         ) : navTab==='browse' ? (
-          <HomeScreen format={format} layouts={LAYOUTS} favorites={favorites} onToggleFave={toggleFave} onSelect={setSelected} filter={filter} setFilter={setFilter} modeFilter={modeFilter} setModeFilter={setModeFilter} cardConfig={cardConfig} numCols={numCols}/>
+          <HomeScreen format={format} layouts={LAYOUTS} favorites={favorites} onToggleFave={toggleFave} onSelect={setSelected} activeTypes={activeTypes} setActiveTypes={setActiveTypes} activeModes={activeModes} setActiveModes={setActiveModes} cardConfig={cardConfig} numCols={numCols} isDesktop={isDesktop}/>
         ) : (
           <FavoritesScreen format={format} layouts={LAYOUTS} favorites={favorites} onSelect={setSelected} onToggleFave={toggleFave} cardConfig={cardConfig} numCols={numCols}/>
         )}
